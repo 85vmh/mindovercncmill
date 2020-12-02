@@ -1,0 +1,6 @@
+[gui_scripts]
+mindovercncmill = mindovercncmill:main
+
+[qtpyvcp.vcp]
+mindovercncmill = mindovercncmill
+

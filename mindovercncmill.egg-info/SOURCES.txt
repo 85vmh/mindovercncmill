@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+mindovercncmill/__init__.py
+mindovercncmill/__init__.py.bak
+mindovercncmill/config.yml
+mindovercncmill/config.yml.bak
+mindovercncmill/mainwindow.py
+mindovercncmill.egg-info/PKG-INFO
+mindovercncmill.egg-info/SOURCES.txt
+mindovercncmill.egg-info/dependency_links.txt
+mindovercncmill.egg-info/entry_points.txt
+mindovercncmill.egg-info/top_level.txt
+mindovercncmill/resources/resources.qrc
+mindovercncmill/ui/mainwindow.ui
+mindovercncmill/ui/style.qss
