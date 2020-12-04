@@ -55,7 +55,7 @@ QComboBox QAbstractItemView {
 
 QPushButton {
     font-family: "Bebas Kai";
-    font-size: 15pt;
+    font-size: 14pt;
 }
 
 QPushButton:disabled {

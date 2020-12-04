@@ -79,7 +79,7 @@
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout">
           <property name="spacing">
-           <number>2</number>
+           <number>0</number>
           </property>
           <property name="leftMargin">
            <number>0</number>
@@ -88,7 +88,7 @@
            <number>0</number>
           </property>
           <property name="rightMargin">
-           <number>1</number>
+           <number>0</number>
           </property>
           <property name="bottomMargin">
            <number>0</number>
@@ -132,63 +132,6 @@
                 <string>[]</string>
                </property>
                <widget class="QWidget" name="page_notHomed">
-                <widget class="ActionButton" name="actionbutton">
-                 <property name="geometry">
-                  <rect>
-                   <x>400</x>
-                   <y>410</y>
-                   <width>251</width>
-                   <height>56</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>E Stop</string>
-                 </property>
-                 <property name="checkable">
-                  <bool>true</bool>
-                 </property>
-                 <property name="actionName" stdset="0">
-                  <string>machine.estop.toggle</string>
-                 </property>
-                </widget>
-                <widget class="ActionButton" name="actionbutton_2">
-                 <property name="geometry">
-                  <rect>
-                   <x>400</x>
-                   <y>485</y>
-                   <width>251</width>
-                   <height>51</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>Power ON</string>
-                 </property>
-                 <property name="checkable">
-                  <bool>true</bool>
-                 </property>
-                 <property name="actionName" stdset="0">
-                  <string>machine.power.toggle</string>
-                 </property>
-                </widget>
-                <widget class="ActionButton" name="actionbutton_4">
-                 <property name="geometry">
-                  <rect>
-                   <x>445</x>
-                   <y>555</y>
-                   <width>166</width>
-                   <height>56</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>Reference All</string>
-                 </property>
-                 <property name="rules" stdset="0">
-                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Referenced' if ch[0] else 'Reference All'&quot;, &quot;name&quot;: &quot;Button text&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color:rgb(138, 226, 52)' if ch[0]else ''&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
-                 </property>
-                 <property name="actionName" stdset="0">
-                  <string>machine.home.all</string>
-                 </property>
-                </widget>
                 <widget class="QLabel" name="label">
                  <property name="geometry">
                   <rect>
@@ -226,8 +169,8 @@
                 <widget class="VCPStackedWidget" name="stackedWidgetLeftTop">
                  <property name="geometry">
                   <rect>
-                   <x>0</x>
-                   <y>0</y>
+                   <x>5</x>
+                   <y>5</y>
                    <width>551</width>
                    <height>381</height>
                   </rect>
@@ -244,7 +187,7 @@
                   <enum>QFrame::Box</enum>
                  </property>
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>1</number>
                  </property>
                  <widget class="QWidget" name="page_3">
                   <widget class="QGroupBox" name="groupBox">
@@ -794,216 +737,814 @@ border-radius: 4px;
                   </widget>
                  </widget>
                  <widget class="QWidget" name="page_4">
-                  <widget class="QFrame" name="gridFrame">
+                  <widget class="QWidget" name="widget" native="true">
                    <property name="geometry">
                     <rect>
-                     <x>10</x>
-                     <y>10</y>
-                     <width>531</width>
-                     <height>361</height>
+                     <x>0</x>
+                     <y>5</y>
+                     <width>546</width>
+                     <height>371</height>
                     </rect>
                    </property>
-                   <layout class="QGridLayout" name="gridLayout_3">
-                    <item row="7" column="1">
-                     <widget class="QPushButton" name="pushButton_19">
-                      <property name="text">
-                       <string>0</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="5" column="0">
-                     <widget class="QPushButton" name="pushButton_13">
-                      <property name="text">
-                       <string>4</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="4" column="1">
-                     <widget class="QPushButton" name="pushButton_11">
-                      <property name="text">
-                       <string>2</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="5" column="2">
-                     <widget class="QPushButton" name="pushButton_15">
-                      <property name="text">
-                       <string>6</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="4" column="5">
-                     <widget class="QPushButton" name="pushButton_9">
-                      <property name="text">
-                       <string>S</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="5" column="1">
-                     <widget class="QPushButton" name="pushButton_14">
-                      <property name="text">
-                       <string>5</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="5">
-                     <widget class="QPushButton" name="pushButton_10">
-                      <property name="text">
-                       <string>Run</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="4" column="2">
-                     <widget class="QPushButton" name="pushButton_12">
-                      <property name="text">
-                       <string>3</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="4" column="0">
-                     <widget class="QPushButton" name="pushButton_2">
-                      <property name="text">
-                       <string>1</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="6" column="4">
-                     <widget class="QPushButton" name="pushButton_22">
-                      <property name="text">
-                       <string>+</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="3">
-                     <widget class="QPushButton" name="pushButton_6">
-                      <property name="text">
-                       <string>A</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="7" column="2">
-                     <widget class="QPushButton" name="pushButton_21">
-                      <property name="text">
-                       <string/>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="1">
-                     <widget class="QPushButton" name="pushButton_4">
-                      <property name="text">
-                       <string>Y</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="0">
-                     <widget class="QPushButton" name="pushButton_3">
-                      <property name="text">
-                       <string>X</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="0">
-                     <widget class="QPushButton" name="pushButton">
-                      <property name="text">
-                       <string>Clear</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="7" column="0">
-                     <widget class="QPushButton" name="pushButton_20">
-                      <property name="text">
-                       <string>.</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="6" column="0">
-                     <widget class="QPushButton" name="pushButton_16">
-                      <property name="text">
-                       <string>7</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="6" column="1">
-                     <widget class="QPushButton" name="pushButton_17">
-                      <property name="text">
-                       <string>8</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="2">
-                     <widget class="QPushButton" name="pushButton_5">
-                      <property name="text">
-                       <string>Z</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="7" column="4">
-                     <widget class="QPushButton" name="pushButton_23">
-                      <property name="text">
-                       <string>-</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="5">
-                     <widget class="QPushButton" name="pushButton_7">
-                      <property name="text">
-                       <string>G</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="6" column="2">
-                     <widget class="QPushButton" name="pushButton_18">
-                      <property name="text">
-                       <string>9</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="1" colspan="4">
-                     <widget class="MDIEntry" name="mdientry"/>
-                    </item>
-                    <item row="1" column="6">
-                     <widget class="QPushButton" name="pushButton_8">
-                      <property name="text">
-                       <string>M</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="4" column="6">
-                     <widget class="QPushButton" name="pushButton_24">
-                      <property name="text">
-                       <string>T</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="5" column="5">
-                     <widget class="QPushButton" name="pushButton_25">
-                      <property name="text">
-                       <string>P</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="5" column="6">
-                     <widget class="QPushButton" name="pushButton_26">
-                      <property name="text">
-                       <string>K</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="6" column="5">
-                     <widget class="QPushButton" name="pushButton_27">
-                      <property name="text">
-                       <string>I</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="6" column="6">
-                     <widget class="QPushButton" name="pushButton_28">
-                      <property name="text">
-                       <string>J</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
+                   <widget class="QPushButton" name="pushButton_23">
+                    <property name="geometry">
+                     <rect>
+                      <x>265</x>
+                      <y>280</y>
+                      <width>40</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>40</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>40</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>-</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="pushButton_22">
+                    <property name="geometry">
+                     <rect>
+                      <x>265</x>
+                      <y>226</y>
+                      <width>40</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>40</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>40</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>+</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="pushButton_28">
+                    <property name="geometry">
+                     <rect>
+                      <x>480</x>
+                      <y>315</y>
+                      <width>50</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>J</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="pushButton_27">
+                    <property name="geometry">
+                     <rect>
+                      <x>420</x>
+                      <y>315</y>
+                      <width>50</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>I</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="pushButton_9">
+                    <property name="geometry">
+                     <rect>
+                      <x>420</x>
+                      <y>214</y>
+                      <width>50</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>S</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="pushButton_7">
+                    <property name="geometry">
+                     <rect>
+                      <x>420</x>
+                      <y>165</y>
+                      <width>50</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>G</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="pushButton_26">
+                    <property name="geometry">
+                     <rect>
+                      <x>480</x>
+                      <y>265</y>
+                      <width>50</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>K</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="pushButton_8">
+                    <property name="geometry">
+                     <rect>
+                      <x>480</x>
+                      <y>165</y>
+                      <width>50</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>M</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="pushButton_24">
+                    <property name="geometry">
+                     <rect>
+                      <x>480</x>
+                      <y>214</y>
+                      <width>50</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>T</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="pushButton_25">
+                    <property name="geometry">
+                     <rect>
+                      <x>420</x>
+                      <y>265</y>
+                      <width>50</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>P</string>
+                    </property>
+                   </widget>
+                   <widget class="QFrame" name="frame">
+                    <property name="geometry">
+                     <rect>
+                      <x>5</x>
+                      <y>5</y>
+                      <width>536</width>
+                      <height>36</height>
+                     </rect>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <widget class="QPushButton" name="pushButton_10">
+                     <property name="geometry">
+                      <rect>
+                       <x>480</x>
+                       <y>5</y>
+                       <width>51</width>
+                       <height>27</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Run</string>
+                     </property>
+                    </widget>
+                    <widget class="MDIEntry" name="mdientry">
+                     <property name="geometry">
+                      <rect>
+                       <x>270</x>
+                       <y>5</y>
+                       <width>201</width>
+                       <height>25</height>
+                      </rect>
+                     </property>
+                     <property name="clearButtonEnabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="mdi_history_size" stdset="0">
+                      <number>50</number>
+                     </property>
+                    </widget>
+                   </widget>
+                   <widget class="QFrame" name="frame_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>5</x>
+                      <y>50</y>
+                      <width>281</width>
+                      <height>56</height>
+                     </rect>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <widget class="QPushButton" name="pushButton_3">
+                     <property name="geometry">
+                      <rect>
+                       <x>5</x>
+                       <y>10</y>
+                       <width>60</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>60</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>X</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="pushButton_6">
+                     <property name="geometry">
+                      <rect>
+                       <x>215</x>
+                       <y>10</y>
+                       <width>60</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>60</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>A</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="pushButton_4">
+                     <property name="geometry">
+                      <rect>
+                       <x>75</x>
+                       <y>10</y>
+                       <width>60</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>60</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>Y</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="pushButton_5">
+                     <property name="geometry">
+                      <rect>
+                       <x>145</x>
+                       <y>10</y>
+                       <width>60</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>60</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>Z</string>
+                     </property>
+                    </widget>
+                   </widget>
+                   <widget class="QFrame" name="frame_3">
+                    <property name="geometry">
+                     <rect>
+                      <x>5</x>
+                      <y>150</y>
+                      <width>191</width>
+                      <height>216</height>
+                     </rect>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <widget class="QPushButton" name="pushButton_21">
+                     <property name="geometry">
+                      <rect>
+                       <x>135</x>
+                       <y>170</y>
+                       <width>50</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="pushButton_11">
+                     <property name="geometry">
+                      <rect>
+                       <x>70</x>
+                       <y>8</y>
+                       <width>50</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>2</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="pushButton_14">
+                     <property name="geometry">
+                      <rect>
+                       <x>70</x>
+                       <y>62</y>
+                       <width>50</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>5</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="pushButton_15">
+                     <property name="geometry">
+                      <rect>
+                       <x>135</x>
+                       <y>62</y>
+                       <width>50</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>6</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="pushButton_18">
+                     <property name="geometry">
+                      <rect>
+                       <x>135</x>
+                       <y>116</y>
+                       <width>50</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>9</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="pushButton_17">
+                     <property name="geometry">
+                      <rect>
+                       <x>70</x>
+                       <y>116</y>
+                       <width>50</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>8</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="pushButton_2">
+                     <property name="geometry">
+                      <rect>
+                       <x>7</x>
+                       <y>8</y>
+                       <width>50</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>1</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="pushButton_12">
+                     <property name="geometry">
+                      <rect>
+                       <x>135</x>
+                       <y>8</y>
+                       <width>50</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>3</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="pushButton_13">
+                     <property name="geometry">
+                      <rect>
+                       <x>7</x>
+                       <y>62</y>
+                       <width>50</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>4</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="pushButton_16">
+                     <property name="geometry">
+                      <rect>
+                       <x>7</x>
+                       <y>116</y>
+                       <width>50</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>7</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="pushButton_20">
+                     <property name="geometry">
+                      <rect>
+                       <x>7</x>
+                       <y>170</y>
+                       <width>50</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>.</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="pushButton_19">
+                     <property name="geometry">
+                      <rect>
+                       <x>70</x>
+                       <y>170</y>
+                       <width>50</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </widget>
                   </widget>
                  </widget>
                  <widget class="QWidget" name="page_8">
@@ -1018,6 +1559,12 @@ border-radius: 4px;
                    </property>
                    <property name="styleSheet">
                     <string notr="true"/>
+                   </property>
+                   <property name="horizontalScrollBarPolicy">
+                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                   </property>
+                   <property name="sizeAdjustPolicy">
+                    <enum>QAbstractScrollArea::AdjustToContents</enum>
                    </property>
                    <property name="is_editor" stdset="0">
                     <bool>true</bool>
@@ -1179,8 +1726,8 @@ QComboBox QAbstractItemView{
                 <widget class="VCPStackedWidget" name="stackedWidgetLeftBottom">
                  <property name="geometry">
                   <rect>
-                   <x>0</x>
-                   <y>390</y>
+                   <x>20</x>
+                   <y>410</y>
                    <width>391</width>
                    <height>331</height>
                   </rect>
@@ -1194,7 +1741,7 @@ QComboBox QAbstractItemView{
 }</string>
                  </property>
                  <property name="currentIndex">
-                  <number>2</number>
+                  <number>1</number>
                  </property>
                  <widget class="QWidget" name="page_5">
                   <widget class="ActionButton" name="actionbutton_9">
@@ -1467,395 +2014,6 @@ QComboBox QAbstractItemView{
                    </property>
                    <property name="actionName" stdset="0">
                     <string>coolant.flood.toggle</string>
-                   </property>
-                  </widget>
-                  <widget class="QPushButton" name="clear_button">
-                   <property name="geometry">
-                    <rect>
-                     <x>80</x>
-                     <y>275</y>
-                     <width>60</width>
-                     <height>30</height>
-                    </rect>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>Clear</string>
-                   </property>
-                   <property name="checkable">
-                    <bool>false</bool>
-                   </property>
-                  </widget>
-                  <widget class="QPushButton" name="iso_view_button">
-                   <property name="geometry">
-                    <rect>
-                     <x>245</x>
-                     <y>260</y>
-                     <width>60</width>
-                     <height>30</height>
-                    </rect>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
-                   </property>
-                   <property name="text">
-                    <string>ISO VIEW</string>
-                   </property>
-                   <property name="checkable">
-                    <bool>false</bool>
-                   </property>
-                  </widget>
-                  <widget class="QPushButton" name="zoom_out_button">
-                   <property name="geometry">
-                    <rect>
-                     <x>0</x>
-                     <y>225</y>
-                     <width>60</width>
-                     <height>30</height>
-                    </rect>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>ZOOM -</string>
-                   </property>
-                   <property name="checkable">
-                    <bool>false</bool>
-                   </property>
-                  </widget>
-                  <widget class="QPushButton" name="path_button">
-                   <property name="geometry">
-                    <rect>
-                     <x>0</x>
-                     <y>280</y>
-                     <width>60</width>
-                     <height>30</height>
-                    </rect>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>Path</string>
-                   </property>
-                   <property name="checkable">
-                    <bool>false</bool>
-                   </property>
-                  </widget>
-                  <widget class="QPushButton" name="zoom_in_button">
-                   <property name="geometry">
-                    <rect>
-                     <x>0</x>
-                     <y>185</y>
-                     <width>60</width>
-                     <height>30</height>
-                    </rect>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>ZOOM +</string>
-                   </property>
-                   <property name="checkable">
-                    <bool>false</bool>
-                   </property>
-                  </widget>
-                  <widget class="QPushButton" name="x_view_button">
-                   <property name="geometry">
-                    <rect>
-                     <x>180</x>
-                     <y>260</y>
-                     <width>60</width>
-                     <height>30</height>
-                    </rect>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>X View</string>
-                   </property>
-                   <property name="checkable">
-                    <bool>false</bool>
-                   </property>
-                  </widget>
-                  <widget class="QPushButton" name="y_view_button">
-                   <property name="geometry">
-                    <rect>
-                     <x>180</x>
-                     <y>215</y>
-                     <width>60</width>
-                     <height>30</height>
-                    </rect>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>Y View</string>
-                   </property>
-                   <property name="checkable">
-                    <bool>false</bool>
-                   </property>
-                  </widget>
-                  <widget class="QPushButton" name="z_view_button">
-                   <property name="geometry">
-                    <rect>
-                     <x>250</x>
-                     <y>210</y>
-                     <width>60</width>
-                     <height>30</height>
-                    </rect>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>Z View</string>
-                   </property>
-                   <property name="checkable">
-                    <bool>false</bool>
-                   </property>
-                  </widget>
-                  <widget class="QPushButton" name="pan_button">
-                   <property name="geometry">
-                    <rect>
-                     <x>0</x>
-                     <y>145</y>
-                     <width>60</width>
-                     <height>30</height>
-                    </rect>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>60</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QPushButton {
-    color: white;
-    border-color: rgb(74, 77, 81);
-    border-style: solid;
-    border-radius: 5px;
-    border-width: 2px;
-    background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255));
-}
-
-QPushButton:disabled {
-    border-color: gray;
-}
-
-/*QPushButton[error=&quot;true&quot;] {
-    border-color: red;
-}*/
-
-QPushButton:hover {
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
-}
-
-QPushButton:pressed {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}
-
-QPushButton:checked[option=&quot;true&quot;] {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}
-
-QPushButton:checked {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}</string>
-                   </property>
-                   <property name="text">
-                    <string>PAN</string>
-                   </property>
-                   <property name="checkable">
-                    <bool>true</bool>
                    </property>
                   </widget>
                  </widget>
@@ -2281,8 +2439,11 @@ QPushButton:checked {
                    <height>251</height>
                   </rect>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
                  <property name="frameShape">
-                  <enum>QFrame::NoFrame</enum>
+                  <enum>QFrame::Box</enum>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_56">
                   <property name="spacing">
@@ -3678,14 +3839,19 @@ QPushButton:checked {
                 <widget class="VCPStackedWidget" name="stackedWidgetSpindle">
                  <property name="geometry">
                   <rect>
-                   <x>1005</x>
+                   <x>1015</x>
                    <y>630</y>
                    <width>251</width>
                    <height>111</height>
                   </rect>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true"/>
+                  <string notr="true">.VCPStackedWidget {
+    border-style: solid;
+    border-color: rgb(186, 189, 182);
+    border-width: 1px;
+    border-radius: 6px;
+}</string>
                  </property>
                  <property name="frameShape">
                   <enum>QFrame::Box</enum>
@@ -3693,12 +3859,15 @@ QPushButton:checked {
                  <property name="currentIndex">
                   <number>0</number>
                  </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.0.speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;currentIndex&quot;, &quot;expression&quot;: &quot;0 if ch[0] == 0 else 1&quot;, &quot;name&quot;: &quot;Spindle Status&quot;}]</string>
+                 </property>
                  <widget class="QWidget" name="page_spindle_off">
                   <widget class="QFrame" name="frame_29">
                    <property name="geometry">
                     <rect>
-                     <x>10</x>
-                     <y>35</y>
+                     <x>80</x>
+                     <y>10</y>
                      <width>88</width>
                      <height>38</height>
                     </rect>
@@ -3791,7 +3960,7 @@ QPushButton:checked {
                      </widget>
                     </item>
                     <item>
-                     <widget class="VCPLineEdit" name="tool_number_entry_main_panel_3">
+                     <widget class="VCPLineEdit" name="spindleSpeed">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                         <horstretch>0</horstretch>
@@ -4055,7 +4224,7 @@ QPushButton:checked {
                        <string notr="true">font: 17pt;</string>
                       </property>
                       <property name="text">
-                       <string>0.0</string>
+                       <string>0</string>
                       </property>
                       <property name="maxLength">
                        <number>5</number>
@@ -4067,106 +4236,20 @@ QPushButton:checked {
                        <set>Qt::AlignCenter</set>
                       </property>
                       <property name="rules" stdset="0">
-                       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:settings?speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str( ch[0] )&quot;, &quot;name&quot;: &quot;Default spindle speed&quot;}]</string>
+                       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:settings?speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(int(ch[0]))&quot;, &quot;name&quot;: &quot;Default spindle speed&quot;}]</string>
                       </property>
                      </widget>
                     </item>
                    </layout>
                   </widget>
-                  <widget class="ActionButton" name="spindle_rev_button">
+                  <widget class="MDIButton" name="spindleFwdButton">
                    <property name="geometry">
                     <rect>
                      <x>140</x>
-                     <y>60</y>
-                     <width>100</width>
-                     <height>35</height>
+                     <y>65</y>
+                     <width>96</width>
+                     <height>36</height>
                     </rect>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>100</width>
-                     <height>35</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>100</width>
-                     <height>35</height>
-                    </size>
-                   </property>
-                   <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QPushButton {
-   	font: 17pt &quot;Bebas Kai&quot;;
-}</string>
-                   </property>
-                   <property name="text">
-                    <string>REV</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="../resources.qrc">
-                     <normaloff>:/images/ccw_arrow.png</normaloff>:/images/ccw_arrow.png</iconset>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>18</width>
-                     <height>18</height>
-                    </size>
-                   </property>
-                   <property name="actionName" stdset="0">
-                    <string>spindle.reverse</string>
-                   </property>
-                   <property name="option" stdset="0">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                  <widget class="ActionButton" name="spindle_fwd_button">
-                   <property name="geometry">
-                    <rect>
-                     <x>140</x>
-                     <y>10</y>
-                     <width>100</width>
-                     <height>35</height>
-                    </rect>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>100</width>
-                     <height>35</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>100</width>
-                     <height>35</height>
-                    </size>
-                   </property>
-                   <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
-                   </property>
-                   <property name="layoutDirection">
-                    <enum>Qt::RightToLeft</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QPushButton {
-    text-align: right;
-    padding-right: 22px;
-    font: 17pt &quot;Bebas Kai&quot;;
-}</string>
                    </property>
                    <property name="text">
                     <string>FWD</string>
@@ -4175,17 +4258,28 @@ QPushButton:checked {
                     <iconset resource="../resources.qrc">
                      <normaloff>:/images/cw_arrow.png</normaloff>:/images/cw_arrow.png</iconset>
                    </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>18</width>
-                     <height>18</height>
-                    </size>
+                   <property name="MDICommand" stdset="0">
+                    <string>S#&lt;spindleSpeed&gt;M3</string>
                    </property>
-                   <property name="actionName" stdset="0">
-                    <string>spindle.forward</string>
+                  </widget>
+                  <widget class="MDIButton" name="spindleFwdButton_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>15</x>
+                     <y>65</y>
+                     <width>96</width>
+                     <height>36</height>
+                    </rect>
                    </property>
-                   <property name="option" stdset="0">
-                    <bool>true</bool>
+                   <property name="text">
+                    <string>REV</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../resources.qrc">
+                     <normaloff>:/images/ccw_arrow.png</normaloff>:/images/ccw_arrow.png</iconset>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>S#&lt;spindleSpeed&gt;M4</string>
                    </property>
                   </widget>
                  </widget>
@@ -4196,7 +4290,7 @@ QPushButton:checked {
                      <x>55</x>
                      <y>70</y>
                      <width>130</width>
-                     <height>35</height>
+                     <height>30</height>
                     </rect>
                    </property>
                    <property name="sizePolicy">
@@ -4384,37 +4478,88 @@ QPushButton:checked {
                 <widget class="VCPStackedWidget" name="stackedWidgetTool">
                  <property name="geometry">
                   <rect>
-                   <x>1005</x>
-                   <y>475</y>
+                   <x>1015</x>
+                   <y>485</y>
                    <width>251</width>
-                   <height>151</height>
+                   <height>141</height>
                   </rect>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true"/>
+                  <string notr="true">.VCPStackedWidget {
+    border-style: solid;
+    border-color: rgb(186, 189, 182);
+    border-width: 1px;
+    border-radius: 6px;
+}</string>
                  </property>
                  <property name="frameShape">
                   <enum>QFrame::Box</enum>
                  </property>
                  <property name="currentIndex">
-                  <number>1</number>
+                  <number>0</number>
                  </property>
                  <widget class="QWidget" name="page_11">
-                  <widget class="QWidget" name="layoutWidget_3">
+                  <widget class="QFrame" name="frame_28">
                    <property name="geometry">
                     <rect>
-                     <x>50</x>
-                     <y>50</y>
-                     <width>156</width>
-                     <height>42</height>
+                     <x>90</x>
+                     <y>15</y>
+                     <width>68</width>
+                     <height>38</height>
                     </rect>
                    </property>
-                   <layout class="QHBoxLayout" name="horizontalLayout_97">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>38</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>68</width>
+                     <height>38</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">.QFrame{
+    border-style: solid;
+    border-color: rgb(176, 179,172);
+    border-width: 1px;
+    border-radius: 4px;
+    background-color: rgb(90, 90, 90);
+    padding: -5px;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_106">
                     <property name="spacing">
-                     <number>4</number>
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>1</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
                     </property>
                     <item>
-                     <widget class="QFrame" name="frame_28">
+                     <widget class="QLabel" name="ref_coilumn_header_4">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                         <horstretch>0</horstretch>
@@ -4423,347 +4568,296 @@ QPushButton:checked {
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>0</width>
-                        <height>38</height>
+                        <width>15</width>
+                        <height>36</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>68</width>
-                        <height>38</height>
+                        <width>15</width>
+                        <height>36</height>
                        </size>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">.QFrame{
-    border-style: solid;
-    border-color: rgb(176, 179,172);
-    border-width: 1px;
-    border-radius: 4px;
-    padding: -5px;
-}</string>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_106">
-                       <property name="spacing">
-                        <number>0</number>
-                       </property>
-                       <property name="leftMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="topMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="rightMargin">
-                        <number>1</number>
-                       </property>
-                       <property name="bottomMargin">
-                        <number>0</number>
-                       </property>
-                       <item>
-                        <widget class="QLabel" name="ref_coilumn_header_4">
-                         <property name="sizePolicy">
-                          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                          </sizepolicy>
-                         </property>
-                         <property name="minimumSize">
-                          <size>
-                           <width>15</width>
-                           <height>36</height>
-                          </size>
-                         </property>
-                         <property name="maximumSize">
-                          <size>
-                           <width>15</width>
-                           <height>36</height>
-                          </size>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QLabel{
+                       <string notr="true">QLabel{
     color: rgb(238, 238, 236);
 	font: 17pt &quot;Bebas Kai&quot;;
 }</string>
-                         </property>
-                         <property name="text">
-                          <string>T</string>
-                         </property>
-                         <property name="alignment">
-                          <set>Qt::AlignCenter</set>
-                         </property>
-                         <property name="indent">
-                          <number>0</number>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="VCPLineEdit" name="tool_number_entry_main_panel_2">
-                         <property name="sizePolicy">
-                          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                          </sizepolicy>
-                         </property>
-                         <property name="minimumSize">
-                          <size>
-                           <width>35</width>
-                           <height>30</height>
-                          </size>
-                         </property>
-                         <property name="maximumSize">
-                          <size>
-                           <width>35</width>
-                           <height>30</height>
-                          </size>
-                         </property>
-                         <property name="palette">
-                          <palette>
-                           <active>
-                            <colorrole role="WindowText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Button">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>235</red>
-                               <green>235</green>
-                               <blue>235</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="ButtonText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Base">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>235</red>
-                               <green>235</green>
-                               <blue>235</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Window">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>235</red>
-                               <green>235</green>
-                               <blue>235</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Highlight">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>65</red>
-                               <green>84</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="HighlightedText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>255</red>
-                               <green>255</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </active>
-                           <inactive>
-                            <colorrole role="WindowText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Button">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>235</red>
-                               <green>235</green>
-                               <blue>235</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="ButtonText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Base">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>235</red>
-                               <green>235</green>
-                               <blue>235</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Window">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>235</red>
-                               <green>235</green>
-                               <blue>235</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Highlight">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>65</red>
-                               <green>84</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="HighlightedText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>255</red>
-                               <green>255</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </inactive>
-                           <disabled>
-                            <colorrole role="WindowText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Button">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>235</red>
-                               <green>235</green>
-                               <blue>235</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="ButtonText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Base">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>235</red>
-                               <green>235</green>
-                               <blue>235</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Window">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>235</red>
-                               <green>235</green>
-                               <blue>235</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Highlight">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>65</red>
-                               <green>84</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="HighlightedText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>255</red>
-                               <green>255</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </disabled>
-                          </palette>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>Bebas Kai</family>
-                           <pointsize>17</pointsize>
-                           <weight>50</weight>
-                           <italic>false</italic>
-                           <bold>false</bold>
-                          </font>
-                         </property>
-                         <property name="focusPolicy">
-                          <enum>Qt::ClickFocus</enum>
-                         </property>
-                         <property name="contextMenuPolicy">
-                          <enum>Qt::NoContextMenu</enum>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">VCPLineEdit{
+                      </property>
+                      <property name="text">
+                       <string>T</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="indent">
+                       <number>0</number>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="VCPLineEdit" name="tool_number_entry_main_panel_2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>35</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>35</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="palette">
+                       <palette>
+                        <active>
+                         <colorrole role="WindowText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>0</red>
+                            <green>0</green>
+                            <blue>0</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Button">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>235</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Text">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>0</red>
+                            <green>0</green>
+                            <blue>0</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="ButtonText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>0</red>
+                            <green>0</green>
+                            <blue>0</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Base">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>235</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Window">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>235</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Highlight">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>65</red>
+                            <green>84</green>
+                            <blue>255</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="HighlightedText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>255</red>
+                            <green>255</green>
+                            <blue>255</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                        </active>
+                        <inactive>
+                         <colorrole role="WindowText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>0</red>
+                            <green>0</green>
+                            <blue>0</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Button">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>235</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Text">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>0</red>
+                            <green>0</green>
+                            <blue>0</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="ButtonText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>0</red>
+                            <green>0</green>
+                            <blue>0</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Base">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>235</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Window">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>235</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Highlight">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>65</red>
+                            <green>84</green>
+                            <blue>255</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="HighlightedText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>255</red>
+                            <green>255</green>
+                            <blue>255</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                        </inactive>
+                        <disabled>
+                         <colorrole role="WindowText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>0</red>
+                            <green>0</green>
+                            <blue>0</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Button">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>235</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Text">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>0</red>
+                            <green>0</green>
+                            <blue>0</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="ButtonText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>0</red>
+                            <green>0</green>
+                            <blue>0</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Base">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>235</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Window">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>235</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Highlight">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>65</red>
+                            <green>84</green>
+                            <blue>255</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="HighlightedText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>255</red>
+                            <green>255</green>
+                            <blue>255</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                        </disabled>
+                       </palette>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bebas Kai</family>
+                        <pointsize>17</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                       </font>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::ClickFocus</enum>
+                      </property>
+                      <property name="contextMenuPolicy">
+                       <enum>Qt::NoContextMenu</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">VCPLineEdit{
     border-style: transparant;
     border-color: rgb(235, 235, 235);
     border-width: 1px;
@@ -4772,49 +4866,55 @@ QPushButton:checked {
     background: rgb(235, 235, 235);
     font: 17pt &quot;Bebas Kai&quot;;
 }</string>
-                         </property>
-                         <property name="text">
-                          <string>000</string>
-                         </property>
-                         <property name="maxLength">
-                          <number>3</number>
-                         </property>
-                         <property name="frame">
-                          <bool>true</bool>
-                         </property>
-                         <property name="alignment">
-                          <set>Qt::AlignCenter</set>
-                         </property>
-                         <property name="rules" stdset="0">
-                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;tooltable:current_tool?tool_number&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;update tool num&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_state?text&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:interp_state?text&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0] == 'On' and ch[1] == 'Idle'&quot;, &quot;name&quot;: &quot;enable/disable&quot;}]</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
+                      </property>
+                      <property name="text">
+                       <string>000</string>
+                      </property>
+                      <property name="maxLength">
+                       <number>3</number>
+                      </property>
+                      <property name="frame">
+                       <bool>true</bool>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="rules" stdset="0">
+                       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;tooltable:current_tool?tool_number&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;update tool num&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_state?text&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:interp_state?text&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0] == 'On' and ch[1] == 'Idle'&quot;, &quot;name&quot;: &quot;enable/disable&quot;}]</string>
+                      </property>
                      </widget>
                     </item>
-                    <item>
-                     <widget class="SubCallButton" name="m6_tool_call_button_main_panel_2">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>70</width>
-                        <height>40</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>40</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
+                   </layout>
+                  </widget>
+                  <widget class="SubCallButton" name="m6_tool_call_button_main_panel_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>90</x>
+                     <y>90</y>
+                     <width>70</width>
+                     <height>40</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>70</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
     color: white;    
     border-color: black;
     border-style: solid;
@@ -4849,23 +4949,20 @@ QPushButton:checked {
     background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
 }
 </string>
-                      </property>
-                      <property name="text">
-                       <string>M6 G43</string>
-                      </property>
-                      <property name="filename" stdset="0">
-                       <string>m6_tool_call_main_panel.ngc</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
+                   </property>
+                   <property name="text">
+                    <string>M6 G43</string>
+                   </property>
+                   <property name="filename" stdset="0">
+                    <string>m6_tool_call_main_panel.ngc</string>
+                   </property>
                   </widget>
                  </widget>
                  <widget class="QWidget" name="page_12">
                   <widget class="StatusLabel" name="statuslabel_zOffset">
                    <property name="geometry">
                     <rect>
-                     <x>80</x>
+                     <x>65</x>
                      <y>45</y>
                      <width>70</width>
                      <height>25</height>
@@ -4916,7 +5013,7 @@ QPushButton:checked {
                   <widget class="StatusLabel" name="statuslabel_8">
                    <property name="geometry">
                     <rect>
-                     <x>150</x>
+                     <x>135</x>
                      <y>45</y>
                      <width>29</width>
                      <height>26</height>
@@ -4944,7 +5041,7 @@ QPushButton:checked {
                   <widget class="StatusLabel" name="statuslabel_10">
                    <property name="geometry">
                     <rect>
-                     <x>150</x>
+                     <x>135</x>
                      <y>75</y>
                      <width>29</width>
                      <height>26</height>
@@ -4972,7 +5069,7 @@ QPushButton:checked {
                   <widget class="StatusLabel" name="statuslabel_zOffset_2">
                    <property name="geometry">
                     <rect>
-                     <x>80</x>
+                     <x>65</x>
                      <y>75</y>
                      <width>70</width>
                      <height>25</height>
@@ -5008,13 +5105,13 @@ QPushButton:checked {
 }</string>
                    </property>
                    <property name="text">
-                    <string>0.000</string>
+                    <string>0.00</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;tooltable:current_tool?z_offset&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:linear_units?text&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0]) if ch[1] == 'in' else \&quot;{:.3f}\&quot;.format(ch[0])&quot;, &quot;name&quot;: &quot;Diameter&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;tooltable:current_tool?z_offset&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:linear_units?text&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.3f}\&quot;.format(ch[0]) if ch[1] == 'in' else \&quot;{:.2f}\&quot;.format(ch[0])&quot;, &quot;name&quot;: &quot;Diameter&quot;}]</string>
                    </property>
                    <property name="format" stdset="0">
                     <string>{:.0f}</string>
@@ -5111,6 +5208,442 @@ QPushButton:checked {
                    </property>
                   </widget>
                  </widget>
+                 <widget class="QWidget" name="page_2">
+                  <widget class="StatusLabel" name="statuslabel_13">
+                   <property name="geometry">
+                    <rect>
+                     <x>135</x>
+                     <y>45</y>
+                     <width>29</width>
+                     <height>26</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel{
+    color: rgb(85, 87, 83)
+	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:linear_units?text&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0].lower()&quot;, &quot;name&quot;: &quot;Units&quot;}]</string>
+                   </property>
+                  </widget>
+                  <widget class="StatusLabel" name="statuslabel_14">
+                   <property name="geometry">
+                    <rect>
+                     <x>135</x>
+                     <y>75</y>
+                     <width>29</width>
+                     <height>26</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel{
+    color: rgb(85, 87, 83)
+	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:linear_units?text&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0].lower()&quot;, &quot;name&quot;: &quot;Units&quot;}]</string>
+                   </property>
+                  </widget>
+                  <widget class="StatusLabel" name="statuslabel_28">
+                   <property name="geometry">
+                    <rect>
+                     <x>5</x>
+                     <y>50</y>
+                     <width>70</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>70</width>
+                     <height>17</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>70</width>
+                     <height>17</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 14pt &quot;Bebas Kai&quot;;
+    padding-left: 1px;
+    padding-right: 20px;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Offset</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[]</string>
+                   </property>
+                  </widget>
+                  <widget class="StatusLabel" name="statuslabel_zOffset_6">
+                   <property name="geometry">
+                    <rect>
+                     <x>65</x>
+                     <y>45</y>
+                     <width>70</width>
+                     <height>25</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>70</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>70</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 5px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>0.000</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;tooltable:current_tool?z_offset&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:linear_units?text&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0]) if ch[1] == 'in' else \&quot;{:.3f}\&quot;.format(ch[0])&quot;, &quot;name&quot;: &quot;Z Offset&quot;}]</string>
+                   </property>
+                   <property name="format" stdset="0">
+                    <string>{:.0f}</string>
+                   </property>
+                  </widget>
+                  <widget class="StatusLabel" name="statuslabel_zOffset_7">
+                   <property name="geometry">
+                    <rect>
+                     <x>65</x>
+                     <y>75</y>
+                     <width>70</width>
+                     <height>25</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>70</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>70</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 5px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>0.00</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;tooltable:current_tool?z_offset&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:linear_units?text&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.3f}\&quot;.format(ch[0]) if ch[1] == 'in' else \&quot;{:.2f}\&quot;.format(ch[0])&quot;, &quot;name&quot;: &quot;Diameter&quot;}]</string>
+                   </property>
+                   <property name="format" stdset="0">
+                    <string>{:.0f}</string>
+                   </property>
+                  </widget>
+                  <widget class="StatusLabel" name="statuslabel_29">
+                   <property name="geometry">
+                    <rect>
+                     <x>5</x>
+                     <y>80</y>
+                     <width>60</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>60</width>
+                     <height>17</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>60</width>
+                     <height>17</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 14pt &quot;Bebas Kai&quot;;
+    padding-left: 1px;
+    padding-right: 20px;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Diam</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[]</string>
+                   </property>
+                  </widget>
+                  <widget class="QFrame" name="frame_31">
+                   <property name="geometry">
+                    <rect>
+                     <x>70</x>
+                     <y>5</y>
+                     <width>68</width>
+                     <height>38</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>38</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>68</width>
+                     <height>38</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">.QFrame{
+    border-style: solid;
+    border-color: rgb(176, 179,172);
+    border-width: 1px;
+    border-radius: 2px;
+	padding: -5px;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_109">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>1</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="ref_coilumn_header_7">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>15</width>
+                        <height>36</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>15</width>
+                        <height>36</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>T</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="indent">
+                       <number>0</number>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="StatusLabel" name="statuslabel_zOffset_5">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>25</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>40</width>
+                        <height>25</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 5px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="rules" stdset="0">
+                       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;tooltable:current_tool?tool_number&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;Current Tool&quot;}]</string>
+                      </property>
+                      <property name="format" stdset="0">
+                       <string>{:.0f}</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="StatusLabel" name="statuslabel_30">
+                   <property name="geometry">
+                    <rect>
+                     <x>5</x>
+                     <y>15</y>
+                     <width>60</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>60</width>
+                     <height>17</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>60</width>
+                     <height>17</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 14pt &quot;Bebas Kai&quot;;
+    padding-left: 1px;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Current</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[]</string>
+                   </property>
+                  </widget>
+                 </widget>
                 </widget>
                 <widget class="VTKBackPlot" name="vtkbackplot">
                  <property name="enabled">
@@ -5119,7 +5652,7 @@ QPushButton:checked {
                  <property name="geometry">
                   <rect>
                    <x>570</x>
-                   <y>0</y>
+                   <y>5</y>
                    <width>694</width>
                    <height>428</height>
                   </rect>
@@ -5151,13 +5684,406 @@ QPushButton:checked {
 }</string>
                  </property>
                 </widget>
+                <widget class="QPushButton" name="iso_view_button">
+                 <property name="geometry">
+                  <rect>
+                   <x>580</x>
+                   <y>10</y>
+                   <width>60</width>
+                   <height>30</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font-size: 12pt</string>
+                 </property>
+                 <property name="text">
+                  <string>ISO VIEW</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="x_view_button">
+                 <property name="geometry">
+                  <rect>
+                   <x>580</x>
+                   <y>45</y>
+                   <width>60</width>
+                   <height>30</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font-size: 12pt</string>
+                 </property>
+                 <property name="text">
+                  <string>X View</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="y_view_button">
+                 <property name="geometry">
+                  <rect>
+                   <x>580</x>
+                   <y>80</y>
+                   <width>60</width>
+                   <height>30</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font-size: 12pt</string>
+                 </property>
+                 <property name="text">
+                  <string>Y View</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="z_view_button">
+                 <property name="geometry">
+                  <rect>
+                   <x>580</x>
+                   <y>115</y>
+                   <width>60</width>
+                   <height>30</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font-size: 12pt</string>
+                 </property>
+                 <property name="text">
+                  <string>Z View</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="pan_button">
+                 <property name="geometry">
+                  <rect>
+                   <x>580</x>
+                   <y>165</y>
+                   <width>60</width>
+                   <height>30</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+	font-size: 12pt;
+    color: white;
+    border-color: rgb(74, 77, 81);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255));
+}
+
+QPushButton:disabled {
+    border-color: gray;
+}
+
+/*QPushButton[error=&quot;true&quot;] {
+    border-color: red;
+}*/
+
+QPushButton:hover {
+    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
+}
+
+QPushButton:pressed {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}
+
+QPushButton:checked[option=&quot;true&quot;] {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}
+
+QPushButton:checked {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>PAN</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="zoom_out_button">
+                 <property name="geometry">
+                  <rect>
+                   <x>580</x>
+                   <y>240</y>
+                   <width>60</width>
+                   <height>30</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font-size: 12pt</string>
+                 </property>
+                 <property name="text">
+                  <string>ZOOM -</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="zoom_in_button">
+                 <property name="geometry">
+                  <rect>
+                   <x>580</x>
+                   <y>210</y>
+                   <width>60</width>
+                   <height>30</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font-size: 12pt</string>
+                 </property>
+                 <property name="text">
+                  <string>ZOOM +</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="path_button">
+                 <property name="geometry">
+                  <rect>
+                   <x>580</x>
+                   <y>300</y>
+                   <width>60</width>
+                   <height>30</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font-size: 12pt</string>
+                 </property>
+                 <property name="text">
+                  <string>Path</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="clear_button">
+                 <property name="geometry">
+                  <rect>
+                   <x>580</x>
+                   <y>330</y>
+                   <width>60</width>
+                   <height>30</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font-size: 12pt</string>
+                 </property>
+                 <property name="text">
+                  <string>Clear</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                </widget>
                </widget>
                <widget class="QWidget" name="page_selectProgram">
                 <widget class="QFrame" name="frame_35">
                  <property name="geometry">
                   <rect>
                    <x>0</x>
-                   <y>0</y>
+                   <y>5</y>
                    <width>350</width>
                    <height>491</height>
                   </rect>
@@ -5561,7 +6487,7 @@ QHeaderView {
                  <property name="geometry">
                   <rect>
                    <x>770</x>
-                   <y>0</y>
+                   <y>5</y>
                    <width>491</width>
                    <height>491</height>
                   </rect>
@@ -5840,7 +6766,7 @@ QHeaderView {
                  <property name="geometry">
                   <rect>
                    <x>410</x>
-                   <y>0</y>
+                   <y>5</y>
                    <width>350</width>
                    <height>491</height>
                   </rect>
@@ -6354,43 +7280,129 @@ LEFT</string>
              <string notr="true"/>
             </property>
             <property name="frameShape">
-             <enum>QFrame::Box</enum>
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
             </property>
             <layout class="QGridLayout" name="gridLayout_2">
              <property name="leftMargin">
-              <number>2</number>
+              <number>0</number>
              </property>
              <property name="topMargin">
-              <number>2</number>
+              <number>0</number>
              </property>
              <property name="rightMargin">
-              <number>3</number>
+              <number>0</number>
              </property>
              <property name="bottomMargin">
-              <number>2</number>
+              <number>0</number>
+             </property>
+             <property name="spacing">
+              <number>0</number>
              </property>
              <item row="1" column="0">
-              <widget class="ActionButton" name="btnManual">
-               <property name="text">
-                <string>Manual</string>
-               </property>
-               <property name="actionName" stdset="0">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="0">
-              <widget class="ActionButton" name="btnProgram">
-               <property name="text">
-                <string>Program</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="0">
-              <widget class="ActionButton" name="btnMdi">
-               <property name="text">
-                <string>MDI</string>
-               </property>
+              <widget class="QWidget" name="rightButtonsContainer" native="true">
+               <widget class="ActionButton" name="btnManual">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>220</y>
+                  <width>80</width>
+                  <height>30</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Manual</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string/>
+                </property>
+               </widget>
+               <widget class="ActionButton" name="btnMdi">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>260</y>
+                  <width>80</width>
+                  <height>30</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>MDI</string>
+                </property>
+               </widget>
+               <widget class="ActionButton" name="btnProgram">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>300</y>
+                  <width>80</width>
+                  <height>30</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Program</string>
+                </property>
+               </widget>
+               <widget class="ActionButton" name="actionbutton">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>5</y>
+                  <width>80</width>
+                  <height>60</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>E Stop</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.estop.toggle</string>
+                </property>
+               </widget>
+               <widget class="ActionButton" name="actionbutton_2">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>70</y>
+                  <width>80</width>
+                  <height>60</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Power
+ON</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.power.toggle</string>
+                </property>
+               </widget>
+               <widget class="ActionButton" name="actionbutton_4">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>135</y>
+                  <width>80</width>
+                  <height>60</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Home All</string>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Referenced' if ch[0] else 'Reference All'&quot;, &quot;name&quot;: &quot;Button text&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color:rgb(138, 226, 52)' if ch[0]else ''&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.home.all</string>
+                </property>
+               </widget>
               </widget>
              </item>
             </layout>
@@ -6725,6 +7737,118 @@ LEFT</string>
     <hint type="destinationlabel">
      <x>585</x>
      <y>247</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>iso_view_button</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewP()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>609</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>916</x>
+     <y>218</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>z_view_button</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewZ()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>609</x>
+     <y>129</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>916</x>
+     <y>218</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>x_view_button</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewX()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>609</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>916</x>
+     <y>218</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>x_view_button</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewY()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>609</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>916</x>
+     <y>218</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pan_button</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>enable_panning(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>609</x>
+     <y>179</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>916</x>
+     <y>218</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoom_in_button</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>zoomIn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>609</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>916</x>
+     <y>218</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoom_out_button</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>zoomOut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>609</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>916</x>
+     <y>218</y>
     </hint>
    </hints>
   </connection>
