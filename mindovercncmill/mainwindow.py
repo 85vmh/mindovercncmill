@@ -28,11 +28,13 @@ class MyMainWindow(VCPMainWindow):
         self.stackedWidgetMain.setCurrentIndex(stackedWidgetMain_homed_index)
         self.stackedWidgetLeftTop.setCurrentIndex(0)
         self.stackedWidgetLeftBottom.setCurrentIndex(0)
+        self.stackedWidgetSliders.setCurrentIndex(0)
 
     def setMdiScreen(self):
         self.stackedWidgetMain.setCurrentIndex(stackedWidgetMain_homed_index)
         self.stackedWidgetLeftTop.setCurrentIndex(1)
         self.stackedWidgetLeftBottom.setCurrentIndex(1)
+        self.stackedWidgetSliders.setCurrentIndex(1)
 
     def setProgramScreen(self):
         self.stackedWidgetMain.setCurrentIndex(stackedWidgetMain_homed_filemanager)
@@ -42,6 +44,7 @@ class MyMainWindow(VCPMainWindow):
         self.stackedWidgetMain.setCurrentIndex(stackedWidgetMain_homed_index)    
         self.stackedWidgetLeftTop.setCurrentIndex(2)
         self.stackedWidgetLeftBottom.setCurrentIndex(2)
+        self.stackedWidgetSliders.setCurrentIndex(1)
 
     def changeProgram(self):
         #self.filesystemtable_left.loadSelected
