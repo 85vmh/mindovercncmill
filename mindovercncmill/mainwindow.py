@@ -17,12 +17,13 @@ class MyMainWindow(VCPMainWindow):
     """Main window class for the VCP."""
     def __init__(self, *args, **kwargs):
         super(MyMainWindow, self).__init__(*args, **kwargs)
-        self.btnManual.clicked.connect(self.setManualScreen)
-        self.btnMdi.clicked.connect(self.setMdiScreen)
+        #self.btnManual.clicked.connect(self.setManualScreen)
+        #self.btnMdi.clicked.connect(self.setMdiScreen)
         self.btnProgram.clicked.connect(self.setProgramScreen)
         self.btnLoadGCode.clicked.connect(self.loadGCode)
         self.change_program_button.clicked.connect(self.changeProgram)
         self.buttonGroupMdi.buttonClicked.connect(self.mdiHandleKeys)
+        self.btnChangeTool.clicked.connect(self.changeCurrentTool)
 
     def mdiHandleKeys(self, button):
         char = str(button.text())
@@ -53,12 +54,15 @@ class MyMainWindow(VCPMainWindow):
         #self.filesystemtable_left.loadSelected
         self.stackedWidgetMain.setCurrentIndex(stackedWidgetMain_homed_index)    
         self.stackedWidgetLeftTop.setCurrentIndex(2)
-        self.stackedWidgetLeftBottom.setCurrentIndex(2)
-        self.stackedWidgetSliders.setCurrentIndex(1)
+        #self.stackedWidgetLeftBottom.setCurrentIndex(2)
+        #self.stackedWidgetSliders.setCurrentIndex(1)
 
     def changeProgram(self):
         #self.filesystemtable_left.loadSelected
         self.stackedWidgetMain.setCurrentIndex(stackedWidgetMain_homed_filemanager)  
+
+    def changeCurrentTool(self):
+        self.stackedWidgetTool.setCurrentIndex(0)
 
 
 	
