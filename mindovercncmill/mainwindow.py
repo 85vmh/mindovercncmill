@@ -22,6 +22,16 @@ class MyMainWindow(VCPMainWindow):
         self.btnProgram.clicked.connect(self.setProgramScreen)
         self.btnLoadGCode.clicked.connect(self.loadGCode)
         self.change_program_button.clicked.connect(self.changeProgram)
+        self.buttonGroupMdi.buttonClicked.connect(self.mdiHandleKeys)
+
+    def mdiHandleKeys(self, button):
+        char = str(button.text())
+        text = self.mdiEntry.text() or '0'
+        if text != '0':
+            text += char
+        else:
+            text = char
+        self.mdiEntry.setText(text)
 
     # add any custom methods here
     def setManualScreen(self):
