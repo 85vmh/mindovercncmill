@@ -131,39 +131,1075 @@
                <property name="rules" stdset="0">
                 <string>[]</string>
                </property>
-               <widget class="QWidget" name="page_notHomed">
-                <widget class="QLabel" name="label">
+               <widget class="QWidget" name="page_toolsScreen">
+                <widget class="QFrame" name="frame_13">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
                  <property name="geometry">
                   <rect>
-                   <x>375</x>
-                   <y>120</y>
-                   <width>321</width>
-                   <height>106</height>
+                   <x>440</x>
+                   <y>0</y>
+                   <width>821</width>
+                   <height>741</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">.QFrame{
+    background-color: rgb(51, 57, 59);
+}</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_20">
+                  <property name="leftMargin">
+                   <number>2</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>2</number>
+                  </property>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_38">
+                    <property name="leftMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>5</number>
+                    </property>
+                    <item>
+                     <widget class="ToolTable" name="tableWidget_2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="palette">
+                       <palette>
+                        <active>
+                         <colorrole role="WindowText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Button">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Text">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="ButtonText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Base">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Window">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="AlternateBase">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>90</red>
+                            <green>90</green>
+                            <blue>90</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                        </active>
+                        <inactive>
+                         <colorrole role="WindowText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Button">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Text">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="ButtonText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Base">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Window">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="AlternateBase">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>90</red>
+                            <green>90</green>
+                            <blue>90</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                        </inactive>
+                        <disabled>
+                         <colorrole role="WindowText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Button">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Text">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="ButtonText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Base">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Window">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="AlternateBase">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>90</red>
+                            <green>90</green>
+                            <blue>90</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                        </disabled>
+                       </palette>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bebas Kai</family>
+                        <pointsize>15</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                       </font>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">TootTable,
+QHeaderView {
+    font: 14pt &quot;Bebas Kai&quot;;
+	background-color: rgb(220, 220, 220);
+	color: black;
+    border: none;
+}
+
+ToolTable {
+   	border-top: 8px rgb(120, 120, 120);
+	border-left: 4px  rgb(120, 120, 120);
+	border-bottom: 5px rgb(120, 120, 120);
+	border-right: 4px rgb(120, 120, 120);
+	border-radius: 5px;
+	border-color: rgb(120, 120, 120);
+	border-style: solid;
+	background-color: rgb(120, 120, 120);
+    gridline-color: rgb(203, 203, 203);
+	alternate-background-color: rgb(90, 90, 90);
+}</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Sunken</enum>
+                      </property>
+                      <property name="lineWidth">
+                       <number>3</number>
+                      </property>
+                      <property name="midLineWidth">
+                       <number>3</number>
+                      </property>
+                      <property name="editTriggers">
+                       <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
+                      </property>
+                      <property name="showDropIndicator" stdset="0">
+                       <bool>true</bool>
+                      </property>
+                      <property name="alternatingRowColors">
+                       <bool>true</bool>
+                      </property>
+                      <property name="showGrid">
+                       <bool>true</bool>
+                      </property>
+                      <property name="gridStyle">
+                       <enum>Qt::SolidLine</enum>
+                      </property>
+                      <property name="sortingEnabled">
+                       <bool>true</bool>
+                      </property>
+                      <property name="displayColumns" stdset="0">
+                       <string>TPZDR</string>
+                      </property>
+                      <property name="currentToolColor" stdset="0">
+                       <color>
+                        <red>42</red>
+                        <green>56</green>
+                        <blue>255</blue>
+                       </color>
+                      </property>
+                      <attribute name="horizontalHeaderDefaultSectionSize">
+                       <number>90</number>
+                      </attribute>
+                      <attribute name="horizontalHeaderHighlightSections">
+                       <bool>false</bool>
+                      </attribute>
+                      <attribute name="horizontalHeaderMinimumSectionSize">
+                       <number>90</number>
+                      </attribute>
+                      <attribute name="horizontalHeaderStretchLastSection">
+                       <bool>true</bool>
+                      </attribute>
+                      <attribute name="verticalHeaderVisible">
+                       <bool>false</bool>
+                      </attribute>
+                      <attribute name="verticalHeaderCascadingSectionResizes">
+                       <bool>true</bool>
+                      </attribute>
+                      <attribute name="verticalHeaderDefaultSectionSize">
+                       <number>30</number>
+                      </attribute>
+                      <attribute name="verticalHeaderHighlightSections">
+                       <bool>false</bool>
+                      </attribute>
+                      <attribute name="verticalHeaderMinimumSectionSize">
+                       <number>30</number>
+                      </attribute>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_37">
+                    <item>
+                     <widget class="QPushButton" name="tool_table_delete_button">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+   	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>DELETE</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="tool_table_add_tool_button">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+   	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>ADD TOOL</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="tool_table_import_tool_button">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+   	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>IMPORT TOOL</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="tool_table_export_tool_button">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+   	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>EXPORT TOOL</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="tool_table_save_button">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+   	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>SAVE TABLE</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="tool_table_reload_button">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>140</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>140</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+   	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>RELOAD TABLE</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QFrame" name="frame_11">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>200</y>
+                   <width>145</width>
+                   <height>60</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>58</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">.QFrame{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 6px;
+    color: rgb(238, 238, 236);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(81, 86, 85), stop:0.489795 rgb(99, 102, 102), stop:0.699799 rgb(85, 88, 94), stop:0.90444 rgb(77, 84, 86), stop:0.160246 rgb(83, 84, 91), stop:1 rgb(109, 115, 118));
+}</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_100">
+                  <property name="leftMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>5</number>
+                  </property>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_19">
+                    <property name="spacing">
+                     <number>3</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_50">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>48</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>48</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLabel{
+font: 75 13pt &quot;Bebas Kai&quot;;
+color: rgb(255, 255, 255);
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>TOOL LENGTH</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="StatusLabel" name="tool_length_6">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                        <horstretch>1</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>70</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLabel {
+    border-style: transparent;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px;
+    border-radius: 5px;
+    color: black;
+    background: white;
+	font: 75 14pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>0.0000</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="rules" stdset="0">
+                       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;tooltable:current_tool?z_offset&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:linear_units?text&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0]) if ch[1] == 'in' else \&quot;{:.4f}\&quot;.format(ch[0])&quot;, &quot;name&quot;: &quot;Tool Length&quot;}]</string>
+                      </property>
+                      <property name="format" stdset="0">
+                       <string>{:.3f}</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="label_43">
+                 <property name="geometry">
+                  <rect>
+                   <x>55</x>
+                   <y>-3</y>
+                   <width>250</width>
+                   <height>403</height>
                   </rect>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">font: 75 35pt &quot;MathJax_SansSerif&quot;;</string>
+                  <string notr="true">image: url(:/images/atc_spindle_tool_dimensioned.png);</string>
                  </property>
                  <property name="text">
-                  <string>Mind Over CNC</string>
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap resource="../resources.qrc">:/images/atc_spindle_tool_dimensioned.png</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
                  </property>
                 </widget>
-                <widget class="QLabel" name="label_2">
+                <widget class="QFrame" name="frame_12">
                  <property name="geometry">
                   <rect>
-                   <x>495</x>
-                   <y>220</y>
-                   <width>91</width>
-                   <height>66</height>
+                   <x>11</x>
+                   <y>365</y>
+                   <width>161</width>
+                   <height>60</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">.QFrame{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 6px;
+    color: rgb(238, 238, 236);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(81, 86, 85), stop:0.489795 rgb(99, 102, 102), stop:0.699799 rgb(85, 88, 94), stop:0.90444 rgb(77, 84, 86), stop:0.160246 rgb(83, 84, 91), stop:1 rgb(109, 115, 118));
+}</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_101">
+                  <property name="leftMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>5</number>
+                  </property>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_20">
+                    <property name="spacing">
+                     <number>3</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_51">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>64</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>35</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLabel{
+font: 75 13pt &quot;Bebas Kai&quot;;
+color: rgb(255, 255, 255);
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>DIAMETER</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="StatusLabel" name="tool_diameter_3">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                        <horstretch>1</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>70</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLabel {
+    border-style: transparent;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px;
+    border-radius: 5px;
+    color: black;
+    background: white;
+	font: 75 14pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>0.00</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="rules" stdset="0">
+                       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;tooltable:current_tool?diameter&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:linear_units?text&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0]) if ch[1] == 'in' else \&quot;{:.2f}\&quot;.format(ch[0])&quot;, &quot;name&quot;: &quot;Tool Diameter&quot;}]</string>
+                      </property>
+                      <property name="format" stdset="0">
+                       <string>{:.3f}</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="label_38">
+                 <property name="geometry">
+                  <rect>
+                   <x>200</x>
+                   <y>540</y>
+                   <width>240</width>
+                   <height>200</height>
                   </rect>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">font: italic 30pt &quot;DejaVu Sans&quot;;</string>
+                  <string notr="true">image: url(:/images/tool_probe.png);</string>
                  </property>
                  <property name="text">
-                  <string>Mill</string>
+                  <string/>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
                  </property>
                 </widget>
+                <widget class="StatusLabel" name="tool_length_7">
+                 <property name="geometry">
+                  <rect>
+                   <x>190</x>
+                   <y>145</y>
+                   <width>50</width>
+                   <height>33</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>1</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>33</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>33</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    border-style: transparent;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px;
+    border-radius: 5px;
+    color: black;
+    background: white;
+	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>T0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_in_spindle?text&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'T' + ch[0]&quot;, &quot;name&quot;: &quot;current tool&quot;}]</string>
+                 </property>
+                 <property name="format" stdset="0">
+                  <string>{:.3f}</string>
+                 </property>
+                </widget>
+                <widget class="SubCallButton" name="tool_touch_off_button">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>635</y>
+                   <width>201</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>145</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    color: white;    
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255));
+}
+
+QPushButton {
+    font-family: &quot;Bebas Kai&quot;;
+    font-size: 16pt;
+}
+
+QPushButton:disabled {
+    border-color: gray;
+}
+
+QPushButton:hover {
+    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
+}
+
+QPushButton:pressed {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}
+
+QPushButton:checked[option=&quot;true&quot;] {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}
+
+QPushButton:checked {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}
+</string>
+                 </property>
+                 <property name="text">
+                  <string>TOUCH OFF CURRENT TOOL</string>
+                 </property>
+                 <property name="filename" stdset="0">
+                  <string>tool_touch_off.ngc</string>
+                 </property>
+                </widget>
+                <widget class="HalLedIndicator" name="halledindicator">
+                 <property name="geometry">
+                  <rect>
+                   <x>295</x>
+                   <y>605</y>
+                   <width>20</width>
+                   <height>20</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="diameter">
+                  <number>20</number>
+                 </property>
+                 <property name="color">
+                  <color>
+                   <red>78</red>
+                   <green>154</green>
+                   <blue>6</blue>
+                  </color>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_52">
+                 <property name="geometry">
+                  <rect>
+                   <x>275</x>
+                   <y>580</y>
+                   <width>64</width>
+                   <height>25</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>64</width>
+                   <height>25</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>35</width>
+                   <height>25</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel{
+font: 75 13pt &quot;Bebas Kai&quot;;
+color: rgb(255, 255, 255);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Touched</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <zorder>frame_13</zorder>
+                <zorder>label_43</zorder>
+                <zorder>frame_12</zorder>
+                <zorder>label_38</zorder>
+                <zorder>tool_length_7</zorder>
+                <zorder>frame_11</zorder>
+                <zorder>tool_touch_off_button</zorder>
+                <zorder>halledindicator</zorder>
+                <zorder>label_52</zorder>
                </widget>
                <widget class="QWidget" name="page_mainScreen">
                 <widget class="VCPStackedWidget" name="stackedWidgetLeftTop">
@@ -1878,8 +2914,8 @@ QComboBox QAbstractItemView{
                   <widget class="ActionButton" name="actionbutton_6">
                    <property name="geometry">
                     <rect>
-                     <x>145</x>
-                     <y>85</y>
+                     <x>65</x>
+                     <y>175</y>
                      <width>130</width>
                      <height>42</height>
                     </rect>
@@ -2055,6 +3091,48 @@ QComboBox QAbstractItemView{
                     <string>coolant.flood.toggle</string>
                    </property>
                   </widget>
+                  <widget class="ActionButton" name="actionbutton_18">
+                   <property name="geometry">
+                    <rect>
+                     <x>145</x>
+                     <y>85</y>
+                     <width>130</width>
+                     <height>42</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>130</width>
+                     <height>42</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>130</width>
+                     <height>42</height>
+                    </size>
+                   </property>
+                   <property name="focusPolicy">
+                    <enum>Qt::NoFocus</enum>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Resume</string>
+                   </property>
+                   <property name="actionName" stdset="0">
+                    <string>program.resume</string>
+                   </property>
+                  </widget>
                  </widget>
                  <widget class="QWidget" name="page">
                   <widget class="ActionButton" name="actionbutton_3">
@@ -2149,8 +3227,8 @@ QComboBox QAbstractItemView{
                   <widget class="ActionButton" name="actionbutton_7">
                    <property name="geometry">
                     <rect>
-                     <x>145</x>
-                     <y>80</y>
+                     <x>65</x>
+                     <y>245</y>
                      <width>130</width>
                      <height>42</height>
                     </rect>
@@ -2237,7 +3315,7 @@ QComboBox QAbstractItemView{
                    <property name="geometry">
                     <rect>
                      <x>10</x>
-                     <y>80</y>
+                     <y>75</y>
                      <width>130</width>
                      <height>42</height>
                     </rect>
@@ -2269,7 +3347,7 @@ QComboBox QAbstractItemView{
 }</string>
                    </property>
                    <property name="text">
-                    <string>FEED HOLD</string>
+                    <string>Pause</string>
                    </property>
                    <property name="checkable">
                     <bool>true</bool>
@@ -2285,7 +3363,7 @@ QComboBox QAbstractItemView{
                    <property name="geometry">
                     <rect>
                      <x>10</x>
-                     <y>140</y>
+                     <y>135</y>
                      <width>130</width>
                      <height>42</height>
                     </rect>
@@ -2329,107 +3407,11 @@ QComboBox QAbstractItemView{
                     <string>program.step</string>
                    </property>
                   </widget>
-                  <widget class="ActionButton" name="actionbutton_17">
-                   <property name="geometry">
-                    <rect>
-                     <x>40</x>
-                     <y>195</y>
-                     <width>200</width>
-                     <height>42</height>
-                    </rect>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>200</width>
-                     <height>42</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>130</width>
-                     <height>42</height>
-                    </size>
-                   </property>
-                   <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QPushButton {
-   	font: 15pt &quot;Bebas Kai&quot;;
-}</string>
-                   </property>
-                   <property name="text">
-                    <string>Stop and remember Line</string>
-                   </property>
-                   <property name="checkable">
-                    <bool>true</bool>
-                   </property>
-                   <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:interp_state?text&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Checked&quot;, &quot;expression&quot;: &quot;ch[0] == 'Paused'&quot;, &quot;name&quot;: &quot;check when paused&quot;}]</string>
-                   </property>
-                   <property name="actionName" stdset="0">
-                    <string>program.pause</string>
-                   </property>
-                  </widget>
-                  <widget class="ActionButton" name="actionbutton_18">
-                   <property name="geometry">
-                    <rect>
-                     <x>40</x>
-                     <y>245</y>
-                     <width>200</width>
-                     <height>42</height>
-                    </rect>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>200</width>
-                     <height>42</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>130</width>
-                     <height>42</height>
-                    </size>
-                   </property>
-                   <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QPushButton {
-   	font: 15pt &quot;Bebas Kai&quot;;
-}</string>
-                   </property>
-                   <property name="text">
-                    <string>Pause and Inspect</string>
-                   </property>
-                   <property name="checkable">
-                    <bool>true</bool>
-                   </property>
-                   <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:interp_state?text&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Checked&quot;, &quot;expression&quot;: &quot;ch[0] == 'Paused'&quot;, &quot;name&quot;: &quot;check when paused&quot;}]</string>
-                   </property>
-                   <property name="actionName" stdset="0">
-                    <string>program.pause</string>
-                   </property>
-                  </widget>
                   <widget class="ActionButton" name="actionbutton_19">
                    <property name="geometry">
                     <rect>
                      <x>145</x>
-                     <y>140</y>
+                     <y>135</y>
                      <width>130</width>
                      <height>42</height>
                     </rect>
@@ -2467,12 +3449,99 @@ QComboBox QAbstractItemView{
                     <string>program.run-from-line</string>
                    </property>
                   </widget>
+                  <widget class="ActionButton" name="actionbutton_17">
+                   <property name="geometry">
+                    <rect>
+                     <x>145</x>
+                     <y>75</y>
+                     <width>130</width>
+                     <height>42</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>130</width>
+                     <height>42</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>130</width>
+                     <height>42</height>
+                    </size>
+                   </property>
+                   <property name="focusPolicy">
+                    <enum>Qt::NoFocus</enum>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Resume</string>
+                   </property>
+                   <property name="actionName" stdset="0">
+                    <string>program.resume</string>
+                   </property>
+                  </widget>
+                  <widget class="ActionButton" name="actionbutton_5">
+                   <property name="geometry">
+                    <rect>
+                     <x>65</x>
+                     <y>195</y>
+                     <width>130</width>
+                     <height>42</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>130</width>
+                     <height>42</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>130</width>
+                     <height>42</height>
+                    </size>
+                   </property>
+                   <property name="focusPolicy">
+                    <enum>Qt::NoFocus</enum>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>M01 BREAK</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="actionName" stdset="0">
+                    <string>program.optional-stop.toggle</string>
+                   </property>
+                  </widget>
                  </widget>
                 </widget>
                 <widget class="QFrame" name="frame_dro_zone">
                  <property name="geometry">
                   <rect>
-                   <x>570</x>
+                   <x>575</x>
                    <y>440</y>
                    <width>436</width>
                    <height>301</height>
@@ -2922,7 +3991,7 @@ QComboBox QAbstractItemView{
 }</string>
                       </property>
                       <property name="text">
-                       <string>-0000.000</string>
+                       <string>     0.000</string>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2979,7 +4048,7 @@ QComboBox QAbstractItemView{
 }</string>
                       </property>
                       <property name="text">
-                       <string>-0000.000</string>
+                       <string>     0.000</string>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3160,7 +4229,7 @@ QComboBox QAbstractItemView{
 }</string>
                       </property>
                       <property name="text">
-                       <string>000.000</string>
+                       <string>   0.0000</string>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3202,7 +4271,7 @@ QComboBox QAbstractItemView{
 }</string>
                       </property>
                       <property name="text">
-                       <string>000.000</string>
+                       <string>     0.000</string>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3259,7 +4328,7 @@ QComboBox QAbstractItemView{
 }</string>
                       </property>
                       <property name="text">
-                       <string>000.000</string>
+                       <string>     0.000</string>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3437,7 +4506,7 @@ QComboBox QAbstractItemView{
 }</string>
                       </property>
                       <property name="text">
-                       <string>000.000</string>
+                       <string>   0.0000</string>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3479,7 +4548,7 @@ QComboBox QAbstractItemView{
 }</string>
                       </property>
                       <property name="text">
-                       <string>000.000</string>
+                       <string>     0.000</string>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3536,7 +4605,7 @@ QComboBox QAbstractItemView{
 }</string>
                       </property>
                       <property name="text">
-                       <string>000.000</string>
+                       <string>     0.000</string>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3716,7 +4785,7 @@ QComboBox QAbstractItemView{
 }</string>
                       </property>
                       <property name="text">
-                       <string>000.00</string>
+                       <string>      0.00</string>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3758,7 +4827,7 @@ QComboBox QAbstractItemView{
 }</string>
                       </property>
                       <property name="text">
-                       <string>000.00</string>
+                       <string>      0.00</string>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3815,7 +4884,7 @@ QComboBox QAbstractItemView{
 }</string>
                       </property>
                       <property name="text">
-                       <string>000.00</string>
+                       <string>      0.00</string>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -4464,7 +5533,7 @@ QComboBox QAbstractItemView{
 }</string>
                    </property>
                    <property name="text">
-                    <string>00000</string>
+                    <string>0</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -4920,7 +5989,7 @@ QComboBox QAbstractItemView{
 }</string>
                       </property>
                       <property name="text">
-                       <string>000</string>
+                       <string>0</string>
                       </property>
                       <property name="maxLength">
                        <number>3</number>
@@ -5228,6 +6297,9 @@ QComboBox QAbstractItemView{
                      <width>241</width>
                      <height>16</height>
                     </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(136, 138, 133)</string>
                    </property>
                    <property name="frameShadow">
                     <enum>QFrame::Plain</enum>
@@ -5547,6 +6619,9 @@ QComboBox QAbstractItemView{
                      <width>241</width>
                      <height>16</height>
                     </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(136, 138, 133)</string>
                    </property>
                    <property name="frameShadow">
                     <enum>QFrame::Plain</enum>
@@ -6306,9 +7381,9 @@ QPushButton:checked {
                 <widget class="VCPStackedWidget" name="stackedWidgetSliders">
                  <property name="geometry">
                   <rect>
-                   <x>305</x>
+                   <x>300</x>
                    <y>440</y>
-                   <width>256</width>
+                   <width>271</width>
                    <height>301</height>
                   </rect>
                  </property>
@@ -6349,9 +7424,9 @@ QPushButton:checked {
                   <widget class="VCPSettingsSlider" name="settings_slider_3">
                    <property name="geometry">
                     <rect>
-                     <x>10</x>
+                     <x>5</x>
                      <y>115</y>
-                     <width>231</width>
+                     <width>256</width>
                      <height>30</height>
                     </rect>
                    </property>
@@ -6463,9 +7538,9 @@ border-radius: 4px;
                   <widget class="VCPSettingsSlider" name="settings_slider_2">
                    <property name="geometry">
                     <rect>
-                     <x>10</x>
+                     <x>5</x>
                      <y>40</y>
-                     <width>231</width>
+                     <width>256</width>
                      <height>30</height>
                     </rect>
                    </property>
@@ -6558,9 +7633,9 @@ border-radius: 4px;
                   <widget class="ActionSlider" name="actionslider_spindle_override_2">
                    <property name="geometry">
                     <rect>
-                     <x>10</x>
+                     <x>5</x>
                      <y>260</y>
-                     <width>231</width>
+                     <width>256</width>
                      <height>30</height>
                     </rect>
                    </property>
@@ -6641,7 +7716,7 @@ border-radius: 4px;
                   <widget class="ActionButton" name="actionbutton_36">
                    <property name="geometry">
                     <rect>
-                     <x>195</x>
+                     <x>215</x>
                      <y>230</y>
                      <width>45</width>
                      <height>30</height>
@@ -6698,7 +7773,7 @@ border-radius: 4px;
                   <widget class="ActionButton" name="actionbutton_max_velocity_reset_3">
                    <property name="geometry">
                     <rect>
-                     <x>200</x>
+                     <x>220</x>
                      <y>10</y>
                      <width>40</width>
                      <height>30</height>
@@ -6740,9 +7815,9 @@ border-radius: 4px;
                   <widget class="ActionSlider" name="actionslider_max_velocity_3">
                    <property name="geometry">
                     <rect>
-                     <x>10</x>
+                     <x>5</x>
                      <y>40</y>
-                     <width>231</width>
+                     <width>256</width>
                      <height>30</height>
                     </rect>
                    </property>
@@ -6823,7 +7898,7 @@ border-radius: 4px;
                   <widget class="ActionButton" name="actionbutton_rapid_override_reset_3">
                    <property name="geometry">
                     <rect>
-                     <x>200</x>
+                     <x>220</x>
                      <y>85</y>
                      <width>40</width>
                      <height>30</height>
@@ -6906,9 +7981,9 @@ border-radius: 4px;
                   <widget class="ActionSlider" name="actionslider_feed_override_3">
                    <property name="geometry">
                     <rect>
-                     <x>10</x>
+                     <x>5</x>
                      <y>190</y>
-                     <width>231</width>
+                     <width>256</width>
                      <height>30</height>
                     </rect>
                    </property>
@@ -7011,7 +8086,7 @@ border-radius: 4px;
                   <widget class="ActionButton" name="actionbutton_feed_override_reset_3">
                    <property name="geometry">
                     <rect>
-                     <x>200</x>
+                     <x>220</x>
                      <y>160</y>
                      <width>40</width>
                      <height>30</height>
@@ -7047,9 +8122,9 @@ border-radius: 4px;
                   <widget class="ActionSlider" name="actionslider_rapid_override_3">
                    <property name="geometry">
                     <rect>
-                     <x>10</x>
+                     <x>5</x>
                      <y>115</y>
-                     <width>231</width>
+                     <width>256</width>
                      <height>30</height>
                     </rect>
                    </property>
@@ -7130,15 +8205,15 @@ border-radius: 4px;
                   <widget class="ActionButton" name="actionbutton_32">
                    <property name="geometry">
                     <rect>
-                     <x>195</x>
+                     <x>220</x>
                      <y>230</y>
-                     <width>45</width>
+                     <width>40</width>
                      <height>30</height>
                     </rect>
                    </property>
                    <property name="minimumSize">
                     <size>
-                     <width>45</width>
+                     <width>40</width>
                      <height>30</height>
                     </size>
                    </property>
@@ -7185,9 +8260,9 @@ border-radius: 4px;
                   <widget class="ActionSlider" name="actionslider_spindle_override">
                    <property name="geometry">
                     <rect>
-                     <x>10</x>
+                     <x>5</x>
                      <y>260</y>
-                     <width>231</width>
+                     <width>256</width>
                      <height>30</height>
                     </rect>
                    </property>
@@ -7275,7 +8350,7 @@ border-radius: 4px;
                    <x>0</x>
                    <y>5</y>
                    <width>350</width>
-                   <height>491</height>
+                   <height>731</height>
                   </rect>
                  </property>
                  <property name="sizePolicy">
@@ -7679,7 +8754,7 @@ QHeaderView {
                    <x>770</x>
                    <y>5</y>
                    <width>491</width>
-                   <height>491</height>
+                   <height>646</height>
                   </rect>
                  </property>
                  <property name="sizePolicy">
@@ -7958,7 +9033,7 @@ QHeaderView {
                    <x>410</x>
                    <y>5</y>
                    <width>350</width>
-                   <height>491</height>
+                   <height>731</height>
                   </rect>
                  </property>
                  <property name="sizePolicy">
@@ -8285,7 +9360,7 @@ QHeaderView {
                    <x>350</x>
                    <y>9</y>
                    <width>61</width>
-                   <height>471</height>
+                   <height>726</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_36">
@@ -8410,10 +9485,10 @@ LEFT</string>
                 <widget class="QPushButton" name="btnLoadGCode">
                  <property name="geometry">
                   <rect>
-                   <x>90</x>
-                   <y>590</y>
-                   <width>100</width>
-                   <height>30</height>
+                   <x>950</x>
+                   <y>675</y>
+                   <width>150</width>
+                   <height>35</height>
                   </rect>
                  </property>
                  <property name="sizePolicy">
@@ -8424,8 +9499,8 @@ LEFT</string>
                  </property>
                  <property name="minimumSize">
                   <size>
-                   <width>100</width>
-                   <height>30</height>
+                   <width>150</width>
+                   <height>35</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -8445,6 +9520,753 @@ LEFT</string>
                  <property name="text">
                   <string>LOAD G-CODE</string>
                  </property>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="page_offsetsScreen">
+                <widget class="QFrame" name="frame_37">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>5</y>
+                   <width>545</width>
+                   <height>500</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>545</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>545</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">.QFrame{
+    background-color: rgb(51, 57, 59);
+}</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_39">
+                  <property name="spacing">
+                   <number>4</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>9</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>5</number>
+                  </property>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_47">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="OffsetTable" name="offset_table">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>522</width>
+                        <height>428</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>522</width>
+                        <height>428</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">OffsetTable,
+QHeaderView {
+    font: 15pt &quot;Bebas Kai&quot;;
+	background-color: rgb(220, 220, 220);
+	color: black;
+    border: none;
+}
+
+OffsetTable {
+   	border-top: 8px rgb(120, 120, 120);
+	border-left: 4px  rgb(120, 120, 120);
+	border-bottom: 5px rgb(120, 120, 120);
+	border-right: 4px rgb(120, 120, 120);
+	border-radius: 5px;
+	border-color: rgb(120, 120, 120);
+	border-style: solid;
+	background-color: rgb(120, 120, 120);
+    gridline-color: rgb(203, 203, 203);
+	alternate-background-color: rgb(90, 90, 90);
+    color: white;
+    font: 16pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="verticalScrollBarPolicy">
+                       <enum>Qt::ScrollBarAlwaysOff</enum>
+                      </property>
+                      <property name="horizontalScrollBarPolicy">
+                       <enum>Qt::ScrollBarAlwaysOff</enum>
+                      </property>
+                      <property name="sizeAdjustPolicy">
+                       <enum>QAbstractScrollArea::AdjustIgnored</enum>
+                      </property>
+                      <property name="autoScroll">
+                       <bool>false</bool>
+                      </property>
+                      <property name="autoScrollMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>false</bool>
+                      </property>
+                      <property name="cornerButtonEnabled">
+                       <bool>false</bool>
+                      </property>
+                      <property name="displayColumns" stdset="0">
+                       <string>XYZR</string>
+                      </property>
+                      <property name="currentRowColor" stdset="0">
+                       <color>
+                        <red>0</red>
+                        <green>38</green>
+                        <blue>255</blue>
+                       </color>
+                      </property>
+                      <attribute name="horizontalHeaderCascadingSectionResizes">
+                       <bool>false</bool>
+                      </attribute>
+                      <attribute name="horizontalHeaderDefaultSectionSize">
+                       <number>118</number>
+                      </attribute>
+                      <attribute name="horizontalHeaderHighlightSections">
+                       <bool>false</bool>
+                      </attribute>
+                      <attribute name="horizontalHeaderMinimumSectionSize">
+                       <number>118</number>
+                      </attribute>
+                      <attribute name="horizontalHeaderStretchLastSection">
+                       <bool>true</bool>
+                      </attribute>
+                      <attribute name="verticalHeaderDefaultSectionSize">
+                       <number>43</number>
+                      </attribute>
+                      <attribute name="verticalHeaderHighlightSections">
+                       <bool>false</bool>
+                      </attribute>
+                      <attribute name="verticalHeaderMinimumSectionSize">
+                       <number>43</number>
+                      </attribute>
+                      <attribute name="verticalHeaderStretchLastSection">
+                       <bool>false</bool>
+                      </attribute>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_130">
+                    <property name="spacing">
+                     <number>10</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>5</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="x_axis_button_10">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>CLEAR SELECTED</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="x_axis_button_11">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>CLEAR ALL</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="x_axis_button_13">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>SAVE TABLE</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="x_axis_button_14">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>RELOAD TABLE</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="widget_40" native="true">
+                 <property name="geometry">
+                  <rect>
+                   <x>670</x>
+                   <y>145</y>
+                   <width>280</width>
+                   <height>280</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>280</width>
+                   <height>280</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>280</width>
+                   <height>280</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_7">
+                  <property name="leftMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="spacing">
+                   <number>6</number>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="SubCallButton" name="probe_back_left_top_corner">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::NoFocus</enum>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resources.qrc">
+                      <normaloff>:/images/back_left_outside_corner.png</normaloff>:/images/back_left_outside_corner.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>75</width>
+                      <height>75</height>
+                     </size>
+                    </property>
+                    <property name="filename" stdset="0">
+                     <string>probe_back_left_top_corner.ngc</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="4">
+                   <widget class="SubCallButton" name="probe_back_right_top_corner">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::NoFocus</enum>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resources.qrc">
+                      <normaloff>:/images/back_right_outside_corner.png</normaloff>:/images/back_right_outside_corner.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>75</width>
+                      <height>75</height>
+                     </size>
+                    </property>
+                    <property name="filename" stdset="0">
+                     <string>probe_back_right_top_corner.ngc</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="4">
+                   <widget class="SubCallButton" name="probe_right_top_side">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::NoFocus</enum>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resources.qrc">
+                      <normaloff>:/images/right_side_edge.png</normaloff>
+                      <normalon>:/images/right_side_edge.png</normalon>:/images/right_side_edge.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>75</width>
+                      <height>75</height>
+                     </size>
+                    </property>
+                    <property name="filename" stdset="0">
+                     <string>probe_right_top_side.ngc</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="3">
+                   <widget class="SubCallButton" name="probe_z_minus_wco_edge">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::NoFocus</enum>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resources.qrc">
+                      <normaloff>:/images/z_top.png</normaloff>:/images/z_top.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>75</width>
+                      <height>75</height>
+                     </size>
+                    </property>
+                    <property name="filename" stdset="0">
+                     <string>probe_z_minus_wco.ngc</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="3">
+                   <widget class="SubCallButton" name="probe_front_top_side">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::NoFocus</enum>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resources.qrc">
+                      <normaloff>:/images/front_middle_edge.png</normaloff>:/images/front_middle_edge.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>75</width>
+                      <height>75</height>
+                     </size>
+                    </property>
+                    <property name="filename" stdset="0">
+                     <string>probe_front_top_side.ngc</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="3">
+                   <widget class="SubCallButton" name="probe_back_top_side">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::NoFocus</enum>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resources.qrc">
+                      <normaloff>:/images/back_middle_outside_edge.png</normaloff>:/images/back_middle_outside_edge.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>75</width>
+                      <height>75</height>
+                     </size>
+                    </property>
+                    <property name="filename" stdset="0">
+                     <string>probe_back_top_side.ngc</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="SubCallButton" name="probe_front_left_top_corner">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::NoFocus</enum>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resources.qrc">
+                      <normaloff>:/images/front_left_outside_corner.png</normaloff>:/images/front_left_outside_corner.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>75</width>
+                      <height>75</height>
+                     </size>
+                    </property>
+                    <property name="filename" stdset="0">
+                     <string>probe_front_left_top_corner.ngc</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="4">
+                   <widget class="SubCallButton" name="probe_front_right_top_corner">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::NoFocus</enum>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resources.qrc">
+                      <normaloff>:/images/front_right_outside_corner.png</normaloff>:/images/front_right_outside_corner.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>75</width>
+                      <height>75</height>
+                     </size>
+                    </property>
+                    <property name="filename" stdset="0">
+                     <string>probe_front_right_top_corner.ngc</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="SubCallButton" name="probe_left_top_side">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::NoFocus</enum>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resources.qrc">
+                      <normaloff>:/images/left_side_edge.png</normaloff>:/images/left_side_edge.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>75</width>
+                      <height>75</height>
+                     </size>
+                    </property>
+                    <property name="filename" stdset="0">
+                     <string>probe_left_top_side.ngc</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                </widget>
               </widget>
@@ -8630,6 +10452,9 @@ All</string>
                 <property name="text">
                  <string>Offsets</string>
                 </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
                </widget>
                <widget class="ActionButton" name="btnTools">
                 <property name="geometry">
@@ -8642,6 +10467,9 @@ All</string>
                 </property>
                 <property name="text">
                  <string>Tools</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
                 </property>
                </widget>
                <widget class="ActionButton" name="btnConversational">
@@ -8751,6 +10579,11 @@ All</string>
    <header>qtpyvcp.widgets.input_widgets.action_slider</header>
   </customwidget>
   <customwidget>
+   <class>OffsetTable</class>
+   <extends>QTableView</extends>
+   <header>qtpyvcp.widgets.input_widgets.offset_table</header>
+  </customwidget>
+  <customwidget>
    <class>RemovableDeviceComboBox</class>
    <extends>QComboBox</extends>
    <header>qtpyvcp.widgets.input_widgets.file_system</header>
@@ -8777,9 +10610,24 @@ All</string>
    <header>qtpyvcp.widgets.input_widgets.recent_file_combobox</header>
   </customwidget>
   <customwidget>
+   <class>HalLedIndicator</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.hal_widgets.hal_led</header>
+  </customwidget>
+  <customwidget>
+   <class>SubCallButton</class>
+   <extends>QPushButton</extends>
+   <header>qtpyvcp.widgets.button_widgets.subcall_button</header>
+  </customwidget>
+  <customwidget>
    <class>VCPSettingsSlider</class>
    <extends>QSlider</extends>
    <header>qtpyvcp.widgets.input_widgets.setting_slider</header>
+  </customwidget>
+  <customwidget>
+   <class>ToolTable</class>
+   <extends>QTableView</extends>
+   <header>qtpyvcp.widgets.input_widgets.tool_table</header>
   </customwidget>
   <customwidget>
    <class>MDIButton</class>
@@ -8826,6 +10674,7 @@ All</string>
  <resources>
   <include location="../resources.qrc"/>
   <include location="../../../probe_basic/probe_basic/probe_basic.qrc"/>
+  <include location="probe_basic.qrc"/>
  </resources>
  <connections>
   <connection>

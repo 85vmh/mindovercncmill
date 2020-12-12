@@ -6,11 +6,10 @@ import resources_rc
 from qtpyvcp.utilities import logger
 LOG = logger.getLogger('qtpyvcp.' + __name__)
 
-stackedWidgetMain_unhomed_index = 0
+stackedWidgetMain_tools_index = 0
 stackedWidgetMain_homed_index = 1
 stackedWidgetMain_homed_filemanager = 2
-
-
+stackedWidgetMain_wcs_offsets = 3
 
 
 class MyMainWindow(VCPMainWindow):
@@ -24,6 +23,8 @@ class MyMainWindow(VCPMainWindow):
         self.change_program_button.clicked.connect(self.changeProgram)
         self.buttonGroupMdi.buttonClicked.connect(self.mdiHandleKeys)
         self.btnChangeTool.clicked.connect(self.changeCurrentTool)
+        self.btnTools.clicked.connect(self.showToolsPage)
+        self.btnOffsets.clicked.connect(self.showOffsetsPage)
 
     def mdiHandleKeys(self, button):
         char = str(button.text())
@@ -46,6 +47,18 @@ class MyMainWindow(VCPMainWindow):
         self.stackedWidgetLeftTop.setCurrentIndex(1)
         self.stackedWidgetLeftBottom.setCurrentIndex(1)
         self.stackedWidgetSliders.setCurrentIndex(1)
+
+    def showToolsPage(self):
+        if self.btnTools.isChecked():
+            self.stackedWidgetMain.setCurrentIndex(stackedWidgetMain_tools_index)
+        else:
+            self.stackedWidgetMain.setCurrentIndex(stackedWidgetMain_homed_index)       
+
+    def showOffsetsPage(self):
+        if self.btnOffsets.isChecked():
+            self.stackedWidgetMain.setCurrentIndex(stackedWidgetMain_wcs_offsets)
+        else:
+            self.stackedWidgetMain.setCurrentIndex(stackedWidgetMain_homed_index)  
 
     def setProgramScreen(self):
         self.stackedWidgetMain.setCurrentIndex(stackedWidgetMain_homed_filemanager)
