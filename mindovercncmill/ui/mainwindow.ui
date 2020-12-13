@@ -3868,7 +3868,7 @@ QComboBox QAbstractItemView{
                       <property name="maximumSize">
                        <size>
                         <width>60</width>
-                        <height>35</height>
+                        <height>40</height>
                        </size>
                       </property>
                       <property name="focusPolicy">
@@ -4090,7 +4090,7 @@ QComboBox QAbstractItemView{
                       <property name="maximumSize">
                        <size>
                         <width>60</width>
-                        <height>35</height>
+                        <height>40</height>
                        </size>
                       </property>
                       <property name="focusPolicy">
@@ -4148,7 +4148,7 @@ QComboBox QAbstractItemView{
                       <property name="maximumSize">
                        <size>
                         <width>60</width>
-                        <height>35</height>
+                        <height>40</height>
                        </size>
                       </property>
                       <property name="focusPolicy">
@@ -4370,7 +4370,7 @@ QComboBox QAbstractItemView{
                       <property name="maximumSize">
                        <size>
                         <width>60</width>
-                        <height>35</height>
+                        <height>40</height>
                        </size>
                       </property>
                       <property name="focusPolicy">
@@ -4425,7 +4425,7 @@ QComboBox QAbstractItemView{
                       <property name="maximumSize">
                        <size>
                         <width>60</width>
-                        <height>35</height>
+                        <height>40</height>
                        </size>
                       </property>
                       <property name="focusPolicy">
@@ -4647,7 +4647,7 @@ QComboBox QAbstractItemView{
                       <property name="maximumSize">
                        <size>
                         <width>60</width>
-                        <height>35</height>
+                        <height>40</height>
                        </size>
                       </property>
                       <property name="focusPolicy">
@@ -4705,7 +4705,7 @@ QComboBox QAbstractItemView{
                       <property name="maximumSize">
                        <size>
                         <width>60</width>
-                        <height>35</height>
+                        <height>40</height>
                        </size>
                       </property>
                       <property name="focusPolicy">
@@ -4926,7 +4926,7 @@ QComboBox QAbstractItemView{
                       <property name="maximumSize">
                        <size>
                         <width>60</width>
-                        <height>35</height>
+                        <height>40</height>
                        </size>
                       </property>
                       <property name="focusPolicy">
@@ -5359,9 +5359,9 @@ QComboBox QAbstractItemView{
                    <property name="geometry">
                     <rect>
                      <x>145</x>
-                     <y>60</y>
+                     <y>50</y>
                      <width>96</width>
-                     <height>30</height>
+                     <height>40</height>
                     </rect>
                    </property>
                    <property name="text">
@@ -5379,9 +5379,9 @@ QComboBox QAbstractItemView{
                    <property name="geometry">
                     <rect>
                      <x>10</x>
-                     <y>60</y>
+                     <y>50</y>
                      <width>96</width>
-                     <height>30</height>
+                     <height>40</height>
                     </rect>
                    </property>
                    <property name="text">
@@ -5401,9 +5401,9 @@ QComboBox QAbstractItemView{
                    <property name="geometry">
                     <rect>
                      <x>180</x>
-                     <y>60</y>
+                     <y>50</y>
                      <width>60</width>
-                     <height>30</height>
+                     <height>40</height>
                     </rect>
                    </property>
                    <property name="sizePolicy">
@@ -5415,13 +5415,13 @@ QComboBox QAbstractItemView{
                    <property name="minimumSize">
                     <size>
                      <width>60</width>
-                     <height>30</height>
+                     <height>40</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>60</width>
-                     <height>30</height>
+                     <height>35</height>
                     </size>
                    </property>
                    <property name="focusPolicy">
@@ -5498,7 +5498,7 @@ QComboBox QAbstractItemView{
                    <property name="geometry">
                     <rect>
                      <x>105</x>
-                     <y>60</y>
+                     <y>55</y>
                      <width>70</width>
                      <height>30</height>
                     </rect>
@@ -5552,7 +5552,7 @@ QComboBox QAbstractItemView{
                    <property name="geometry">
                     <rect>
                      <x>10</x>
-                     <y>65</y>
+                     <y>60</y>
                      <width>90</width>
                      <height>20</height>
                     </rect>
@@ -5624,7 +5624,7 @@ QComboBox QAbstractItemView{
                    <property name="geometry">
                     <rect>
                      <x>90</x>
-                     <y>15</y>
+                     <y>45</y>
                      <width>68</width>
                      <height>38</height>
                     </rect>
@@ -6011,9 +6011,9 @@ QComboBox QAbstractItemView{
                    <property name="geometry">
                     <rect>
                      <x>70</x>
-                     <y>120</y>
+                     <y>135</y>
                      <width>106</width>
-                     <height>41</height>
+                     <height>40</height>
                     </rect>
                    </property>
                    <property name="text">
@@ -6312,9 +6312,9 @@ QComboBox QAbstractItemView{
                    <property name="geometry">
                     <rect>
                      <x>70</x>
-                     <y>140</y>
+                     <y>135</y>
                      <width>116</width>
-                     <height>30</height>
+                     <height>40</height>
                     </rect>
                    </property>
                    <property name="text">
@@ -6790,13 +6790,13 @@ QComboBox QAbstractItemView{
 }</string>
                    </property>
                    <property name="text">
-                    <string>0</string>
+                    <string>0.0</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:current_vel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'%.1f' % (ch[0] * 60)&quot;, &quot;name&quot;: &quot;Current Feedrate&quot;}]</string>
                    </property>
                    <property name="format" stdset="0">
                     <string>{:.0f}</string>
@@ -10318,10 +10318,10 @@ OffsetTable {
                <widget class="ActionButton" name="btnManual">
                 <property name="geometry">
                  <rect>
-                  <x>4</x>
-                  <y>235</y>
-                  <width>91</width>
-                  <height>30</height>
+                  <x>9</x>
+                  <y>220</y>
+                  <width>80</width>
+                  <height>50</height>
                  </rect>
                 </property>
                 <property name="text">
@@ -10340,10 +10340,10 @@ OffsetTable {
                <widget class="ActionButton" name="btnMdi">
                 <property name="geometry">
                  <rect>
-                  <x>4</x>
-                  <y>275</y>
-                  <width>91</width>
-                  <height>30</height>
+                  <x>10</x>
+                  <y>280</y>
+                  <width>80</width>
+                  <height>50</height>
                  </rect>
                 </property>
                 <property name="text">
@@ -10362,10 +10362,10 @@ OffsetTable {
                <widget class="ActionButton" name="btnProgram">
                 <property name="geometry">
                  <rect>
-                  <x>4</x>
-                  <y>315</y>
-                  <width>91</width>
-                  <height>30</height>
+                  <x>10</x>
+                  <y>340</y>
+                  <width>80</width>
+                  <height>50</height>
                  </rect>
                 </property>
                 <property name="text">
@@ -10443,9 +10443,9 @@ All</string>
                <widget class="ActionButton" name="btnOffsets">
                 <property name="geometry">
                  <rect>
-                  <x>4</x>
-                  <y>370</y>
-                  <width>91</width>
+                  <x>10</x>
+                  <y>435</y>
+                  <width>80</width>
                   <height>30</height>
                  </rect>
                 </property>
@@ -10459,9 +10459,9 @@ All</string>
                <widget class="ActionButton" name="btnTools">
                 <property name="geometry">
                  <rect>
-                  <x>5</x>
-                  <y>410</y>
-                  <width>91</width>
+                  <x>10</x>
+                  <y>480</y>
+                  <width>80</width>
                   <height>30</height>
                  </rect>
                 </property>
@@ -10475,9 +10475,9 @@ All</string>
                <widget class="ActionButton" name="btnConversational">
                 <property name="geometry">
                  <rect>
-                  <x>5</x>
-                  <y>450</y>
-                  <width>91</width>
+                  <x>10</x>
+                  <y>525</y>
+                  <width>80</width>
                   <height>30</height>
                  </rect>
                 </property>
@@ -10488,10 +10488,10 @@ All</string>
                <widget class="ActionButton" name="btnExit">
                 <property name="geometry">
                  <rect>
-                  <x>5</x>
-                  <y>700</y>
-                  <width>91</width>
-                  <height>30</height>
+                  <x>10</x>
+                  <y>685</y>
+                  <width>80</width>
+                  <height>50</height>
                  </rect>
                 </property>
                 <property name="text">
@@ -10501,9 +10501,9 @@ All</string>
                <widget class="ActionButton" name="btnSettings">
                 <property name="geometry">
                  <rect>
-                  <x>5</x>
-                  <y>590</y>
-                  <width>91</width>
+                  <x>10</x>
+                  <y>610</y>
+                  <width>80</width>
                   <height>30</height>
                  </rect>
                 </property>
@@ -10674,7 +10674,6 @@ All</string>
  <resources>
   <include location="../resources.qrc"/>
   <include location="../../../probe_basic/probe_basic/probe_basic.qrc"/>
-  <include location="probe_basic.qrc"/>
  </resources>
  <connections>
   <connection>
