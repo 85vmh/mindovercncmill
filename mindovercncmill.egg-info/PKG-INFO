@@ -7,38 +7,25 @@ Author: John Doe
 Author-email: <doe.john@example.com>
 License: UNKNOWN
 Download-URL: https://github.com/USERNAME/REPO/tarball/master
-Description:  # VCP Template
+Description:  # MindOverCNC Mill
         
-        Very basic QtPyVCP based Virtual Control Panel for LinuxCNC.
-        This is intended as a template that you can use as a base for
-        creating your own VCPs.
+        QtPyVCP based Virtual Control Panel for LinuxCNC, optimized for 1366 x 768px (15 inch wide) touch screens.
+        This is intended for mills only.
         
-        ## Getting Started
+        ## Applying this VCP
         
-        1) Fork this repository to your github account.
+        1) Navigate to your machine home directory.
         2) Clone it to your local machine:
-          `git clone https://github.com/USERNAME/REPO.git`
+          `git clone https://github.com/85vmh/mindovercncmill.git`
         3) Install with pip:
           `pip install -e .`
-        5) Edit the files to customize name etc.
-        6) Edit the layout in QtDesigner by running:
-          `editvcp myvcp`
-        
-        ## To Copy
-        
-        1) Clone the VCP Template:
-          `git clone https://github.com/kcjengr/vcp-template.git`
-        2) Run the copy.sh script and give it a new name:
-          `./copy.sh`
-        
-        ## To Create the Tutorial
-        
-        1) Clone the VCP Template:
-          `git clone https://github.com/kcjengr/vcp-template.git`
-        2) Run the tutorial.sh script and give it a new name:
-          `./tutorial.sh`
-        
-        
+        4) Copy the font file /mindovercncmill/fonts/BebasKai.tff into your home directory /home/{yourUserName}/.local/share/fonts/
+        5) Edit the .ini file of the machine configuration on which you wish to apply this VCP and add the following lines in the [DISPLAY] section:
+        `
+        [DISPLAY]
+        DISPLAY = qtpyvcp
+        VCP = mindovercncmill
+        `
         
 Platform: UNKNOWN
 Description-Content-Type: text/markdown

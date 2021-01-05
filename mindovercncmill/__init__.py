@@ -24,6 +24,7 @@ import qtpyvcp
 VCP_DIR = os.path.realpath(os.path.dirname(__file__))
 VCP_CONFIG_FILE = os.path.join(VCP_DIR, 'config.yml')
 
+SETTINGS = {}
 
 def main(opts=None):
 

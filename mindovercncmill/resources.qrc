@@ -1,5 +1,5 @@
 <RCC>
-<qresource prefix="/">
+  <qresource prefix="/">
     <file>images/boss_round.png</file>
     <file>images/back_left_outside_corner.png</file>
     <file>images/back_middle_outside_edge.png</file>
@@ -22,7 +22,7 @@
     <file>images/round_pocket.png</file>
     <file>images/rect_pocket.png</file>
     <file>images/rect_boss.png</file>
-    <file>images/z_clearance.png</file>   
+    <file>images/z_clearance.png</file>
     <file>images/xy_clearance.png</file>
     <file>images/max_z_distance.png</file>
     <file>images/max_xy_distance.png</file>
@@ -53,7 +53,7 @@
     <file>images/probe_top_back_edge_angle_r.png</file>
     <file>images/probe_top_right_edge_angle_r.png</file>
     <file>images/ridge_and_valley_group.png</file>
-    <file>images/tool_probe.png</file>    
+    <file>images/tool_probe.png</file>
     <file>images/atc_spindle_tool_dimensioned.png</file>
     <file>images/x_minus_jog_button.png</file>
     <file>images/y_minus_jog_button.png</file>
@@ -86,6 +86,66 @@
     <file>images/probe_cal_round_pocket.png</file>
     <file>images/probe_cal_square_boss.png</file>
     <file>images/probe_cal_square_pocket.png</file>
-            
-</qresource>
+    <file>probe_icons/angle.png</file>
+    <file>probe_icons/angleX+.png</file>
+    <file>probe_icons/angleX-.png</file>
+    <file>probe_icons/angleY+.png</file>
+    <file>probe_icons/angleY-.png</file>
+    <file>probe_icons/center.png</file>
+    <file>probe_icons/down.png</file>
+    <file>probe_icons/edge_length.png</file>
+    <file>probe_icons/hole_center.png</file>
+    <file>probe_icons/inHole.png</file>
+    <file>probe_icons/inX+.png</file>
+    <file>probe_icons/inX-.png</file>
+    <file>probe_icons/inX+Y+.png</file>
+    <file>probe_icons/inX+Y-.png</file>
+    <file>probe_icons/inX-Y+.png</file>
+    <file>probe_icons/inX-Y-.png</file>
+    <file>probe_icons/inY+.png</file>
+    <file>probe_icons/inY-.png</file>
+    <file>probe_icons/latch_dist.png</file>
+    <file>probe_icons/Lx_in.png</file>
+    <file>probe_icons/Lx_out.png</file>
+    <file>probe_icons/Ly_in.png</file>
+    <file>probe_icons/Ly_out.png</file>
+    <file>probe_icons/max_probe.png</file>
+    <file>probe_icons/probe_a.png</file>
+    <file>probe_icons/probe_center_x.png</file>
+    <file>probe_icons/probe_center_y.png</file>
+    <file>probe_icons/probe_centr.png</file>
+    <file>probe_icons/probe_d.png</file>
+    <file>probe_icons/probe_diam.png</file>
+    <file>probe_icons/probe_lx.png</file>
+    <file>probe_icons/probe_ly.png</file>
+    <file>probe_icons/probe_vel.png</file>
+    <file>probe_icons/probe_xm.png</file>
+    <file>probe_icons/probe_xp.png</file>
+    <file>probe_icons/probe_ym.png</file>
+    <file>probe_icons/probe_yp.png</file>
+    <file>probe_icons/probe_z.png</file>
+    <file>probe_icons/rappid.png</file>
+    <file>probe_icons/reset_curr.png</file>
+    <file>probe_icons/rott.png</file>
+    <file>probe_icons/search_vel.png</file>
+    <file>probe_icons/tool_dia.png</file>
+    <file>probe_icons/touch.png</file>
+    <file>probe_icons/ts_height.png</file>
+    <file>probe_icons/workpiece_height.png</file>
+    <file>probe_icons/X0.png</file>
+    <file>probe_icons/X+.png</file>
+    <file>probe_icons/X-.png</file>
+    <file>probe_icons/X+Y+.png</file>
+    <file>probe_icons/X+Y-.png</file>
+    <file>probe_icons/X-Y+.png</file>
+    <file>probe_icons/X-Y-.png</file>
+    <file>probe_icons/xy_center.png</file>
+    <file>probe_icons/XYclearance.png</file>
+    <file>probe_icons/Y0.png</file>
+    <file>probe_icons/Y+.png</file>
+    <file>probe_icons/Y-.png</file>
+    <file>probe_icons/Y+X-.png</file>
+    <file>probe_icons/Z0.png</file>
+    <file>probe_icons/Zclearance.png</file>
+  </qresource>
 </RCC>
