@@ -1132,7 +1132,7 @@ QPushButton:checked {
     <widget class="QPushButton" name="buttonChangeRoutine">
      <property name="geometry">
       <rect>
-       <x>370</x>
+       <x>390</x>
        <y>5</y>
        <width>131</width>
        <height>36</height>
@@ -1158,8 +1158,8 @@ QPushButton:checked {
     <widget class="QPushButton" name="buttonGenerateCode">
      <property name="geometry">
       <rect>
-       <x>335</x>
-       <y>445</y>
+       <x>660</x>
+       <y>475</y>
        <width>196</width>
        <height>46</height>
       </rect>
@@ -1168,16 +1168,42 @@ QPushButton:checked {
       <string>Generate Probing Code</string>
      </property>
     </widget>
-    <widget class="QWidget" name="verticalLayoutWidget">
+    <widget class="QFrame" name="verticalFrame">
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>50</y>
-       <width>386</width>
+       <x>560</x>
+       <y>55</y>
+       <width>450</width>
        <height>381</height>
       </rect>
      </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
      <layout class="QVBoxLayout" name="verticalLayout"/>
+    </widget>
+    <widget class="QmlProbe" name="qmlprobe">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>195</y>
+       <width>521</width>
+       <height>401</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox">
+     <property name="geometry">
+      <rect>
+       <x>565</x>
+       <y>470</y>
+       <width>49</width>
+       <height>26</height>
+      </rect>
+     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="page_displayResults">
@@ -2402,11 +2428,38 @@ color: white;
    <header>qtpyvcp.widgets.containers.stack</header>
    <container>1</container>
   </customwidget>
+  <customwidget>
+   <class>QmlProbe</class>
+   <extends>QQuickWidget</extends>
+   <header>widgets.qml_probe.qml_probe</header>
+  </customwidget>
+  <customwidget>
+   <class>QQuickWidget</class>
+   <extends>QWidget</extends>
+   <header>QtQuickWidgets/QQuickWidget</header>
+  </customwidget>
  </customwidgets>
  <resources>
   <include location="../resources.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>qmlprobe</receiver>
+   <slot>set_z_retract(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>590</x>
+     <y>488</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>276</x>
+     <y>331</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <buttongroups>
   <buttongroup name="probeButtonGroup"/>
   <buttongroup name="probeTabsGroup"/>

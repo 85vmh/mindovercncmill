@@ -1,5 +1,10 @@
 <RCC>
   <qresource prefix="/">
+    <file>images/tool_loaded.png</file>
+    <file>images/no_tool.png</file>
+    <file>images/probe_loaded.png</file>
+    <file>images/spindle_tool.png</file>
+    <file>images/spindle_tool.png</file>
     <file>images/boss_round.png</file>
     <file>images/back_left_outside_corner.png</file>
     <file>images/back_middle_outside_edge.png</file>

@@ -14,6 +14,7 @@ class MainScreenPage(IntEnum):
     MAIN = 1
     FILE_MANAGER = 2
     WCS = 3
+    SETTINGS = 4
 
 
 class MyMainWindow(VCPMainWindow):
@@ -30,8 +31,13 @@ class MyMainWindow(VCPMainWindow):
         self.btnChangeTool.clicked.connect(self.changeCurrentTool)
         self.btnTools.clicked.connect(self.showToolsPage)
         self.btnOffsets.clicked.connect(self.showOffsetsPage)
+        self.btnSettings.clicked.connect(self.showSettingsPage)
+        self.pushStatusButton.clicked.connect(self.showStatusPage)
         self.probewizardwidget.probingCodeReady.connect(self.loadGCode)
         self.probewizardwidget.probingFinished.connect(self.handleProbingFinished)
+
+    def on_btnExit_clicked(self):
+        self.app.quit()
 
     def mdiHandleKeys(self, button):
         char = str(button.text())
@@ -70,6 +76,19 @@ class MyMainWindow(VCPMainWindow):
             self.stackedWidgetMain.setCurrentIndex(MainScreenPage.WCS)
         else:
             self.stackedWidgetMain.setCurrentIndex(MainScreenPage.MAIN)
+
+    def showSettingsPage(self):
+        if self.btnSettings.isChecked():
+            self.stackedWidgetMain.setCurrentIndex(MainScreenPage.SETTINGS)
+        else:
+            self.stackedWidgetMain.setCurrentIndex(MainScreenPage.MAIN)
+
+    def showStatusPage(self):
+        if self.pushStatusButton.isChecked():
+            self._initialLeftTopPage = self.stackedWidgetLeftTop.currentIndex()
+            self.stackedWidgetLeftTop.setCurrentIndex(3)
+        else:
+            self.stackedWidgetLeftTop.setCurrentIndex(self._initialLeftTopPage)
 
     def setProgramScreen(self):
         self.stackedWidgetMain.setCurrentIndex(MainScreenPage.FILE_MANAGER)

@@ -14,3 +14,8 @@ from probe_param_input import ProbeParamInputWidget
 class ProbeParamInputWidget_Plugin(_DesignerPlugin):
     def pluginClass(self):
         return ProbeParamInputWidget
+
+from qml_probe.qml_probe import QmlProbe
+class QmlProbe_Plugin(_DesignerPlugin):
+    def pluginClass(self):
+        return QmlProbe

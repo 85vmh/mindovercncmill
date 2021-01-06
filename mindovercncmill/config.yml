@@ -50,92 +50,79 @@ application:
     stylesheet: {{ file.dir }}/ui/style.qss
 
 settings:
-  probe-input.input_probe_fast_fr:
-    description: Probe Fast Speed
+    
+  probewizard.input_probe_fast_fr:
+    description: Probe Fast Fast
     default_value: 200.0
     persistent: true
     min_value: 0
     max_value: 9999
 
-  probe-input.input_probe_slow_fr:
-    description: Probe Slow Speed
+  probewizard.input_probe_slow_fr:
+    description: Probe Slow Slow
     default_value: 10.0
     persistent: true
     min_value: 0
     max_value: 9999    
 
-  touch-probe.calibration-offset:
-    description: Probe trigger point offset.
+  probewizard.input_calibration_offset:
+    description: Probe trigger point offset
     default_value: 0.0
     persistent: true
     min_value: 0
     max_value: 1
 
-  probe-parameters.probe-tool-number:
-    description: probe tool number.
+  probewizard.input_probe_tool_number:
+    description: probe tool number
     default_value: 10
     persistent: true
     min_value: 0
     max_value: 9999
 
-  probe-parameters.step-off-width:
-    description: probe step off width.
+  probewizard.input_step_off_width:
+    description: probe step off width
     default_value: 0.0
     persistent: true
     min_value: 0
     max_value: 1000
 
-  probe-parameters.probe-fast-fr:
-    description: probe fast feedrate.
-    default_value: 0.0
-    persistent: true
-    min_value: 0
-    max_value: 1000
-
-  probe-parameters.probe-slow-fr:
-    description: probe slow feedrate.
-    default_value: 0.0
-    persistent: true
-    min_value: 0
-    max_value: 1000
-
-  probe-parameters.max-xy-distance:
-    description: max x and y probe travel distance.
+  probewizard.input_max_xy_distance:
+    description: max x and y probe travel distance
     default_value: 0.0
     persistent: true
     min_value: 0
     max_value: 100
 
-  probe-parameters.xy-clearance:
-    description: x and y clearance distance.
+  probewizard.input_xy_clearance:
+    description: x and y clearance distance
     default_value: 0.0
     persistent: true
     min_value: 0
     max_value: 1000
 
-  probe-parameters.max-z-distance:
-    description: max z probe travel distance.
+  probewizard.input_max_z_distance:
+    description: max z probe travel distance
     default_value: 0.0
     persistent: true
     min_value: 0
     max_value: 100
 
-  probe-parameters.z-clearance:
-    description: z clearance distance.
+  probewizard.input_z_clearance:
+    description: z clearance distance
     default_value: 0.0
     persistent: true
     min_value: 0
     max_value: 1000
 
-  probe-parameters.extra-probe-depth:
-    description: extra probe depth.
+  probewizard.input_extra_probe_depth:
+    description: extra probe depth
     default_value: 0.0
     persistent: true
     min_value: 0
     max_value: 100
 
-  probe-parameters.edge-width:
-    description: edge width probing distance.
+  probewizard.input_edge_width:
+    description: edge width probing distance
     default_value: 0.0
     persistent: true
     min_value: 0

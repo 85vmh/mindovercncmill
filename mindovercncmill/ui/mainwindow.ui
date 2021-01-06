@@ -126,7 +126,7 @@
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>3</number>
+                <number>1</number>
                </property>
                <property name="rules" stdset="0">
                 <string>[]</string>
@@ -1228,7 +1228,7 @@ color: rgb(255, 255, 255);
                  <property name="rules" stdset="0">
                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;currentIndex&quot;, &quot;expression&quot;: &quot;0 if(ch[0] == 1) else (1 if(ch[0] == 3) else 2)&quot;, &quot;name&quot;: &quot;Selected Page&quot;}]</string>
                  </property>
-                 <widget class="QWidget" name="page_3">
+                 <widget class="QWidget" name="page_manual">
                   <widget class="QWidget" name="gridWidget_2" native="true">
                    <property name="geometry">
                     <rect>
@@ -1353,6 +1353,47 @@ color: rgb(255, 255, 255);
                       </property>
                      </widget>
                     </item>
+                    <item row="3" column="2">
+                     <widget class="ActionButton" name="y_minus_jogbutton">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>56</width>
+                        <height>56</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>56</width>
+                        <height>56</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources.qrc">
+                        <normaloff>:/images/y_minus_jog_button.png</normaloff>:/images/y_minus_jog_button.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>48</width>
+                        <height>48</height>
+                       </size>
+                      </property>
+                      <property name="actionName" stdset="0">
+                       <string>machine.jog.axis:y,neg</string>
+                      </property>
+                     </widget>
+                    </item>
                     <item row="1" column="3">
                      <widget class="ActionButton" name="x_plus_jogbutton">
                       <property name="sizePolicy">
@@ -1397,8 +1438,8 @@ color: rgb(255, 255, 255);
                       </property>
                      </widget>
                     </item>
-                    <item row="3" column="2">
-                     <widget class="ActionButton" name="y_minus_jogbutton">
+                    <item row="3" column="4">
+                     <widget class="ActionButton" name="a_minus_jogbutton">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                         <horstretch>0</horstretch>
@@ -1425,7 +1466,7 @@ color: rgb(255, 255, 255);
                       </property>
                       <property name="icon">
                        <iconset resource="../resources.qrc">
-                        <normaloff>:/images/y_minus_jog_button.png</normaloff>:/images/y_minus_jog_button.png</iconset>
+                        <normaloff>:/images/a_minus_jog_button.png</normaloff>:/images/a_minus_jog_button.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1434,42 +1475,7 @@ color: rgb(255, 255, 255);
                        </size>
                       </property>
                       <property name="actionName" stdset="0">
-                       <string>machine.jog.axis:y,neg</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="3" column="0">
-                     <widget class="ActionButton" name="z_minus_jogbutton">
-                      <property name="minimumSize">
-                       <size>
-                        <width>56</width>
-                        <height>56</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>56</width>
-                        <height>56</height>
-                       </size>
-                      </property>
-                      <property name="focusPolicy">
-                       <enum>Qt::NoFocus</enum>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="../resources.qrc">
-                        <normaloff>:/images/z_minus_jog_button.png</normaloff>:/images/z_minus_jog_button.png</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>48</width>
-                        <height>48</height>
-                       </size>
-                      </property>
-                      <property name="actionName" stdset="0">
-                       <string>machine.jog.axis:z,neg</string>
+                       <string>machine.jog.axis:a,neg</string>
                       </property>
                      </widget>
                     </item>
@@ -1514,14 +1520,8 @@ color: rgb(255, 255, 255);
                       </property>
                      </widget>
                     </item>
-                    <item row="3" column="4">
-                     <widget class="ActionButton" name="a_minus_jogbutton">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
+                    <item row="3" column="0">
+                     <widget class="ActionButton" name="z_minus_jogbutton">
                       <property name="minimumSize">
                        <size>
                         <width>56</width>
@@ -1542,7 +1542,7 @@ color: rgb(255, 255, 255);
                       </property>
                       <property name="icon">
                        <iconset resource="../resources.qrc">
-                        <normaloff>:/images/a_minus_jog_button.png</normaloff>:/images/a_minus_jog_button.png</iconset>
+                        <normaloff>:/images/z_minus_jog_button.png</normaloff>:/images/z_minus_jog_button.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1551,7 +1551,7 @@ color: rgb(255, 255, 255);
                        </size>
                       </property>
                       <property name="actionName" stdset="0">
-                       <string>machine.jog.axis:a,neg</string>
+                       <string>machine.jog.axis:z,neg</string>
                       </property>
                      </widget>
                     </item>
@@ -1599,7 +1599,7 @@ color: rgb(255, 255, 255);
                    </property>
                   </widget>
                  </widget>
-                 <widget class="QWidget" name="page_4">
+                 <widget class="QWidget" name="page_mdi">
                   <widget class="QWidget" name="widget" native="true">
                    <property name="geometry">
                     <rect>
@@ -2619,7 +2619,7 @@ color: rgb(255, 255, 255);
                    </widget>
                   </widget>
                  </widget>
-                 <widget class="QWidget" name="page_8">
+                 <widget class="QWidget" name="page_program">
                   <widget class="GcodeEditor" name="gcodeeditor_final">
                    <property name="geometry">
                     <rect>
@@ -2791,6 +2791,32 @@ QComboBox QAbstractItemView{
                      <width>30</width>
                      <height>17</height>
                     </size>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="page_status">
+                  <widget class="NotificationWidget" name="notificationwidget">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>491</width>
+                     <height>376</height>
+                    </rect>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>491</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel {
+    font-family: &quot;Bebas Kai&quot;;
+    color: white;
+    font-size: 16pt;
+}
+</string>
                    </property>
                   </widget>
                  </widget>
@@ -5606,7 +5632,7 @@ QComboBox QAbstractItemView{
                   <enum>QFrame::Box</enum>
                  </property>
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>1</number>
                  </property>
                  <property name="rules" stdset="0">
                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;tooltable:current_tool?tool_number&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:spindle.0.speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;currentIndex&quot;, &quot;expression&quot;: &quot;0 if ch[0] == 0 else (1 if ch[1]  == 0 else 2)&quot;, &quot;name&quot;: &quot;Selected Index&quot;}]</string>
@@ -5615,9 +5641,9 @@ QComboBox QAbstractItemView{
                   <widget class="QFrame" name="frame_28">
                    <property name="geometry">
                     <rect>
-                     <x>90</x>
-                     <y>45</y>
-                     <width>68</width>
+                     <x>95</x>
+                     <y>105</y>
+                     <width>61</width>
                      <height>38</height>
                     </rect>
                    </property>
@@ -6003,7 +6029,7 @@ QComboBox QAbstractItemView{
                    <property name="geometry">
                     <rect>
                      <x>70</x>
-                     <y>135</y>
+                     <y>150</y>
                      <width>106</width>
                      <height>40</height>
                     </rect>
@@ -6015,6 +6041,25 @@ QComboBox QAbstractItemView{
                     <string>M6 T#&lt;tool_number_entry&gt; G43</string>
                    </property>
                   </widget>
+                  <widget class="QLabel" name="label_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>40</x>
+                     <y>-25</y>
+                     <width>166</width>
+                     <height>171</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="../resources.qrc">:/images/spindle_tool.png</pixmap>
+                   </property>
+                  </widget>
+                  <zorder>label_2</zorder>
+                  <zorder>frame_28</zorder>
+                  <zorder>m6g43</zorder>
                  </widget>
                  <widget class="QWidget" name="page_toolLoadedNotRunning">
                   <widget class="StatusLabel" name="statuslabel_zOffset">
@@ -6796,51 +6841,12 @@ QComboBox QAbstractItemView{
                   </widget>
                  </widget>
                 </widget>
-                <widget class="VTKBackPlot" name="vtkbackplot">
-                 <property name="enabled">
-                  <bool>true</bool>
-                 </property>
-                 <property name="geometry">
-                  <rect>
-                   <x>570</x>
-                   <y>5</y>
-                   <width>100</width>
-                   <height>30</height>
-                  </rect>
-                 </property>
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>694</width>
-                   <height>428</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>400</height>
-                  </size>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">.VTKBackPlot {
-    border-style: solid;
-    border-color: rgb(186, 189, 182);
-    border-width: 2px;
-    border-radius: 6px;
-}</string>
-                 </property>
-                </widget>
                 <widget class="QFrame" name="frame_5">
                  <property name="geometry">
                   <rect>
                    <x>5</x>
                    <y>5</y>
-                   <width>491</width>
+                   <width>426</width>
                    <height>41</height>
                   </rect>
                  </property>
@@ -6865,8 +6871,8 @@ QComboBox QAbstractItemView{
                   <property name="geometry">
                    <rect>
                     <x>60</x>
-                    <y>5</y>
-                    <width>400</width>
+                    <y>2</y>
+                    <width>360</width>
                     <height>20</height>
                    </rect>
                   </property>
@@ -6878,7 +6884,7 @@ QComboBox QAbstractItemView{
                   </property>
                   <property name="minimumSize">
                    <size>
-                    <width>400</width>
+                    <width>360</width>
                     <height>0</height>
                    </size>
                   </property>
@@ -6893,6 +6899,9 @@ QComboBox QAbstractItemView{
     color: white;
     font: 75 12pt &quot;Bebas Kai&quot;;
 }</string>
+                  </property>
+                  <property name="text">
+                   <string>G0   G0   G0</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -6917,14 +6926,14 @@ QComboBox QAbstractItemView{
                   <property name="geometry">
                    <rect>
                     <x>60</x>
-                    <y>20</y>
-                    <width>400</width>
-                    <height>20</height>
+                    <y>22</y>
+                    <width>360</width>
+                    <height>21</height>
                    </rect>
                   </property>
                   <property name="minimumSize">
                    <size>
-                    <width>400</width>
+                    <width>360</width>
                     <height>0</height>
                    </size>
                   </property>
@@ -7513,7 +7522,7 @@ border-radius: 4px;
                     <rect>
                      <x>10</x>
                      <y>15</y>
-                     <width>181</width>
+                     <width>246</width>
                      <height>21</height>
                     </rect>
                    </property>
@@ -7524,7 +7533,7 @@ border-radius: 4px;
 }</string>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:machine.jog.linear-speed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:program_units?text&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Linear Jog Speed: {:.0f}'.format(ch[0])&quot;, &quot;name&quot;: &quot;Linear Jog Speed&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:machine.jog.linear-speed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:program_units?text&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Linear Jog Speed: {:.0f}'.format(ch[0]) +\&quot; \&quot;+ ch[1] + '/min'&quot;, &quot;name&quot;: &quot;Linear Jog Speed&quot;}]</string>
                    </property>
                   </widget>
                   <widget class="VCPSettingsSlider" name="settings_slider_2">
@@ -8334,6 +8343,37 @@ border-radius: 4px;
                   </widget>
                  </widget>
                 </widget>
+                <widget class="QWidget" name="verticalLayoutWidget">
+                 <property name="geometry">
+                  <rect>
+                   <x>565</x>
+                   <y>5</y>
+                   <width>701</width>
+                   <height>426</height>
+                  </rect>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_2">
+                  <item>
+                   <widget class="VTKBackPlot" name="vtkbackplot"/>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QPushButton" name="pushStatusButton">
+                 <property name="geometry">
+                  <rect>
+                   <x>435</x>
+                   <y>5</y>
+                   <width>61</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Status</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                </widget>
                </widget>
                <widget class="QWidget" name="page_selectProgram">
                 <widget class="QFrame" name="frame_35">
@@ -8737,285 +8777,6 @@ QHeaderView {
                      </widget>
                     </item>
                    </layout>
-                  </item>
-                 </layout>
-                </widget>
-                <widget class="QFrame" name="frame_36">
-                 <property name="geometry">
-                  <rect>
-                   <x>770</x>
-                   <y>5</y>
-                   <width>491</width>
-                   <height>646</height>
-                  </rect>
-                 </property>
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">.QFrame{
-    background-color: rgb(51, 57, 59);
-}</string>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_38">
-                  <property name="leftMargin">
-                   <number>9</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>9</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>9</number>
-                  </property>
-                  <item>
-                   <widget class="QStackedWidget" name="file_viewer_widget">
-                    <property name="minimumSize">
-                     <size>
-                      <width>457</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">QStackedWidget{
-    background-color: transparent;
-}</string>
-                    </property>
-                    <property name="currentIndex">
-                     <number>0</number>
-                    </property>
-                    <widget class="QWidget" name="page_9">
-                     <layout class="QVBoxLayout" name="verticalLayout_50">
-                      <item>
-                       <widget class="QLabel" name="file_absolute_path">
-                        <property name="enabled">
-                         <bool>true</bool>
-                        </property>
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="minimumSize">
-                         <size>
-                          <width>300</width>
-                          <height>25</height>
-                         </size>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>25</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>Bebas Kai</family>
-                          <pointsize>12</pointsize>
-                          <weight>50</weight>
-                          <italic>false</italic>
-                          <bold>false</bold>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QLabel{
-    border-style: solid;
-    border-radius: 4px;
-    border-color: transparent;
-    color: black;
-  	background-color: white;
-    font: 12pt &quot;Bebas Kai&quot;;
-    padding-left: 6px;
-}</string>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="GcodeEditor" name="gcodeeditor_initial">
-                        <property name="styleSheet">
-                         <string notr="true"/>
-                        </property>
-                        <property name="is_editor" stdset="0">
-                         <bool>true</bool>
-                        </property>
-                        <property name="backgroundcolor" stdset="0">
-                         <string>#d9dadb</string>
-                        </property>
-                        <property name="marginbackgroundcolor" stdset="0">
-                         <string>#d9dadb</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_129">
-                        <item>
-                         <widget class="QPushButton" name="edit_gcode_button">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>100</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>100</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="focusPolicy">
-                           <enum>Qt::NoFocus</enum>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QPushButton {
-   	font: 12pt &quot;Bebas Kai&quot;;
-}</string>
-                          </property>
-                          <property name="text">
-                           <string>EDIT G-CODE</string>
-                          </property>
-                          <property name="checkable">
-                           <bool>true</bool>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QPushButton" name="find_replace_button">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>100</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>100</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="focusPolicy">
-                           <enum>Qt::NoFocus</enum>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QPushButton {
-   	font: 12pt &quot;Bebas Kai&quot;;
-}</string>
-                          </property>
-                          <property name="text">
-                           <string>FIND/REPLACE</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QPushButton" name="save_button">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>100</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>100</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="focusPolicy">
-                           <enum>Qt::NoFocus</enum>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QPushButton {
-   	font: 12pt &quot;Bebas Kai&quot;;
-}</string>
-                          </property>
-                          <property name="text">
-                           <string>SAVE</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QPushButton" name="save_as_button">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>100</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>100</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="focusPolicy">
-                           <enum>Qt::NoFocus</enum>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QPushButton {
-   	font: 12pt &quot;Bebas Kai&quot;;
-}</string>
-                          </property>
-                          <property name="text">
-                           <string>SAVE AS</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </item>
-                     </layout>
-                    </widget>
-                    <widget class="QWidget" name="page_10">
-                     <layout class="QVBoxLayout" name="verticalLayout_52">
-                      <item>
-                       <widget class="QWebView" name="webView">
-                        <property name="url">
-                         <url>
-                          <string>about:blank</string>
-                         </url>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </widget>
                   </item>
                  </layout>
                 </widget>
@@ -9477,8 +9238,8 @@ LEFT</string>
                 <widget class="QPushButton" name="btnLoadGCode">
                  <property name="geometry">
                   <rect>
-                   <x>950</x>
-                   <y>675</y>
+                   <x>955</x>
+                   <y>695</y>
                    <width>150</width>
                    <height>35</height>
                   </rect>
@@ -9513,15 +9274,484 @@ LEFT</string>
                   <string>LOAD G-CODE</string>
                  </property>
                 </widget>
+                <widget class="QFrame" name="frame_7">
+                 <property name="geometry">
+                  <rect>
+                   <x>770</x>
+                   <y>5</y>
+                   <width>491</width>
+                   <height>676</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">.QFrame{
+    background-color: rgb(51, 57, 59);
+}</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <widget class="QLabel" name="file_absolute_path">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="geometry">
+                   <rect>
+                    <x>15</x>
+                    <y>15</y>
+                    <width>453</width>
+                    <height>25</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>300</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Bebas Kai</family>
+                    <pointsize>12</pointsize>
+                    <weight>50</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel{
+    border-style: solid;
+    border-radius: 4px;
+    border-color: transparent;
+    color: black;
+  	background-color: white;
+    font: 12pt &quot;Bebas Kai&quot;;
+    padding-left: 6px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="GcodeEditor" name="gcodeeditor_initial">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>45</y>
+                    <width>471</width>
+                    <height>571</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="is_editor" stdset="0">
+                   <bool>true</bool>
+                  </property>
+                  <property name="backgroundcolor" stdset="0">
+                   <string>#d9dadb</string>
+                  </property>
+                  <property name="marginbackgroundcolor" stdset="0">
+                   <string>#d9dadb</string>
+                  </property>
+                 </widget>
+                 <widget class="QWidget" name="layoutWidget">
+                  <property name="geometry">
+                   <rect>
+                    <x>35</x>
+                    <y>630</y>
+                    <width>420</width>
+                    <height>32</height>
+                   </rect>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_130">
+                   <item>
+                    <widget class="QPushButton" name="edit_gcode_button_2">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>100</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>100</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+   	font: 12pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>EDIT G-CODE</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="find_replace_button_2">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>100</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>100</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+   	font: 12pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>FIND/REPLACE</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="save_button_2">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>100</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>100</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+   	font: 12pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>SAVE</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="save_as_button_2">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>100</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>100</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+   	font: 12pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>SAVE AS</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
                </widget>
                <widget class="QWidget" name="page_offsetsScreen">
                 <widget class="ProbeWizardWidget" name="probewizardwidget">
                  <property name="geometry">
                   <rect>
-                   <x>20</x>
-                   <y>10</y>
+                   <x>5</x>
+                   <y>5</y>
                    <width>1116</width>
-                   <height>646</height>
+                   <height>641</height>
+                  </rect>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="page_Settings">
+                <widget class="ActionButton" name="actionbutton_20">
+                 <property name="geometry">
+                  <rect>
+                   <x>115</x>
+                   <y>105</y>
+                   <width>161</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Virtual Keyboard</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>settings.virtual-input.enable</string>
+                 </property>
+                </widget>
+                <widget class="ActionButton" name="actionbutton_21">
+                 <property name="geometry">
+                  <rect>
+                   <x>115</x>
+                   <y>175</y>
+                   <width>166</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Hal Show</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>tool.halshow</string>
+                 </property>
+                </widget>
+                <widget class="ActionButton" name="actionbutton_22">
+                 <property name="geometry">
+                  <rect>
+                   <x>115</x>
+                   <y>225</y>
+                   <width>166</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Hal Meter</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>tool.halmeter</string>
+                 </property>
+                </widget>
+                <widget class="ActionButton" name="actionbutton_23">
+                 <property name="geometry">
+                  <rect>
+                   <x>115</x>
+                   <y>275</y>
+                   <width>166</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Hal Scope</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>tool.halscope</string>
+                 </property>
+                </widget>
+                <widget class="ActionButton" name="actionbutton_24">
+                 <property name="geometry">
+                  <rect>
+                   <x>115</x>
+                   <y>325</y>
+                   <width>166</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Classic Ladder</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>tool.classicladder</string>
+                 </property>
+                </widget>
+                <widget class="ActionButton" name="actionbutton_25">
+                 <property name="geometry">
+                  <rect>
+                   <x>355</x>
+                   <y>100</y>
+                   <width>166</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Simulated Probe</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>tool.simulate_probe</string>
+                 </property>
+                </widget>
+                <widget class="ActionButton" name="actionbutton_26">
+                 <property name="geometry">
+                  <rect>
+                   <x>115</x>
+                   <y>375</y>
+                   <width>166</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>LCNC Status</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>tool.status</string>
+                 </property>
+                </widget>
+                <widget class="ActionButton" name="actionbutton_27">
+                 <property name="geometry">
+                  <rect>
+                   <x>115</x>
+                   <y>430</y>
+                   <width>166</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Calibration</string>
+                 </property>
+                 <property name="actionName" stdset="0">
+                  <string>tool.calibration</string>
+                 </property>
+                </widget>
+                <widget class="VCPStackedWidget" name="spindleWidget">
+                 <property name="geometry">
+                  <rect>
+                   <x>805</x>
+                   <y>90</y>
+                   <width>251</width>
+                   <height>301</height>
+                  </rect>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::Box</enum>
+                 </property>
+                 <property name="currentIndex">
+                  <number>0</number>
+                 </property>
+                 <widget class="QWidget" name="page_probeLoaded">
+                  <widget class="QLabel" name="label_7">
+                   <property name="geometry">
+                    <rect>
+                     <x>20</x>
+                     <y>0</y>
+                     <width>206</width>
+                     <height>301</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="../resources.qrc">:/images/probe_loaded.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="page_2">
+                  <widget class="QLabel" name="label_8">
+                   <property name="geometry">
+                    <rect>
+                     <x>20</x>
+                     <y>-5</y>
+                     <width>206</width>
+                     <height>166</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="../resources.qrc">:/images/tool_loaded.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="page_noToolLoaded">
+                  <widget class="QLabel" name="label">
+                   <property name="geometry">
+                    <rect>
+                     <x>20</x>
+                     <y>-5</y>
+                     <width>206</width>
+                     <height>86</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="../resources.qrc">:/images/no_tool.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </widget>
+                </widget>
+                <widget class="ActiveGcodesTable" name="activegcodestable">
+                 <property name="geometry">
+                  <rect>
+                   <x>320</x>
+                   <y>220</y>
+                   <width>431</width>
+                   <height>451</height>
                   </rect>
                  </property>
                 </widget>
@@ -9767,6 +9997,9 @@ All</string>
                 <property name="text">
                  <string>Settings</string>
                 </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
                </widget>
               </widget>
              </item>
@@ -9781,6 +10014,7 @@ All</string>
     </item>
    </layout>
   </widget>
+  <widget class="QStatusBar" name="statusBar"/>
   <action name="actionExit">
    <property name="text">
     <string>Exit</string>
@@ -9849,6 +10083,11 @@ All</string>
    <class>ProbeWizardWidget</class>
    <extends>QWidget</extends>
    <header>widgets.probe_wizard_widget</header>
+  </customwidget>
+  <customwidget>
+   <class>ActiveGcodesTable</class>
+   <extends>QTableView</extends>
+   <header>qtpyvcp.widgets.display_widgets.active_gcodes_table</header>
   </customwidget>
   <customwidget>
    <class>StatusLabel</class>
@@ -9923,9 +10162,9 @@ All</string>
    <header>qtpyvcp.widgets.button_widgets.action_button</header>
   </customwidget>
   <customwidget>
-   <class>QWebView</class>
+   <class>NotificationWidget</class>
    <extends>QWidget</extends>
-   <header>QtWebKitWidgets/QWebView</header>
+   <header>qtpyvcp.widgets.display_widgets.notification_widget</header>
   </customwidget>
  </customwidgets>
  <resources>
@@ -10093,22 +10332,6 @@ All</string>
    </hints>
   </connection>
   <connection>
-   <sender>filesystemtable_right</sender>
-   <signal>filePreviewText(QString)</signal>
-   <receiver>gcodeeditor_initial</receiver>
-   <slot>setText(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>585</x>
-     <y>247</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1016</x>
-     <y>243</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>btnLoadGCode</sender>
    <signal>clicked()</signal>
    <receiver>filesystemtable_right</receiver>
@@ -10121,86 +10344,6 @@ All</string>
     <hint type="destinationlabel">
      <x>585</x>
      <y>247</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>y_view_button</sender>
-   <signal>clicked()</signal>
-   <receiver>vtkbackplot</receiver>
-   <slot>setViewY()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>532</x>
-     <y>117</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>916</x>
-     <y>218</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>z_view_button</sender>
-   <signal>clicked()</signal>
-   <receiver>vtkbackplot</receiver>
-   <slot>setViewZ()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>609</x>
-     <y>129</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>916</x>
-     <y>218</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>iso_view_button</sender>
-   <signal>clicked()</signal>
-   <receiver>vtkbackplot</receiver>
-   <slot>setViewP()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>609</x>
-     <y>24</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>916</x>
-     <y>218</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>x_view_button</sender>
-   <signal>clicked()</signal>
-   <receiver>vtkbackplot</receiver>
-   <slot>setViewX()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>609</x>
-     <y>59</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>916</x>
-     <y>218</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pan_button</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>vtkbackplot</receiver>
-   <slot>enable_panning(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>609</x>
-     <y>179</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>916</x>
-     <y>218</y>
     </hint>
    </hints>
   </connection>
@@ -10221,6 +10364,86 @@ All</string>
    </hints>
   </connection>
   <connection>
+   <sender>filesystemtable_right</sender>
+   <signal>filePreviewText(QString)</signal>
+   <receiver>gcodeeditor_initial</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>585</x>
+     <y>247</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1016</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>iso_view_button</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewP()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>532</x>
+     <y>27</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>915</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>x_view_button</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewX()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>532</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>915</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>y_view_button</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewY()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>532</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>915</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>z_view_button</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewZ()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>532</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>915</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
    <sender>zoom_in_button</sender>
    <signal>clicked()</signal>
    <receiver>vtkbackplot</receiver>
@@ -10231,8 +10454,8 @@ All</string>
      <y>272</y>
     </hint>
     <hint type="destinationlabel">
-     <x>916</x>
-     <y>218</y>
+     <x>915</x>
+     <y>217</y>
     </hint>
    </hints>
   </connection>
@@ -10247,8 +10470,24 @@ All</string>
      <y>317</y>
     </hint>
     <hint type="destinationlabel">
-     <x>916</x>
-     <y>218</y>
+     <x>915</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pan_button</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>enable_panning(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>532</x>
+     <y>217</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>915</x>
+     <y>217</y>
     </hint>
    </hints>
   </connection>
@@ -10263,8 +10502,8 @@ All</string>
      <y>367</y>
     </hint>
     <hint type="destinationlabel">
-     <x>916</x>
-     <y>218</y>
+     <x>915</x>
+     <y>217</y>
     </hint>
    </hints>
   </connection>
@@ -10279,8 +10518,8 @@ All</string>
      <y>412</y>
     </hint>
     <hint type="destinationlabel">
-     <x>916</x>
-     <y>218</y>
+     <x>915</x>
+     <y>217</y>
     </hint>
    </hints>
   </connection>

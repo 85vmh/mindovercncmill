@@ -3,6 +3,7 @@ import re
 
 from qtpy import uic
 from qtpy.QtCore import Slot, Signal
+from PyQt5 import QtCore, QtGui, QtWidgets
 from qtpy.QtWidgets import QWidget, QWidgetItem, QAbstractButton
 from qtpyvcp.actions.program_actions import load as loadProgram
 from qtpyvcp.utilities import logger
@@ -67,14 +68,14 @@ class ProbeWizardWidget(QWidget):
         self.buttonGenerateCode.clicked.connect(self.generateCode)
         self.buttonChangeParams.clicked.connect(self.changeParams)
 
-        comp = hal.component('probewizard')
-        comp.addPin('probe-plugged', 'bit', 'in')
-        comp.addPin('probe-tripped', 'bit', 'in')
-        comp.addListener('probe-plugged', self.onProbePlugged)
-        comp.addListener('probe-tripped', self.onProbeTripped)
-        comp.ready()
+        # comp = hal.component('probewizard')
+        # comp.addPin('probe-plugged', 'bit', 'in')
+        # comp.addPin('probe-tripped', 'bit', 'in')
+        # comp.addListener('probe-plugged', self.onProbePlugged)
+        # comp.addListener('probe-tripped', self.onProbeTripped)
+        # comp.ready()
 
-        self.stackedWidget.setCurrentIndex(WizardPage.LOAD_PROBE_TOOL)
+        self.stackedWidget.setCurrentIndex(WizardPage.ENTER_PARAMETERS)
 
         self.wizard_machine = ProbeWizardStateMachine(self)
         self.wizard_machine.start_wizard()
@@ -213,7 +214,7 @@ class ProbeWizardWidget(QWidget):
                     self.removeDynamicInputs(item.layout())
 
     def renderInput(self, param_name):
-        probeparaminputwidget = ProbeParamInputWidget(self.verticalLayoutWidget, param_name)
+        probeparaminputwidget = ProbeParamInputWidget(self, param_name)
         probeparaminputwidget.setObjectName("child_"+param_name)
         self.verticalLayout.addWidget(probeparaminputwidget)
 

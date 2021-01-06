@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>350</width>
-    <height>40</height>
+    <width>450</width>
+    <height>44</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -27,7 +27,7 @@
     <rect>
      <x>10</x>
      <y>5</y>
-     <width>170</width>
+     <width>280</width>
      <height>30</height>
     </rect>
    </property>
@@ -45,7 +45,7 @@
    </property>
    <property name="maximumSize">
     <size>
-     <width>170</width>
+     <width>280</width>
      <height>30</height>
     </size>
    </property>
@@ -68,50 +68,10 @@ color: white;
     <number>0</number>
    </property>
   </widget>
-  <widget class="VCPSettingsLineEdit" name="param_input">
-   <property name="geometry">
-    <rect>
-     <x>195</x>
-     <y>5</y>
-     <width>81</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>100</width>
-     <height>16777215</height>
-    </size>
-   </property>
-   <property name="layoutDirection">
-    <enum>Qt::LeftToRight</enum>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLineEdit{
-    border-style: transparant;
-    border-color: rgb(235, 235, 235);
-    border-width: 1px;
-    border-radius: 3px;
-    color: black;
-    background: rgb(235, 235, 235);
-    padding-right: 2px;
-    font: 17pt &quot;Bebas Kai&quot;;
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-   </property>
-   <property name="settingName" stdset="0">
-    <string>probe-input.input_probe_fast_fr</string>
-   </property>
-  </widget>
   <widget class="StatusLabel" name="input_unit">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>390</x>
      <y>10</y>
      <width>50</width>
      <height>21</height>
@@ -142,17 +102,37 @@ color: white;
     <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:linear_units?text&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Units&quot;}]</string>
    </property>
   </widget>
+  <widget class="QLineEdit" name="param_input">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>5</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+    border-style: transparant;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px;
+    border-radius: 3px;
+    color: black;
+    background: rgb(235, 235, 235);
+    padding-right: 2px;
+    font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
  </widget>
  <customwidgets>
   <customwidget>
    <class>StatusLabel</class>
    <extends>QLabel</extends>
    <header>qtpyvcp.widgets.display_widgets.status_label</header>
-  </customwidget>
-  <customwidget>
-   <class>VCPSettingsLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>qtpyvcp.widgets.input_widgets.setting_slider</header>
   </customwidget>
  </customwidgets>
  <resources/>

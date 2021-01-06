@@ -3,6 +3,8 @@ from qtpy import uic
 from qtpy.QtWidgets import QWidget
 from qtpy.QtCore import Property
 from qtpyvcp.utilities.settings import getSetting, connectSetting
+from qtpyvcp.utilities import logger
+LOG = logger.getLogger(__name__)
 
 UI_FILE = os.path.join(os.path.dirname(__file__), "probe_param_input.ui")
 
@@ -11,10 +13,14 @@ class ProbeParamInputWidget(QWidget):
         super(ProbeParamInputWidget, self).__init__(parent)
         uic.loadUi(UI_FILE, self)
 
-        self.param_label.setText(inputObjectName + ":")
-        self.param_input.setObjectName(inputObjectName)
-        self.param_input.setProperty("settingName", "probe-input.input_probe_fast_fr")
+        labelSetting = getSetting("probewizard." + inputObjectName)
+        if labelSetting != None:
+            self.param_label.setText(labelSetting.__doc__ + ":")
 
+        self.param_input.setObjectName(inputObjectName)
+        valueSetting = getSetting("probewizard." + inputObjectName)
+        if valueSetting != None:
+            self.param_input.setText(str(valueSetting.value))
 
     def get_inputValue(self):
         """Gets or sets the value from the input field of this widget (str).
