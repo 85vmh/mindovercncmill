@@ -8,7 +8,6 @@ from qtpy.QtWidgets import QWidget, QWidgetItem, QAbstractButton
 from qtpyvcp.actions.program_actions import load as loadProgram
 from qtpyvcp.utilities import logger
 from qtpyvcp.utilities.info import Info
-from qtpyvcp import hal
 from widgets.probe_param_input import ProbeParamInputWidget
 from enum import IntEnum
 from statemachine import StateMachine, State
@@ -68,27 +67,22 @@ class ProbeWizardWidget(QWidget):
         self.buttonGenerateCode.clicked.connect(self.generateCode)
         self.buttonChangeParams.clicked.connect(self.changeParams)
 
-        # comp = hal.component('probewizard')
-        # comp.addPin('probe-plugged', 'bit', 'in')
-        # comp.addPin('probe-tripped', 'bit', 'in')
-        # comp.addListener('probe-plugged', self.onProbePlugged)
-        # comp.addListener('probe-tripped', self.onProbeTripped)
-        # comp.ready()
-
         self.stackedWidget.setCurrentIndex(WizardPage.ENTER_PARAMETERS)
 
         self.wizard_machine = ProbeWizardStateMachine(self)
         self.wizard_machine.start_wizard()
 
-    def onProbePlugged(self, probePlugged):
-        if probePlugged:
+    @Slot(bool)
+    def set_probe_plugged(self, plugged):
+        if plugged:
             self.wizard_machine.probe_plugged()
             self.stackedWidget.setCurrentIndex(WizardPage.TRIP_PROBE_TIP)
         else:
             self.stackedWidget.setCurrentIndex(WizardPage.LOAD_PROBE_TOOL)
 
-    def onProbeTripped(self, probeTripped):
-        if probeTripped:
+    @Slot(bool)
+    def set_probe_tripped(self, tripped):
+        if tripped:
             self.wizard_machine.probe_tripped()
             self.stackedWidget.setCurrentIndex(WizardPage.SELECT_PROBE_OPERATION)
         else:

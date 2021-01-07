@@ -19,3 +19,8 @@ from qml_probe.qml_probe import QmlProbe
 class QmlProbe_Plugin(_DesignerPlugin):
     def pluginClass(self):
         return QmlProbe
+
+from spindle_widget import SpindleWidget
+class SpindleWidget_Plugin(_DesignerPlugin):
+    def pluginClass(self):
+        return SpindleWidget

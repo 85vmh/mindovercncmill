@@ -4,6 +4,7 @@ import resources_rc
 
 # Setup logging
 from qtpyvcp.utilities import logger
+from qtpyvcp import hal
 from enum import IntEnum
 
 LOG = logger.getLogger('qtpyvcp.' + __name__)
@@ -28,13 +29,19 @@ class MyMainWindow(VCPMainWindow):
         self.btnLoadGCode.clicked.connect(self.loadGCode)
         self.change_program_button.clicked.connect(self.changeProgram)
         self.buttonGroupMdi.buttonClicked.connect(self.mdiHandleKeys)
-        self.btnChangeTool.clicked.connect(self.changeCurrentTool)
         self.btnTools.clicked.connect(self.showToolsPage)
         self.btnOffsets.clicked.connect(self.showOffsetsPage)
         self.btnSettings.clicked.connect(self.showSettingsPage)
         self.pushStatusButton.clicked.connect(self.showStatusPage)
         self.probewizardwidget.probingCodeReady.connect(self.loadGCode)
         self.probewizardwidget.probingFinished.connect(self.handleProbingFinished)
+
+        comp = hal.component('mindovercnc')
+        comp.addPin('probe-plugged', 'bit', 'in')
+        comp.addPin('probe-tripped', 'bit', 'in')
+        comp.addListener('probe-plugged', self.onProbePlugged)
+        comp.addListener('probe-tripped', self.onProbeTripped)
+        comp.ready()
 
     def on_btnExit_clicked(self):
         self.app.quit()
@@ -104,5 +111,8 @@ class MyMainWindow(VCPMainWindow):
         # self.filesystemtable_left.loadSelected
         self.stackedWidgetMain.setCurrentIndex(MainScreenPage.FILE_MANAGER)
 
-    def changeCurrentTool(self):
-        self.stackedWidgetTool.setCurrentIndex(0)
+    def onProbePlugged(self, plugged):
+        self.spindlewidget.set_probe_plugged(plugged)
+
+    def onProbeTripped(self):
+        pass
