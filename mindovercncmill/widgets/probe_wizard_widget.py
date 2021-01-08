@@ -10,7 +10,7 @@ from qtpyvcp.utilities import logger
 from qtpyvcp.utilities.info import Info
 from widgets.probe_param_input import ProbeParamInputWidget
 from enum import IntEnum
-from statemachine import StateMachine, State
+# from statemachine import StateMachine, State
 
 LOG = logger.getLogger(__name__)
 INFO = Info()
@@ -32,27 +32,27 @@ class WizardPage(IntEnum):
     SHOW_PROBE_RESULTS = 4
 
 
-class ProbeWizardStateMachine(StateMachine):
-    startWizard = State('StartWizard', initial=True)
-    loadProbeTool = State('LoadProbeTool')
-    tipProbeTip = State('TipProbeTip')
-    selectProbeOperation = State('SelectProbeOperation')
-    enterProbingParameters = State('EnterProbingParameters')
-    # showProbingResults = State('ShowProbingResults')
-
-    start_wizard = startWizard.to(loadProbeTool)
-    probe_plugged = loadProbeTool.to(tipProbeTip)
-    probe_tripped = tipProbeTip.to(selectProbeOperation)
-    probe_routine_selected = selectProbeOperation.to(enterProbingParameters)
-
-    def on_enter_loadProbeTool(self):
-        LOG.debug('-----Entered LoadProbeTool')
-
-    def on_enter_tipProbeTip(self):
-        LOG.debug('-----Entered tipProbeTip')
-
-    def on_enter_selectProbeOperation(self):
-        LOG.debug('-----Entered selectProbeOperation')
+# class ProbeWizardStateMachine(StateMachine):
+#     startWizard = State('StartWizard', initial=True)
+#     loadProbeTool = State('LoadProbeTool')
+#     tipProbeTip = State('TipProbeTip')
+#     selectProbeOperation = State('SelectProbeOperation')
+#     enterProbingParameters = State('EnterProbingParameters')
+#     # showProbingResults = State('ShowProbingResults')
+#
+#     start_wizard = startWizard.to(loadProbeTool)
+#     probe_plugged = loadProbeTool.to(tipProbeTip)
+#     probe_tripped = tipProbeTip.to(selectProbeOperation)
+#     probe_routine_selected = selectProbeOperation.to(enterProbingParameters)
+#
+#     def on_enter_loadProbeTool(self):
+#         LOG.debug('-----Entered LoadProbeTool')
+#
+#     def on_enter_tipProbeTip(self):
+#         LOG.debug('-----Entered tipProbeTip')
+#
+#     def on_enter_selectProbeOperation(self):
+#         LOG.debug('-----Entered selectProbeOperation')
 
 class ProbeWizardWidget(QWidget):
     probingFinished = Signal(object)
@@ -69,13 +69,13 @@ class ProbeWizardWidget(QWidget):
 
         self.stackedWidget.setCurrentIndex(WizardPage.ENTER_PARAMETERS)
 
-        self.wizard_machine = ProbeWizardStateMachine(self)
-        self.wizard_machine.start_wizard()
+        # self.wizard_machine = ProbeWizardStateMachine(self)
+        # self.wizard_machine.start_wizard()
 
     @Slot(bool)
     def set_probe_plugged(self, plugged):
         if plugged:
-            self.wizard_machine.probe_plugged()
+            # self.wizard_machine.probe_plugged()
             self.stackedWidget.setCurrentIndex(WizardPage.TRIP_PROBE_TIP)
         else:
             self.stackedWidget.setCurrentIndex(WizardPage.LOAD_PROBE_TOOL)
@@ -83,7 +83,7 @@ class ProbeWizardWidget(QWidget):
     @Slot(bool)
     def set_probe_tripped(self, tripped):
         if tripped:
-            self.wizard_machine.probe_tripped()
+            # self.wizard_machine.probe_tripped()
             self.stackedWidget.setCurrentIndex(WizardPage.SELECT_PROBE_OPERATION)
         else:
             self.stackedWidget.setCurrentIndex(WizardPage.LOAD_PROBE_TOOL)

@@ -4120,7 +4120,7 @@ QPushButton:checked {
 }</string>
                  </property>
                  <property name="currentIndex">
-                  <number>1</number>
+                  <number>0</number>
                  </property>
                  <property name="rules" stdset="0">
                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;currentIndex&quot;, &quot;expression&quot;: &quot;0 if ch[0] == 1 else 1&quot;, &quot;name&quot;: &quot;Selected Page&quot;}]</string>
