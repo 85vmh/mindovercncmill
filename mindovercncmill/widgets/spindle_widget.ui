@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>251</width>
-    <height>301</height>
+    <width>252</width>
+    <height>321</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,14 @@
      <x>0</x>
      <y>0</y>
      <width>251</width>
-     <height>301</height>
+     <height>321</height>
     </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>251</width>
+     <height>321</height>
+    </size>
    </property>
    <property name="styleSheet">
     <string notr="true">.VCPStackedWidget {
@@ -81,7 +87,7 @@
      <property name="geometry">
       <rect>
        <x>205</x>
-       <y>215</y>
+       <y>230</y>
        <width>30</width>
        <height>30</height>
       </rect>
@@ -132,7 +138,7 @@
      <property name="geometry">
       <rect>
        <x>105</x>
-       <y>215</y>
+       <y>230</y>
        <width>60</width>
        <height>30</height>
       </rect>
@@ -183,7 +189,7 @@
      <property name="geometry">
       <rect>
        <x>5</x>
-       <y>215</y>
+       <y>230</y>
        <width>80</width>
        <height>30</height>
       </rect>
@@ -252,102 +258,13 @@
       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;tooltable:current_tool?tool_number&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;tooltable:current_tool?remark&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'T ' + (str(ch[0])) + \&quot; : \&quot; + ch[1]&quot;, &quot;name&quot;: &quot;Tool Number &amp; comment&quot;}]</string>
      </property>
     </widget>
-    <widget class="QFrame" name="frame_8">
-     <property name="geometry">
-      <rect>
-       <x>5</x>
-       <y>185</y>
-       <width>241</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">.QFrame{
-    border-style: solid;
-    border-color: rgb(176, 179,172);
-    border-width: 1px;
-    border-radius: 4px;
-    background-color: rgb(90, 90, 90);
-    padding: -5px;
-}</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <widget class="QLabel" name="label_27">
-      <property name="geometry">
-       <rect>
-        <x>95</x>
-        <y>5</y>
-        <width>71</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-    padding-left: 1px;
-    padding-right: 1px;
-}</string>
-      </property>
-      <property name="text">
-       <string>Diameter</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_28">
-      <property name="geometry">
-       <rect>
-        <x>185</x>
-        <y>5</y>
-        <width>51</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-    padding-left: 1px;
-    padding-right: 1px;
-}</string>
-      </property>
-      <property name="text">
-       <string>Flutes</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_29">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>5</y>
-        <width>66</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-    padding-left: 1px;
-    padding-right: 1px;
-}</string>
-      </property>
-      <property name="text">
-       <string>Z Offset</string>
-      </property>
-     </widget>
-    </widget>
     <widget class="QPushButton" name="changeToolBtn">
      <property name="geometry">
       <rect>
-       <x>65</x>
-       <y>258</y>
-       <width>121</width>
-       <height>36</height>
+       <x>55</x>
+       <y>275</y>
+       <width>141</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="text">
@@ -358,7 +275,7 @@
      <property name="geometry">
       <rect>
        <x>5</x>
-       <y>245</y>
+       <y>260</y>
        <width>241</width>
        <height>16</height>
       </rect>
@@ -694,6 +611,89 @@
        <normaloff>:/images/cw_arrow.png</normaloff>:/images/cw_arrow.png</iconset>
      </property>
     </widget>
+    <widget class="QFrame" name="frame_3">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>185</y>
+       <width>241</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">.QFrame{
+    border-style: solid;
+    border-color: rgb(176, 179,172);
+    border-width: 1px;
+    border-radius: 4px;
+    background-color: rgb(90, 90, 90);
+    padding: -5px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_35">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>66</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 16pt &quot;Bebas Kai&quot;;
+}</string>
+      </property>
+      <property name="text">
+       <string>Z Offset</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_36">
+      <property name="geometry">
+       <rect>
+        <x>96</x>
+        <y>10</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 16pt &quot;Bebas Kai&quot;;
+}</string>
+      </property>
+      <property name="text">
+       <string>Diameter</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_37">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>10</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 16pt &quot;Bebas Kai&quot;;
+}</string>
+      </property>
+      <property name="text">
+       <string>Flutes</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QWidget" name="page_withToolSpindleOn">
     <widget class="QLabel" name="label_9">
@@ -823,100 +823,11 @@
       <string>{:.0f}</string>
      </property>
     </widget>
-    <widget class="QFrame" name="frame_6">
-     <property name="geometry">
-      <rect>
-       <x>5</x>
-       <y>185</y>
-       <width>241</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">.QFrame{
-    border-style: solid;
-    border-color: rgb(176, 179,172);
-    border-width: 1px;
-    border-radius: 4px;
-    background-color: rgb(90, 90, 90);
-    padding: -5px;
-}</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <widget class="QLabel" name="label_12">
-      <property name="geometry">
-       <rect>
-        <x>95</x>
-        <y>5</y>
-        <width>71</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-    padding-left: 1px;
-    padding-right: 1px;
-}</string>
-      </property>
-      <property name="text">
-       <string>Diameter</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_14">
-      <property name="geometry">
-       <rect>
-        <x>185</x>
-        <y>5</y>
-        <width>51</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-    padding-left: 1px;
-    padding-right: 1px;
-}</string>
-      </property>
-      <property name="text">
-       <string>Flutes</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_15">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>5</y>
-        <width>66</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-    padding-left: 1px;
-    padding-right: 1px;
-}</string>
-      </property>
-      <property name="text">
-       <string>Z Offset</string>
-      </property>
-     </widget>
-    </widget>
     <widget class="StatusLabel" name="statuslabel_zOffset_6">
      <property name="geometry">
       <rect>
        <x>105</x>
-       <y>215</y>
+       <y>230</y>
        <width>60</width>
        <height>30</height>
       </rect>
@@ -967,7 +878,7 @@
      <property name="geometry">
       <rect>
        <x>5</x>
-       <y>215</y>
+       <y>230</y>
        <width>80</width>
        <height>30</height>
       </rect>
@@ -1018,7 +929,7 @@
      <property name="geometry">
       <rect>
        <x>205</x>
-       <y>215</y>
+       <y>230</y>
        <width>30</width>
        <height>30</height>
       </rect>
@@ -1069,7 +980,7 @@
      <property name="geometry">
       <rect>
        <x>5</x>
-       <y>245</y>
+       <y>260</y>
        <width>241</width>
        <height>16</height>
       </rect>
@@ -1088,9 +999,9 @@
      <property name="geometry">
       <rect>
        <x>5</x>
-       <y>265</y>
+       <y>280</y>
        <width>76</width>
-       <height>17</height>
+       <height>30</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1110,9 +1021,9 @@
      <property name="geometry">
       <rect>
        <x>175</x>
-       <y>260</y>
+       <y>280</y>
        <width>66</width>
-       <height>26</height>
+       <height>30</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -1138,7 +1049,7 @@
      <property name="geometry">
       <rect>
        <x>105</x>
-       <y>260</y>
+       <y>280</y>
        <width>60</width>
        <height>30</height>
       </rect>
@@ -1255,6 +1166,89 @@ Spindle</string>
      <property name="option" stdset="0">
       <bool>true</bool>
      </property>
+    </widget>
+    <widget class="QFrame" name="frame_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>185</y>
+       <width>241</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">.QFrame{
+    border-style: solid;
+    border-color: rgb(176, 179,172);
+    border-width: 1px;
+    border-radius: 4px;
+    background-color: rgb(90, 90, 90);
+    padding: -5px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_32">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>66</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 16pt &quot;Bebas Kai&quot;;
+}</string>
+      </property>
+      <property name="text">
+       <string>Z Offset</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_33">
+      <property name="geometry">
+       <rect>
+        <x>96</x>
+        <y>10</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 16pt &quot;Bebas Kai&quot;;
+}</string>
+      </property>
+      <property name="text">
+       <string>Diameter</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_34">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>10</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 16pt &quot;Bebas Kai&quot;;
+}</string>
+      </property>
+      <property name="text">
+       <string>Flutes</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="page_noToolLoaded">

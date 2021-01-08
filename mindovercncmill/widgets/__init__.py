@@ -24,3 +24,8 @@ from spindle_widget import SpindleWidget
 class SpindleWidget_Plugin(_DesignerPlugin):
     def pluginClass(self):
         return SpindleWidget
+
+from smart_dro_widget import SmartDro
+class SmartDro_Plugin(_DesignerPlugin):
+    def pluginClass(self):
+        return SmartDro
