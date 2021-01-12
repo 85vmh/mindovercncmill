@@ -6,9 +6,9 @@ qtdesigner:
   qss_file: ( application.kwargs.stylesheet )
 
 vcp:
-  name: MindOverCncMill
+  name: MindOverCnc Mill
   version: v0.0.1
-  author: My Name
+  author: Vasi Mihalca
   description: >
     Put a short description of your VCP here. This will be
     shown in the VCP Chooser when launching QtPyVCP with the
@@ -25,6 +25,10 @@ data_plugins:
   status:
     kwargs:
       cycle_time: 75
+  notifications:
+    provider: qtpyvcp.plugins.notifications:Notifications
+    kwargs:
+      enabled: False    
 
 windows:
 

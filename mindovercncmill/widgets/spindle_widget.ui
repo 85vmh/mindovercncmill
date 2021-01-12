@@ -22,7 +22,19 @@
      <height>321</height>
     </rect>
    </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <property name="minimumSize">
+    <size>
+     <width>251</width>
+     <height>321</height>
+    </size>
+   </property>
+   <property name="maximumSize">
     <size>
      <width>251</width>
      <height>321</height>
@@ -1705,5 +1717,38 @@ Spindle</string>
  <resources>
   <include location="../resources.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>toolNumberInput</sender>
+   <signal>returnPressed()</signal>
+   <receiver>loadToolBtn</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>166</x>
+     <y>189</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spindleSpeed</sender>
+   <signal>returnPressed()</signal>
+   <receiver>spindleFwdBtn</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>123</x>
+     <y>125</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>36</x>
+     <y>126</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

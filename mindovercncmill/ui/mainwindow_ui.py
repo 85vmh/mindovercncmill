@@ -56,7 +56,7 @@ class Ui_MainWindow(object):
         self.page_toolsScreen.setObjectName("page_toolsScreen")
         self.frame_13 = QtWidgets.QFrame(self.page_toolsScreen)
         self.frame_13.setEnabled(True)
-        self.frame_13.setGeometry(QtCore.QRect(440, 0, 821, 741))
+        self.frame_13.setGeometry(QtCore.QRect(0, 0, 821, 766))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -72,12 +72,12 @@ class Ui_MainWindow(object):
         self.horizontalLayout_38 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_38.setContentsMargins(5, 5, 5, -1)
         self.horizontalLayout_38.setObjectName("horizontalLayout_38")
-        self.tableWidget_2 = ToolTable(self.frame_13)
+        self.toolTable = ToolTable(self.frame_13)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.tableWidget_2.sizePolicy().hasHeightForWidth())
-        self.tableWidget_2.setSizePolicy(sizePolicy)
+        sizePolicy.setHeightForWidth(self.toolTable.sizePolicy().hasHeightForWidth())
+        self.toolTable.setSizePolicy(sizePolicy)
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(235, 235, 238))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -142,16 +142,16 @@ class Ui_MainWindow(object):
         brush = QtGui.QBrush(QtGui.QColor(90, 90, 90))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.AlternateBase, brush)
-        self.tableWidget_2.setPalette(palette)
+        self.toolTable.setPalette(palette)
         font = QtGui.QFont()
         font.setFamily("Bebas Kai")
         font.setPointSize(15)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
-        self.tableWidget_2.setFont(font)
-        self.tableWidget_2.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.tableWidget_2.setStyleSheet("TootTable,\n"
+        self.toolTable.setFont(font)
+        self.toolTable.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.toolTable.setStyleSheet("TootTable,\n"
 "QHeaderView {\n"
 "    font: 14pt \"Bebas Kai\";\n"
 "    background-color: rgb(220, 220, 220);\n"
@@ -171,45 +171,31 @@ class Ui_MainWindow(object):
 "    gridline-color: rgb(203, 203, 203);\n"
 "    alternate-background-color: rgb(90, 90, 90);\n"
 "}")
-        self.tableWidget_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.tableWidget_2.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.tableWidget_2.setLineWidth(3)
-        self.tableWidget_2.setMidLineWidth(3)
-        self.tableWidget_2.setEditTriggers(QtWidgets.QAbstractItemView.AnyKeyPressed|QtWidgets.QAbstractItemView.DoubleClicked|QtWidgets.QAbstractItemView.EditKeyPressed|QtWidgets.QAbstractItemView.SelectedClicked)
-        self.tableWidget_2.setProperty("showDropIndicator", True)
-        self.tableWidget_2.setAlternatingRowColors(True)
-        self.tableWidget_2.setShowGrid(True)
-        self.tableWidget_2.setGridStyle(QtCore.Qt.SolidLine)
-        self.tableWidget_2.setSortingEnabled(True)
-        self.tableWidget_2.setProperty("currentToolColor", QtGui.QColor(42, 56, 255))
-        self.tableWidget_2.setObjectName("tableWidget_2")
-        self.tableWidget_2.horizontalHeader().setDefaultSectionSize(90)
-        self.tableWidget_2.horizontalHeader().setHighlightSections(False)
-        self.tableWidget_2.horizontalHeader().setMinimumSectionSize(90)
-        self.tableWidget_2.horizontalHeader().setStretchLastSection(True)
-        self.tableWidget_2.verticalHeader().setVisible(False)
-        self.tableWidget_2.verticalHeader().setCascadingSectionResizes(True)
-        self.tableWidget_2.verticalHeader().setDefaultSectionSize(30)
-        self.tableWidget_2.verticalHeader().setHighlightSections(False)
-        self.tableWidget_2.verticalHeader().setMinimumSectionSize(30)
-        self.horizontalLayout_38.addWidget(self.tableWidget_2)
+        self.toolTable.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.toolTable.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.toolTable.setLineWidth(3)
+        self.toolTable.setMidLineWidth(3)
+        self.toolTable.setEditTriggers(QtWidgets.QAbstractItemView.AnyKeyPressed|QtWidgets.QAbstractItemView.DoubleClicked|QtWidgets.QAbstractItemView.EditKeyPressed|QtWidgets.QAbstractItemView.SelectedClicked)
+        self.toolTable.setProperty("showDropIndicator", True)
+        self.toolTable.setAlternatingRowColors(True)
+        self.toolTable.setShowGrid(True)
+        self.toolTable.setGridStyle(QtCore.Qt.SolidLine)
+        self.toolTable.setSortingEnabled(True)
+        self.toolTable.setProperty("currentToolColor", QtGui.QColor(42, 56, 255))
+        self.toolTable.setObjectName("toolTable")
+        self.toolTable.horizontalHeader().setDefaultSectionSize(90)
+        self.toolTable.horizontalHeader().setHighlightSections(False)
+        self.toolTable.horizontalHeader().setMinimumSectionSize(90)
+        self.toolTable.horizontalHeader().setStretchLastSection(True)
+        self.toolTable.verticalHeader().setVisible(False)
+        self.toolTable.verticalHeader().setCascadingSectionResizes(True)
+        self.toolTable.verticalHeader().setDefaultSectionSize(30)
+        self.toolTable.verticalHeader().setHighlightSections(False)
+        self.toolTable.verticalHeader().setMinimumSectionSize(30)
+        self.horizontalLayout_38.addWidget(self.toolTable)
         self.verticalLayout_20.addLayout(self.horizontalLayout_38)
         self.horizontalLayout_37 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_37.setObjectName("horizontalLayout_37")
-        self.tool_table_delete_button = QtWidgets.QPushButton(self.frame_13)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.tool_table_delete_button.sizePolicy().hasHeightForWidth())
-        self.tool_table_delete_button.setSizePolicy(sizePolicy)
-        self.tool_table_delete_button.setMinimumSize(QtCore.QSize(120, 33))
-        self.tool_table_delete_button.setMaximumSize(QtCore.QSize(120, 33))
-        self.tool_table_delete_button.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.tool_table_delete_button.setStyleSheet("QPushButton {\n"
-"       font: 14pt \"Bebas Kai\";\n"
-"}")
-        self.tool_table_delete_button.setObjectName("tool_table_delete_button")
-        self.horizontalLayout_37.addWidget(self.tool_table_delete_button)
         self.tool_table_add_tool_button = QtWidgets.QPushButton(self.frame_13)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -224,34 +210,20 @@ class Ui_MainWindow(object):
 "}")
         self.tool_table_add_tool_button.setObjectName("tool_table_add_tool_button")
         self.horizontalLayout_37.addWidget(self.tool_table_add_tool_button)
-        self.tool_table_import_tool_button = QtWidgets.QPushButton(self.frame_13)
+        self.tool_table_delete_button = QtWidgets.QPushButton(self.frame_13)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.tool_table_import_tool_button.sizePolicy().hasHeightForWidth())
-        self.tool_table_import_tool_button.setSizePolicy(sizePolicy)
-        self.tool_table_import_tool_button.setMinimumSize(QtCore.QSize(120, 33))
-        self.tool_table_import_tool_button.setMaximumSize(QtCore.QSize(120, 33))
-        self.tool_table_import_tool_button.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.tool_table_import_tool_button.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.tool_table_delete_button.sizePolicy().hasHeightForWidth())
+        self.tool_table_delete_button.setSizePolicy(sizePolicy)
+        self.tool_table_delete_button.setMinimumSize(QtCore.QSize(120, 33))
+        self.tool_table_delete_button.setMaximumSize(QtCore.QSize(120, 33))
+        self.tool_table_delete_button.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.tool_table_delete_button.setStyleSheet("QPushButton {\n"
 "       font: 14pt \"Bebas Kai\";\n"
 "}")
-        self.tool_table_import_tool_button.setObjectName("tool_table_import_tool_button")
-        self.horizontalLayout_37.addWidget(self.tool_table_import_tool_button)
-        self.tool_table_export_tool_button = QtWidgets.QPushButton(self.frame_13)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.tool_table_export_tool_button.sizePolicy().hasHeightForWidth())
-        self.tool_table_export_tool_button.setSizePolicy(sizePolicy)
-        self.tool_table_export_tool_button.setMinimumSize(QtCore.QSize(120, 33))
-        self.tool_table_export_tool_button.setMaximumSize(QtCore.QSize(120, 33))
-        self.tool_table_export_tool_button.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.tool_table_export_tool_button.setStyleSheet("QPushButton {\n"
-"       font: 14pt \"Bebas Kai\";\n"
-"}")
-        self.tool_table_export_tool_button.setObjectName("tool_table_export_tool_button")
-        self.horizontalLayout_37.addWidget(self.tool_table_export_tool_button)
+        self.tool_table_delete_button.setObjectName("tool_table_delete_button")
+        self.horizontalLayout_37.addWidget(self.tool_table_delete_button)
         self.tool_table_save_button = QtWidgets.QPushButton(self.frame_13)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -282,7 +254,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_37.addWidget(self.tool_table_reload_button)
         self.verticalLayout_20.addLayout(self.horizontalLayout_37)
         self.frame_11 = QtWidgets.QFrame(self.page_toolsScreen)
-        self.frame_11.setGeometry(QtCore.QRect(10, 200, 145, 60))
+        self.frame_11.setGeometry(QtCore.QRect(830, 200, 145, 60))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -343,14 +315,14 @@ class Ui_MainWindow(object):
         self.horizontalLayout_19.addWidget(self.tool_length_6)
         self.horizontalLayout_100.addLayout(self.horizontalLayout_19)
         self.label_43 = QtWidgets.QLabel(self.page_toolsScreen)
-        self.label_43.setGeometry(QtCore.QRect(55, -3, 250, 403))
+        self.label_43.setGeometry(QtCore.QRect(875, -3, 250, 403))
         self.label_43.setStyleSheet("image: url(:/images/atc_spindle_tool_dimensioned.png);")
         self.label_43.setText("")
         self.label_43.setPixmap(QtGui.QPixmap(":/images/atc_spindle_tool_dimensioned.png"))
         self.label_43.setScaledContents(True)
         self.label_43.setObjectName("label_43")
         self.frame_12 = QtWidgets.QFrame(self.page_toolsScreen)
-        self.frame_12.setGeometry(QtCore.QRect(11, 365, 161, 60))
+        self.frame_12.setGeometry(QtCore.QRect(831, 365, 161, 60))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -411,13 +383,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout_20.addWidget(self.tool_diameter_3)
         self.horizontalLayout_101.addLayout(self.horizontalLayout_20)
         self.label_38 = QtWidgets.QLabel(self.page_toolsScreen)
-        self.label_38.setGeometry(QtCore.QRect(200, 540, 240, 200))
+        self.label_38.setGeometry(QtCore.QRect(1020, 565, 240, 200))
         self.label_38.setStyleSheet("image: url(:/images/tool_probe.png);")
         self.label_38.setText("")
         self.label_38.setScaledContents(True)
         self.label_38.setObjectName("label_38")
         self.tool_length_7 = StatusLabel(self.page_toolsScreen)
-        self.tool_length_7.setGeometry(QtCore.QRect(190, 145, 50, 33))
+        self.tool_length_7.setGeometry(QtCore.QRect(1010, 145, 50, 33))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(1)
         sizePolicy.setVerticalStretch(0)
@@ -437,7 +409,7 @@ class Ui_MainWindow(object):
         self.tool_length_7.setAlignment(QtCore.Qt.AlignCenter)
         self.tool_length_7.setObjectName("tool_length_7")
         self.tool_touch_off_button = SubCallButton(self.page_toolsScreen)
-        self.tool_touch_off_button.setGeometry(QtCore.QRect(20, 635, 201, 35))
+        self.tool_touch_off_button.setGeometry(QtCore.QRect(835, 660, 201, 35))
         self.tool_touch_off_button.setMinimumSize(QtCore.QSize(145, 35))
         self.tool_touch_off_button.setStyleSheet("QPushButton {\n"
 "    color: white;    \n"
@@ -476,14 +448,14 @@ class Ui_MainWindow(object):
 "")
         self.tool_touch_off_button.setObjectName("tool_touch_off_button")
         self.halledindicator = HalLedIndicator(self.page_toolsScreen)
-        self.halledindicator.setGeometry(QtCore.QRect(295, 605, 20, 20))
+        self.halledindicator.setGeometry(QtCore.QRect(1115, 625, 20, 20))
         self.halledindicator.setMinimumSize(QtCore.QSize(0, 20))
         self.halledindicator.setMaximumSize(QtCore.QSize(16777215, 20))
         self.halledindicator.setDiameter(20)
         self.halledindicator.setColor(QtGui.QColor(78, 154, 6))
         self.halledindicator.setObjectName("halledindicator")
         self.label_52 = QtWidgets.QLabel(self.page_toolsScreen)
-        self.label_52.setGeometry(QtCore.QRect(275, 580, 64, 25))
+        self.label_52.setGeometry(QtCore.QRect(1095, 600, 64, 25))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -979,39 +951,15 @@ class Ui_MainWindow(object):
 "}")
         self.recentfilecombobox.setProperty("resource", "")
         self.recentfilecombobox.setObjectName("recentfilecombobox")
-        self.change_program_button = QtWidgets.QPushButton(self.page_program)
-        self.change_program_button.setGeometry(QtCore.QRect(5, 5, 80, 30))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.change_program_button.sizePolicy().hasHeightForWidth())
-        self.change_program_button.setSizePolicy(sizePolicy)
-        self.change_program_button.setMinimumSize(QtCore.QSize(50, 30))
-        self.change_program_button.setMaximumSize(QtCore.QSize(80, 30))
-        self.change_program_button.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.change_program_button.setStyleSheet("QPushButton {\n"
-"       font: 14pt \"Bebas Kai\";\n"
-"}")
+        self.buttonChangeProgram = ActionButton(self.page_program)
+        self.buttonChangeProgram.setGeometry(QtCore.QRect(5, 5, 81, 31))
         icon8 = QtGui.QIcon()
         icon8.addPixmap(QtGui.QPixmap(":/images/new_file.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.change_program_button.setIcon(icon8)
-        self.change_program_button.setIconSize(QtCore.QSize(30, 17))
-        self.change_program_button.setObjectName("change_program_button")
-        self.reload_program_button = QtWidgets.QPushButton(self.page_program)
-        self.reload_program_button.setGeometry(QtCore.QRect(410, 5, 76, 30))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.reload_program_button.sizePolicy().hasHeightForWidth())
-        self.reload_program_button.setSizePolicy(sizePolicy)
-        self.reload_program_button.setMinimumSize(QtCore.QSize(50, 30))
-        self.reload_program_button.setMaximumSize(QtCore.QSize(80, 30))
-        self.reload_program_button.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.reload_program_button.setStyleSheet("QPushButton {\n"
-"       font: 14pt \"Bebas Kai\";\n"
-"}")
-        self.reload_program_button.setIconSize(QtCore.QSize(30, 17))
-        self.reload_program_button.setObjectName("reload_program_button")
+        self.buttonChangeProgram.setIcon(icon8)
+        self.buttonChangeProgram.setObjectName("buttonChangeProgram")
+        self.buttonReloadProgram = ActionButton(self.page_program)
+        self.buttonReloadProgram.setGeometry(QtCore.QRect(410, 5, 71, 31))
+        self.buttonReloadProgram.setObjectName("buttonReloadProgram")
         self.stackedWidgetLeftTop.addWidget(self.page_program)
         self.page_status = QtWidgets.QWidget()
         self.page_status.setObjectName("page_status")
@@ -1027,7 +975,7 @@ class Ui_MainWindow(object):
         self.notificationwidget.setObjectName("notificationwidget")
         self.stackedWidgetLeftTop.addWidget(self.page_status)
         self.stackedWidgetLeftBottom = VCPStackedWidget(self.page_mainScreen)
-        self.stackedWidgetLeftBottom.setGeometry(QtCore.QRect(5, 440, 291, 301))
+        self.stackedWidgetLeftBottom.setGeometry(QtCore.QRect(5, 440, 291, 321))
         self.stackedWidgetLeftBottom.setStyleSheet(".VCPStackedWidget {\n"
 "    border-style: solid;\n"
 "    border-color: rgb(186, 189, 182);\n"
@@ -1281,1266 +1229,6 @@ class Ui_MainWindow(object):
         self.actionbutton_5.setCheckable(True)
         self.actionbutton_5.setObjectName("actionbutton_5")
         self.stackedWidgetLeftBottom.addWidget(self.page_7)
-        self.frame_dro_zone = QtWidgets.QFrame(self.page_mainScreen)
-        self.frame_dro_zone.setGeometry(QtCore.QRect(575, 440, 436, 301))
-        self.frame_dro_zone.setStyleSheet(".QFrame {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(186, 189, 182);\n"
-"    border-width: 1px;\n"
-"    border-radius: 6px;\n"
-"}")
-        self.frame_dro_zone.setFrameShape(QtWidgets.QFrame.Box)
-        self.frame_dro_zone.setObjectName("frame_dro_zone")
-        self.verticalLayout_56 = QtWidgets.QVBoxLayout(self.frame_dro_zone)
-        self.verticalLayout_56.setContentsMargins(5, 0, 3, 0)
-        self.verticalLayout_56.setSpacing(5)
-        self.verticalLayout_56.setObjectName("verticalLayout_56")
-        self.horizontalLayout_77 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_77.setContentsMargins(1, 1, 1, 1)
-        self.horizontalLayout_77.setSpacing(4)
-        self.horizontalLayout_77.setObjectName("horizontalLayout_77")
-        self.frame_43 = QtWidgets.QFrame(self.frame_dro_zone)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.frame_43.sizePolicy().hasHeightForWidth())
-        self.frame_43.setSizePolicy(sizePolicy)
-        self.frame_43.setMinimumSize(QtCore.QSize(0, 35))
-        self.frame_43.setMaximumSize(QtCore.QSize(16777215, 35))
-        self.frame_43.setStyleSheet(".QFrame{\n"
-"    border-style: solid;\n"
-"    border-color: rgb(176, 179,172);\n"
-"    border-width: 1px;\n"
-"    border-radius: 4px;\n"
-"    background-color: rgb(90, 90, 90);\n"
-"    padding: -5px;\n"
-"}")
-        self.frame_43.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_43.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_43.setObjectName("frame_43")
-        self.horizontalLayout_144 = QtWidgets.QHBoxLayout(self.frame_43)
-        self.horizontalLayout_144.setContentsMargins(15, 0, 22, 0)
-        self.horizontalLayout_144.setSpacing(8)
-        self.horizontalLayout_144.setObjectName("horizontalLayout_144")
-        self.statuslabel_23 = StatusLabel(self.frame_43)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.statuslabel_23.sizePolicy().hasHeightForWidth())
-        self.statuslabel_23.setSizePolicy(sizePolicy)
-        self.statuslabel_23.setMinimumSize(QtCore.QSize(50, 17))
-        self.statuslabel_23.setMaximumSize(QtCore.QSize(50, 17))
-        self.statuslabel_23.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 16pt \"Bebas Kai\";\n"
-"    padding-left: 1px;\n"
-"    padding-right: 20px;\n"
-"}")
-        self.statuslabel_23.setAlignment(QtCore.Qt.AlignCenter)
-        self.statuslabel_23.setObjectName("statuslabel_23")
-        self.horizontalLayout_144.addWidget(self.statuslabel_23)
-        self.statuslabel_24 = StatusLabel(self.frame_43)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.statuslabel_24.sizePolicy().hasHeightForWidth())
-        self.statuslabel_24.setSizePolicy(sizePolicy)
-        self.statuslabel_24.setMinimumSize(QtCore.QSize(90, 17))
-        self.statuslabel_24.setMaximumSize(QtCore.QSize(90, 17))
-        self.statuslabel_24.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 16pt \"Bebas Kai\";\n"
-"    padding-left: 6px;\n"
-"}")
-        self.statuslabel_24.setAlignment(QtCore.Qt.AlignCenter)
-        self.statuslabel_24.setObjectName("statuslabel_24")
-        self.horizontalLayout_144.addWidget(self.statuslabel_24)
-        self.work_column_header_9 = QtWidgets.QLabel(self.frame_43)
-        self.work_column_header_9.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.work_column_header_9.sizePolicy().hasHeightForWidth())
-        self.work_column_header_9.setSizePolicy(sizePolicy)
-        self.work_column_header_9.setMinimumSize(QtCore.QSize(100, 17))
-        self.work_column_header_9.setMaximumSize(QtCore.QSize(100, 17))
-        self.work_column_header_9.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 16pt \"Bebas Kai\";\n"
-"}")
-        self.work_column_header_9.setAlignment(QtCore.Qt.AlignCenter)
-        self.work_column_header_9.setObjectName("work_column_header_9")
-        self.horizontalLayout_144.addWidget(self.work_column_header_9)
-        self.dtg_column_header_4 = QtWidgets.QLabel(self.frame_43)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.dtg_column_header_4.sizePolicy().hasHeightForWidth())
-        self.dtg_column_header_4.setSizePolicy(sizePolicy)
-        self.dtg_column_header_4.setMinimumSize(QtCore.QSize(90, 17))
-        self.dtg_column_header_4.setMaximumSize(QtCore.QSize(90, 17))
-        self.dtg_column_header_4.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 16pt \"Bebas Kai\";\n"
-"}")
-        self.dtg_column_header_4.setAlignment(QtCore.Qt.AlignCenter)
-        self.dtg_column_header_4.setObjectName("dtg_column_header_4")
-        self.horizontalLayout_144.addWidget(self.dtg_column_header_4)
-        self.statuslabel_25 = StatusLabel(self.frame_43)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.statuslabel_25.sizePolicy().hasHeightForWidth())
-        self.statuslabel_25.setSizePolicy(sizePolicy)
-        self.statuslabel_25.setMinimumSize(QtCore.QSize(40, 17))
-        self.statuslabel_25.setMaximumSize(QtCore.QSize(40, 17))
-        self.statuslabel_25.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 16pt \"Bebas Kai\";\n"
-"    padding-left: 6px;\n"
-"}")
-        self.statuslabel_25.setAlignment(QtCore.Qt.AlignCenter)
-        self.statuslabel_25.setObjectName("statuslabel_25")
-        self.horizontalLayout_144.addWidget(self.statuslabel_25)
-        self.horizontalLayout_77.addWidget(self.frame_43)
-        self.verticalLayout_56.addLayout(self.horizontalLayout_77)
-        self.x_axis_dro_layout = QtWidgets.QHBoxLayout()
-        self.x_axis_dro_layout.setContentsMargins(1, 1, 0, 1)
-        self.x_axis_dro_layout.setSpacing(7)
-        self.x_axis_dro_layout.setObjectName("x_axis_dro_layout")
-        self.zero_x_button_3 = MDIButton(self.frame_dro_zone)
-        self.zero_x_button_3.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.zero_x_button_3.sizePolicy().hasHeightForWidth())
-        self.zero_x_button_3.setSizePolicy(sizePolicy)
-        self.zero_x_button_3.setMinimumSize(QtCore.QSize(60, 35))
-        self.zero_x_button_3.setMaximumSize(QtCore.QSize(60, 40))
-        self.zero_x_button_3.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.zero_x_button_3.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.zero_x_button_3.setStyleSheet("MDIButton {\n"
-"       font: 17pt \"Bebas Kai\";\n"
-"}")
-        icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap(":/images/zero.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.zero_x_button_3.setIcon(icon9)
-        self.zero_x_button_3.setIconSize(QtCore.QSize(20, 20))
-        self.zero_x_button_3.setObjectName("zero_x_button_3")
-        self.x_axis_dro_layout.addWidget(self.zero_x_button_3)
-        self.dro_entry_main_x = DROLineEdit(self.frame_dro_zone)
-        self.dro_entry_main_x.setMinimumSize(QtCore.QSize(90, 30))
-        self.dro_entry_main_x.setMaximumSize(QtCore.QSize(90, 30))
-        font = QtGui.QFont()
-        font.setFamily("Bebas Kai")
-        font.setPointSize(17)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.dro_entry_main_x.setFont(font)
-        self.dro_entry_main_x.setStyleSheet("QLineEdit{\n"
-"    border-style: transparant;\n"
-"    border-color: rgb(235, 235, 235);\n"
-"    border-width: 1px;\n"
-"    border-radius: 3px;\n"
-"    color: black;\n"
-"    background: rgb(235, 235, 235);\n"
-"    padding-right: 2px;\n"
-"    font: 17pt \"Bebas Kai\";\n"
-"}")
-        self.dro_entry_main_x.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.dro_entry_main_x.setObjectName("dro_entry_main_x")
-        self.x_axis_dro_layout.addWidget(self.dro_entry_main_x)
-        self.drolabel_15 = DROLabel(self.frame_dro_zone)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.drolabel_15.sizePolicy().hasHeightForWidth())
-        self.drolabel_15.setSizePolicy(sizePolicy)
-        self.drolabel_15.setMinimumSize(QtCore.QSize(90, 30))
-        self.drolabel_15.setMaximumSize(QtCore.QSize(90, 30))
-        self.drolabel_15.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 3px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.drolabel_15.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.drolabel_15.setProperty("referenceType", 0)
-        self.drolabel_15.setProperty("axisNumber", 0)
-        self.drolabel_15.setProperty("latheMode", 0)
-        self.drolabel_15.setObjectName("drolabel_15")
-        self.x_axis_dro_layout.addWidget(self.drolabel_15)
-        self.drolabel_16 = DROLabel(self.frame_dro_zone)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.drolabel_16.sizePolicy().hasHeightForWidth())
-        self.drolabel_16.setSizePolicy(sizePolicy)
-        self.drolabel_16.setMinimumSize(QtCore.QSize(90, 30))
-        self.drolabel_16.setMaximumSize(QtCore.QSize(90, 30))
-        self.drolabel_16.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 3px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.drolabel_16.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.drolabel_16.setProperty("referenceType", 2)
-        self.drolabel_16.setProperty("axisNumber", 0)
-        self.drolabel_16.setProperty("latheMode", 0)
-        self.drolabel_16.setObjectName("drolabel_16")
-        self.x_axis_dro_layout.addWidget(self.drolabel_16)
-        self.axisactionbutton_6 = ActionButton(self.frame_dro_zone)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.axisactionbutton_6.sizePolicy().hasHeightForWidth())
-        self.axisactionbutton_6.setSizePolicy(sizePolicy)
-        self.axisactionbutton_6.setMinimumSize(QtCore.QSize(60, 35))
-        self.axisactionbutton_6.setMaximumSize(QtCore.QSize(60, 40))
-        self.axisactionbutton_6.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.axisactionbutton_6.setStyleSheet("QPushButton {\n"
-"       font: 15pt \"Bebas Kai\";\n"
-"}")
-        self.axisactionbutton_6.setObjectName("axisactionbutton_6")
-        self.x_axis_dro_layout.addWidget(self.axisactionbutton_6)
-        self.verticalLayout_56.addLayout(self.x_axis_dro_layout)
-        self.y_axis_dro_layout_3 = QtWidgets.QHBoxLayout()
-        self.y_axis_dro_layout_3.setContentsMargins(1, 1, 1, 1)
-        self.y_axis_dro_layout_3.setSpacing(7)
-        self.y_axis_dro_layout_3.setObjectName("y_axis_dro_layout_3")
-        self.zero_y_button_5 = MDIButton(self.frame_dro_zone)
-        self.zero_y_button_5.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.zero_y_button_5.sizePolicy().hasHeightForWidth())
-        self.zero_y_button_5.setSizePolicy(sizePolicy)
-        self.zero_y_button_5.setMinimumSize(QtCore.QSize(60, 35))
-        self.zero_y_button_5.setMaximumSize(QtCore.QSize(60, 40))
-        self.zero_y_button_5.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.zero_y_button_5.setStyleSheet("MDIButton {\n"
-"       font: 17pt \"Bebas Kai\";\n"
-"}")
-        self.zero_y_button_5.setIcon(icon9)
-        self.zero_y_button_5.setIconSize(QtCore.QSize(20, 20))
-        self.zero_y_button_5.setObjectName("zero_y_button_5")
-        self.y_axis_dro_layout_3.addWidget(self.zero_y_button_5)
-        self.dro_entry_main_y_2 = DROLineEdit(self.frame_dro_zone)
-        self.dro_entry_main_y_2.setMinimumSize(QtCore.QSize(90, 30))
-        self.dro_entry_main_y_2.setMaximumSize(QtCore.QSize(90, 30))
-        font = QtGui.QFont()
-        font.setFamily("Bebas Kai")
-        font.setPointSize(17)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.dro_entry_main_y_2.setFont(font)
-        self.dro_entry_main_y_2.setStyleSheet("QLineEdit{\n"
-"    border-style: transparant;\n"
-"    border-color: rgb(235, 235, 235);\n"
-"    border-width: 1px;\n"
-"    border-radius: 3px;\n"
-"    color: black;\n"
-"    background: rgb(235, 235, 235);\n"
-"    padding-right: 2px;\n"
-"    font: 17pt \"Bebas Kai\";\n"
-"}")
-        self.dro_entry_main_y_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.dro_entry_main_y_2.setProperty("axisNumber", 1)
-        self.dro_entry_main_y_2.setObjectName("dro_entry_main_y_2")
-        self.y_axis_dro_layout_3.addWidget(self.dro_entry_main_y_2)
-        self.drolabel_19 = DROLabel(self.frame_dro_zone)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.drolabel_19.sizePolicy().hasHeightForWidth())
-        self.drolabel_19.setSizePolicy(sizePolicy)
-        self.drolabel_19.setMinimumSize(QtCore.QSize(90, 30))
-        self.drolabel_19.setMaximumSize(QtCore.QSize(90, 30))
-        self.drolabel_19.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 3px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.drolabel_19.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.drolabel_19.setProperty("referenceType", 0)
-        self.drolabel_19.setProperty("axisNumber", 1)
-        self.drolabel_19.setProperty("latheMode", 0)
-        self.drolabel_19.setObjectName("drolabel_19")
-        self.y_axis_dro_layout_3.addWidget(self.drolabel_19)
-        self.drolabel_20 = DROLabel(self.frame_dro_zone)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.drolabel_20.sizePolicy().hasHeightForWidth())
-        self.drolabel_20.setSizePolicy(sizePolicy)
-        self.drolabel_20.setMinimumSize(QtCore.QSize(90, 30))
-        self.drolabel_20.setMaximumSize(QtCore.QSize(90, 30))
-        self.drolabel_20.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 3px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.drolabel_20.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.drolabel_20.setProperty("referenceType", 2)
-        self.drolabel_20.setProperty("axisNumber", 1)
-        self.drolabel_20.setProperty("latheMode", 0)
-        self.drolabel_20.setObjectName("drolabel_20")
-        self.y_axis_dro_layout_3.addWidget(self.drolabel_20)
-        self.axisactionbutton_4 = ActionButton(self.frame_dro_zone)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.axisactionbutton_4.sizePolicy().hasHeightForWidth())
-        self.axisactionbutton_4.setSizePolicy(sizePolicy)
-        self.axisactionbutton_4.setMinimumSize(QtCore.QSize(60, 35))
-        self.axisactionbutton_4.setMaximumSize(QtCore.QSize(60, 40))
-        self.axisactionbutton_4.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.axisactionbutton_4.setStyleSheet("QPushButton {\n"
-"       font: 15pt \"Bebas Kai\";\n"
-"}")
-        self.axisactionbutton_4.setObjectName("axisactionbutton_4")
-        self.y_axis_dro_layout_3.addWidget(self.axisactionbutton_4)
-        self.verticalLayout_56.addLayout(self.y_axis_dro_layout_3)
-        self.z_axis_dro_layout = QtWidgets.QHBoxLayout()
-        self.z_axis_dro_layout.setContentsMargins(1, 1, 1, -1)
-        self.z_axis_dro_layout.setSpacing(7)
-        self.z_axis_dro_layout.setObjectName("z_axis_dro_layout")
-        self.zero_z_button_3 = MDIButton(self.frame_dro_zone)
-        self.zero_z_button_3.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.zero_z_button_3.sizePolicy().hasHeightForWidth())
-        self.zero_z_button_3.setSizePolicy(sizePolicy)
-        self.zero_z_button_3.setMinimumSize(QtCore.QSize(60, 35))
-        self.zero_z_button_3.setMaximumSize(QtCore.QSize(60, 40))
-        self.zero_z_button_3.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.zero_z_button_3.setStyleSheet("MDIButton {\n"
-"       font: 17pt \"Bebas Kai\";\n"
-"}")
-        self.zero_z_button_3.setIcon(icon9)
-        self.zero_z_button_3.setIconSize(QtCore.QSize(20, 20))
-        self.zero_z_button_3.setObjectName("zero_z_button_3")
-        self.z_axis_dro_layout.addWidget(self.zero_z_button_3)
-        self.dro_entry_main_z = DROLineEdit(self.frame_dro_zone)
-        self.dro_entry_main_z.setMinimumSize(QtCore.QSize(90, 30))
-        self.dro_entry_main_z.setMaximumSize(QtCore.QSize(90, 30))
-        font = QtGui.QFont()
-        font.setFamily("Bebas Kai")
-        font.setPointSize(17)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.dro_entry_main_z.setFont(font)
-        self.dro_entry_main_z.setStyleSheet("QLineEdit{\n"
-"    border-style: transparant;\n"
-"    border-color: rgb(235, 235, 235);\n"
-"    border-width: 1px;\n"
-"    border-radius: 3px;\n"
-"    color: black;\n"
-"    background: rgb(235, 235, 235);\n"
-"    padding-right: 2px;\n"
-"    font: 17pt \"Bebas Kai\";\n"
-"}")
-        self.dro_entry_main_z.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.dro_entry_main_z.setProperty("axisNumber", 2)
-        self.dro_entry_main_z.setObjectName("dro_entry_main_z")
-        self.z_axis_dro_layout.addWidget(self.dro_entry_main_z)
-        self.drolabel_21 = DROLabel(self.frame_dro_zone)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.drolabel_21.sizePolicy().hasHeightForWidth())
-        self.drolabel_21.setSizePolicy(sizePolicy)
-        self.drolabel_21.setMinimumSize(QtCore.QSize(90, 30))
-        self.drolabel_21.setMaximumSize(QtCore.QSize(90, 30))
-        self.drolabel_21.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 3px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.drolabel_21.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.drolabel_21.setProperty("referenceType", 0)
-        self.drolabel_21.setProperty("axisNumber", 2)
-        self.drolabel_21.setProperty("latheMode", 0)
-        self.drolabel_21.setObjectName("drolabel_21")
-        self.z_axis_dro_layout.addWidget(self.drolabel_21)
-        self.drolabel_22 = DROLabel(self.frame_dro_zone)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.drolabel_22.sizePolicy().hasHeightForWidth())
-        self.drolabel_22.setSizePolicy(sizePolicy)
-        self.drolabel_22.setMinimumSize(QtCore.QSize(90, 30))
-        self.drolabel_22.setMaximumSize(QtCore.QSize(90, 30))
-        self.drolabel_22.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 3px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.drolabel_22.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.drolabel_22.setProperty("referenceType", 2)
-        self.drolabel_22.setProperty("axisNumber", 2)
-        self.drolabel_22.setProperty("latheMode", 0)
-        self.drolabel_22.setObjectName("drolabel_22")
-        self.z_axis_dro_layout.addWidget(self.drolabel_22)
-        self.axisactionbutton = ActionButton(self.frame_dro_zone)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.axisactionbutton.sizePolicy().hasHeightForWidth())
-        self.axisactionbutton.setSizePolicy(sizePolicy)
-        self.axisactionbutton.setMinimumSize(QtCore.QSize(60, 35))
-        self.axisactionbutton.setMaximumSize(QtCore.QSize(60, 40))
-        self.axisactionbutton.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.axisactionbutton.setStyleSheet("QPushButton {\n"
-"       font: 15pt \"Bebas Kai\";\n"
-"}")
-        self.axisactionbutton.setObjectName("axisactionbutton")
-        self.z_axis_dro_layout.addWidget(self.axisactionbutton)
-        self.verticalLayout_56.addLayout(self.z_axis_dro_layout)
-        self.a_axis_dro_layout = QtWidgets.QHBoxLayout()
-        self.a_axis_dro_layout.setContentsMargins(1, 0, 1, 0)
-        self.a_axis_dro_layout.setSpacing(7)
-        self.a_axis_dro_layout.setObjectName("a_axis_dro_layout")
-        self.zero_a_button_3 = MDIButton(self.frame_dro_zone)
-        self.zero_a_button_3.setEnabled(False)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.zero_a_button_3.sizePolicy().hasHeightForWidth())
-        self.zero_a_button_3.setSizePolicy(sizePolicy)
-        self.zero_a_button_3.setMinimumSize(QtCore.QSize(60, 35))
-        self.zero_a_button_3.setMaximumSize(QtCore.QSize(60, 40))
-        self.zero_a_button_3.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.zero_a_button_3.setStyleSheet("MDIButton {\n"
-"       font: 17pt \"Bebas Kai\";\n"
-"}")
-        self.zero_a_button_3.setIcon(icon9)
-        self.zero_a_button_3.setIconSize(QtCore.QSize(20, 20))
-        self.zero_a_button_3.setObjectName("zero_a_button_3")
-        self.a_axis_dro_layout.addWidget(self.zero_a_button_3)
-        self.dro_entry_main_a = DROLineEdit(self.frame_dro_zone)
-        self.dro_entry_main_a.setMinimumSize(QtCore.QSize(90, 30))
-        self.dro_entry_main_a.setMaximumSize(QtCore.QSize(90, 30))
-        font = QtGui.QFont()
-        font.setFamily("Bebas Kai")
-        font.setPointSize(17)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.dro_entry_main_a.setFont(font)
-        self.dro_entry_main_a.setStyleSheet("QLineEdit{\n"
-"    border-style: transparant;\n"
-"    border-color: rgb(235, 235, 235);\n"
-"    border-width: 1px;\n"
-"    border-radius: 3px;\n"
-"    color: black;\n"
-"    background: rgb(235, 235, 235);\n"
-"    padding-right: 2px;\n"
-"    font: 17pt \"Bebas Kai\";\n"
-"}")
-        self.dro_entry_main_a.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.dro_entry_main_a.setProperty("axisNumber", 3)
-        self.dro_entry_main_a.setObjectName("dro_entry_main_a")
-        self.a_axis_dro_layout.addWidget(self.dro_entry_main_a)
-        self.drolabel_23 = DROLabel(self.frame_dro_zone)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.drolabel_23.sizePolicy().hasHeightForWidth())
-        self.drolabel_23.setSizePolicy(sizePolicy)
-        self.drolabel_23.setMinimumSize(QtCore.QSize(90, 30))
-        self.drolabel_23.setMaximumSize(QtCore.QSize(90, 30))
-        self.drolabel_23.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 3px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.drolabel_23.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.drolabel_23.setProperty("referenceType", 0)
-        self.drolabel_23.setProperty("axisNumber", 3)
-        self.drolabel_23.setProperty("latheMode", 0)
-        self.drolabel_23.setObjectName("drolabel_23")
-        self.a_axis_dro_layout.addWidget(self.drolabel_23)
-        self.drolabel_24 = DROLabel(self.frame_dro_zone)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.drolabel_24.sizePolicy().hasHeightForWidth())
-        self.drolabel_24.setSizePolicy(sizePolicy)
-        self.drolabel_24.setMinimumSize(QtCore.QSize(90, 30))
-        self.drolabel_24.setMaximumSize(QtCore.QSize(90, 30))
-        self.drolabel_24.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 3px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.drolabel_24.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.drolabel_24.setProperty("referenceType", 2)
-        self.drolabel_24.setProperty("axisNumber", 3)
-        self.drolabel_24.setProperty("latheMode", 0)
-        self.drolabel_24.setObjectName("drolabel_24")
-        self.a_axis_dro_layout.addWidget(self.drolabel_24)
-        self.button_a_goto_zero = MDIButton(self.frame_dro_zone)
-        self.button_a_goto_zero.setMinimumSize(QtCore.QSize(60, 35))
-        self.button_a_goto_zero.setMaximumSize(QtCore.QSize(60, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bebas Kai")
-        font.setPointSize(14)
-        self.button_a_goto_zero.setFont(font)
-        self.button_a_goto_zero.setObjectName("button_a_goto_zero")
-        self.a_axis_dro_layout.addWidget(self.button_a_goto_zero)
-        self.verticalLayout_56.addLayout(self.a_axis_dro_layout)
-        self.stackedWidgetSpindle = VCPStackedWidget(self.page_mainScreen)
-        self.stackedWidgetSpindle.setGeometry(QtCore.QRect(1015, 640, 251, 101))
-        self.stackedWidgetSpindle.setStyleSheet(".VCPStackedWidget {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(186, 189, 182);\n"
-"    border-width: 1px;\n"
-"    border-radius: 6px;\n"
-"}")
-        self.stackedWidgetSpindle.setFrameShape(QtWidgets.QFrame.Box)
-        self.stackedWidgetSpindle.setObjectName("stackedWidgetSpindle")
-        self.page_spindle_off = QtWidgets.QWidget()
-        self.page_spindle_off.setObjectName("page_spindle_off")
-        self.frame_29 = QtWidgets.QFrame(self.page_spindle_off)
-        self.frame_29.setGeometry(QtCore.QRect(80, 5, 88, 38))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.frame_29.sizePolicy().hasHeightForWidth())
-        self.frame_29.setSizePolicy(sizePolicy)
-        self.frame_29.setMinimumSize(QtCore.QSize(0, 38))
-        self.frame_29.setMaximumSize(QtCore.QSize(16777215, 38))
-        self.frame_29.setStyleSheet(".QFrame{\n"
-"    border-style: solid;\n"
-"    border-color: rgb(176, 179,172);\n"
-"    border-width: 1px;\n"
-"    border-radius: 4px;\n"
-"    background-color: rgb(90, 90, 90);\n"
-"    padding: -5px;\n"
-"}")
-        self.frame_29.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_29.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_29.setObjectName("frame_29")
-        self.horizontalLayout_107 = QtWidgets.QHBoxLayout(self.frame_29)
-        self.horizontalLayout_107.setContentsMargins(0, 0, 1, 0)
-        self.horizontalLayout_107.setSpacing(0)
-        self.horizontalLayout_107.setObjectName("horizontalLayout_107")
-        self.ref_coilumn_header_5 = QtWidgets.QLabel(self.frame_29)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.ref_coilumn_header_5.sizePolicy().hasHeightForWidth())
-        self.ref_coilumn_header_5.setSizePolicy(sizePolicy)
-        self.ref_coilumn_header_5.setMinimumSize(QtCore.QSize(15, 36))
-        self.ref_coilumn_header_5.setMaximumSize(QtCore.QSize(15, 36))
-        self.ref_coilumn_header_5.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 17pt \"Bebas Kai\";\n"
-"}")
-        self.ref_coilumn_header_5.setAlignment(QtCore.Qt.AlignCenter)
-        self.ref_coilumn_header_5.setIndent(0)
-        self.ref_coilumn_header_5.setObjectName("ref_coilumn_header_5")
-        self.horizontalLayout_107.addWidget(self.ref_coilumn_header_5)
-        self.spindleSpeed = VCPLineEdit(self.frame_29)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.spindleSpeed.sizePolicy().hasHeightForWidth())
-        self.spindleSpeed.setSizePolicy(sizePolicy)
-        self.spindleSpeed.setMinimumSize(QtCore.QSize(55, 30))
-        self.spindleSpeed.setMaximumSize(QtCore.QSize(55, 30))
-        palette = QtGui.QPalette()
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Button, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Text, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.ButtonText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Window, brush)
-        brush = QtGui.QBrush(QtGui.QColor(65, 84, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Highlight, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.HighlightedText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Button, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Text, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.ButtonText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Window, brush)
-        brush = QtGui.QBrush(QtGui.QColor(65, 84, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Highlight, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.HighlightedText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Text, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ButtonText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
-        brush = QtGui.QBrush(QtGui.QColor(65, 84, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Highlight, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.HighlightedText, brush)
-        self.spindleSpeed.setPalette(palette)
-        font = QtGui.QFont()
-        font.setFamily("Bebas Kai")
-        font.setPointSize(17)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.spindleSpeed.setFont(font)
-        self.spindleSpeed.setFocusPolicy(QtCore.Qt.ClickFocus)
-        self.spindleSpeed.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.spindleSpeed.setStyleSheet("font: 17pt;")
-        self.spindleSpeed.setMaxLength(5)
-        self.spindleSpeed.setFrame(True)
-        self.spindleSpeed.setAlignment(QtCore.Qt.AlignCenter)
-        self.spindleSpeed.setObjectName("spindleSpeed")
-        self.horizontalLayout_107.addWidget(self.spindleSpeed)
-        self.spindleFwdButton = MDIButton(self.page_spindle_off)
-        self.spindleFwdButton.setGeometry(QtCore.QRect(145, 50, 96, 40))
-        icon10 = QtGui.QIcon()
-        icon10.addPixmap(QtGui.QPixmap(":/images/cw_arrow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.spindleFwdButton.setIcon(icon10)
-        self.spindleFwdButton.setObjectName("spindleFwdButton")
-        self.spindleFwdButton_2 = MDIButton(self.page_spindle_off)
-        self.spindleFwdButton_2.setGeometry(QtCore.QRect(10, 50, 96, 40))
-        icon11 = QtGui.QIcon()
-        icon11.addPixmap(QtGui.QPixmap(":/images/ccw_arrow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.spindleFwdButton_2.setIcon(icon11)
-        self.spindleFwdButton_2.setObjectName("spindleFwdButton_2")
-        self.stackedWidgetSpindle.addWidget(self.page_spindle_off)
-        self.page_spindle_on = QtWidgets.QWidget()
-        self.page_spindle_on.setObjectName("page_spindle_on")
-        self.spindle_stop_button = ActionButton(self.page_spindle_on)
-        self.spindle_stop_button.setGeometry(QtCore.QRect(180, 50, 60, 40))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.spindle_stop_button.sizePolicy().hasHeightForWidth())
-        self.spindle_stop_button.setSizePolicy(sizePolicy)
-        self.spindle_stop_button.setMinimumSize(QtCore.QSize(60, 40))
-        self.spindle_stop_button.setMaximumSize(QtCore.QSize(60, 35))
-        self.spindle_stop_button.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.spindle_stop_button.setStyleSheet("QPushButton {\n"
-"       font: 17pt \"Bebas Kai\";\n"
-"}")
-        self.spindle_stop_button.setProperty("option", True)
-        self.spindle_stop_button.setObjectName("spindle_stop_button")
-        self.spindle_load_indicator = HalBarIndicator(self.page_spindle_on)
-        self.spindle_load_indicator.setGeometry(QtCore.QRect(10, 15, 231, 20))
-        self.spindle_load_indicator.setMinimumSize(QtCore.QSize(0, 20))
-        self.spindle_load_indicator.setMaximumSize(QtCore.QSize(16777215, 20))
-        font = QtGui.QFont()
-        font.setFamily("Bebas Kai")
-        font.setPointSize(14)
-        self.spindle_load_indicator.setFont(font)
-        self.spindle_load_indicator.setStyleSheet(".HalBarIndicator{\n"
-"    color: rgb(238, 238, 236);\n"
-"}")
-        self.spindle_load_indicator.setProperty("value", 100.0)
-        self.spindle_load_indicator.setProperty("maximum", 150.0)
-        self.spindle_load_indicator.setProperty("barGradient", ['0.0, 170, 170, 236', '0.63, 85, 85, 238', '0.65, 171, 171, 158', '0.79, 227, 237, 106', '0.84, 219, 124, 55', '1.0, 209, 0, 0'])
-        self.spindle_load_indicator.setObjectName("spindle_load_indicator")
-        self.statuslabel_6 = StatusLabel(self.page_spindle_on)
-        self.statuslabel_6.setGeometry(QtCore.QRect(105, 55, 70, 30))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.statuslabel_6.sizePolicy().hasHeightForWidth())
-        self.statuslabel_6.setSizePolicy(sizePolicy)
-        self.statuslabel_6.setMinimumSize(QtCore.QSize(70, 30))
-        self.statuslabel_6.setMaximumSize(QtCore.QSize(70, 30))
-        self.statuslabel_6.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 5px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.statuslabel_6.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.statuslabel_6.setObjectName("statuslabel_6")
-        self.work_column_header_10 = QtWidgets.QLabel(self.page_spindle_on)
-        self.work_column_header_10.setEnabled(False)
-        self.work_column_header_10.setGeometry(QtCore.QRect(10, 60, 90, 20))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.work_column_header_10.sizePolicy().hasHeightForWidth())
-        self.work_column_header_10.setSizePolicy(sizePolicy)
-        self.work_column_header_10.setMinimumSize(QtCore.QSize(90, 20))
-        self.work_column_header_10.setMaximumSize(QtCore.QSize(90, 20))
-        self.work_column_header_10.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 14pt \"Bebas Kai\";\n"
-"}")
-        self.work_column_header_10.setFrameShape(QtWidgets.QFrame.NoFrame)
-        self.work_column_header_10.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.work_column_header_10.setObjectName("work_column_header_10")
-        self.stackedWidgetSpindle.addWidget(self.page_spindle_on)
-        self.stackedWidgetTool = VCPStackedWidget(self.page_mainScreen)
-        self.stackedWidgetTool.setGeometry(QtCore.QRect(1015, 440, 251, 196))
-        self.stackedWidgetTool.setStyleSheet(".VCPStackedWidget {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(186, 189, 182);\n"
-"    border-width: 1px;\n"
-"    border-radius: 6px;\n"
-"}")
-        self.stackedWidgetTool.setFrameShape(QtWidgets.QFrame.Box)
-        self.stackedWidgetTool.setObjectName("stackedWidgetTool")
-        self.page_loadTool = QtWidgets.QWidget()
-        self.page_loadTool.setObjectName("page_loadTool")
-        self.frame_28 = QtWidgets.QFrame(self.page_loadTool)
-        self.frame_28.setGeometry(QtCore.QRect(95, 105, 61, 38))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.frame_28.sizePolicy().hasHeightForWidth())
-        self.frame_28.setSizePolicy(sizePolicy)
-        self.frame_28.setMinimumSize(QtCore.QSize(0, 38))
-        self.frame_28.setMaximumSize(QtCore.QSize(68, 38))
-        self.frame_28.setStyleSheet(".QFrame{\n"
-"    border-style: solid;\n"
-"    border-color: rgb(176, 179,172);\n"
-"    border-width: 1px;\n"
-"    border-radius: 4px;\n"
-"    background-color: rgb(90, 90, 90);\n"
-"    padding: -5px;\n"
-"}")
-        self.frame_28.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_28.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_28.setObjectName("frame_28")
-        self.horizontalLayout_106 = QtWidgets.QHBoxLayout(self.frame_28)
-        self.horizontalLayout_106.setContentsMargins(0, 0, 1, 0)
-        self.horizontalLayout_106.setSpacing(0)
-        self.horizontalLayout_106.setObjectName("horizontalLayout_106")
-        self.ref_coilumn_header_4 = QtWidgets.QLabel(self.frame_28)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.ref_coilumn_header_4.sizePolicy().hasHeightForWidth())
-        self.ref_coilumn_header_4.setSizePolicy(sizePolicy)
-        self.ref_coilumn_header_4.setMinimumSize(QtCore.QSize(15, 36))
-        self.ref_coilumn_header_4.setMaximumSize(QtCore.QSize(15, 36))
-        self.ref_coilumn_header_4.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 17pt \"Bebas Kai\";\n"
-"}")
-        self.ref_coilumn_header_4.setAlignment(QtCore.Qt.AlignCenter)
-        self.ref_coilumn_header_4.setIndent(0)
-        self.ref_coilumn_header_4.setObjectName("ref_coilumn_header_4")
-        self.horizontalLayout_106.addWidget(self.ref_coilumn_header_4)
-        self.tool_number_entry = VCPLineEdit(self.frame_28)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.tool_number_entry.sizePolicy().hasHeightForWidth())
-        self.tool_number_entry.setSizePolicy(sizePolicy)
-        self.tool_number_entry.setMinimumSize(QtCore.QSize(35, 30))
-        self.tool_number_entry.setMaximumSize(QtCore.QSize(35, 30))
-        palette = QtGui.QPalette()
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(235, 235, 235))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Button, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Text, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.ButtonText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(235, 235, 235))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(235, 235, 235))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Window, brush)
-        brush = QtGui.QBrush(QtGui.QColor(65, 84, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Highlight, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.HighlightedText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(235, 235, 235))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Button, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Text, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.ButtonText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(235, 235, 235))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(235, 235, 235))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Window, brush)
-        brush = QtGui.QBrush(QtGui.QColor(65, 84, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Highlight, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.HighlightedText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(235, 235, 235))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Text, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ButtonText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(235, 235, 235))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(235, 235, 235))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
-        brush = QtGui.QBrush(QtGui.QColor(65, 84, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Highlight, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.HighlightedText, brush)
-        self.tool_number_entry.setPalette(palette)
-        font = QtGui.QFont()
-        font.setFamily("Bebas Kai")
-        font.setPointSize(17)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.tool_number_entry.setFont(font)
-        self.tool_number_entry.setFocusPolicy(QtCore.Qt.ClickFocus)
-        self.tool_number_entry.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.tool_number_entry.setStyleSheet("VCPLineEdit{\n"
-"    border-style: transparant;\n"
-"    border-color: rgb(235, 235, 235);\n"
-"    border-width: 1px;\n"
-"    border-radius: 2px;\n"
-"    color: black;\n"
-"    background: rgb(235, 235, 235);\n"
-"    font: 17pt \"Bebas Kai\";\n"
-"}")
-        self.tool_number_entry.setMaxLength(3)
-        self.tool_number_entry.setFrame(True)
-        self.tool_number_entry.setAlignment(QtCore.Qt.AlignCenter)
-        self.tool_number_entry.setObjectName("tool_number_entry")
-        self.horizontalLayout_106.addWidget(self.tool_number_entry)
-        self.m6g43 = MDIButton(self.page_loadTool)
-        self.m6g43.setGeometry(QtCore.QRect(70, 150, 106, 40))
-        self.m6g43.setObjectName("m6g43")
-        self.label_2 = QtWidgets.QLabel(self.page_loadTool)
-        self.label_2.setGeometry(QtCore.QRect(40, -25, 166, 171))
-        self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap(":/images/spindle_tool.png"))
-        self.label_2.setObjectName("label_2")
-        self.label_2.raise_()
-        self.frame_28.raise_()
-        self.m6g43.raise_()
-        self.stackedWidgetTool.addWidget(self.page_loadTool)
-        self.page_toolLoadedNotRunning = QtWidgets.QWidget()
-        self.page_toolLoadedNotRunning.setObjectName("page_toolLoadedNotRunning")
-        self.statuslabel_zOffset = StatusLabel(self.page_toolLoadedNotRunning)
-        self.statuslabel_zOffset.setGeometry(QtCore.QRect(5, 76, 80, 30))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.statuslabel_zOffset.sizePolicy().hasHeightForWidth())
-        self.statuslabel_zOffset.setSizePolicy(sizePolicy)
-        self.statuslabel_zOffset.setMinimumSize(QtCore.QSize(80, 30))
-        self.statuslabel_zOffset.setMaximumSize(QtCore.QSize(70, 25))
-        self.statuslabel_zOffset.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 5px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.statuslabel_zOffset.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.statuslabel_zOffset.setObjectName("statuslabel_zOffset")
-        self.statuslabel_zOffset_2 = StatusLabel(self.page_toolLoadedNotRunning)
-        self.statuslabel_zOffset_2.setGeometry(QtCore.QRect(105, 76, 60, 30))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.statuslabel_zOffset_2.sizePolicy().hasHeightForWidth())
-        self.statuslabel_zOffset_2.setSizePolicy(sizePolicy)
-        self.statuslabel_zOffset_2.setMinimumSize(QtCore.QSize(60, 30))
-        self.statuslabel_zOffset_2.setMaximumSize(QtCore.QSize(51, 30))
-        self.statuslabel_zOffset_2.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 5px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.statuslabel_zOffset_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.statuslabel_zOffset_2.setObjectName("statuslabel_zOffset_2")
-        self.frame_4 = QtWidgets.QFrame(self.page_toolLoadedNotRunning)
-        self.frame_4.setGeometry(QtCore.QRect(5, 35, 241, 35))
-        self.frame_4.setStyleSheet(".QFrame{\n"
-"    border-style: solid;\n"
-"    border-color: rgb(176, 179,172);\n"
-"    border-width: 1px;\n"
-"    border-radius: 4px;\n"
-"    background-color: rgb(90, 90, 90);\n"
-"    padding: -5px;\n"
-"}")
-        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_4.setObjectName("frame_4")
-        self.label_4 = QtWidgets.QLabel(self.frame_4)
-        self.label_4.setGeometry(QtCore.QRect(90, 10, 76, 17))
-        self.label_4.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 16pt \"Bebas Kai\";\n"
-"    padding-left: 1px;\n"
-"    padding-right: 1px;\n"
-"}")
-        self.label_4.setObjectName("label_4")
-        self.label_5 = QtWidgets.QLabel(self.frame_4)
-        self.label_5.setGeometry(QtCore.QRect(180, 10, 56, 17))
-        self.label_5.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 16pt \"Bebas Kai\";\n"
-"    padding-left: 1px;\n"
-"    padding-right: 1px;\n"
-"}")
-        self.label_5.setObjectName("label_5")
-        self.label_6 = QtWidgets.QLabel(self.frame_4)
-        self.label_6.setGeometry(QtCore.QRect(10, 10, 66, 17))
-        self.label_6.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 16pt \"Bebas Kai\";\n"
-"    padding-left: 1px;\n"
-"    padding-right: 1px;\n"
-"}")
-        self.label_6.setObjectName("label_6")
-        self.statuslabel_zOffset_8 = StatusLabel(self.page_toolLoadedNotRunning)
-        self.statuslabel_zOffset_8.setGeometry(QtCore.QRect(185, 76, 60, 30))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.statuslabel_zOffset_8.sizePolicy().hasHeightForWidth())
-        self.statuslabel_zOffset_8.setSizePolicy(sizePolicy)
-        self.statuslabel_zOffset_8.setMinimumSize(QtCore.QSize(60, 30))
-        self.statuslabel_zOffset_8.setMaximumSize(QtCore.QSize(60, 25))
-        self.statuslabel_zOffset_8.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 5px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.statuslabel_zOffset_8.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.statuslabel_zOffset_8.setObjectName("statuslabel_zOffset_8")
-        self.statuslabel_4 = StatusLabel(self.page_toolLoadedNotRunning)
-        self.statuslabel_4.setGeometry(QtCore.QRect(5, 5, 241, 26))
-        self.statuslabel_4.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 14pt \"Bebas Kai\";\n"
-"}")
-        self.statuslabel_4.setObjectName("statuslabel_4")
-        self.line = QtWidgets.QFrame(self.page_toolLoadedNotRunning)
-        self.line.setGeometry(QtCore.QRect(5, 110, 241, 16))
-        self.line.setStyleSheet("color: rgb(136, 138, 133)")
-        self.line.setFrameShadow(QtWidgets.QFrame.Plain)
-        self.line.setFrameShape(QtWidgets.QFrame.HLine)
-        self.line.setObjectName("line")
-        self.btnChangeTool = QtWidgets.QPushButton(self.page_toolLoadedNotRunning)
-        self.btnChangeTool.setGeometry(QtCore.QRect(70, 135, 116, 40))
-        self.btnChangeTool.setObjectName("btnChangeTool")
-        self.stackedWidgetTool.addWidget(self.page_toolLoadedNotRunning)
-        self.page_toolLoadedAndRunning = QtWidgets.QWidget()
-        self.page_toolLoadedAndRunning.setObjectName("page_toolLoadedAndRunning")
-        self.statuslabel_13 = StatusLabel(self.page_toolLoadedAndRunning)
-        self.statuslabel_13.setGeometry(QtCore.QRect(175, 125, 66, 26))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.statuslabel_13.sizePolicy().hasHeightForWidth())
-        self.statuslabel_13.setSizePolicy(sizePolicy)
-        self.statuslabel_13.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 14pt \"Bebas Kai\";\n"
-"}")
-        self.statuslabel_13.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.statuslabel_13.setObjectName("statuslabel_13")
-        self.statuslabel_14 = StatusLabel(self.page_toolLoadedAndRunning)
-        self.statuslabel_14.setGeometry(QtCore.QRect(175, 160, 66, 26))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.statuslabel_14.sizePolicy().hasHeightForWidth())
-        self.statuslabel_14.setSizePolicy(sizePolicy)
-        self.statuslabel_14.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 14pt \"Bebas Kai\";\n"
-"}")
-        self.statuslabel_14.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.statuslabel_14.setObjectName("statuslabel_14")
-        self.frame_6 = QtWidgets.QFrame(self.page_toolLoadedAndRunning)
-        self.frame_6.setGeometry(QtCore.QRect(5, 35, 241, 35))
-        self.frame_6.setStyleSheet(".QFrame{\n"
-"    border-style: solid;\n"
-"    border-color: rgb(176, 179,172);\n"
-"    border-width: 1px;\n"
-"    border-radius: 4px;\n"
-"    background-color: rgb(90, 90, 90);\n"
-"    padding: -5px;\n"
-"}")
-        self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_6.setObjectName("frame_6")
-        self.label_9 = QtWidgets.QLabel(self.frame_6)
-        self.label_9.setGeometry(QtCore.QRect(90, 10, 76, 17))
-        self.label_9.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 16pt \"Bebas Kai\";\n"
-"    padding-left: 1px;\n"
-"    padding-right: 1px;\n"
-"}")
-        self.label_9.setObjectName("label_9")
-        self.label_10 = QtWidgets.QLabel(self.frame_6)
-        self.label_10.setGeometry(QtCore.QRect(180, 10, 56, 17))
-        self.label_10.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 16pt \"Bebas Kai\";\n"
-"    padding-left: 1px;\n"
-"    padding-right: 1px;\n"
-"}")
-        self.label_10.setObjectName("label_10")
-        self.label_11 = QtWidgets.QLabel(self.frame_6)
-        self.label_11.setGeometry(QtCore.QRect(10, 10, 66, 17))
-        self.label_11.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 16pt \"Bebas Kai\";\n"
-"    padding-left: 1px;\n"
-"    padding-right: 1px;\n"
-"}")
-        self.label_11.setObjectName("label_11")
-        self.statuslabel_zOffset_5 = StatusLabel(self.page_toolLoadedAndRunning)
-        self.statuslabel_zOffset_5.setGeometry(QtCore.QRect(5, 76, 80, 30))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.statuslabel_zOffset_5.sizePolicy().hasHeightForWidth())
-        self.statuslabel_zOffset_5.setSizePolicy(sizePolicy)
-        self.statuslabel_zOffset_5.setMinimumSize(QtCore.QSize(80, 30))
-        self.statuslabel_zOffset_5.setMaximumSize(QtCore.QSize(70, 25))
-        self.statuslabel_zOffset_5.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 5px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.statuslabel_zOffset_5.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.statuslabel_zOffset_5.setObjectName("statuslabel_zOffset_5")
-        self.statuslabel_zOffset_6 = StatusLabel(self.page_toolLoadedAndRunning)
-        self.statuslabel_zOffset_6.setGeometry(QtCore.QRect(105, 76, 60, 30))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.statuslabel_zOffset_6.sizePolicy().hasHeightForWidth())
-        self.statuslabel_zOffset_6.setSizePolicy(sizePolicy)
-        self.statuslabel_zOffset_6.setMinimumSize(QtCore.QSize(60, 30))
-        self.statuslabel_zOffset_6.setMaximumSize(QtCore.QSize(51, 30))
-        self.statuslabel_zOffset_6.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 5px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.statuslabel_zOffset_6.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.statuslabel_zOffset_6.setObjectName("statuslabel_zOffset_6")
-        self.label_12 = QtWidgets.QLabel(self.page_toolLoadedAndRunning)
-        self.label_12.setGeometry(QtCore.QRect(5, 165, 91, 17))
-        self.label_12.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 14pt \"Bebas Kai\";\n"
-"}")
-        self.label_12.setObjectName("label_12")
-        self.statuslabel_7 = StatusLabel(self.page_toolLoadedAndRunning)
-        self.statuslabel_7.setGeometry(QtCore.QRect(5, 5, 241, 26))
-        self.statuslabel_7.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 14pt \"Bebas Kai\";\n"
-"}")
-        self.statuslabel_7.setObjectName("statuslabel_7")
-        self.line_2 = QtWidgets.QFrame(self.page_toolLoadedAndRunning)
-        self.line_2.setGeometry(QtCore.QRect(5, 110, 241, 16))
-        self.line_2.setStyleSheet("color: rgb(136, 138, 133)")
-        self.line_2.setFrameShadow(QtWidgets.QFrame.Plain)
-        self.line_2.setFrameShape(QtWidgets.QFrame.HLine)
-        self.line_2.setObjectName("line_2")
-        self.statuslabel_zOffset_11 = StatusLabel(self.page_toolLoadedAndRunning)
-        self.statuslabel_zOffset_11.setGeometry(QtCore.QRect(185, 76, 60, 30))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.statuslabel_zOffset_11.sizePolicy().hasHeightForWidth())
-        self.statuslabel_zOffset_11.setSizePolicy(sizePolicy)
-        self.statuslabel_zOffset_11.setMinimumSize(QtCore.QSize(60, 30))
-        self.statuslabel_zOffset_11.setMaximumSize(QtCore.QSize(60, 25))
-        self.statuslabel_zOffset_11.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 5px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.statuslabel_zOffset_11.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.statuslabel_zOffset_11.setObjectName("statuslabel_zOffset_11")
-        self.label_13 = QtWidgets.QLabel(self.page_toolLoadedAndRunning)
-        self.label_13.setGeometry(QtCore.QRect(5, 130, 91, 17))
-        self.label_13.setStyleSheet("QLabel{\n"
-"    color: rgb(238, 238, 236);\n"
-"    font: 14pt \"Bebas Kai\";\n"
-"}")
-        self.label_13.setObjectName("label_13")
-        self.statuslabel_zOffset_12 = StatusLabel(self.page_toolLoadedAndRunning)
-        self.statuslabel_zOffset_12.setGeometry(QtCore.QRect(105, 160, 60, 30))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.statuslabel_zOffset_12.sizePolicy().hasHeightForWidth())
-        self.statuslabel_zOffset_12.setSizePolicy(sizePolicy)
-        self.statuslabel_zOffset_12.setMinimumSize(QtCore.QSize(60, 30))
-        self.statuslabel_zOffset_12.setMaximumSize(QtCore.QSize(60, 25))
-        self.statuslabel_zOffset_12.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 5px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.statuslabel_zOffset_12.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.statuslabel_zOffset_12.setObjectName("statuslabel_zOffset_12")
-        self.statuslabel_zOffset_13 = StatusLabel(self.page_toolLoadedAndRunning)
-        self.statuslabel_zOffset_13.setGeometry(QtCore.QRect(105, 125, 60, 30))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.statuslabel_zOffset_13.sizePolicy().hasHeightForWidth())
-        self.statuslabel_zOffset_13.setSizePolicy(sizePolicy)
-        self.statuslabel_zOffset_13.setMinimumSize(QtCore.QSize(60, 30))
-        self.statuslabel_zOffset_13.setMaximumSize(QtCore.QSize(60, 25))
-        self.statuslabel_zOffset_13.setStyleSheet("QLabel {\n"
-"    border-style: solid;\n"
-"    border-color: rgb(96, 96, 97);\n"
-"    border-width: 2px;\n"
-"    border-radius: 5px;\n"
-"    color: white;\n"
-"    background: rgb(86, 86, 87);\n"
-"    font: 50 17pt \"Bebas Kai\";\n"
-"}")
-        self.statuslabel_zOffset_13.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.statuslabel_zOffset_13.setObjectName("statuslabel_zOffset_13")
-        self.stackedWidgetTool.addWidget(self.page_toolLoadedAndRunning)
         self.frame_5 = QtWidgets.QFrame(self.page_mainScreen)
         self.frame_5.setGeometry(QtCore.QRect(5, 5, 426, 41))
         self.frame_5.setStyleSheet(".QFrame {\n"
@@ -2742,7 +1430,7 @@ class Ui_MainWindow(object):
         self.clear_button.setCheckable(False)
         self.clear_button.setObjectName("clear_button")
         self.stackedWidgetSliders = VCPStackedWidget(self.page_mainScreen)
-        self.stackedWidgetSliders.setGeometry(QtCore.QRect(300, 440, 271, 301))
+        self.stackedWidgetSliders.setGeometry(QtCore.QRect(300, 440, 271, 321))
         self.stackedWidgetSliders.setStyleSheet(".VCPStackedWidget {\n"
 "    border-style: solid;\n"
 "    border-color: rgb(186, 189, 182);\n"
@@ -2753,7 +1441,7 @@ class Ui_MainWindow(object):
         self.page_jog_sliders = QtWidgets.QWidget()
         self.page_jog_sliders.setObjectName("page_jog_sliders")
         self.statuslabel_33 = StatusLabel(self.page_jog_sliders)
-        self.statuslabel_33.setGeometry(QtCore.QRect(10, 90, 181, 21))
+        self.statuslabel_33.setGeometry(QtCore.QRect(10, 90, 246, 21))
         self.statuslabel_33.setStyleSheet("QLabel{\n"
 "    color: rgb(238, 238, 236);\n"
 "    font: 14pt \"Bebas Kai\";\n"
@@ -2899,7 +1587,7 @@ class Ui_MainWindow(object):
         self.settings_slider_2.setOrientation(QtCore.Qt.Horizontal)
         self.settings_slider_2.setObjectName("settings_slider_2")
         self.actionslider_spindle_override_2 = ActionSlider(self.page_jog_sliders)
-        self.actionslider_spindle_override_2.setGeometry(QtCore.QRect(5, 260, 256, 30))
+        self.actionslider_spindle_override_2.setGeometry(QtCore.QRect(5, 275, 256, 30))
         self.actionslider_spindle_override_2.setMinimumSize(QtCore.QSize(0, 30))
         self.actionslider_spindle_override_2.setFocusPolicy(QtCore.Qt.NoFocus)
         self.actionslider_spindle_override_2.setStyleSheet("QSlider::groove:horizontal {\n"
@@ -2961,8 +1649,8 @@ class Ui_MainWindow(object):
         self.actionslider_spindle_override_2.setOrientation(QtCore.Qt.Horizontal)
         self.actionslider_spindle_override_2.setObjectName("actionslider_spindle_override_2")
         self.actionbutton_36 = ActionButton(self.page_jog_sliders)
-        self.actionbutton_36.setGeometry(QtCore.QRect(215, 230, 45, 30))
-        self.actionbutton_36.setMinimumSize(QtCore.QSize(45, 30))
+        self.actionbutton_36.setGeometry(QtCore.QRect(220, 245, 40, 30))
+        self.actionbutton_36.setMinimumSize(QtCore.QSize(40, 30))
         self.actionbutton_36.setMaximumSize(QtCore.QSize(40, 30))
         self.actionbutton_36.setFocusPolicy(QtCore.Qt.NoFocus)
         self.actionbutton_36.setStyleSheet("QPushButton {\n"
@@ -2970,7 +1658,7 @@ class Ui_MainWindow(object):
 "}")
         self.actionbutton_36.setObjectName("actionbutton_36")
         self.statuslabel_2 = StatusLabel(self.page_jog_sliders)
-        self.statuslabel_2.setGeometry(QtCore.QRect(10, 235, 171, 16))
+        self.statuslabel_2.setGeometry(QtCore.QRect(10, 250, 171, 16))
         self.statuslabel_2.setStyleSheet("QLabel{\n"
 "    color: rgb(238, 238, 236);\n"
 "    font: 14pt \"Bebas Kai\";\n"
@@ -3086,7 +1774,7 @@ class Ui_MainWindow(object):
 "}")
         self.statuslabel_16.setObjectName("statuslabel_16")
         self.actionslider_feed_override_3 = ActionSlider(self.page_all_sliders)
-        self.actionslider_feed_override_3.setGeometry(QtCore.QRect(5, 190, 256, 30))
+        self.actionslider_feed_override_3.setGeometry(QtCore.QRect(5, 195, 256, 30))
         self.actionslider_feed_override_3.setMinimumSize(QtCore.QSize(0, 30))
         self.actionslider_feed_override_3.setFocusPolicy(QtCore.Qt.NoFocus)
         self.actionslider_feed_override_3.setStyleSheet("QSlider::groove:horizontal {\n"
@@ -3149,14 +1837,14 @@ class Ui_MainWindow(object):
         self.actionslider_feed_override_3.setOrientation(QtCore.Qt.Horizontal)
         self.actionslider_feed_override_3.setObjectName("actionslider_feed_override_3")
         self.statuslabel_20 = StatusLabel(self.page_all_sliders)
-        self.statuslabel_20.setGeometry(QtCore.QRect(10, 165, 171, 21))
+        self.statuslabel_20.setGeometry(QtCore.QRect(10, 170, 171, 21))
         self.statuslabel_20.setStyleSheet("QLabel{\n"
 "    color: rgb(238, 238, 236);\n"
 "    font: 14pt \"Bebas Kai\";\n"
 "}")
         self.statuslabel_20.setObjectName("statuslabel_20")
         self.actionbutton_feed_override_reset_3 = ActionButton(self.page_all_sliders)
-        self.actionbutton_feed_override_reset_3.setGeometry(QtCore.QRect(220, 160, 40, 30))
+        self.actionbutton_feed_override_reset_3.setGeometry(QtCore.QRect(220, 165, 40, 30))
         self.actionbutton_feed_override_reset_3.setMinimumSize(QtCore.QSize(40, 30))
         self.actionbutton_feed_override_reset_3.setMaximumSize(QtCore.QSize(40, 30))
         self.actionbutton_feed_override_reset_3.setFocusPolicy(QtCore.Qt.NoFocus)
@@ -3227,7 +1915,7 @@ class Ui_MainWindow(object):
         self.actionslider_rapid_override_3.setOrientation(QtCore.Qt.Horizontal)
         self.actionslider_rapid_override_3.setObjectName("actionslider_rapid_override_3")
         self.actionbutton_32 = ActionButton(self.page_all_sliders)
-        self.actionbutton_32.setGeometry(QtCore.QRect(220, 230, 40, 30))
+        self.actionbutton_32.setGeometry(QtCore.QRect(220, 245, 40, 30))
         self.actionbutton_32.setMinimumSize(QtCore.QSize(40, 30))
         self.actionbutton_32.setMaximumSize(QtCore.QSize(40, 30))
         self.actionbutton_32.setFocusPolicy(QtCore.Qt.NoFocus)
@@ -3236,14 +1924,14 @@ class Ui_MainWindow(object):
 "}")
         self.actionbutton_32.setObjectName("actionbutton_32")
         self.statuslabel = StatusLabel(self.page_all_sliders)
-        self.statuslabel.setGeometry(QtCore.QRect(10, 235, 171, 16))
+        self.statuslabel.setGeometry(QtCore.QRect(10, 250, 171, 16))
         self.statuslabel.setStyleSheet("QLabel{\n"
 "    color: rgb(238, 238, 236);\n"
 "    font: 14pt \"Bebas Kai\";\n"
 "}")
         self.statuslabel.setObjectName("statuslabel")
         self.actionslider_spindle_override = ActionSlider(self.page_all_sliders)
-        self.actionslider_spindle_override.setGeometry(QtCore.QRect(5, 260, 256, 30))
+        self.actionslider_spindle_override.setGeometry(QtCore.QRect(5, 275, 256, 30))
         self.actionslider_spindle_override.setMinimumSize(QtCore.QSize(0, 30))
         self.actionslider_spindle_override.setFocusPolicy(QtCore.Qt.NoFocus)
         self.actionslider_spindle_override.setStyleSheet("QSlider::groove:horizontal {\n"
@@ -3318,6 +2006,12 @@ class Ui_MainWindow(object):
         self.pushStatusButton.setGeometry(QtCore.QRect(435, 5, 61, 41))
         self.pushStatusButton.setCheckable(True)
         self.pushStatusButton.setObjectName("pushStatusButton")
+        self.smartdro = SmartDro(self.page_mainScreen)
+        self.smartdro.setGeometry(QtCore.QRect(575, 440, 436, 321))
+        self.smartdro.setObjectName("smartdro")
+        self.spindlewidget = SpindleWidget(self.page_mainScreen)
+        self.spindlewidget.setGeometry(QtCore.QRect(1015, 440, 251, 321))
+        self.spindlewidget.setObjectName("spindlewidget")
         self.stackedWidgetMain.addWidget(self.page_mainScreen)
         self.page_selectProgram = QtWidgets.QWidget()
         self.page_selectProgram.setObjectName("page_selectProgram")
@@ -3353,9 +2047,9 @@ class Ui_MainWindow(object):
         self.folderUp_left.setStyleSheet("QPushButton {\n"
 "       font: 12pt \"Bebas Kai\";\n"
 "}")
-        icon12 = QtGui.QIcon()
-        icon12.addPixmap(QtGui.QPixmap(":/images/folder_up.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.folderUp_left.setIcon(icon12)
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap(":/images/folder_up.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.folderUp_left.setIcon(icon9)
         self.folderUp_left.setIconSize(QtCore.QSize(30, 17))
         self.folderUp_left.setObjectName("folderUp_left")
         self.horizontalLayout_124.addWidget(self.folderUp_left)
@@ -3457,9 +2151,9 @@ class Ui_MainWindow(object):
         self.device_delete_item_button.setStyleSheet("QPushButton {\n"
 "       font: 12pt \"Bebas Kai\";\n"
 "}")
-        icon13 = QtGui.QIcon()
-        icon13.addPixmap(QtGui.QPixmap(":/images/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.device_delete_item_button.setIcon(icon13)
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap(":/images/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.device_delete_item_button.setIcon(icon10)
         self.device_delete_item_button.setIconSize(QtCore.QSize(14, 14))
         self.device_delete_item_button.setObjectName("device_delete_item_button")
         self.horizontalLayout_126.addWidget(self.device_delete_item_button)
@@ -3491,9 +2185,9 @@ class Ui_MainWindow(object):
         self.device_new_folder_button.setStyleSheet("QPushButton {\n"
 "       font: 12pt \"Bebas Kai\";\n"
 "}")
-        icon14 = QtGui.QIcon()
-        icon14.addPixmap(QtGui.QPixmap(":/images/new_folder.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.device_new_folder_button.setIcon(icon14)
+        icon11 = QtGui.QIcon()
+        icon11.addPixmap(QtGui.QPixmap(":/images/new_folder.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.device_new_folder_button.setIcon(icon11)
         self.device_new_folder_button.setIconSize(QtCore.QSize(28, 15))
         self.device_new_folder_button.setObjectName("device_new_folder_button")
         self.horizontalLayout_126.addWidget(self.device_new_folder_button)
@@ -3544,7 +2238,7 @@ class Ui_MainWindow(object):
         self.folderUp_right.setStyleSheet("QPushButton {\n"
 "       font: 12pt \"Bebas Kai\";\n"
 "}")
-        self.folderUp_right.setIcon(icon12)
+        self.folderUp_right.setIcon(icon9)
         self.folderUp_right.setIconSize(QtCore.QSize(30, 17))
         self.folderUp_right.setObjectName("folderUp_right")
         self.horizontalLayout_121.addWidget(self.folderUp_right)
@@ -3601,7 +2295,7 @@ class Ui_MainWindow(object):
         self.main_delete_item_button.setStyleSheet("QPushButton {\n"
 "       font: 12pt \"Bebas Kai\";\n"
 "}")
-        self.main_delete_item_button.setIcon(icon13)
+        self.main_delete_item_button.setIcon(icon10)
         self.main_delete_item_button.setIconSize(QtCore.QSize(14, 14))
         self.main_delete_item_button.setObjectName("main_delete_item_button")
         self.horizontalLayout_123.addWidget(self.main_delete_item_button)
@@ -3633,7 +2327,7 @@ class Ui_MainWindow(object):
         self.main_new_folder_button.setStyleSheet("QPushButton {\n"
 "       font: 12pt \"Bebas Kai\";\n"
 "}")
-        self.main_new_folder_button.setIcon(icon14)
+        self.main_new_folder_button.setIcon(icon11)
         self.main_new_folder_button.setIconSize(QtCore.QSize(28, 15))
         self.main_new_folder_button.setObjectName("main_new_folder_button")
         self.horizontalLayout_123.addWidget(self.main_new_folder_button)
@@ -3674,9 +2368,9 @@ class Ui_MainWindow(object):
 "       font: 12pt \"Bebas Kai\";\n"
 "    padding-right: 4px;\n"
 "}")
-        icon15 = QtGui.QIcon()
-        icon15.addPixmap(QtGui.QPixmap(":/images/tall_right_arrow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.copy_to_right.setIcon(icon15)
+        icon12 = QtGui.QIcon()
+        icon12.addPixmap(QtGui.QPixmap(":/images/tall_right_arrow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.copy_to_right.setIcon(icon12)
         self.copy_to_right.setIconSize(QtCore.QSize(18, 60))
         self.copy_to_right.setObjectName("copy_to_right")
         self.verticalLayout_36.addWidget(self.copy_to_right)
@@ -3694,9 +2388,9 @@ class Ui_MainWindow(object):
 "       font: 12pt \"Bebas Kai\";\n"
 "    padding-right: 8px;\n"
 "}")
-        icon16 = QtGui.QIcon()
-        icon16.addPixmap(QtGui.QPixmap(":/images/tall_left_arrow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.copy_to_left.setIcon(icon16)
+        icon13 = QtGui.QIcon()
+        icon13.addPixmap(QtGui.QPixmap(":/images/tall_left_arrow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.copy_to_left.setIcon(icon13)
         self.copy_to_left.setIconSize(QtCore.QSize(28, 60))
         self.copy_to_left.setObjectName("copy_to_left")
         self.verticalLayout_36.addWidget(self.copy_to_left)
@@ -3845,7 +2539,7 @@ class Ui_MainWindow(object):
         self.actionbutton_24.setGeometry(QtCore.QRect(115, 325, 166, 41))
         self.actionbutton_24.setObjectName("actionbutton_24")
         self.actionbutton_25 = ActionButton(self.page_Settings)
-        self.actionbutton_25.setGeometry(QtCore.QRect(355, 100, 166, 41))
+        self.actionbutton_25.setGeometry(QtCore.QRect(125, 35, 166, 41))
         self.actionbutton_25.setObjectName("actionbutton_25")
         self.actionbutton_26 = ActionButton(self.page_Settings)
         self.actionbutton_26.setGeometry(QtCore.QRect(115, 375, 166, 41))
@@ -3853,22 +2547,6 @@ class Ui_MainWindow(object):
         self.actionbutton_27 = ActionButton(self.page_Settings)
         self.actionbutton_27.setGeometry(QtCore.QRect(115, 430, 166, 41))
         self.actionbutton_27.setObjectName("actionbutton_27")
-        self.spindleWidget = VCPStackedWidget(self.page_Settings)
-        self.spindleWidget.setGeometry(QtCore.QRect(805, 90, 251, 301))
-        self.spindleWidget.setFrameShape(QtWidgets.QFrame.Box)
-        self.spindleWidget.setObjectName("spindleWidget")
-        self.page_probeLoaded = QtWidgets.QWidget()
-        self.page_probeLoaded.setObjectName("page_probeLoaded")
-        self.spindleWidget.addWidget(self.page_probeLoaded)
-        self.page_2 = QtWidgets.QWidget()
-        self.page_2.setObjectName("page_2")
-        self.spindleWidget.addWidget(self.page_2)
-        self.page_noToolLoaded = QtWidgets.QWidget()
-        self.page_noToolLoaded.setObjectName("page_noToolLoaded")
-        self.spindleWidget.addWidget(self.page_noToolLoaded)
-        self.activegcodestable = ActiveGcodesTable(self.page_Settings)
-        self.activegcodestable.setGeometry(QtCore.QRect(320, 220, 431, 451))
-        self.activegcodestable.setObjectName("activegcodestable")
         self.stackedWidgetMain.addWidget(self.page_Settings)
         self.verticalLayout_3.addWidget(self.stackedWidgetMain)
         self.horizontalLayout.addWidget(self.verticalFrame)
@@ -3888,14 +2566,17 @@ class Ui_MainWindow(object):
         self.btnManual = ActionButton(self.rightButtonsContainer)
         self.btnManual.setGeometry(QtCore.QRect(9, 220, 80, 50))
         self.btnManual.setCheckable(True)
+        self.btnManual.setAutoExclusive(False)
         self.btnManual.setObjectName("btnManual")
         self.btnMdi = ActionButton(self.rightButtonsContainer)
         self.btnMdi.setGeometry(QtCore.QRect(10, 280, 80, 50))
         self.btnMdi.setCheckable(True)
+        self.btnMdi.setAutoExclusive(False)
         self.btnMdi.setObjectName("btnMdi")
         self.btnProgram = ActionButton(self.rightButtonsContainer)
         self.btnProgram.setGeometry(QtCore.QRect(10, 340, 80, 50))
         self.btnProgram.setCheckable(True)
+        self.btnProgram.setAutoExclusive(False)
         self.btnProgram.setObjectName("btnProgram")
         self.actionbutton = ActionButton(self.rightButtonsContainer)
         self.actionbutton.setGeometry(QtCore.QRect(10, 5, 80, 60))
@@ -3931,9 +2612,6 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.horizontalWidget, 0, 0, 1, 1)
         self.verticalLayout.addWidget(self.gridFrame)
         MainWindow.setCentralWidget(self.centralwidget)
-        self.statusBar = QtWidgets.QStatusBar(MainWindow)
-        self.statusBar.setObjectName("statusBar")
-        MainWindow.setStatusBar(self.statusBar)
         self.actionExit = QtWidgets.QAction(MainWindow)
         self.actionExit.setObjectName("actionExit")
         self.actionOPEN = QtWidgets.QAction(MainWindow)
@@ -3945,14 +2623,11 @@ class Ui_MainWindow(object):
         self.actionFullscreen.setObjectName("actionFullscreen")
 
         self.retranslateUi(MainWindow)
-        self.stackedWidgetMain.setCurrentIndex(1)
-        self.stackedWidgetLeftTop.setCurrentIndex(3)
+        self.stackedWidgetMain.setCurrentIndex(0)
+        self.stackedWidgetLeftTop.setCurrentIndex(0)
         self.stackedWidgetLeftBottom.setCurrentIndex(0)
-        self.stackedWidgetSpindle.setCurrentIndex(0)
-        self.stackedWidgetTool.setCurrentIndex(1)
         self.stackedWidgetSliders.setCurrentIndex(0)
         self.pathComboBox.setCurrentIndex(2)
-        self.spindleWidget.setCurrentIndex(1)
         self.pathComboBox.currentDeviceEjectable['bool'].connect(self.device_eject_usb_button.setEnabled)
         self.pathComboBox.usbPresent['bool'].connect(self.device_eject_usb_button.setEnabled)
         self.pathComboBox.currentPathChanged['QString'].connect(self.filesystemtable_left.setRootPath)
@@ -3975,17 +2650,19 @@ class Ui_MainWindow(object):
         self.pan_button.toggled['bool'].connect(self.vtkbackplot.enable_panning)
         self.path_button.clicked.connect(self.vtkbackplot.setViewPath)
         self.clear_button.clicked.connect(self.vtkbackplot.clearLivePlot)
+        self.tool_table_add_tool_button.clicked.connect(self.toolTable.addTool)
+        self.tool_table_delete_button.clicked.connect(self.toolTable.deleteSelectedTool)
+        self.tool_table_save_button.clicked.connect(self.toolTable.saveToolTable)
+        self.tool_table_reload_button.clicked.connect(self.toolTable.loadToolTable)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.stackedWidgetMain.setProperty("rules", _translate("MainWindow", "[]"))
-        self.tableWidget_2.setProperty("displayColumns", _translate("MainWindow", "TPZDR"))
-        self.tool_table_delete_button.setText(_translate("MainWindow", "DELETE"))
+        self.toolTable.setProperty("displayColumns", _translate("MainWindow", "TPZDR"))
         self.tool_table_add_tool_button.setText(_translate("MainWindow", "ADD TOOL"))
-        self.tool_table_import_tool_button.setText(_translate("MainWindow", "IMPORT TOOL"))
-        self.tool_table_export_tool_button.setText(_translate("MainWindow", "EXPORT TOOL"))
+        self.tool_table_delete_button.setText(_translate("MainWindow", "DELETE"))
         self.tool_table_save_button.setText(_translate("MainWindow", "SAVE TABLE"))
         self.tool_table_reload_button.setText(_translate("MainWindow", "RELOAD TABLE"))
         self.label_50.setText(_translate("MainWindow", "TOOL LENGTH"))
@@ -4045,8 +2722,11 @@ class Ui_MainWindow(object):
         self.pushButton_32.setText(_translate("MainWindow", "D"))
         self.gcodeeditor_final.setProperty("backgroundcolor", _translate("MainWindow", "#d9dadb"))
         self.gcodeeditor_final.setProperty("marginbackgroundcolor", _translate("MainWindow", "#d9dadb"))
-        self.change_program_button.setText(_translate("MainWindow", "Change"))
-        self.reload_program_button.setText(_translate("MainWindow", "Reload"))
+        self.buttonChangeProgram.setText(_translate("MainWindow", "Change"))
+        self.buttonChangeProgram.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:interp_state\", \"trigger\": true}], \"property\": \"Enable\", \"expression\": \"ch[0] == 1\", \"name\": \"Change Active\"}]"))
+        self.buttonReloadProgram.setText(_translate("MainWindow", "Reload"))
+        self.buttonReloadProgram.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:interp_state\", \"trigger\": true}], \"property\": \"Enable\", \"expression\": \"ch[0] == 1\", \"name\": \"Reload Active\"}]"))
+        self.buttonReloadProgram.setProperty("actionName", _translate("MainWindow", "program.reload"))
         self.stackedWidgetLeftBottom.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:task_mode\", \"trigger\": true}, {\"url\": \"status:interp_state\", \"trigger\": true}], \"property\": \"currentIndex\", \"expression\": \"0 if(ch[0] == 1) else (1 if(ch[0] == 3) else (2 if(ch[1] == 1) else 3))\", \"name\": \"Selected Page\"}]"))
         self.actionbutton_9.setText(_translate("MainWindow", "Flood"))
         self.actionbutton_9.setProperty("actionName", _translate("MainWindow", "coolant.flood.toggle"))
@@ -4083,181 +2763,7 @@ class Ui_MainWindow(object):
         self.actionbutton_17.setProperty("actionName", _translate("MainWindow", "program.resume"))
         self.actionbutton_5.setText(_translate("MainWindow", "M01 BREAK"))
         self.actionbutton_5.setProperty("actionName", _translate("MainWindow", "program.optional-stop.toggle"))
-        self.statuslabel_23.setText(_translate("MainWindow", "AXIS"))
-        self.statuslabel_23.setProperty("rules", _translate("MainWindow", "[]"))
-        self.statuslabel_24.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:g5x_index?text\", \"trigger\": true}], \"property\": \"Text\", \"expression\": \"ch[0] + \' POS\'\\n\", \"name\": \"WCS Header\"}]"))
-        self.work_column_header_9.setText(_translate("MainWindow", "MACHINE"))
-        self.dtg_column_header_4.setText(_translate("MainWindow", "DTG"))
-        self.statuslabel_25.setText(_translate("MainWindow", "REF"))
-        self.statuslabel_25.setProperty("rules", _translate("MainWindow", "[]"))
-        self.zero_x_button_3.setText(_translate("MainWindow", "X"))
-        self.zero_x_button_3.setProperty("rules", _translate("MainWindow", "[\n"
-"    {\n"
-"        \"channels\": [\n"
-"            {\n"
-"                \"url\": \"status:g5x_index\",\n"
-"                \"trigger\": true,\n"
-"                \"type\": \"int\"\n"
-"            }\n"
-"        ],\n"
-"        \"expression\": \"\",\n"
-"        \"name\": \"G5x Index\",\n"
-"        \"property\": \"None\"\n"
-"    }\n"
-"]"))
-        self.zero_x_button_3.setProperty("MDICommand", _translate("MainWindow", "G10 L20 P{ch[0]} X0.0"))
-        self.dro_entry_main_x.setText(_translate("MainWindow", "-0000.000"))
-        self.drolabel_15.setText(_translate("MainWindow", "     0.000"))
-        self.drolabel_15.setProperty("inchFormat", _translate("MainWindow", "%9.4f"))
-        self.drolabel_15.setProperty("millimeterFormat", _translate("MainWindow", "%10.3f"))
-        self.drolabel_15.setProperty("degreeFormat", _translate("MainWindow", "%10.2f"))
-        self.drolabel_16.setText(_translate("MainWindow", "     0.000"))
-        self.drolabel_16.setProperty("inchFormat", _translate("MainWindow", "%9.4f"))
-        self.drolabel_16.setProperty("millimeterFormat", _translate("MainWindow", "%10.3f"))
-        self.drolabel_16.setProperty("degreeFormat", _translate("MainWindow", "%10.2f"))
-        self.axisactionbutton_6.setText(_translate("MainWindow", "REF X"))
-        self.axisactionbutton_6.setProperty("actionName", _translate("MainWindow", "machine.home.axis:x"))
-        self.zero_y_button_5.setText(_translate("MainWindow", "Y"))
-        self.zero_y_button_5.setProperty("rules", _translate("MainWindow", "[\n"
-"    {\n"
-"        \"channels\": [\n"
-"            {\n"
-"                \"url\": \"status:g5x_index\",\n"
-"                \"trigger\": true,\n"
-"                \"type\": \"int\"\n"
-"            }\n"
-"        ],\n"
-"        \"expression\": \"\",\n"
-"        \"name\": \"G5x Index\",\n"
-"        \"property\": \"None\"\n"
-"    }\n"
-"]"))
-        self.zero_y_button_5.setProperty("MDICommand", _translate("MainWindow", "G10 L20 P{ch[0]} Y0.0"))
-        self.dro_entry_main_y_2.setText(_translate("MainWindow", "   0.0000"))
-        self.drolabel_19.setText(_translate("MainWindow", "     0.000"))
-        self.drolabel_19.setProperty("inchFormat", _translate("MainWindow", "%9.4f"))
-        self.drolabel_19.setProperty("millimeterFormat", _translate("MainWindow", "%10.3f"))
-        self.drolabel_19.setProperty("degreeFormat", _translate("MainWindow", "%10.2f"))
-        self.drolabel_20.setText(_translate("MainWindow", "     0.000"))
-        self.drolabel_20.setProperty("inchFormat", _translate("MainWindow", "%9.4f"))
-        self.drolabel_20.setProperty("millimeterFormat", _translate("MainWindow", "%10.3f"))
-        self.drolabel_20.setProperty("degreeFormat", _translate("MainWindow", "%10.2f"))
-        self.axisactionbutton_4.setText(_translate("MainWindow", "REF Y"))
-        self.axisactionbutton_4.setProperty("actionName", _translate("MainWindow", "machine.home.axis:y"))
-        self.zero_z_button_3.setText(_translate("MainWindow", "Z"))
-        self.zero_z_button_3.setProperty("rules", _translate("MainWindow", "[\n"
-"    {\n"
-"        \"channels\": [\n"
-"            {\n"
-"                \"url\": \"status:g5x_index\",\n"
-"                \"trigger\": true,\n"
-"                \"type\": \"int\"\n"
-"            }\n"
-"        ],\n"
-"        \"expression\": \"\",\n"
-"        \"name\": \"G5x Index\",\n"
-"        \"property\": \"None\"\n"
-"    }\n"
-"]"))
-        self.zero_z_button_3.setProperty("MDICommand", _translate("MainWindow", "G10 L20 P{ch[0]} Z0.0"))
-        self.dro_entry_main_z.setText(_translate("MainWindow", "   0.0000"))
-        self.drolabel_21.setText(_translate("MainWindow", "     0.000"))
-        self.drolabel_21.setProperty("inchFormat", _translate("MainWindow", "%9.4f"))
-        self.drolabel_21.setProperty("millimeterFormat", _translate("MainWindow", "%10.3f"))
-        self.drolabel_21.setProperty("degreeFormat", _translate("MainWindow", "%10.2f"))
-        self.drolabel_22.setText(_translate("MainWindow", "     0.000"))
-        self.drolabel_22.setProperty("inchFormat", _translate("MainWindow", "%9.4f"))
-        self.drolabel_22.setProperty("millimeterFormat", _translate("MainWindow", "%10.3f"))
-        self.drolabel_22.setProperty("degreeFormat", _translate("MainWindow", "%10.2f"))
-        self.axisactionbutton.setText(_translate("MainWindow", "REF Z"))
-        self.axisactionbutton.setProperty("actionName", _translate("MainWindow", "machine.home.axis:z"))
-        self.zero_a_button_3.setText(_translate("MainWindow", "A"))
-        self.zero_a_button_3.setProperty("rules", _translate("MainWindow", "[\n"
-"    {\n"
-"        \"channels\": [\n"
-"            {\n"
-"                \"url\": \"status:g5x_index\",\n"
-"                \"trigger\": true\n"
-"            }\n"
-"        ],\n"
-"        \"expression\": \"\",\n"
-"        \"name\": \"G5x Index\",\n"
-"        \"property\": \"None\"\n"
-"    }\n"
-"]"))
-        self.zero_a_button_3.setProperty("MDICommand", _translate("MainWindow", "G10 L20 P{ch[0]} A0.0"))
-        self.dro_entry_main_a.setText(_translate("MainWindow", "      0.00"))
-        self.drolabel_23.setText(_translate("MainWindow", "      0.00"))
-        self.drolabel_23.setProperty("inchFormat", _translate("MainWindow", "%9.4f"))
-        self.drolabel_23.setProperty("millimeterFormat", _translate("MainWindow", "%10.3f"))
-        self.drolabel_23.setProperty("degreeFormat", _translate("MainWindow", "%10.2f"))
-        self.drolabel_24.setText(_translate("MainWindow", "      0.00"))
-        self.drolabel_24.setProperty("inchFormat", _translate("MainWindow", "%9.4f"))
-        self.drolabel_24.setProperty("millimeterFormat", _translate("MainWindow", "%10.3f"))
-        self.drolabel_24.setProperty("degreeFormat", _translate("MainWindow", "%10.2f"))
-        self.button_a_goto_zero.setText(_translate("MainWindow", "GO TO 0"))
-        self.button_a_goto_zero.setProperty("MDICommand", _translate("MainWindow", "G0 A0.0"))
-        self.stackedWidgetSpindle.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:spindle.0.speed\", \"trigger\": true}], \"property\": \"currentIndex\", \"expression\": \"0 if ch[0] == 0 else 1\", \"name\": \"Spindle Status\"}]"))
-        self.ref_coilumn_header_5.setText(_translate("MainWindow", "S"))
-        self.spindleSpeed.setText(_translate("MainWindow", "0"))
-        self.spindleSpeed.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:settings?speed\", \"trigger\": true}], \"property\": \"Text\", \"expression\": \"str(int(ch[0]))\", \"name\": \"Default spindle speed\"}]"))
-        self.spindleFwdButton.setText(_translate("MainWindow", "FWD"))
-        self.spindleFwdButton.setProperty("MDICommand", _translate("MainWindow", "S#<spindleSpeed>M3"))
-        self.spindleFwdButton_2.setText(_translate("MainWindow", "REV"))
-        self.spindleFwdButton_2.setProperty("MDICommand", _translate("MainWindow", "S#<spindleSpeed>M4"))
-        self.spindle_stop_button.setText(_translate("MainWindow", "STOP"))
-        self.spindle_stop_button.setProperty("actionName", _translate("MainWindow", "spindle.off"))
-        self.spindle_load_indicator.setProperty("format", _translate("MainWindow", "Spindle Load: {p}%"))
-        self.statuslabel_6.setText(_translate("MainWindow", "0"))
-        self.statuslabel_6.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:spindle.0.speed\", \"trigger\": true}, {\"url\": \"status:spindle.0.override\", \"trigger\": true}], \"property\": \"Text\", \"expression\": \"\\\"{:.0f}\\\".format(ch[0] * ch[1])\", \"name\": \"Speed\"}]"))
-        self.statuslabel_6.setProperty("format", _translate("MainWindow", "{:.0f}"))
-        self.work_column_header_10.setText(_translate("MainWindow", "Spindle RPM"))
-        self.stackedWidgetTool.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"tooltable:current_tool?tool_number\", \"trigger\": true}, {\"url\": \"status:spindle.0.speed\", \"trigger\": true}], \"property\": \"currentIndex\", \"expression\": \"0 if ch[0] == 0 else (1 if ch[1]  == 0 else 2)\", \"name\": \"Selected Index\"}]"))
-        self.ref_coilumn_header_4.setText(_translate("MainWindow", "T"))
-        self.tool_number_entry.setText(_translate("MainWindow", "0"))
-        self.tool_number_entry.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"tooltable:current_tool?tool_number\", \"trigger\": true}], \"property\": \"Text\", \"expression\": \"str(ch[0])\", \"name\": \"update tool num\"}, {\"channels\": [{\"url\": \"status:task_state?text\", \"trigger\": true}, {\"url\": \"status:interp_state?text\", \"trigger\": true}], \"property\": \"Enable\", \"expression\": \"ch[0] == \'On\' and ch[1] == \'Idle\'\", \"name\": \"enable/disable\"}]"))
-        self.m6g43.setText(_translate("MainWindow", "M6 G43"))
-        self.m6g43.setProperty("MDICommand", _translate("MainWindow", "M6 T#<tool_number_entry> G43"))
-        self.statuslabel_zOffset.setText(_translate("MainWindow", "0.000"))
-        self.statuslabel_zOffset.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"tooltable:current_tool?z_offset\", \"trigger\": true}, {\"url\": \"status:linear_units?text\", \"trigger\": false}], \"property\": \"Text\", \"expression\": \"\\\"{:.4f}\\\".format(ch[0]) if ch[1] == \'in\' else \\\"{:.3f}\\\".format(ch[0])\", \"name\": \"Z Offset\"}]"))
-        self.statuslabel_zOffset.setProperty("format", _translate("MainWindow", "{:.0f}"))
-        self.statuslabel_zOffset_2.setText(_translate("MainWindow", "0.00"))
-        self.statuslabel_zOffset_2.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"tooltable:current_tool?diameter\", \"trigger\": true}, {\"url\": \"status:linear_units?text\", \"trigger\": false}], \"property\": \"Text\", \"expression\": \"\\\"{:.3f}\\\".format(ch[0]) if ch[1] == \'in\' else \\\"{:.2f}\\\".format(ch[0])\", \"name\": \"Diameter\"}]"))
-        self.statuslabel_zOffset_2.setProperty("format", _translate("MainWindow", "{:.0f}"))
-        self.label_4.setText(_translate("MainWindow", "Diameter"))
-        self.label_5.setText(_translate("MainWindow", "Flutes"))
-        self.label_6.setText(_translate("MainWindow", "Z Offset"))
-        self.statuslabel_zOffset_8.setText(_translate("MainWindow", "0"))
-        self.statuslabel_zOffset_8.setProperty("rules", _translate("MainWindow", "[]"))
-        self.statuslabel_zOffset_8.setProperty("format", _translate("MainWindow", "{:.0f}"))
-        self.statuslabel_4.setText(_translate("MainWindow", "T 0 : No Tool Loaded"))
-        self.statuslabel_4.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"tooltable:current_tool?tool_number\", \"trigger\": true}, {\"url\": \"tooltable:current_tool?remark\", \"trigger\": false}], \"property\": \"Text\", \"expression\": \"\'T \' + (str(ch[0])) + \\\" : \\\" + ch[1]\", \"name\": \"Tool Number & comment\"}]"))
-        self.btnChangeTool.setText(_translate("MainWindow", "Change Tool"))
-        self.statuslabel_13.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:linear_units?text\", \"trigger\": true}], \"property\": \"Text\", \"expression\": \"ch[0] + \\\"/min\\\"\", \"name\": \"Units\"}]"))
-        self.statuslabel_14.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:linear_units?text\", \"trigger\": true}], \"property\": \"Text\", \"expression\": \"ch[0] + \\\"/flute\\\"\", \"name\": \"Units\"}]"))
-        self.label_9.setText(_translate("MainWindow", "Diameter"))
-        self.label_10.setText(_translate("MainWindow", "Flutes"))
-        self.label_11.setText(_translate("MainWindow", "Z Offset"))
-        self.statuslabel_zOffset_5.setText(_translate("MainWindow", "0.000"))
-        self.statuslabel_zOffset_5.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"tooltable:current_tool?z_offset\", \"trigger\": true}, {\"url\": \"status:linear_units?text\", \"trigger\": false}], \"property\": \"Text\", \"expression\": \"\\\"{:.4f}\\\".format(ch[0]) if ch[1] == \'in\' else \\\"{:.3f}\\\".format(ch[0])\", \"name\": \"Z Offset\"}]"))
-        self.statuslabel_zOffset_5.setProperty("format", _translate("MainWindow", "{:.0f}"))
-        self.statuslabel_zOffset_6.setText(_translate("MainWindow", "0.00"))
-        self.statuslabel_zOffset_6.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"tooltable:current_tool?diameter\", \"trigger\": true}, {\"url\": \"status:linear_units?text\", \"trigger\": false}], \"property\": \"Text\", \"expression\": \"\\\"{:.3f}\\\".format(ch[0]) if ch[1] == \'in\' else \\\"{:.2f}\\\".format(ch[0])\", \"name\": \"Diameter\"}]"))
-        self.statuslabel_zOffset_6.setProperty("format", _translate("MainWindow", "{:.0f}"))
-        self.label_12.setText(_translate("MainWindow", "Chip Load"))
-        self.statuslabel_7.setText(_translate("MainWindow", "T 0 : No Tool Loaded"))
-        self.statuslabel_7.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"tooltable:current_tool?tool_number\", \"trigger\": true}, {\"url\": \"tooltable:current_tool?remark\", \"trigger\": false}], \"property\": \"Text\", \"expression\": \"\'T \' + (str(ch[0])) + \\\" : \\\" + ch[1]\", \"name\": \"Tool Number & comment\"}]"))
-        self.statuslabel_zOffset_11.setText(_translate("MainWindow", "0"))
-        self.statuslabel_zOffset_11.setProperty("rules", _translate("MainWindow", "[]"))
-        self.statuslabel_zOffset_11.setProperty("format", _translate("MainWindow", "{:.0f}"))
-        self.label_13.setText(_translate("MainWindow", "Feed Rate"))
-        self.statuslabel_zOffset_12.setText(_translate("MainWindow", "0.00"))
-        self.statuslabel_zOffset_12.setProperty("rules", _translate("MainWindow", "[]"))
-        self.statuslabel_zOffset_12.setProperty("format", _translate("MainWindow", "{:.0f}"))
-        self.statuslabel_zOffset_13.setText(_translate("MainWindow", "0.0"))
-        self.statuslabel_zOffset_13.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:current_vel\", \"trigger\": true}], \"property\": \"Text\", \"expression\": \"\'%.1f\' % (ch[0] * 60)\", \"name\": \"Current Feedrate\"}]"))
-        self.statuslabel_zOffset_13.setProperty("format", _translate("MainWindow", "{:.0f}"))
-        self.statuslabel_17.setText(_translate("MainWindow", "G0   G0   G0"))
+        self.statuslabel_17.setText(_translate("MainWindow", "G0   G0   G0   G0   G0   G0   G0   G0   G0   G0   G0   G0   G0   G0   G0"))
         self.statuslabel_17.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:gcodes\", \"trigger\": true}], \"property\": \"Text\", \"expression\": \"\'   \'.join(map(str, ch[0]))\", \"name\": \"Active Codes\"}]"))
         self.statuslabel_18.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:mcodes\", \"trigger\": true}], \"property\": \"Text\", \"expression\": \"\'   \'.join(map(str, ch[0]))\", \"name\": \"Active Mcodes\"}]"))
         self.label_3.setText(_translate("MainWindow", "Active\n"
@@ -4272,7 +2778,7 @@ class Ui_MainWindow(object):
         self.path_button.setText(_translate("MainWindow", "Path"))
         self.clear_button.setText(_translate("MainWindow", "Clear"))
         self.stackedWidgetSliders.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:task_mode\", \"trigger\": true}], \"property\": \"currentIndex\", \"expression\": \"0 if ch[0] == 1 else 1\", \"name\": \"Selected Page\"}]"))
-        self.statuslabel_33.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"settings:machine.jog.angular-speed\", \"trigger\": true}, {\"url\": \"status:program_units?text\", \"trigger\": false}], \"property\": \"Text\", \"expression\": \"\'Angular Jog Speed: {:.0f}\'.format(ch[0])\", \"name\": \"Angular Jog Speed\"}]"))
+        self.statuslabel_33.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"settings:machine.jog.angular-speed\", \"trigger\": true}, {\"url\": \"status:program_units?text\", \"trigger\": false}], \"property\": \"Text\", \"expression\": \"\'Angular Jog Speed: {:.0f} Deg/Min\'.format(ch[0])\", \"name\": \"Angular Jog Speed\"}]"))
         self.settings_slider_3.setProperty("settingName", _translate("MainWindow", "machine.jog.angular-speed-percentage"))
         self.statuslabel_32.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"settings:machine.jog.linear-speed\", \"trigger\": true}, {\"url\": \"status:program_units?text\", \"trigger\": false}], \"property\": \"Text\", \"expression\": \"\'Linear Jog Speed: {:.0f}\'.format(ch[0]) +\\\" \\\"+ ch[1] + \'/min\'\", \"name\": \"Linear Jog Speed\"}]"))
         self.settings_slider_2.setProperty("settingName", _translate("MainWindow", "machine.jog.linear-speed-percentage"))
@@ -4285,7 +2791,7 @@ class Ui_MainWindow(object):
         self.actionslider_max_velocity_3.setProperty("actionName", _translate("MainWindow", "machine.max-velocity.set"))
         self.actionbutton_rapid_override_reset_3.setText(_translate("MainWindow", "Reset"))
         self.actionbutton_rapid_override_reset_3.setProperty("actionName", _translate("MainWindow", "machine.rapid-override.reset"))
-        self.statuslabel_19.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:max_velocity\", \"trigger\": true}, {\"url\": \"status:program_units?text\", \"trigger\": false}], \"property\": \"Text\", \"expression\": \"\'Max Velocity: {:.0f}\'.format(ch[0] * 60)\", \"name\": \"Max Velocity Text\"}]"))
+        self.statuslabel_19.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:max_velocity\", \"trigger\": true}, {\"url\": \"status:program_units?text\", \"trigger\": false}], \"property\": \"Text\", \"expression\": \"\'Max Velocity: {:.0f}\'.format(ch[0] * 60) + \\\" \\\"+ ch[1] + \'/min\'\", \"name\": \"Max Velocity Text\"}]"))
         self.statuslabel_16.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:rapidrate\", \"trigger\": true}], \"property\": \"Text\", \"expression\": \"\'Rapid Override: {:.0%}\'.format(ch[0])\", \"name\": \"Rapid Override Text\"}]"))
         self.actionslider_feed_override_3.setProperty("actionName", _translate("MainWindow", "machine.feed-override.set"))
         self.statuslabel_20.setProperty("rules", _translate("MainWindow", "[{\"channels\": [{\"url\": \"status:feedrate\", \"trigger\": true}], \"property\": \"Text\", \"expression\": \"\'Feed Override: {:.0%}\'.format(ch[0])\", \"name\": \"Feed Override Text\"}]"))
@@ -4371,25 +2877,21 @@ class Ui_MainWindow(object):
         self.actionFullscreen.setShortcut(_translate("MainWindow", "F11"))
 
 from qtpyvcp.widgets.button_widgets.action_button import ActionButton
-from qtpyvcp.widgets.button_widgets.mdi_button import MDIButton
 from qtpyvcp.widgets.button_widgets.subcall_button import SubCallButton
 from qtpyvcp.widgets.containers.stack import VCPStackedWidget
-from qtpyvcp.widgets.display_widgets.active_gcodes_table import ActiveGcodesTable
-from qtpyvcp.widgets.display_widgets.dro_label import DROLabel
 from qtpyvcp.widgets.display_widgets.notification_widget import NotificationWidget
 from qtpyvcp.widgets.display_widgets.status_label import StatusLabel
 from qtpyvcp.widgets.display_widgets.vtk_backplot.vtk_backplot import VTKBackPlot
-from qtpyvcp.widgets.hal_widgets.hal_bar_indicator import HalBarIndicator
 from qtpyvcp.widgets.hal_widgets.hal_led import HalLedIndicator
 from qtpyvcp.widgets.input_widgets.action_slider import ActionSlider
-from qtpyvcp.widgets.input_widgets.dro_line_edit import DROLineEdit
 from qtpyvcp.widgets.input_widgets.file_system import FileSystemTable, RemovableDeviceComboBox
 from qtpyvcp.widgets.input_widgets.gcode_editor import GcodeEditor
 from qtpyvcp.widgets.input_widgets.jog_increment import JogIncrementWidget
-from qtpyvcp.widgets.input_widgets.line_edit import VCPLineEdit
 from qtpyvcp.widgets.input_widgets.mdientry_widget import MDIEntry
 from qtpyvcp.widgets.input_widgets.recent_file_combobox import RecentFileComboBox
 from qtpyvcp.widgets.input_widgets.setting_slider import VCPSettingsSlider
 from qtpyvcp.widgets.input_widgets.tool_table import ToolTable
 from widgets.probe_wizard_widget import ProbeWizardWidget
+from widgets.smart_dro_widget import SmartDro
+from widgets.spindle_widget import SpindleWidget
 import resources_rc
