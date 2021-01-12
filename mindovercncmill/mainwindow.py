@@ -1,3 +1,5 @@
+# noinspection PyUnresolvedReferences
+import resources_rc
 import linuxcnc
 import os
 from enum import IntEnum
@@ -5,7 +7,6 @@ from enum import IntEnum
 from qtpy.QtWidgets import QMessageBox
 from qtpyvcp import hal
 from qtpyvcp.plugins import getPlugin
-# Setup logging
 from qtpyvcp.utilities import logger
 from qtpyvcp.widgets.form_widgets.main_window import VCPMainWindow
 
@@ -34,7 +35,7 @@ class MyMainWindow(VCPMainWindow):
         self.btnTools.clicked.connect(self.showToolsPage)
         self.btnOffsets.clicked.connect(self.showOffsetsPage)
         self.btnSettings.clicked.connect(self.showSettingsPage)
-        self.pushStatusButton.clicked.connect(self.showStatusPage)
+        self.btnStatus.clicked.connect(self.showStatusPage)
         self.probewizardwidget.probingCodeReady.connect(self.loadGCode)
         self.probewizardwidget.probingFinished.connect(self.handleProbingFinished)
 
@@ -107,7 +108,8 @@ class MyMainWindow(VCPMainWindow):
             self.stackedWidgetMain.setCurrentIndex(MainScreenPage.MAIN)
 
     def showStatusPage(self):
-        if self.pushStatusButton.isChecked():
+        self.btnStatus.mark_as_seen()
+        if self.btnStatus.isChecked():
             self._initialLeftTopPage = self.stackedWidgetLeftTop.currentIndex()
             self.stackedWidgetLeftTop.setCurrentIndex(3)
         else:

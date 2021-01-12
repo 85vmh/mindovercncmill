@@ -18,7 +18,7 @@
     <rect>
      <x>0</x>
      <y>5</y>
-     <width>1071</width>
+     <width>1066</width>
      <height>606</height>
     </rect>
    </property>
@@ -29,14 +29,14 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="page_loadProbeTool">
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>225</x>
-       <y>95</y>
+       <x>535</x>
+       <y>40</y>
        <width>326</width>
        <height>61</height>
       </rect>
@@ -46,13 +46,32 @@
 and plug the cable</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>-5</y>
+       <width>190</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="../resources.qrc">:/images/no_tool.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="page_tripProbeTip">
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>170</y>
+       <x>395</x>
+       <y>255</y>
        <width>321</width>
        <height>56</height>
       </rect>
@@ -61,20 +80,23 @@ and plug the cable</string>
       <string>Touch the tip of the probe to ensure its working</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_7">
+    <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>320</x>
-       <y>220</y>
-       <width>101</width>
-       <height>66</height>
+       <x>150</x>
+       <y>0</y>
+       <width>192</width>
+       <height>286</height>
       </rect>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="../resources.qrc">:/probe_icons/touch.png</pixmap>
+      <pixmap resource="../resources.qrc">:/images/probe_loaded.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
     </widget>
    </widget>
@@ -83,8 +105,8 @@ and plug the cable</string>
      <property name="geometry">
       <rect>
        <x>15</x>
-       <y>0</y>
-       <width>801</width>
+       <y>95</y>
+       <width>701</width>
        <height>46</height>
       </rect>
      </property>
@@ -436,7 +458,7 @@ QPushButton:checked {
      <property name="geometry">
       <rect>
        <x>15</x>
-       <y>55</y>
+       <y>175</y>
        <width>396</width>
        <height>351</height>
       </rect>
@@ -2461,7 +2483,7 @@ color: white;
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="probeButtonGroup"/>
   <buttongroup name="probeTabsGroup"/>
+  <buttongroup name="probeButtonGroup"/>
  </buttongroups>
 </ui>

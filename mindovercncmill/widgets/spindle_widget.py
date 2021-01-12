@@ -64,6 +64,7 @@ class SpindleWidget(QWidget):
         elif spindleSpeed == 0.0:
             LOG.debug('-----SPINDLE_LOADED called')
             self.spindleStates.setCurrentIndex(SpindleState.SPINDLE_LOADED)
+            self.spindleSpeed.setFocus()
         else:
             LOG.debug('-----SPINDLE_Running called')
             self.spindleStates.setCurrentIndex(SpindleState.SPINDLE_RUNNING)
@@ -80,6 +81,7 @@ class SpindleWidget(QWidget):
             pass
         else:
             self.spindleStates.setCurrentIndex(SpindleState.SPINDLE_LOADED)
+            self.spindleSpeed.setFocus()
 
     def spindleForward(self):
         CMD.spindle(linuxcnc.SPINDLE_FORWARD, int(self.spindleSpeed.text()), 0)

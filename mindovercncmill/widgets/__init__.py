@@ -29,3 +29,8 @@ from smart_dro_widget import SmartDro
 class SmartDro_Plugin(_DesignerPlugin):
     def pluginClass(self):
         return SmartDro
+
+from notification_status_button import NotificationStatusButton
+class NotificationStatusButton_Plugin(_DesignerPlugin):
+    def pluginClass(self):
+        return NotificationStatusButton
