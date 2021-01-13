@@ -1,11 +1,10 @@
 import os
+
 from qtpy import uic
 from qtpy.QtWidgets import QWidget
-from qtpy.QtCore import Property, Slot
-from qtpyvcp.utilities.settings import getSetting, connectSetting
-from qtpyvcp.utilities import logger
-from qtpyvcp.actions.machine_actions import issue_mdi
 from qtpyvcp.plugins import getPlugin
+from qtpyvcp.utilities import logger
+
 LOG = logger.getLogger(__name__)
 from enum import IntEnum
 import linuxcnc
@@ -13,25 +12,31 @@ import linuxcnc
 CMD = linuxcnc.command()
 UI_FILE = os.path.join(os.path.dirname(__file__), "smart_dro.ui")
 
+
 class DynamicHeader(IntEnum):
     INTERPRETER_OFF = 0
     INTERPRETER_ON = 1
+
 
 class DynamicX(IntEnum):
     INTERPRETER_OFF = 0
     INTERPRETER_ON = 1
 
+
 class DynamicY(IntEnum):
     INTERPRETER_OFF = 1
     INTERPRETER_ON = 0
+
 
 class DynamicZ(IntEnum):
     INTERPRETER_OFF = 1
     INTERPRETER_ON = 0
 
+
 class DynamicA(IntEnum):
     INTERPRETER_OFF = 1
     INTERPRETER_ON = 0
+
 
 class SmartDro(QWidget):
     def __init__(self, parent=None):
@@ -39,10 +44,10 @@ class SmartDro(QWidget):
         uic.loadUi(UI_FILE, self)
         self.STATUS = getPlugin('status')
 
-        self.STATUS.interp_state.notify(self.updateUi)
+        self.STATUS.interp_state.notify(self.__update_ui)
 
-    def updateUi(self, interpretor_state):
-        if interpretor_state == linuxcnc.INTERP_IDLE:
+    def __update_ui(self, interpreter_state):
+        if interpreter_state == linuxcnc.INTERP_IDLE:
             self.dynamicHeader.setCurrentIndex(DynamicHeader.INTERPRETER_OFF)
             self.dynamicX.setCurrentIndex(DynamicX.INTERPRETER_OFF)
             self.dynamicY.setCurrentIndex(DynamicY.INTERPRETER_OFF)

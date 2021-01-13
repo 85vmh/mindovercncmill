@@ -34,3 +34,8 @@ from notification_status_button import NotificationStatusButton
 class NotificationStatusButton_Plugin(_DesignerPlugin):
     def pluginClass(self):
         return NotificationStatusButton
+
+from pause_resume_button import PauseResumeButton
+class PauseResumeButton_Plugin(_DesignerPlugin):
+    def pluginClass(self):
+        return PauseResumeButton

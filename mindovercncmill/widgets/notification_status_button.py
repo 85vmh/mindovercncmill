@@ -24,12 +24,12 @@ class NotificationStatusButton(QPushButton):
         # self._blink_count = 100
         # self._blink_duration = 1000
 
-        self.notification_channel = getPlugin("notifications")
+        self.notifications = getPlugin("notifications")
 
-        self.notification_channel.info_message.notify(self.__on_info_message)
-        self.notification_channel.warn_message.notify(self.__on_warn_message)
-        self.notification_channel.error_message.notify(self.__on_error_message)
-        self.notification_channel.debug_message.notify(self.__on_debug_message)
+        self.notifications.info_message.notify(self.__on_info_message)
+        self.notifications.warn_message.notify(self.__on_warn_message)
+        self.notifications.error_message.notify(self.__on_error_message)
+        self.notifications.debug_message.notify(self.__on_debug_message)
 
     # def getColor(self):
     #     return self.palette().color(QPalette.Button)

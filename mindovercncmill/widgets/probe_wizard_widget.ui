@@ -29,7 +29,7 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="page_loadProbeTool">
     <widget class="QLabel" name="label">
@@ -2483,7 +2483,7 @@ color: white;
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="probeTabsGroup"/>
   <buttongroup name="probeButtonGroup"/>
+  <buttongroup name="probeTabsGroup"/>
  </buttongroups>
 </ui>
