@@ -39,3 +39,8 @@ from pause_resume_button import PauseResumeButton
 class PauseResumeButton_Plugin(_DesignerPlugin):
     def pluginClass(self):
         return PauseResumeButton
+
+from gm_codes_table import GMCodesTable
+class GMCodesTable_Plugin(_DesignerPlugin):
+    def pluginClass(self):
+        return GMCodesTable

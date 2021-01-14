@@ -26,6 +26,10 @@ class MyMainWindow(VCPMainWindow):
 
     def __init__(self, *args, **kwargs):
         super(MyMainWindow, self).__init__(*args, **kwargs)
+
+        self._initialLeftTopPage = 0
+        self._pageBeforeCodesOpen = 0
+
         self.btnManual.clicked.connect(self.setManualScreen)
         self.btnMdi.clicked.connect(self.setMdiScreen)
         self.btnProgram.clicked.connect(self.setProgramScreen)
@@ -36,11 +40,15 @@ class MyMainWindow(VCPMainWindow):
         self.btnOffsets.clicked.connect(self.showOffsetsPage)
         self.btnSettings.clicked.connect(self.showSettingsPage)
         self.btnStatus.clicked.connect(self.showStatusPage)
+        self.btnActiveCodes.clicked.connect(self.showCodesPage)
         self.probewizardwidget.probingCodeReady.connect(self.loadGCode)
         self.probewizardwidget.probingFinished.connect(self.handleProbingFinished)
 
+        self.btnActiveCodes.setText("initial\nValue")
         self.STATUS = getPlugin('status')
-        #self.STATUS.task_mode.notify(self.reflectTaskMode)
+        self.STATUS.gcodes.notify(self.setActiveCodesButtonText)
+        self.STATUS.mcodes.notify(self.setActiveCodesButtonText)
+        self.setActiveCodesButtonText()
 
         comp = hal.component('mindovercnc')
         comp.addPin('probe-plugged', 'bit', 'in')
@@ -49,7 +57,16 @@ class MyMainWindow(VCPMainWindow):
         comp.addListener('probe-tripped', self.onProbeTripped)
         comp.ready()
 
-    # def reflectTaskMode(self, taskMode):
+
+
+    def setActiveCodesButtonText(self):
+        active_g_codes = self.STATUS.gcodes
+        active_m_codes = self.STATUS.mcodes
+        first_line = '  '.join(map(str, active_g_codes))
+        second_line = '  '.join(map(str, active_m_codes))
+        self.btnActiveCodes.setText(first_line + "\n" + second_line)
+
+        # def reflectTaskMode(self, taskMode):
     #     self.btnManual.setChecked(taskMode == linuxcnc.MODE_MANUAL)
     #     self.btnMdi.setChecked(taskMode == linuxcnc.MODE_MDI)
     #     self.btnProgram.setChecked(taskMode == linuxcnc.MODE_AUTO)
@@ -114,6 +131,13 @@ class MyMainWindow(VCPMainWindow):
             self.stackedWidgetLeftTop.setCurrentIndex(3)
         else:
             self.stackedWidgetLeftTop.setCurrentIndex(self._initialLeftTopPage)
+
+    def showCodesPage(self):
+        if self.btnActiveCodes.isChecked():
+            self._pageBeforeCodesOpen = self.stackedWidgetLeftTop.currentIndex()
+            self.stackedWidgetLeftTop.setCurrentIndex(4)
+        else:
+            self.stackedWidgetLeftTop.setCurrentIndex(self._pageBeforeCodesOpen)
 
     def setProgramScreen(self):
         stat = linuxcnc.stat()
