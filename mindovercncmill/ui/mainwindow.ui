@@ -2759,7 +2759,7 @@ QComboBox QAbstractItemView{
                       <property name="minimumSize">
                        <size>
                         <width>127</width>
-                        <height>30</height>
+                        <height>32</height>
                        </size>
                       </property>
                       <property name="maximumSize">
@@ -2830,7 +2830,7 @@ QPushButton:checked {
                       <property name="minimumSize">
                        <size>
                         <width>127</width>
-                        <height>30</height>
+                        <height>32</height>
                        </size>
                       </property>
                       <property name="maximumSize">
@@ -2914,7 +2914,7 @@ QPushButton:checked {
                  <property name="rules" stdset="0">
                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:interp_state&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;currentIndex&quot;, &quot;expression&quot;: &quot;0 if(ch[0] == 1) else (1 if(ch[0] == 3) else (2 if(ch[1] == 1) else 3))&quot;, &quot;name&quot;: &quot;Selected Page&quot;}]</string>
                  </property>
-                 <widget class="QWidget" name="page_5">
+                 <widget class="QWidget" name="page_actionsManual">
                   <widget class="ActionButton" name="actionbutton_9">
                    <property name="geometry">
                     <rect>
@@ -3005,8 +3005,49 @@ QPushButton:checked {
                     <string>coolant.mist.toggle</string>
                    </property>
                   </widget>
+                  <widget class="QPushButton" name="pushButton">
+                   <property name="geometry">
+                    <rect>
+                     <x>90</x>
+                     <y>145</y>
+                     <width>80</width>
+                     <height>80</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    color: #333;
+    border: 2px solid #555;
+    border-radius: 40px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #fff, stop: 1 #888
+        );
+    padding: 5px;
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #fff, stop: 1 #bbb
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #fff, stop: 1 #ddd
+        );
+    }</string>
+                   </property>
+                   <property name="text">
+                    <string>Resume</string>
+                   </property>
+                  </widget>
                  </widget>
-                 <widget class="QWidget" name="page_6">
+                 <widget class="QWidget" name="page_actionsMdi">
                   <widget class="ActionButton" name="actionbutton_6">
                    <property name="geometry">
                     <rect>
@@ -3158,7 +3199,7 @@ QPushButton:checked {
                    </property>
                   </widget>
                  </widget>
-                 <widget class="QWidget" name="page">
+                 <widget class="QWidget" name="page_startProgram">
                   <widget class="ActionButton" name="actionbutton_3">
                    <property name="geometry">
                     <rect>
@@ -3202,7 +3243,7 @@ QPushButton:checked {
                    </property>
                   </widget>
                  </widget>
-                 <widget class="QWidget" name="page_7">
+                 <widget class="QWidget" name="page_programRunning">
                   <widget class="ActionButton" name="actionbutton_13">
                    <property name="geometry">
                     <rect>
@@ -6445,16 +6486,6 @@ OffsetTable {
                     </item>
                    </layout>
                   </widget>
-                  <widget class="ActiveGcodesTable" name="activegcodestable">
-                   <property name="geometry">
-                    <rect>
-                     <x>600</x>
-                     <y>55</y>
-                     <width>491</width>
-                     <height>491</height>
-                    </rect>
-                   </property>
-                  </widget>
                  </widget>
                  <widget class="QWidget" name="tabProbeWcs">
                   <attribute name="title">
@@ -6961,11 +6992,6 @@ All</string>
    <class>ProbeWizardWidget</class>
    <extends>QWidget</extends>
    <header>widgets.probe_wizard_widget</header>
-  </customwidget>
-  <customwidget>
-   <class>ActiveGcodesTable</class>
-   <extends>QTableView</extends>
-   <header>qtpyvcp.widgets.display_widgets.active_gcodes_table</header>
   </customwidget>
   <customwidget>
    <class>StatusLabel</class>
@@ -7563,7 +7589,7 @@ All</string>
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="machineModeGroup"/>
   <buttongroup name="buttonGroupMdi"/>
+  <buttongroup name="machineModeGroup"/>
  </buttongroups>
 </ui>

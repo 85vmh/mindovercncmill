@@ -43,21 +43,33 @@ class MyMainWindow(VCPMainWindow):
         self.btnActiveCodes.clicked.connect(self.showCodesPage)
         self.probewizardwidget.probingCodeReady.connect(self.loadGCode)
         self.probewizardwidget.probingFinished.connect(self.handleProbingFinished)
+        self.spindlewidget.measureTool.connect(self.toggleMeasureFlag)
 
-        self.btnActiveCodes.setText("initial\nValue")
         self.STATUS = getPlugin('status')
         self.STATUS.gcodes.notify(self.setActiveCodesButtonText)
         self.STATUS.mcodes.notify(self.setActiveCodesButtonText)
         self.setActiveCodesButtonText()
 
-        comp = hal.component('mindovercnc')
-        comp.addPin('probe-plugged', 'bit', 'in')
-        comp.addPin('probe-tripped', 'bit', 'in')
-        comp.addListener('probe-plugged', self.onProbePlugged)
-        comp.addListener('probe-tripped', self.onProbeTripped)
-        comp.ready()
+        self.comp = hal.component('mindovercnc')
+        self.comp.addPin('measure_tool', 'bit', 'in')
+        self.comp.addPin("search_vel", 'float', 'out')
+        self.comp.addPin("probe_vel", 'float', 'out')
+        self.comp.addPin("probeheight", 'float', 'out')
+        self.comp.addPin("blockheight", 'float', 'out')
 
+        self.comp.addPin('probe-plugged', 'bit', 'in')
+        self.comp.addPin('probe-tripped', 'bit', 'in')
+        self.comp.addListener('probe-plugged', self.onProbePlugged)
+        self.comp.addListener('probe-tripped', self.onProbeTripped)
+        self.comp.ready()
 
+        self.comp.getPin('probeheight').value = 80.0
+        self.comp.getPin('blockheight').value = -330.0
+        self.comp.getPin('search_vel').value = 200.0
+        self.comp.getPin('probe_vel').value = 20.0
+
+    def toggleMeasureFlag(self, value):
+        self.comp.getPin('measure_tool').value = value
 
     def setActiveCodesButtonText(self):
         active_g_codes = self.STATUS.gcodes

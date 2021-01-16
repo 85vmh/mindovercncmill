@@ -6,30 +6,49 @@ from qtpyvcp.utilities.settings import getSetting, connectSetting
 from qtpyvcp.utilities import logger
 from qtpyvcp.actions.machine_actions import issue_mdi
 from qtpyvcp.plugins import getPlugin
+
 LOG = logger.getLogger(__name__)
 from enum import IntEnum
 import linuxcnc
+from qtpyvcp import hal
+from qtpy.QtCore import Slot, Signal
+from qtpyvcp.widgets import HALWidget
 
 CMD = linuxcnc.command()
 UI_FILE = os.path.join(os.path.dirname(__file__), "spindle_widget.ui")
 
-class SpindleState(IntEnum):
-    PROBE_IN_SPINDLE = 0
-    SPINDLE_LOADED = 1
-    SPINDLE_RUNNING = 2
-    SPINDLE_EMPTY = 3
 
-class SpindleWidget(QWidget):
+class SpindleState(IntEnum):
+    SPINDLE_EMPTY = 0
+    PREPARING_TOOL_CHANGE = 1
+    CONFIRM_TOOL_CHANGE = 2
+    PROBE_IN_SPINDLE = 3
+    SPINDLE_LOADED = 4
+    SPINDLE_RUNNING = 5
+
+
+class SpindleWidget(QWidget, HALWidget):
+    measureTool = Signal(bool)
+
     def __init__(self, parent=None):
         super(SpindleWidget, self).__init__(parent)
         uic.loadUi(UI_FILE, self)
         self.STATUS = getPlugin('status')
-
         self._probe_plugged = False
         self._probe_tripped = False
+        self._loadedTool = 0
 
-        self.changeToolBtn.clicked.connect(self.changeTool)
+        comp = hal.getComponent()
+        self._tool_change_confirmed = comp.addPin("tool-change-confirmed", "bit", "io")
+        self._tool_change_confirm = comp.addPin("tool-change-confirm", "bit", "in")
+        self._tool_change_prep_number = comp.addPin("tool-change-prep-number", "s32", "in")
+        self._tool_change_confirm.valueChanged.connect(self.readyToConfirm)
+        self._tool_change_prep_number.valueChanged.connect(self.preparingToLoadTool)
+
         self.loadToolBtn.clicked.connect(self.loadTool)
+        self.confirmToolChangeBtn.clicked.connect(self.confirmToolChange)
+        self.measureToolBtn.clicked.connect(self.confirmToolChangeAndMeasure)
+        self.changeToolBtn.clicked.connect(self.changeTool)
         self.spindleRevBtn.clicked.connect(self.spindleReverse)
         self.spindleFwdBtn.clicked.connect(self.spindleForward)
 
@@ -75,7 +94,7 @@ class SpindleWidget(QWidget):
 
     def loadTool(self):
         if int(self.toolNumberInput.text()) != self._loadedTool:
-            #proceed with tool change
+            # proceed with tool change
             issue_mdi("M6 T{} G43".format(self.toolNumberInput.text()))
         elif self._loadedTool == 0:
             pass
@@ -88,3 +107,26 @@ class SpindleWidget(QWidget):
 
     def spindleReverse(self):
         CMD.spindle(linuxcnc.SPINDLE_REVERSE, int(self.spindleSpeed.text()), 0)
+
+    def confirmToolChange(self):
+        self._tool_change_confirmed.value = True
+
+    def confirmToolChangeAndMeasure(self):
+        self.measureTool.emit(True)
+        self._tool_change_confirmed.value = True
+
+    def preparingToLoadTool(self, tool_number):
+        if tool_number != 0:
+            self.spindleStates.setCurrentIndex(SpindleState.PREPARING_TOOL_CHANGE)
+            self.prepareMessageLabel.setText(
+                "Preparing to load T" + str(tool_number) + "...\nMoving to change position...")
+        else:
+            LOG.debug('-----Prepare tool no become 0')
+
+    def readyToConfirm(self, value):
+        if value:
+            self.spindleStates.setCurrentIndex(SpindleState.CONFIRM_TOOL_CHANGE)
+            self.confirmMessageLabel.setText(
+                "Insert T" + str(self._tool_change_prep_number.value) + " in the spindle,\nthen Confirm")
+        else:
+            self._tool_change_confirmed.value = False
