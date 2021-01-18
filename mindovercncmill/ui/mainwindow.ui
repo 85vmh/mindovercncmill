@@ -128,1016 +128,12 @@
 }</string>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <property name="rules" stdset="0">
                 <string>[]</string>
                </property>
-               <widget class="QWidget" name="page_toolsScreen">
-                <widget class="QFrame" name="frame_13">
-                 <property name="enabled">
-                  <bool>true</bool>
-                 </property>
-                 <property name="geometry">
-                  <rect>
-                   <x>0</x>
-                   <y>0</y>
-                   <width>821</width>
-                   <height>764</height>
-                  </rect>
-                 </property>
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">.QFrame{
-    background-color: rgb(51, 57, 59);
-}</string>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_20">
-                  <property name="leftMargin">
-                   <number>2</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>1</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>2</number>
-                  </property>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_38">
-                    <property name="leftMargin">
-                     <number>5</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>5</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>5</number>
-                    </property>
-                    <item>
-                     <widget class="ToolTable" name="toolTable">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="palette">
-                       <palette>
-                        <active>
-                         <colorrole role="WindowText">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>235</red>
-                            <green>235</green>
-                            <blue>238</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="Button">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>120</red>
-                            <green>120</green>
-                            <blue>120</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="Text">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>235</red>
-                            <green>235</green>
-                            <blue>238</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="ButtonText">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>235</red>
-                            <green>235</green>
-                            <blue>238</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="Base">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>120</red>
-                            <green>120</green>
-                            <blue>120</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="Window">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>120</red>
-                            <green>120</green>
-                            <blue>120</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="AlternateBase">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>90</red>
-                            <green>90</green>
-                            <blue>90</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                        </active>
-                        <inactive>
-                         <colorrole role="WindowText">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>235</red>
-                            <green>235</green>
-                            <blue>238</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="Button">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>120</red>
-                            <green>120</green>
-                            <blue>120</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="Text">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>235</red>
-                            <green>235</green>
-                            <blue>238</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="ButtonText">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>235</red>
-                            <green>235</green>
-                            <blue>238</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="Base">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>120</red>
-                            <green>120</green>
-                            <blue>120</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="Window">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>120</red>
-                            <green>120</green>
-                            <blue>120</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="AlternateBase">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>90</red>
-                            <green>90</green>
-                            <blue>90</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                        </inactive>
-                        <disabled>
-                         <colorrole role="WindowText">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>235</red>
-                            <green>235</green>
-                            <blue>238</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="Button">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>120</red>
-                            <green>120</green>
-                            <blue>120</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="Text">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>235</red>
-                            <green>235</green>
-                            <blue>238</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="ButtonText">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>235</red>
-                            <green>235</green>
-                            <blue>238</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="Base">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>120</red>
-                            <green>120</green>
-                            <blue>120</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="Window">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>120</red>
-                            <green>120</green>
-                            <blue>120</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                         <colorrole role="AlternateBase">
-                          <brush brushstyle="SolidPattern">
-                           <color alpha="255">
-                            <red>90</red>
-                            <green>90</green>
-                            <blue>90</blue>
-                           </color>
-                          </brush>
-                         </colorrole>
-                        </disabled>
-                       </palette>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Bebas Kai</family>
-                        <pointsize>15</pointsize>
-                        <weight>50</weight>
-                        <italic>false</italic>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="focusPolicy">
-                       <enum>Qt::NoFocus</enum>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">TootTable,
-QHeaderView {
-    font: 14pt &quot;Bebas Kai&quot;;
-	background-color: rgb(220, 220, 220);
-	color: black;
-    border: none;
-}
-
-ToolTable {
-   	border-top: 8px rgb(120, 120, 120);
-	border-left: 4px  rgb(120, 120, 120);
-	border-bottom: 5px rgb(120, 120, 120);
-	border-right: 4px rgb(120, 120, 120);
-	border-radius: 5px;
-	border-color: rgb(120, 120, 120);
-	border-style: solid;
-	background-color: rgb(120, 120, 120);
-    gridline-color: rgb(203, 203, 203);
-	alternate-background-color: rgb(90, 90, 90);
-}</string>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Sunken</enum>
-                      </property>
-                      <property name="lineWidth">
-                       <number>3</number>
-                      </property>
-                      <property name="midLineWidth">
-                       <number>3</number>
-                      </property>
-                      <property name="editTriggers">
-                       <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
-                      </property>
-                      <property name="showDropIndicator" stdset="0">
-                       <bool>true</bool>
-                      </property>
-                      <property name="alternatingRowColors">
-                       <bool>true</bool>
-                      </property>
-                      <property name="showGrid">
-                       <bool>true</bool>
-                      </property>
-                      <property name="gridStyle">
-                       <enum>Qt::SolidLine</enum>
-                      </property>
-                      <property name="sortingEnabled">
-                       <bool>true</bool>
-                      </property>
-                      <property name="displayColumns" stdset="0">
-                       <string>TPZDR</string>
-                      </property>
-                      <property name="currentToolColor" stdset="0">
-                       <color>
-                        <red>42</red>
-                        <green>56</green>
-                        <blue>255</blue>
-                       </color>
-                      </property>
-                      <attribute name="horizontalHeaderDefaultSectionSize">
-                       <number>90</number>
-                      </attribute>
-                      <attribute name="horizontalHeaderHighlightSections">
-                       <bool>false</bool>
-                      </attribute>
-                      <attribute name="horizontalHeaderMinimumSectionSize">
-                       <number>90</number>
-                      </attribute>
-                      <attribute name="horizontalHeaderStretchLastSection">
-                       <bool>true</bool>
-                      </attribute>
-                      <attribute name="verticalHeaderVisible">
-                       <bool>false</bool>
-                      </attribute>
-                      <attribute name="verticalHeaderCascadingSectionResizes">
-                       <bool>true</bool>
-                      </attribute>
-                      <attribute name="verticalHeaderDefaultSectionSize">
-                       <number>30</number>
-                      </attribute>
-                      <attribute name="verticalHeaderHighlightSections">
-                       <bool>false</bool>
-                      </attribute>
-                      <attribute name="verticalHeaderMinimumSectionSize">
-                       <number>30</number>
-                      </attribute>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_37">
-                    <item>
-                     <widget class="QPushButton" name="tool_table_add_tool_button">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>120</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>120</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="focusPolicy">
-                       <enum>Qt::NoFocus</enum>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
-                      <property name="text">
-                       <string>ADD TOOL</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QPushButton" name="tool_table_delete_button">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>120</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>120</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="focusPolicy">
-                       <enum>Qt::NoFocus</enum>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
-                      <property name="text">
-                       <string>DELETE</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QPushButton" name="tool_table_save_button">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>120</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>120</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="focusPolicy">
-                       <enum>Qt::NoFocus</enum>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
-                      <property name="text">
-                       <string>SAVE TABLE</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QPushButton" name="tool_table_reload_button">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>140</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>140</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="focusPolicy">
-                       <enum>Qt::NoFocus</enum>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
-                      <property name="text">
-                       <string>RELOAD TABLE</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                 </layout>
-                </widget>
-                <widget class="QFrame" name="frame_11">
-                 <property name="geometry">
-                  <rect>
-                   <x>830</x>
-                   <y>200</y>
-                   <width>145</width>
-                   <height>60</height>
-                  </rect>
-                 </property>
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>100</width>
-                   <height>60</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>58</height>
-                  </size>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">.QFrame{
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    border-radius: 6px;
-    color: rgb(238, 238, 236);
-	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(81, 86, 85), stop:0.489795 rgb(99, 102, 102), stop:0.699799 rgb(85, 88, 94), stop:0.90444 rgb(77, 84, 86), stop:0.160246 rgb(83, 84, 91), stop:1 rgb(109, 115, 118));
-}</string>
-                 </property>
-                 <layout class="QHBoxLayout" name="horizontalLayout_100">
-                  <property name="leftMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>5</number>
-                  </property>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_19">
-                    <property name="spacing">
-                     <number>3</number>
-                    </property>
-                    <item>
-                     <widget class="QLabel" name="label_50">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>48</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>48</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QLabel{
-font: 75 13pt &quot;Bebas Kai&quot;;
-color: rgb(255, 255, 255);
-}</string>
-                      </property>
-                      <property name="text">
-                       <string>TOOL LENGTH</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                      <property name="wordWrap">
-                       <bool>true</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="StatusLabel" name="tool_length_6">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                        <horstretch>1</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>70</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>70</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QLabel {
-    border-style: transparent;
-    border-color: rgb(235, 235, 235);
-    border-width: 1px;
-    border-radius: 5px;
-    color: black;
-    background: white;
-	font: 75 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
-                      <property name="text">
-                       <string>0.0000</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                      </property>
-                      <property name="rules" stdset="0">
-                       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;tooltable:current_tool?z_offset&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:linear_units?text&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0]) if ch[1] == 'in' else \&quot;{:.4f}\&quot;.format(ch[0])&quot;, &quot;name&quot;: &quot;Tool Length&quot;}]</string>
-                      </property>
-                      <property name="format" stdset="0">
-                       <string>{:.3f}</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                 </layout>
-                </widget>
-                <widget class="QLabel" name="label_43">
-                 <property name="geometry">
-                  <rect>
-                   <x>875</x>
-                   <y>-3</y>
-                   <width>250</width>
-                   <height>403</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">image: url(:/images/atc_spindle_tool_dimensioned.png);</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="pixmap">
-                  <pixmap resource="../resources.qrc">:/images/atc_spindle_tool_dimensioned.png</pixmap>
-                 </property>
-                 <property name="scaledContents">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-                <widget class="QFrame" name="frame_12">
-                 <property name="geometry">
-                  <rect>
-                   <x>831</x>
-                   <y>365</y>
-                   <width>161</width>
-                   <height>60</height>
-                  </rect>
-                 </property>
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>100</width>
-                   <height>60</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>60</height>
-                  </size>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">.QFrame{
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    border-radius: 6px;
-    color: rgb(238, 238, 236);
-	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(81, 86, 85), stop:0.489795 rgb(99, 102, 102), stop:0.699799 rgb(85, 88, 94), stop:0.90444 rgb(77, 84, 86), stop:0.160246 rgb(83, 84, 91), stop:1 rgb(109, 115, 118));
-}</string>
-                 </property>
-                 <layout class="QHBoxLayout" name="horizontalLayout_101">
-                  <property name="leftMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>5</number>
-                  </property>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_20">
-                    <property name="spacing">
-                     <number>3</number>
-                    </property>
-                    <item>
-                     <widget class="QLabel" name="label_51">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>64</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>35</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QLabel{
-font: 75 13pt &quot;Bebas Kai&quot;;
-color: rgb(255, 255, 255);
-}</string>
-                      </property>
-                      <property name="text">
-                       <string>DIAMETER</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                      <property name="wordWrap">
-                       <bool>true</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="StatusLabel" name="tool_diameter_3">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                        <horstretch>1</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>70</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>70</width>
-                        <height>33</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QLabel {
-    border-style: transparent;
-    border-color: rgb(235, 235, 235);
-    border-width: 1px;
-    border-radius: 5px;
-    color: black;
-    background: white;
-	font: 75 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
-                      <property name="text">
-                       <string>0.00</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                      </property>
-                      <property name="rules" stdset="0">
-                       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;tooltable:current_tool?diameter&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:linear_units?text&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0]) if ch[1] == 'in' else \&quot;{:.2f}\&quot;.format(ch[0])&quot;, &quot;name&quot;: &quot;Tool Diameter&quot;}]</string>
-                      </property>
-                      <property name="format" stdset="0">
-                       <string>{:.3f}</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                 </layout>
-                </widget>
-                <widget class="QLabel" name="label_38">
-                 <property name="geometry">
-                  <rect>
-                   <x>1020</x>
-                   <y>565</y>
-                   <width>240</width>
-                   <height>200</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">image: url(:/images/tool_probe.png);</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="scaledContents">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-                <widget class="StatusLabel" name="tool_length_7">
-                 <property name="geometry">
-                  <rect>
-                   <x>1010</x>
-                   <y>145</y>
-                   <width>50</width>
-                   <height>33</height>
-                  </rect>
-                 </property>
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                   <horstretch>1</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>33</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>50</width>
-                   <height>33</height>
-                  </size>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QLabel {
-    border-style: transparent;
-    border-color: rgb(235, 235, 235);
-    border-width: 1px;
-    border-radius: 5px;
-    color: black;
-    background: white;
-	font: 15pt &quot;Bebas Kai&quot;;
-}</string>
-                 </property>
-                 <property name="text">
-                  <string>T0</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                 <property name="rules" stdset="0">
-                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_in_spindle?text&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'T' + ch[0]&quot;, &quot;name&quot;: &quot;current tool&quot;}]</string>
-                 </property>
-                 <property name="format" stdset="0">
-                  <string>{:.3f}</string>
-                 </property>
-                </widget>
-                <widget class="SubCallButton" name="tool_touch_off_button">
-                 <property name="geometry">
-                  <rect>
-                   <x>835</x>
-                   <y>660</y>
-                   <width>201</width>
-                   <height>35</height>
-                  </rect>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>145</width>
-                   <height>35</height>
-                  </size>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QPushButton {
-    color: white;    
-    border-color: black;
-    border-style: solid;
-    border-radius: 5px;
-    border-width: 2px;
-    background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255));
-}
-
-QPushButton {
-    font-family: &quot;Bebas Kai&quot;;
-    font-size: 16pt;
-}
-
-QPushButton:disabled {
-    border-color: gray;
-}
-
-QPushButton:hover {
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
-}
-
-QPushButton:pressed {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}
-
-QPushButton:checked[option=&quot;true&quot;] {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}
-
-QPushButton:checked {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}
-</string>
-                 </property>
-                 <property name="text">
-                  <string>TOUCH OFF CURRENT TOOL</string>
-                 </property>
-                 <property name="filename" stdset="0">
-                  <string>tool_touch_off.ngc</string>
-                 </property>
-                </widget>
-                <widget class="HalLedIndicator" name="halledindicator">
-                 <property name="geometry">
-                  <rect>
-                   <x>1115</x>
-                   <y>625</y>
-                   <width>20</width>
-                   <height>20</height>
-                  </rect>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                 <property name="diameter">
-                  <number>20</number>
-                 </property>
-                 <property name="color">
-                  <color>
-                   <red>78</red>
-                   <green>154</green>
-                   <blue>6</blue>
-                  </color>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_52">
-                 <property name="geometry">
-                  <rect>
-                   <x>1095</x>
-                   <y>600</y>
-                   <width>64</width>
-                   <height>25</height>
-                  </rect>
-                 </property>
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>64</width>
-                   <height>25</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>35</width>
-                   <height>25</height>
-                  </size>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QLabel{
-font: 75 13pt &quot;Bebas Kai&quot;;
-color: rgb(255, 255, 255);
-}</string>
-                 </property>
-                 <property name="text">
-                  <string>Touched</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                 <property name="wordWrap">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-                <zorder>frame_13</zorder>
-                <zorder>label_43</zorder>
-                <zorder>frame_12</zorder>
-                <zorder>label_38</zorder>
-                <zorder>tool_length_7</zorder>
-                <zorder>frame_11</zorder>
-                <zorder>tool_touch_off_button</zorder>
-                <zorder>halledindicator</zorder>
-                <zorder>label_52</zorder>
-               </widget>
-               <widget class="QWidget" name="page_mainScreen">
+               <widget class="QWidget" name="page_main">
                 <widget class="VCPStackedWidget" name="stackedWidgetLeftTop">
                  <property name="geometry">
                   <rect>
@@ -2891,7 +1887,7 @@ QPushButton:checked {
                   </widget>
                  </widget>
                 </widget>
-                <widget class="VCPStackedWidget" name="stackedWidgetLeftBottom">
+                <widget class="VCPStackedWidget" name="stackedWidgetMainButtons">
                  <property name="geometry">
                   <rect>
                    <x>5</x>
@@ -2912,7 +1908,7 @@ QPushButton:checked {
                   <number>0</number>
                  </property>
                  <property name="rules" stdset="0">
-                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:interp_state&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;currentIndex&quot;, &quot;expression&quot;: &quot;0 if(ch[0] == 1) else (1 if(ch[0] == 3) else (2 if(ch[1] == 1) else 3))&quot;, &quot;name&quot;: &quot;Selected Page&quot;}]</string>
+                  <string>[]</string>
                  </property>
                  <widget class="QWidget" name="page_actionsManual">
                   <widget class="ActionButton" name="actionbutton_9">
@@ -3003,47 +1999,6 @@ QPushButton:checked {
                    </property>
                    <property name="actionName" stdset="0">
                     <string>coolant.mist.toggle</string>
-                   </property>
-                  </widget>
-                  <widget class="QPushButton" name="pushButton">
-                   <property name="geometry">
-                    <rect>
-                     <x>90</x>
-                     <y>145</y>
-                     <width>80</width>
-                     <height>80</height>
-                    </rect>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QPushButton {
-    color: #333;
-    border: 2px solid #555;
-    border-radius: 40px;
-    border-style: outset;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #fff, stop: 1 #888
-        );
-    padding: 5px;
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #fff, stop: 1 #bbb
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #fff, stop: 1 #ddd
-        );
-    }</string>
-                   </property>
-                   <property name="text">
-                    <string>Resume</string>
                    </property>
                   </widget>
                  </widget>
@@ -3183,7 +2138,7 @@ QPushButton:pressed {
                   <widget class="PauseResumeButton" name="pauseresumebutton_2">
                    <property name="geometry">
                     <rect>
-                     <x>40</x>
+                     <x>45</x>
                      <y>130</y>
                      <width>201</width>
                      <height>55</height>
@@ -4962,7 +3917,7 @@ border-radius: 4px;
                  </property>
                 </widget>
                </widget>
-               <widget class="QWidget" name="page_selectProgram">
+               <widget class="QWidget" name="page_filesystem">
                 <widget class="QFrame" name="frame_35">
                  <property name="geometry">
                   <rect>
@@ -6163,42 +5118,3314 @@ LEFT</string>
                  </widget>
                 </widget>
                </widget>
-               <widget class="QWidget" name="page_offsetsScreen">
-                <widget class="QTabWidget" name="tabWidget">
+               <widget class="QWidget" name="page_tools">
+                <widget class="QFrame" name="frame_13">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
                  <property name="geometry">
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>1261</width>
-                   <height>766</height>
+                   <width>821</width>
+                   <height>764</height>
                   </rect>
                  </property>
-                 <property name="currentIndex">
-                  <number>0</number>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
                  </property>
-                 <widget class="QWidget" name="tabManualWcs">
-                  <attribute name="title">
-                   <string>Manual Set WCS</string>
-                  </attribute>
-                 </widget>
-                 <widget class="QWidget" name="tabProbeWcs">
-                  <attribute name="title">
-                   <string>Probe Set WCS</string>
-                  </attribute>
-                  <widget class="ProbeWizardWidget" name="probewizardwidget">
+                 <property name="styleSheet">
+                  <string notr="true">.QFrame{
+    background-color: rgb(51, 57, 59);
+}</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_20">
+                  <property name="leftMargin">
+                   <number>2</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>2</number>
+                  </property>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_38">
+                    <property name="leftMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>5</number>
+                    </property>
+                    <item>
+                     <widget class="ToolTable" name="toolTable">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="palette">
+                       <palette>
+                        <active>
+                         <colorrole role="WindowText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Button">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Text">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="ButtonText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Base">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Window">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="AlternateBase">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>90</red>
+                            <green>90</green>
+                            <blue>90</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                        </active>
+                        <inactive>
+                         <colorrole role="WindowText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Button">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Text">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="ButtonText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Base">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Window">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="AlternateBase">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>90</red>
+                            <green>90</green>
+                            <blue>90</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                        </inactive>
+                        <disabled>
+                         <colorrole role="WindowText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Button">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Text">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="ButtonText">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>235</red>
+                            <green>235</green>
+                            <blue>238</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Base">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="Window">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>120</red>
+                            <green>120</green>
+                            <blue>120</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                         <colorrole role="AlternateBase">
+                          <brush brushstyle="SolidPattern">
+                           <color alpha="255">
+                            <red>90</red>
+                            <green>90</green>
+                            <blue>90</blue>
+                           </color>
+                          </brush>
+                         </colorrole>
+                        </disabled>
+                       </palette>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bebas Kai</family>
+                        <pointsize>15</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                       </font>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">TootTable,
+QHeaderView {
+    font: 14pt &quot;Bebas Kai&quot;;
+	background-color: rgb(220, 220, 220);
+	color: black;
+    border: none;
+}
+
+ToolTable {
+   	border-top: 8px rgb(120, 120, 120);
+	border-left: 4px  rgb(120, 120, 120);
+	border-bottom: 5px rgb(120, 120, 120);
+	border-right: 4px rgb(120, 120, 120);
+	border-radius: 5px;
+	border-color: rgb(120, 120, 120);
+	border-style: solid;
+	background-color: rgb(120, 120, 120);
+    gridline-color: rgb(203, 203, 203);
+	alternate-background-color: rgb(90, 90, 90);
+}</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Sunken</enum>
+                      </property>
+                      <property name="lineWidth">
+                       <number>3</number>
+                      </property>
+                      <property name="midLineWidth">
+                       <number>3</number>
+                      </property>
+                      <property name="editTriggers">
+                       <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
+                      </property>
+                      <property name="showDropIndicator" stdset="0">
+                       <bool>true</bool>
+                      </property>
+                      <property name="alternatingRowColors">
+                       <bool>true</bool>
+                      </property>
+                      <property name="showGrid">
+                       <bool>true</bool>
+                      </property>
+                      <property name="gridStyle">
+                       <enum>Qt::SolidLine</enum>
+                      </property>
+                      <property name="sortingEnabled">
+                       <bool>true</bool>
+                      </property>
+                      <property name="displayColumns" stdset="0">
+                       <string>TPZDR</string>
+                      </property>
+                      <property name="currentToolColor" stdset="0">
+                       <color>
+                        <red>42</red>
+                        <green>56</green>
+                        <blue>255</blue>
+                       </color>
+                      </property>
+                      <attribute name="horizontalHeaderDefaultSectionSize">
+                       <number>90</number>
+                      </attribute>
+                      <attribute name="horizontalHeaderHighlightSections">
+                       <bool>false</bool>
+                      </attribute>
+                      <attribute name="horizontalHeaderMinimumSectionSize">
+                       <number>90</number>
+                      </attribute>
+                      <attribute name="horizontalHeaderStretchLastSection">
+                       <bool>true</bool>
+                      </attribute>
+                      <attribute name="verticalHeaderVisible">
+                       <bool>false</bool>
+                      </attribute>
+                      <attribute name="verticalHeaderCascadingSectionResizes">
+                       <bool>true</bool>
+                      </attribute>
+                      <attribute name="verticalHeaderDefaultSectionSize">
+                       <number>30</number>
+                      </attribute>
+                      <attribute name="verticalHeaderHighlightSections">
+                       <bool>false</bool>
+                      </attribute>
+                      <attribute name="verticalHeaderMinimumSectionSize">
+                       <number>30</number>
+                      </attribute>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_37">
+                    <item>
+                     <widget class="QPushButton" name="tool_table_add_tool_button">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+   	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>ADD TOOL</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="tool_table_delete_button">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+   	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>DELETE</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="tool_table_save_button">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>120</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+   	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>SAVE TABLE</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="tool_table_reload_button">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>140</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>140</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+   	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>RELOAD TABLE</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QFrame" name="frame_11">
+                 <property name="geometry">
+                  <rect>
+                   <x>830</x>
+                   <y>200</y>
+                   <width>145</width>
+                   <height>60</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>58</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">.QFrame{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 6px;
+    color: rgb(238, 238, 236);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(81, 86, 85), stop:0.489795 rgb(99, 102, 102), stop:0.699799 rgb(85, 88, 94), stop:0.90444 rgb(77, 84, 86), stop:0.160246 rgb(83, 84, 91), stop:1 rgb(109, 115, 118));
+}</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_100">
+                  <property name="leftMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>5</number>
+                  </property>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_19">
+                    <property name="spacing">
+                     <number>3</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_50">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>48</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>48</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLabel{
+font: 75 13pt &quot;Bebas Kai&quot;;
+color: rgb(255, 255, 255);
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>TOOL LENGTH</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="StatusLabel" name="tool_length_6">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                        <horstretch>1</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>70</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLabel {
+    border-style: transparent;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px;
+    border-radius: 5px;
+    color: black;
+    background: white;
+	font: 75 14pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>0.0000</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="rules" stdset="0">
+                       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;tooltable:current_tool?z_offset&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:linear_units?text&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0]) if ch[1] == 'in' else \&quot;{:.4f}\&quot;.format(ch[0])&quot;, &quot;name&quot;: &quot;Tool Length&quot;}]</string>
+                      </property>
+                      <property name="format" stdset="0">
+                       <string>{:.3f}</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="label_43">
+                 <property name="geometry">
+                  <rect>
+                   <x>875</x>
+                   <y>-3</y>
+                   <width>250</width>
+                   <height>403</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">image: url(:/images/atc_spindle_tool_dimensioned.png);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap resource="../resources.qrc">:/images/atc_spindle_tool_dimensioned.png</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QFrame" name="frame_12">
+                 <property name="geometry">
+                  <rect>
+                   <x>831</x>
+                   <y>365</y>
+                   <width>161</width>
+                   <height>60</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">.QFrame{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 6px;
+    color: rgb(238, 238, 236);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(81, 86, 85), stop:0.489795 rgb(99, 102, 102), stop:0.699799 rgb(85, 88, 94), stop:0.90444 rgb(77, 84, 86), stop:0.160246 rgb(83, 84, 91), stop:1 rgb(109, 115, 118));
+}</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_101">
+                  <property name="leftMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>5</number>
+                  </property>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_20">
+                    <property name="spacing">
+                     <number>3</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_51">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>64</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>35</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLabel{
+font: 75 13pt &quot;Bebas Kai&quot;;
+color: rgb(255, 255, 255);
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>DIAMETER</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="StatusLabel" name="tool_diameter_3">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                        <horstretch>1</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>70</width>
+                        <height>33</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLabel {
+    border-style: transparent;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px;
+    border-radius: 5px;
+    color: black;
+    background: white;
+	font: 75 14pt &quot;Bebas Kai&quot;;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>0.00</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="rules" stdset="0">
+                       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;tooltable:current_tool?diameter&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:linear_units?text&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0]) if ch[1] == 'in' else \&quot;{:.2f}\&quot;.format(ch[0])&quot;, &quot;name&quot;: &quot;Tool Diameter&quot;}]</string>
+                      </property>
+                      <property name="format" stdset="0">
+                       <string>{:.3f}</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="label_38">
+                 <property name="geometry">
+                  <rect>
+                   <x>1020</x>
+                   <y>565</y>
+                   <width>240</width>
+                   <height>200</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">image: url(:/images/tool_probe.png);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="StatusLabel" name="tool_length_7">
+                 <property name="geometry">
+                  <rect>
+                   <x>1010</x>
+                   <y>145</y>
+                   <width>50</width>
+                   <height>33</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>1</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>33</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>33</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    border-style: transparent;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px;
+    border-radius: 5px;
+    color: black;
+    background: white;
+	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>T0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_in_spindle?text&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'T' + ch[0]&quot;, &quot;name&quot;: &quot;current tool&quot;}]</string>
+                 </property>
+                 <property name="format" stdset="0">
+                  <string>{:.3f}</string>
+                 </property>
+                </widget>
+                <widget class="SubCallButton" name="tool_touch_off_button">
+                 <property name="geometry">
+                  <rect>
+                   <x>835</x>
+                   <y>660</y>
+                   <width>201</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>145</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    color: white;    
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255));
+}
+
+QPushButton {
+    font-family: &quot;Bebas Kai&quot;;
+    font-size: 16pt;
+}
+
+QPushButton:disabled {
+    border-color: gray;
+}
+
+QPushButton:hover {
+    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
+}
+
+QPushButton:pressed {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}
+
+QPushButton:checked[option=&quot;true&quot;] {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}
+
+QPushButton:checked {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}
+</string>
+                 </property>
+                 <property name="text">
+                  <string>TOUCH OFF CURRENT TOOL</string>
+                 </property>
+                 <property name="filename" stdset="0">
+                  <string>tool_touch_off.ngc</string>
+                 </property>
+                </widget>
+                <widget class="HalLedIndicator" name="halledindicator">
+                 <property name="geometry">
+                  <rect>
+                   <x>1115</x>
+                   <y>625</y>
+                   <width>20</width>
+                   <height>20</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="diameter">
+                  <number>20</number>
+                 </property>
+                 <property name="color">
+                  <color>
+                   <red>78</red>
+                   <green>154</green>
+                   <blue>6</blue>
+                  </color>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_52">
+                 <property name="geometry">
+                  <rect>
+                   <x>1095</x>
+                   <y>600</y>
+                   <width>64</width>
+                   <height>25</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>64</width>
+                   <height>25</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>35</width>
+                   <height>25</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel{
+font: 75 13pt &quot;Bebas Kai&quot;;
+color: rgb(255, 255, 255);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Touched</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <zorder>frame_13</zorder>
+                <zorder>label_43</zorder>
+                <zorder>frame_12</zorder>
+                <zorder>label_38</zorder>
+                <zorder>tool_length_7</zorder>
+                <zorder>frame_11</zorder>
+                <zorder>tool_touch_off_button</zorder>
+                <zorder>halledindicator</zorder>
+                <zorder>label_52</zorder>
+               </widget>
+               <widget class="QWidget" name="page_offsets">
+                <widget class="QFrame" name="frame_4">
+                 <property name="geometry">
+                  <rect>
+                   <x>520</x>
+                   <y>5</y>
+                   <width>746</width>
+                   <height>441</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">.QFrame{
+    border-style: solid;
+    border-color: rgb(186, 189, 182);
+    border-width: 1px;
+    border-radius: 6px;
+}</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <widget class="QFrame" name="frame_header_background_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>125</y>
+                    <width>726</width>
+                    <height>61</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">.QFrame{
+    border-style: solid;
+    border-color: rgb(176, 179,172);
+    border-width: 1px;
+    border-radius: 4px;
+    background-color: rgb(90, 90, 90);
+}
+</string>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <widget class="StatusLabel" name="statuslabel_34">
                    <property name="geometry">
                     <rect>
-                     <x>15</x>
-                     <y>10</y>
-                     <width>1106</width>
-                     <height>631</height>
+                     <x>10</x>
+                     <y>20</y>
+                     <width>35</width>
+                     <height>17</height>
                     </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>30</width>
+                     <height>17</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>50</width>
+                     <height>17</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>AXIS</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[]</string>
+                   </property>
+                  </widget>
+                  <widget class="StatusLabel" name="statuslabel_35">
+                   <property name="geometry">
+                    <rect>
+                     <x>55</x>
+                     <y>5</y>
+                     <width>80</width>
+                     <height>50</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>80</width>
+                     <height>17</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_index?text&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0] + '\\nCoords'\n&quot;, &quot;name&quot;: &quot;WCS Header&quot;}]</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="work_column_header_13">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="geometry">
+                    <rect>
+                     <x>255</x>
+                     <y>5</y>
+                     <width>100</width>
+                     <height>50</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>80</width>
+                     <height>17</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>MACHINE
+Coords</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="machine_column_header_14">
+                   <property name="geometry">
+                    <rect>
+                     <x>380</x>
+                     <y>5</y>
+                     <width>86</width>
+                     <height>50</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>60</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>WC
+OFFSET</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="wordWrap">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="axis_column_header_16">
+                   <property name="geometry">
+                    <rect>
+                     <x>165</x>
+                     <y>5</y>
+                     <width>55</width>
+                     <height>50</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>55</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>55</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>SET TO ZERO</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="wordWrap">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="ref_coilumn_header_4">
+                   <property name="geometry">
+                    <rect>
+                     <x>635</x>
+                     <y>5</y>
+                     <width>65</width>
+                     <height>50</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>65</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>G52/G92
+OFFSET</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="wordWrap">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="machine_column_header_13">
+                   <property name="geometry">
+                    <rect>
+                     <x>515</x>
+                     <y>5</y>
+                     <width>65</width>
+                     <height>50</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>65</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>TOOL
+OFFSET</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="wordWrap">
+                    <bool>true</bool>
                    </property>
                   </widget>
                  </widget>
+                 <widget class="DROLineEdit" name="dro_entry_wcs_y">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>260</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Bebas Kai</family>
+                    <pointsize>17</pointsize>
+                    <weight>50</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit{
+    border-style: transparant;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px;
+    border-radius: 3px;
+    color: black;
+    background: rgb(235, 235, 235);
+    padding-right: 2px;
+    font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>   0.0000</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="axisNumber" stdset="0">
+                   <number>1</number>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_z_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>23</x>
+                    <y>310</y>
+                    <width>31</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 25pt &quot;Bebas Kai&quot;;
+    padding-left: 1px;
+    padding-right: 1px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Z</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="DROLineEdit" name="dro_entry_wcs_z">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>315</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Bebas Kai</family>
+                    <pointsize>17</pointsize>
+                    <weight>50</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit{
+    border-style: transparant;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px;
+    border-radius: 3px;
+    color: black;
+    background: rgb(235, 235, 235);
+    padding-right: 2px;
+    font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>   0.0000</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="axisNumber" stdset="0">
+                   <number>2</number>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_x_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>23</x>
+                    <y>200</y>
+                    <width>31</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 25pt &quot;Bebas Kai&quot;;
+    padding-left: 1px;
+    padding-right: 1px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>X</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="DROLineEdit" name="dro_entry_wcs_a">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>370</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Bebas Kai</family>
+                    <pointsize>17</pointsize>
+                    <weight>50</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit{
+    border-style: transparant;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px;
+    border-radius: 3px;
+    color: black;
+    background: rgb(235, 235, 235);
+    padding-right: 2px;
+    font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>      0.00</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="axisNumber" stdset="0">
+                   <number>3</number>
+                  </property>
+                 </widget>
+                 <widget class="DROLabel" name="drolabel_44">
+                  <property name="geometry">
+                   <rect>
+                    <x>270</x>
+                    <y>370</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>      0.00</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="referenceType" stdset="0">
+                   <number>0</number>
+                  </property>
+                  <property name="axisNumber" stdset="0">
+                   <number>3</number>
+                  </property>
+                  <property name="inchFormat" stdset="0">
+                   <string>%9.4f</string>
+                  </property>
+                  <property name="millimeterFormat" stdset="0">
+                   <string>%10.3f</string>
+                  </property>
+                  <property name="degreeFormat" stdset="0">
+                   <string>%10.2f</string>
+                  </property>
+                  <property name="latheMode" stdset="0">
+                   <number>0</number>
+                  </property>
+                 </widget>
+                 <widget class="DROLabel" name="drolabel_45">
+                  <property name="geometry">
+                   <rect>
+                    <x>270</x>
+                    <y>205</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>     0.000</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="referenceType" stdset="0">
+                   <number>0</number>
+                  </property>
+                  <property name="axisNumber" stdset="0">
+                   <number>0</number>
+                  </property>
+                  <property name="inchFormat" stdset="0">
+                   <string>%9.4f</string>
+                  </property>
+                  <property name="millimeterFormat" stdset="0">
+                   <string>%10.3f</string>
+                  </property>
+                  <property name="degreeFormat" stdset="0">
+                   <string>%10.2f</string>
+                  </property>
+                  <property name="latheMode" stdset="0">
+                   <number>0</number>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_y_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>23</x>
+                    <y>255</y>
+                    <width>31</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 25pt &quot;Bebas Kai&quot;;
+    padding-left: 1px;
+    padding-right: 1px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Y</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_a_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>23</x>
+                    <y>365</y>
+                    <width>31</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 25pt &quot;Bebas Kai&quot;;
+    padding-left: 1px;
+    padding-right: 1px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>A</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="DROLabel" name="drolabel_46">
+                  <property name="geometry">
+                   <rect>
+                    <x>270</x>
+                    <y>260</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>     0.000</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="referenceType" stdset="0">
+                   <number>0</number>
+                  </property>
+                  <property name="axisNumber" stdset="0">
+                   <number>1</number>
+                  </property>
+                  <property name="inchFormat" stdset="0">
+                   <string>%9.4f</string>
+                  </property>
+                  <property name="millimeterFormat" stdset="0">
+                   <string>%10.3f</string>
+                  </property>
+                  <property name="degreeFormat" stdset="0">
+                   <string>%10.2f</string>
+                  </property>
+                  <property name="latheMode" stdset="0">
+                   <number>0</number>
+                  </property>
+                 </widget>
+                 <widget class="DROLineEdit" name="dro_entry_wcs_x">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>205</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Bebas Kai</family>
+                    <pointsize>17</pointsize>
+                    <weight>50</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit{
+    border-style: transparant;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px;
+    border-radius: 3px;
+    color: black;
+    background: rgb(235, 235, 235);
+    padding-right: 2px;
+    font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>-0000.000</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="DROLabel" name="drolabel_47">
+                  <property name="geometry">
+                   <rect>
+                    <x>270</x>
+                    <y>315</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>     0.000</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="referenceType" stdset="0">
+                   <number>0</number>
+                  </property>
+                  <property name="axisNumber" stdset="0">
+                   <number>2</number>
+                  </property>
+                  <property name="inchFormat" stdset="0">
+                   <string>%9.4f</string>
+                  </property>
+                  <property name="millimeterFormat" stdset="0">
+                   <string>%10.3f</string>
+                  </property>
+                  <property name="degreeFormat" stdset="0">
+                   <string>%10.2f</string>
+                  </property>
+                  <property name="latheMode" stdset="0">
+                   <number>0</number>
+                  </property>
+                 </widget>
+                 <widget class="MDIButton" name="wcs_zero_y_button">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="geometry">
+                   <rect>
+                    <x>175</x>
+                    <y>255</y>
+                    <width>60</width>
+                    <height>40</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>60</width>
+                    <height>35</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>60</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::NoFocus</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">MDIButton {
+   	font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Y</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../resources.qrc">
+                    <normaloff>:/images/zero.png</normaloff>:/images/zero.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>20</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[
+    {
+        &quot;channels&quot;: [
+            {
+                &quot;url&quot;: &quot;status:g5x_index&quot;,
+                &quot;trigger&quot;: true,
+                &quot;type&quot;: &quot;int&quot;
+            }
+        ],
+        &quot;expression&quot;: &quot;&quot;,
+        &quot;name&quot;: &quot;G5x Index&quot;,
+        &quot;property&quot;: &quot;None&quot;
+    }
+]</string>
+                  </property>
+                  <property name="MDICommand" stdset="0">
+                   <string>G10 L20 P{ch[0]} Y0.0</string>
+                  </property>
+                 </widget>
+                 <widget class="MDIButton" name="wcs_zero_x_button">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="geometry">
+                   <rect>
+                    <x>175</x>
+                    <y>200</y>
+                    <width>60</width>
+                    <height>40</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>60</width>
+                    <height>35</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>60</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::NoFocus</enum>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">MDIButton {
+   	font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>X</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../resources.qrc">
+                    <normaloff>:/images/zero.png</normaloff>:/images/zero.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>20</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[
+    {
+        &quot;channels&quot;: [
+            {
+                &quot;url&quot;: &quot;status:g5x_index&quot;,
+                &quot;trigger&quot;: true,
+                &quot;type&quot;: &quot;int&quot;
+            }
+        ],
+        &quot;expression&quot;: &quot;&quot;,
+        &quot;name&quot;: &quot;G5x Index&quot;,
+        &quot;property&quot;: &quot;None&quot;
+    }
+]</string>
+                  </property>
+                  <property name="MDICommand" stdset="0">
+                   <string>G10 L20 P{ch[0]} X0.0</string>
+                  </property>
+                 </widget>
+                 <widget class="MDIButton" name="wcs_zero_z_button">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="geometry">
+                   <rect>
+                    <x>175</x>
+                    <y>310</y>
+                    <width>60</width>
+                    <height>40</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>60</width>
+                    <height>35</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>60</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::NoFocus</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">MDIButton {
+   	font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Z</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../resources.qrc">
+                    <normaloff>:/images/zero.png</normaloff>:/images/zero.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>20</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[
+    {
+        &quot;channels&quot;: [
+            {
+                &quot;url&quot;: &quot;status:g5x_index&quot;,
+                &quot;trigger&quot;: true,
+                &quot;type&quot;: &quot;int&quot;
+            }
+        ],
+        &quot;expression&quot;: &quot;&quot;,
+        &quot;name&quot;: &quot;G5x Index&quot;,
+        &quot;property&quot;: &quot;None&quot;
+    }
+]</string>
+                  </property>
+                  <property name="MDICommand" stdset="0">
+                   <string>G10 L20 P{ch[0]} Z0.0</string>
+                  </property>
+                 </widget>
+                 <widget class="MDIButton" name="wcs_zero_a_button">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="geometry">
+                   <rect>
+                    <x>175</x>
+                    <y>365</y>
+                    <width>60</width>
+                    <height>40</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>60</width>
+                    <height>35</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>60</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::NoFocus</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">MDIButton {
+   	font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>A</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../resources.qrc">
+                    <normaloff>:/images/zero.png</normaloff>:/images/zero.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>20</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[
+    {
+        &quot;channels&quot;: [
+            {
+                &quot;url&quot;: &quot;status:g5x_index&quot;,
+                &quot;trigger&quot;: true
+            }
+        ],
+        &quot;expression&quot;: &quot;&quot;,
+        &quot;name&quot;: &quot;G5x Index&quot;,
+        &quot;property&quot;: &quot;None&quot;
+    }
+]</string>
+                  </property>
+                  <property name="MDICommand" stdset="0">
+                   <string>G10 L20 P{ch[0]} A0.0</string>
+                  </property>
+                 </widget>
+                 <widget class="StatusLabel" name="statuslabel_55">
+                  <property name="geometry">
+                   <rect>
+                    <x>390</x>
+                    <y>205</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>0.000</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[{&quot;channels&quot;: [{&quot;trigger&quot;: true, &quot;type&quot;: &quot;tuple&quot;, &quot;url&quot;: &quot;status:g5x_offset&quot;}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0][0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                  </property>
+                 </widget>
+                 <widget class="StatusLabel" name="statuslabel_60">
+                  <property name="geometry">
+                   <rect>
+                    <x>390</x>
+                    <y>260</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>0.000</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[{&quot;channels&quot;: [{&quot;trigger&quot;: true, &quot;type&quot;: &quot;tuple&quot;, &quot;url&quot;: &quot;status:g5x_offset&quot;}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0][1])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                  </property>
+                 </widget>
+                 <widget class="StatusLabel" name="statuslabel_65">
+                  <property name="geometry">
+                   <rect>
+                    <x>390</x>
+                    <y>315</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>0.000</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[{&quot;channels&quot;: [{&quot;trigger&quot;: true, &quot;type&quot;: &quot;tuple&quot;, &quot;url&quot;: &quot;status:g5x_offset&quot;}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0][2])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                  </property>
+                 </widget>
+                 <widget class="StatusLabel" name="statuslabel_70">
+                  <property name="geometry">
+                   <rect>
+                    <x>390</x>
+                    <y>370</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.2f}\&quot;.format(ch[0][3])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                  </property>
+                 </widget>
+                 <widget class="StatusLabel" name="statuslabel_53">
+                  <property name="geometry">
+                   <rect>
+                    <x>630</x>
+                    <y>205</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[{&quot;channels&quot;: [{&quot;trigger&quot;: true, &quot;type&quot;: &quot;tuple&quot;, &quot;url&quot;: &quot;status:g92_offset&quot;}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0][0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                  </property>
+                 </widget>
+                 <widget class="StatusLabel" name="statuslabel_58">
+                  <property name="geometry">
+                   <rect>
+                    <x>630</x>
+                    <y>260</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[{&quot;channels&quot;: [{&quot;trigger&quot;: true, &quot;type&quot;: &quot;tuple&quot;, &quot;url&quot;: &quot;status:g92_offset&quot;}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0][1])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                  </property>
+                 </widget>
+                 <widget class="StatusLabel" name="statuslabel_63">
+                  <property name="geometry">
+                   <rect>
+                    <x>630</x>
+                    <y>315</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[{&quot;channels&quot;: [{&quot;trigger&quot;: true, &quot;type&quot;: &quot;tuple&quot;, &quot;url&quot;: &quot;status:g92_offset&quot;}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0][2])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                  </property>
+                 </widget>
+                 <widget class="StatusLabel" name="statuslabel_68">
+                  <property name="geometry">
+                   <rect>
+                    <x>630</x>
+                    <y>370</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.2f}\&quot;.format(ch[0][3])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                  </property>
+                 </widget>
+                 <widget class="StatusLabel" name="statuslabel_54">
+                  <property name="geometry">
+                   <rect>
+                    <x>510</x>
+                    <y>205</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>0.000</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0][0])&quot;, &quot;name&quot;: &quot;Tool Offset X&quot;}]</string>
+                  </property>
+                 </widget>
+                 <widget class="StatusLabel" name="statuslabel_59">
+                  <property name="geometry">
+                   <rect>
+                    <x>510</x>
+                    <y>260</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>0.000</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0][1])&quot;, &quot;name&quot;: &quot;Tool Offset Y&quot;}]</string>
+                  </property>
+                 </widget>
+                 <widget class="StatusLabel" name="statuslabel_64">
+                  <property name="geometry">
+                   <rect>
+                    <x>510</x>
+                    <y>315</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>0.000</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.4f}\&quot;.format(ch[0][2])&quot;, &quot;name&quot;: &quot;Tool Offset Z&quot;}]</string>
+                  </property>
+                 </widget>
+                 <widget class="StatusLabel" name="statuslabel_69">
+                  <property name="geometry">
+                   <rect>
+                    <x>510</x>
+                    <y>370</y>
+                    <width>90</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="rules" stdset="0">
+                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{:.2f}\&quot;.format(ch[0][3])&quot;, &quot;name&quot;: &quot;Tool Offset A&quot;}]</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="work_column_header_15">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="geometry">
+                   <rect>
+                    <x>255</x>
+                    <y>5</y>
+                    <width>250</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>80</width>
+                    <height>17</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>250</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Current Coordinate System</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QWidget" name="gridLayoutWidget">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>45</y>
+                    <width>726</width>
+                    <height>56</height>
+                   </rect>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_3">
+                   <property name="horizontalSpacing">
+                    <number>10</number>
+                   </property>
+                   <item row="0" column="3">
+                    <widget class="ActionButton" name="actionbutton_g57">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>70</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>80</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>G57</string>
+                     </property>
+                     <property name="autoExclusive">
+                      <bool>true</bool>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.set-work-coord:G57</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="4">
+                    <widget class="ActionButton" name="actionbutton_g58">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>70</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>80</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>G58</string>
+                     </property>
+                     <property name="autoExclusive">
+                      <bool>true</bool>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.set-work-coord:G58</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="5">
+                    <widget class="ActionButton" name="actionbutton_g59">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>70</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>80</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>G59</string>
+                     </property>
+                     <property name="autoExclusive">
+                      <bool>true</bool>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.set-work-coord:G59</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="ActionButton" name="actionbutton_g56">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>70</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>80</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>G56</string>
+                     </property>
+                     <property name="autoExclusive">
+                      <bool>true</bool>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.set-work-coord:G56</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="7">
+                    <widget class="ActionButton" name="actionbutton_g59_2">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>70</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>80</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>G59.2</string>
+                     </property>
+                     <property name="autoExclusive">
+                      <bool>true</bool>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.set-work-coord:G59.2</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="ActionButton" name="actionbutton_g54">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>70</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>80</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>G54</string>
+                     </property>
+                     <property name="autoExclusive">
+                      <bool>true</bool>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.set-work-coord:G54</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="ActionButton" name="actionbutton_g55">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>70</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>80</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>G55</string>
+                     </property>
+                     <property name="autoExclusive">
+                      <bool>true</bool>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.set-work-coord:G55</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="6">
+                    <widget class="ActionButton" name="actionbutton_g59_1">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>70</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>80</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>G59.1</string>
+                     </property>
+                     <property name="autoExclusive">
+                      <bool>true</bool>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.set-work-coord:G59.1</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="8">
+                    <widget class="ActionButton" name="actionbutton_g59_3">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>70</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>80</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+   	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>G59.3</string>
+                     </property>
+                     <property name="autoExclusive">
+                      <bool>true</bool>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.set-work-coord:G59.3</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+                <widget class="MDIButton" name="mdibutton_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>810</x>
+                   <y>570</y>
+                   <width>181</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>G92 Offsets - Resume</string>
+                 </property>
+                 <property name="MDICommand" stdset="0">
+                  <string>G92.3</string>
+                 </property>
+                </widget>
+                <widget class="MDIButton" name="mdibutton">
+                 <property name="geometry">
+                  <rect>
+                   <x>810</x>
+                   <y>470</y>
+                   <width>181</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>G92 Offsets - Zero ALL</string>
+                 </property>
+                 <property name="MDICommand" stdset="0">
+                  <string>G92.1</string>
+                 </property>
+                </widget>
+                <widget class="MDIButton" name="mdibutton_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>810</x>
+                   <y>520</y>
+                   <width>181</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>G92 Offsets - Suspend</string>
+                 </property>
+                 <property name="MDICommand" stdset="0">
+                  <string>G92.2</string>
+                 </property>
+                </widget>
+                <widget class="QFrame" name="frame_5">
+                 <property name="geometry">
+                  <rect>
+                   <x>5</x>
+                   <y>5</y>
+                   <width>511</width>
+                   <height>441</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">.QFrame{
+    border-style: solid;
+    border-color: rgb(186, 189, 182);
+    border-width: 1px;
+    border-radius: 6px;
+}</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <widget class="WcsOffsetsTable" name="wcsoffsetstable">
+                  <property name="geometry">
+                   <rect>
+                    <x>5</x>
+                    <y>50</y>
+                    <width>501</width>
+                    <height>331</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">WcsOffsetsTable,
+QHeaderView {
+    font: 15pt &quot;Bebas Kai&quot;;
+	background-color: rgb(220, 220, 220);
+	color: black;
+    border: none;
+}
+
+WcsOffsetsTable {
+   	border-top: 8px rgb(120, 120, 120);
+	border-left: 4px  rgb(120, 120, 120);
+	border-bottom: 5px rgb(120, 120, 120);
+	border-right: 4px rgb(120, 120, 120);
+	border-radius: 5px;
+	border-color: rgb(120, 120, 120);
+	border-style: solid;
+	background-color: rgb(120, 120, 120);
+    gridline-color: rgb(203, 203, 203);
+	alternate-background-color: rgb(90, 90, 90);
+    color: white;
+    font: 16pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="displayColumns" stdset="0">
+                   <string>XYZAR</string>
+                  </property>
+                  <attribute name="horizontalHeaderDefaultSectionSize">
+                   <number>89</number>
+                  </attribute>
+                  <attribute name="horizontalHeaderMinimumSectionSize">
+                   <number>28</number>
+                  </attribute>
+                  <attribute name="verticalHeaderDefaultSectionSize">
+                   <number>32</number>
+                  </attribute>
+                  <attribute name="verticalHeaderMinimumSectionSize">
+                   <number>20</number>
+                  </attribute>
+                 </widget>
+                 <widget class="QPushButton" name="wcs_clear_selected">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>395</y>
+                    <width>123</width>
+                    <height>33</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>150</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::NoFocus</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+   	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>CLEAR SELECTED</string>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="wcs_save">
+                  <property name="geometry">
+                   <rect>
+                    <x>145</x>
+                    <y>395</y>
+                    <width>100</width>
+                    <height>33</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>150</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::NoFocus</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+   	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>SAVE</string>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="wcs_reload">
+                  <property name="geometry">
+                   <rect>
+                    <x>255</x>
+                    <y>395</y>
+                    <width>100</width>
+                    <height>33</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>150</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::NoFocus</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+   	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>RELOAD</string>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="wcs_clear_all">
+                  <property name="geometry">
+                   <rect>
+                    <x>400</x>
+                    <y>395</y>
+                    <width>100</width>
+                    <height>33</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>150</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::NoFocus</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+   	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>CLEAR ALL</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="work_column_header_14">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="geometry">
+                   <rect>
+                    <x>155</x>
+                    <y>5</y>
+                    <width>200</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>80</width>
+                    <height>17</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>All Coordinate Systems</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
                 </widget>
                </widget>
-               <widget class="QWidget" name="page_Settings">
+               <widget class="QWidget" name="page_probing">
+                <widget class="ProbeWizardWidget" name="probewizardwidget">
+                 <property name="geometry">
+                  <rect>
+                   <x>55</x>
+                   <y>40</y>
+                   <width>1106</width>
+                   <height>661</height>
+                  </rect>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="page_settings">
                 <widget class="ActionButton" name="actionbutton_20">
                  <property name="geometry">
                   <rect>
@@ -6527,7 +8754,7 @@ All</string>
                 <property name="geometry">
                  <rect>
                   <x>10</x>
-                  <y>470</y>
+                  <y>490</y>
                   <width>80</width>
                   <height>39</height>
                  </rect>
@@ -6538,12 +8765,15 @@ All</string>
                 <property name="checkable">
                  <bool>true</bool>
                 </property>
+                <property name="autoExclusive">
+                 <bool>false</bool>
+                </property>
                </widget>
                <widget class="ActionButton" name="btnTools">
                 <property name="geometry">
                  <rect>
                   <x>10</x>
-                  <y>520</y>
+                  <y>445</y>
                   <width>80</width>
                   <height>39</height>
                  </rect>
@@ -6554,12 +8784,15 @@ All</string>
                 <property name="checkable">
                  <bool>true</bool>
                 </property>
+                <property name="autoExclusive">
+                 <bool>false</bool>
+                </property>
                </widget>
                <widget class="ActionButton" name="btnConversational">
                 <property name="geometry">
                  <rect>
                   <x>10</x>
-                  <y>570</y>
+                  <y>580</y>
                   <width>80</width>
                   <height>39</height>
                  </rect>
@@ -6568,6 +8801,9 @@ All</string>
                  <string>Convers</string>
                 </property>
                 <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="autoExclusive">
                  <bool>false</bool>
                 </property>
                </widget>
@@ -6598,6 +8834,25 @@ All</string>
                 </property>
                 <property name="checkable">
                  <bool>true</bool>
+                </property>
+               </widget>
+               <widget class="ActionButton" name="btnProbing">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>535</y>
+                  <width>80</width>
+                  <height>39</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Probing</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="autoExclusive">
+                 <bool>false</bool>
                 </property>
                </widget>
               </widget>
@@ -6678,6 +8933,11 @@ All</string>
    <header>qtpyvcp.widgets.input_widgets.file_system</header>
   </customwidget>
   <customwidget>
+   <class>DROLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>qtpyvcp.widgets.input_widgets.dro_line_edit</header>
+  </customwidget>
+  <customwidget>
    <class>ProbeWizardWidget</class>
    <extends>QWidget</extends>
    <header>widgets.probe_wizard_widget</header>
@@ -6724,6 +8984,11 @@ All</string>
    <header>qtpyvcp.widgets.input_widgets.tool_table</header>
   </customwidget>
   <customwidget>
+   <class>MDIButton</class>
+   <extends>QPushButton</extends>
+   <header>qtpyvcp.widgets.button_widgets.mdi_button</header>
+  </customwidget>
+  <customwidget>
    <class>GMCodesTable</class>
    <extends>QTableView</extends>
    <header>widgets.gm_codes_table</header>
@@ -6745,9 +9010,19 @@ All</string>
    <header>qtpyvcp.widgets.display_widgets.vtk_backplot.vtk_backplot</header>
   </customwidget>
   <customwidget>
+   <class>WcsOffsetsTable</class>
+   <extends>QTableView</extends>
+   <header>widgets.wcs_offsets_table</header>
+  </customwidget>
+  <customwidget>
    <class>PauseResumeButton</class>
    <extends>QPushButton</extends>
    <header>widgets.pause_resume_button</header>
+  </customwidget>
+  <customwidget>
+   <class>DROLabel</class>
+   <extends>QLabel</extends>
+   <header>qtpyvcp.widgets.display_widgets.dro_label</header>
   </customwidget>
   <customwidget>
    <class>ActionButton</class>
@@ -7273,6 +9548,70 @@ All</string>
     <hint type="destinationlabel">
      <x>249</x>
      <y>221</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>wcs_clear_all</sender>
+   <signal>clicked()</signal>
+   <receiver>wcsoffsetstable</receiver>
+   <slot>clearOffsetTable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>454</x>
+     <y>416</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>260</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>wcs_reload</sender>
+   <signal>clicked()</signal>
+   <receiver>wcsoffsetstable</receiver>
+   <slot>loadOffsetTable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>309</x>
+     <y>416</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>260</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>wcs_save</sender>
+   <signal>clicked()</signal>
+   <receiver>wcsoffsetstable</receiver>
+   <slot>saveOffsetTable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>416</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>260</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>wcs_clear_selected</sender>
+   <signal>clicked()</signal>
+   <receiver>wcsoffsetstable</receiver>
+   <slot>deleteSelectedOffset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>416</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>260</x>
+     <y>220</y>
     </hint>
    </hints>
   </connection>

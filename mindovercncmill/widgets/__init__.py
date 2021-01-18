@@ -44,3 +44,8 @@ from gm_codes_table import GMCodesTable
 class GMCodesTable_Plugin(_DesignerPlugin):
     def pluginClass(self):
         return GMCodesTable
+
+from wcs_offsets_table import WcsOffsetsTable
+class WcsOffsetsTable_Plugin(_DesignerPlugin):
+    def pluginClass(self):
+        return WcsOffsetsTable
