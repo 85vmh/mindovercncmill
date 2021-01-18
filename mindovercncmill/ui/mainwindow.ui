@@ -3891,7 +3891,7 @@ border-radius: 4px;
                   </rect>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">font-size: 12pt;</string>
+                  <string notr="true">font-size: 13pt;</string>
                  </property>
                  <property name="text">
                   <string>Active Codes</string>
