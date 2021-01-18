@@ -155,13 +155,13 @@
                   <enum>QFrame::Box</enum>
                  </property>
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>1</number>
                  </property>
                  <property name="rules" stdset="0">
                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;currentIndex&quot;, &quot;expression&quot;: &quot;0 if(ch[0] == 1) else (1 if(ch[0] == 3) else 2)&quot;, &quot;name&quot;: &quot;Selected Page&quot;}]</string>
                  </property>
                  <widget class="QWidget" name="page_manual">
-                  <widget class="QWidget" name="gridWidget_2" native="true">
+                  <widget class="QWidget" name="jogButtonsArea" native="true">
                    <property name="geometry">
                     <rect>
                      <x>5</x>
@@ -532,7 +532,7 @@
                   </widget>
                  </widget>
                  <widget class="QWidget" name="page_mdi">
-                  <widget class="QWidget" name="widget" native="true">
+                  <widget class="QWidget" name="mdiArea" native="true">
                    <property name="geometry">
                     <rect>
                      <x>0</x>
@@ -1672,20 +1672,14 @@ QComboBox QAbstractItemView{
                   </widget>
                  </widget>
                  <widget class="QWidget" name="page_status">
-                  <widget class="NotificationWidget" name="notificationwidget">
+                  <widget class="NotificationsWidget" name="notificationswidget">
                    <property name="geometry">
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>491</width>
+                     <width>489</width>
                      <height>376</height>
                     </rect>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>491</width>
-                     <height>16777215</height>
-                    </size>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QLabel {
@@ -7334,7 +7328,7 @@ OFFSET</string>
 }</string>
                   </property>
                   <property name="text">
-                   <string>0.000</string>
+                   <string>0.0000</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -7364,7 +7358,7 @@ OFFSET</string>
 }</string>
                   </property>
                   <property name="text">
-                   <string>0.000</string>
+                   <string>0.0000</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -7394,7 +7388,7 @@ OFFSET</string>
 }</string>
                   </property>
                   <property name="text">
-                   <string>0.000</string>
+                   <string>0.0000</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -7559,7 +7553,7 @@ OFFSET</string>
 }</string>
                   </property>
                   <property name="text">
-                   <string>0.000</string>
+                   <string>0.0000</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -7589,7 +7583,7 @@ OFFSET</string>
 }</string>
                   </property>
                   <property name="text">
-                   <string>0.000</string>
+                   <string>0.0000</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -7619,7 +7613,7 @@ OFFSET</string>
 }</string>
                   </property>
                   <property name="text">
-                   <string>0.000</string>
+                   <string>0.0000</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -8913,6 +8907,11 @@ All</string>
    <header>widgets.smart_dro_widget</header>
   </customwidget>
   <customwidget>
+   <class>NotificationsWidget</class>
+   <extends>QWidget</extends>
+   <header>widgets.notifications_widget</header>
+  </customwidget>
+  <customwidget>
    <class>FileSystemTable</class>
    <extends>QTableView</extends>
    <header>qtpyvcp.widgets.input_widgets.file_system</header>
@@ -8938,11 +8937,6 @@ All</string>
    <header>qtpyvcp.widgets.input_widgets.dro_line_edit</header>
   </customwidget>
   <customwidget>
-   <class>ProbeWizardWidget</class>
-   <extends>QWidget</extends>
-   <header>widgets.probe_wizard_widget</header>
-  </customwidget>
-  <customwidget>
    <class>StatusLabel</class>
    <extends>QLabel</extends>
    <header>qtpyvcp.widgets.display_widgets.status_label</header>
@@ -8952,6 +8946,11 @@ All</string>
    <extends>QStackedWidget</extends>
    <header>qtpyvcp.widgets.containers.stack</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ProbeWizardWidget</class>
+   <extends>QWidget</extends>
+   <header>widgets.probe_wizard_widget</header>
   </customwidget>
   <customwidget>
    <class>RecentFileComboBox</class>
@@ -9028,11 +9027,6 @@ All</string>
    <class>ActionButton</class>
    <extends>QPushButton</extends>
    <header>qtpyvcp.widgets.button_widgets.action_button</header>
-  </customwidget>
-  <customwidget>
-   <class>NotificationWidget</class>
-   <extends>QWidget</extends>
-   <header>qtpyvcp.widgets.display_widgets.notification_widget</header>
   </customwidget>
  </customwidgets>
  <resources>

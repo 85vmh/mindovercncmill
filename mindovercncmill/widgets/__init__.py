@@ -49,3 +49,8 @@ from wcs_offsets_table import WcsOffsetsTable
 class WcsOffsetsTable_Plugin(_DesignerPlugin):
     def pluginClass(self):
         return WcsOffsetsTable
+
+from notifications_widget import NotificationsWidget
+class NotificationsWidget_Plugin(_DesignerPlugin):
+    def pluginClass(self):
+        return NotificationsWidget

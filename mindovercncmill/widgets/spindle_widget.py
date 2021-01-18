@@ -3,10 +3,11 @@ from qtpy import uic
 from qtpy.QtWidgets import QWidget
 from qtpy.QtCore import Property, Slot
 from qtpyvcp.utilities.settings import getSetting, connectSetting
-from qtpyvcp.utilities import logger
+
 from qtpyvcp.actions.machine_actions import issue_mdi
 from qtpyvcp.plugins import getPlugin
 
+from qtpyvcp.utilities import logger
 LOG = logger.getLogger(__name__)
 from enum import IntEnum
 import linuxcnc

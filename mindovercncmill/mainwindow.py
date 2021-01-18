@@ -54,6 +54,7 @@ class MyMainWindow(VCPMainWindow):
         self.probewizardwidget.probingCodeReady.connect(self.loadGCode)
         self.probewizardwidget.probingFinished.connect(self.handleProbingFinished)
         self.spindlewidget.measureTool.connect(self.toggleMeasureFlag)
+        self.notificationswidget.notificationsCleared.connect(self.hideNotifications)
 
         self.STATUS = getPlugin('status')
         self.STATUS.gcodes.notify(self.setActiveCodesButtonText)
@@ -134,12 +135,14 @@ class MyMainWindow(VCPMainWindow):
     # add any custom methods here
     def setManualScreen(self):
         self.stackedWidgetMain.setCurrentIndex(MainScreenPage.MAIN)
+        self.jogButtonsArea.setFocus()
         # self.stackedWidgetLeftTop.setCurrentIndex(0)
         # self.stackedWidgetLeftBottom.setCurrentIndex(0)
         # self.stackedWidgetSliders.setCurrentIndex(0)
 
     def setMdiScreen(self):
         self.stackedWidgetMain.setCurrentIndex(MainScreenPage.MAIN)
+        self.mdiArea.setFocus()
         # self.stackedWidgetLeftTop.setCurrentIndex(1)
         # self.stackedWidgetLeftBottom.setCurrentIndex(1)
         # self.stackedWidgetSliders.setCurrentIndex(1)
@@ -179,6 +182,11 @@ class MyMainWindow(VCPMainWindow):
             self.stackedWidgetLeftTop.setCurrentIndex(3)
         else:
             self.stackedWidgetLeftTop.setCurrentIndex(self._initialLeftTopPage)
+
+    def hideNotifications(self):
+        self.btnStatus.mark_as_seen()
+        self.btnStatus.setChecked(False)
+        self.stackedWidgetLeftTop.setCurrentIndex(self._initialLeftTopPage)
 
     def showCodesPage(self):
         if self.btnActiveCodes.isChecked():
