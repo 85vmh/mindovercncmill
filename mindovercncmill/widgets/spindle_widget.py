@@ -30,6 +30,14 @@ class SpindleState(IntEnum):
 class SpindleWidget(QWidget, HALWidget):
     measureTool = Signal(bool)
 
+    def initialize(self):
+        comp = hal.getComponent()
+        self._tool_change_confirmed = comp.addPin("tool-change-confirmed", "bit", "io")
+        self._tool_change_confirm = comp.addPin("tool-change-confirm", "bit", "in")
+        self._tool_change_prep_number = comp.addPin("tool-change-prep-number", "s32", "in")
+        self._tool_change_confirm.valueChanged.connect(self.readyToConfirm)
+        self._tool_change_prep_number.valueChanged.connect(self.preparingToLoadTool)
+
     def __init__(self, parent=None):
         super(SpindleWidget, self).__init__(parent)
         uic.loadUi(UI_FILE, self)
@@ -38,12 +46,9 @@ class SpindleWidget(QWidget, HALWidget):
         self._probe_tripped = False
         self._loadedTool = 0
 
-        comp = hal.getComponent()
-        self._tool_change_confirmed = comp.addPin("tool-change-confirmed", "bit", "io")
-        self._tool_change_confirm = comp.addPin("tool-change-confirm", "bit", "in")
-        self._tool_change_prep_number = comp.addPin("tool-change-prep-number", "s32", "in")
-        self._tool_change_confirm.valueChanged.connect(self.readyToConfirm)
-        self._tool_change_prep_number.valueChanged.connect(self.preparingToLoadTool)
+        self._tool_change_confirmed = None
+        self._tool_change_confirm = None
+        self._tool_change_prep_number = None
 
         self.loadToolBtn.clicked.connect(self.loadTool)
         self.confirmToolChangeBtn.clicked.connect(self.confirmToolChange)
