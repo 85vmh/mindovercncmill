@@ -461,13 +461,13 @@
       </item>
      </layout>
     </widget>
-    <widget class="QPushButton" name="loadToolBtn">
+    <widget class="ActionButton" name="loadToolBtn">
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>115</x>
        <y>170</y>
-       <width>111</width>
-       <height>38</height>
+       <width>106</width>
+       <height>36</height>
       </rect>
      </property>
      <property name="text">
@@ -1118,7 +1118,7 @@ and Measure</string>
       <string notr="true">font: 17pt;</string>
      </property>
      <property name="text">
-      <string>0</string>
+      <string/>
      </property>
      <property name="maxLength">
       <number>5</number>
@@ -1128,6 +1128,9 @@ and Measure</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>RPM</string>
      </property>
      <property name="rules" stdset="0">
       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:settings?speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(int(ch[0]))&quot;, &quot;name&quot;: &quot;Default spindle speed&quot;}]</string>
@@ -1841,22 +1844,6 @@ Spindle</string>
   <include location="../resources.qrc"/>
  </resources>
  <connections>
-  <connection>
-   <sender>toolNumberInput</sender>
-   <signal>returnPressed()</signal>
-   <receiver>loadToolBtn</receiver>
-   <slot>click()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>79</x>
-     <y>189</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>166</x>
-     <y>189</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>spindleSpeed</sender>
    <signal>returnPressed()</signal>
