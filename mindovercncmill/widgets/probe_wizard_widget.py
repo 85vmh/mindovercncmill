@@ -67,13 +67,14 @@ class ProbeWizardWidget(QWidget):
         self.buttonGenerateCode.clicked.connect(self.generateCode)
         self.buttonChangeParams.clicked.connect(self.changeParams)
 
-        self.stackedWidget.setCurrentIndex(WizardPage.SELECT_PROBE_OPERATION)
+        self.stackedWidget.setCurrentIndex(WizardPage.LOAD_PROBE_TOOL)
 
         # self.wizard_machine = ProbeWizardStateMachine(self)
         # self.wizard_machine.start_wizard()
 
     @Slot(bool)
     def set_probe_plugged(self, plugged):
+        LOG.error('---------set_probe_plugged: <{}>'.format(plugged))
         if plugged:
             # self.wizard_machine.probe_plugged()
             self.stackedWidget.setCurrentIndex(WizardPage.TRIP_PROBE_TIP)
@@ -82,6 +83,7 @@ class ProbeWizardWidget(QWidget):
 
     @Slot(bool)
     def set_probe_tripped(self, tripped):
+        LOG.error('---------set_probe_tripped: <{}>'.format(tripped))
         if tripped:
             # self.wizard_machine.probe_tripped()
             self.stackedWidget.setCurrentIndex(WizardPage.SELECT_PROBE_OPERATION)

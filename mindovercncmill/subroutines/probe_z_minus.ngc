@@ -43,7 +43,7 @@ o<probe_z_minus> sub
 
   (Move to input_z_clearance height for slow probe)
   G90
-  G0 Z[#<z_minus_probed> + #<input_z_clearance>]
+  G0 Z[#<z_minus_probed> + 0.1]
 
   (Slow Probe Rule, if Slow Probe FR is set to 0, Slow Probe is Bypassed)
   o<130> if [#<input_probe_slow_fr> GT 0]

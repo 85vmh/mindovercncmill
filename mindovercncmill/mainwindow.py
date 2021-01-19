@@ -9,6 +9,7 @@ from qtpyvcp import hal
 from qtpyvcp.plugins import getPlugin
 from qtpyvcp.utilities import logger
 from qtpyvcp.widgets.form_widgets.main_window import VCPMainWindow
+from qtpyvcp.actions.machine_actions import issue_mdi
 
 LOG = logger.getLogger('qtpyvcp.' + __name__)
 
@@ -221,6 +222,15 @@ class MyMainWindow(VCPMainWindow):
 
     def onProbePlugged(self, plugged):
         self.spindlewidget.set_probe_plugged(plugged)
+        self.probewizardwidget.set_probe_plugged(plugged)
+        if plugged:
+            if not self.btnProbing.isChecked():
+                self.btnProbing.click()
+        else:
+            if self.btnProbing.isChecked():
+                self.btnProbing.click()
+            issue_mdi("G53 G0 Z10")
 
-    def onProbeTripped(self):
-        pass
+    def onProbeTripped(self, tripped):
+        self.spindlewidget.set_probe_tripped(tripped)
+        self.probewizardwidget.set_probe_tripped(tripped)
