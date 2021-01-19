@@ -128,7 +128,7 @@
 }</string>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>5</number>
                </property>
                <property name="rules" stdset="0">
                 <string>[]</string>
@@ -8472,10 +8472,10 @@ WcsOffsetsTable {
                 <widget class="ProbeWizardWidget" name="probewizardwidget">
                  <property name="geometry">
                   <rect>
-                   <x>55</x>
-                   <y>40</y>
-                   <width>1106</width>
-                   <height>661</height>
+                   <x>35</x>
+                   <y>20</y>
+                   <width>1081</width>
+                   <height>611</height>
                   </rect>
                  </property>
                 </widget>
@@ -8610,6 +8610,139 @@ WcsOffsetsTable {
                  </property>
                  <property name="actionName" stdset="0">
                   <string>tool.calibration</string>
+                 </property>
+                </widget>
+                <widget class="VCPSettingsLineEdit" name="setting_probe_fast_fr">
+                 <property name="geometry">
+                  <rect>
+                   <x>815</x>
+                   <y>190</y>
+                   <width>142</width>
+                   <height>25</height>
+                  </rect>
+                 </property>
+                 <property name="settingName" stdset="0">
+                  <string>probewizard.setting_probe_fast_fr</string>
+                 </property>
+                 <property name="textFormat" stdset="0">
+                  <string>{:0.4f}</string>
+                 </property>
+                </widget>
+                <widget class="VCPSettingsLineEdit" name="setting_probe_slow_fr">
+                 <property name="geometry">
+                  <rect>
+                   <x>815</x>
+                   <y>225</y>
+                   <width>142</width>
+                   <height>25</height>
+                  </rect>
+                 </property>
+                 <property name="settingName" stdset="0">
+                  <string>probewizard.setting_probe_slow_fr</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label">
+                 <property name="geometry">
+                  <rect>
+                   <x>665</x>
+                   <y>195</y>
+                   <width>146</width>
+                   <height>17</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Probe Fast Feed Rate</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>665</x>
+                   <y>230</y>
+                   <width>146</width>
+                   <height>17</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Probe Slow Feed Rate</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>665</x>
+                   <y>265</y>
+                   <width>146</width>
+                   <height>17</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Calibration offset</string>
+                 </property>
+                </widget>
+                <widget class="VCPSettingsLineEdit" name="setting_probe_calibration_offset">
+                 <property name="geometry">
+                  <rect>
+                   <x>815</x>
+                   <y>260</y>
+                   <width>142</width>
+                   <height>25</height>
+                  </rect>
+                 </property>
+                 <property name="settingName" stdset="0">
+                  <string>probewizard.setting_calibration_offset</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_4">
+                 <property name="geometry">
+                  <rect>
+                   <x>665</x>
+                   <y>300</y>
+                   <width>146</width>
+                   <height>17</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Probe Tool Number</string>
+                 </property>
+                </widget>
+                <widget class="VCPSettingsLineEdit" name="setting_probe_tool_number">
+                 <property name="geometry">
+                  <rect>
+                   <x>815</x>
+                   <y>295</y>
+                   <width>142</width>
+                   <height>25</height>
+                  </rect>
+                 </property>
+                 <property name="settingName" stdset="0">
+                  <string>probewizard.setting_probe_tool_number</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_5">
+                 <property name="geometry">
+                  <rect>
+                   <x>665</x>
+                   <y>335</y>
+                   <width>146</width>
+                   <height>17</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Latch Distance</string>
+                 </property>
+                </widget>
+                <widget class="VCPSettingsLineEdit" name="setting_latch_distance">
+                 <property name="geometry">
+                  <rect>
+                   <x>815</x>
+                   <y>330</y>
+                   <width>142</width>
+                   <height>25</height>
+                  </rect>
+                 </property>
+                 <property name="settingName" stdset="0">
+                  <string>probewizard.setting_latch_distance</string>
                  </property>
                 </widget>
                </widget>
@@ -9017,6 +9150,11 @@ All</string>
    <class>RecentFileComboBox</class>
    <extends>QComboBox</extends>
    <header>qtpyvcp.widgets.input_widgets.recent_file_combobox</header>
+  </customwidget>
+  <customwidget>
+   <class>VCPSettingsLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>qtpyvcp.widgets.input_widgets.setting_slider</header>
   </customwidget>
   <customwidget>
    <class>NotificationStatusButton</class>

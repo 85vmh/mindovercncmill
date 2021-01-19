@@ -1,0 +1,78 @@
+(author: Vasi Mihalca)
+(version: 0.1)
+(date: 19/01/2021)
+
+(Probe Z Minus direction and set Z 0 in current WCO)
+(Start probe position is over stock within max z distance)
+(Ensure all settings have been set properly according to help diagrams)
+
+o<probe_z_minus_wco> sub
+
+  (uses NGCGUI style arg spec)
+  (number after "=" in comment is default value)
+  #<setting_probe_tool_number> = #1    (=99)
+  #<setting_probe_fast_fr> = #2        (=200.0)
+  #<setting_probe_slow_fr> = #3        (=20.0)
+  #<setting_latch_distance> = #4       (=0.5)
+  #<setting_probe_mode> = #5           (=0)
+
+  #<input_max_z_distance> = #6        (=10.000)
+  #<input_z_final_retract> = #7       (=0.1000)
+
+
+  (Cancel G92 offsets)
+  G92.1
+
+  #<workspace_z> = #[5203 + [20 * #5220]]
+
+  (Probe Tool Safety Check)
+  o<110> if [#5400 NE #<setting_probe_tool_number>]
+  (ERROR, Probe tool in the spindle, aborting)
+   o<probe_z_minus_wco> return
+  o<110> endif
+
+  (Current Z Position including offsets in current program units)
+  #<z> = #5422
+
+  (Initial Fast Z- Probe)
+  G91
+  F[#<setting_probe_fast_fr>]
+  G38.2 Z-[#<input_max_z_distance>]
+  #<z_minus_probed> = #5063
+
+  (Probe Error check, #5070 will be 0 if failed)
+  o<120> if [#5070 EQ 0]
+    (back to start point and feed)
+    G90
+    G0 Z#<z>
+    F[#<setting_probe_fast_fr>]
+    (return from sub)
+    o<probe_z_minus_wco> return
+  o<120> endif
+
+  (Move to setting_latch_distance height for slow probe)
+  G90
+  G0 Z[#<z_minus_probed> + #<setting_latch_distance>]
+
+  (Subsequent Slow Z- Probe)
+  G91
+  F[#<setting_probe_slow_fr>]
+  G38.2 Z-[#<setting_latch_distance> * 2]
+  #<z_minus_probed> = #5063
+  (debug, Probed Pos: #5063 , Z Pos: #<_z>)
+  G90
+  G0 Z[#<z_minus_probed> + #<input_z_final_retract>]
+
+
+  (Output to probewizardwidget")
+  (DEBUG, EVAL[vcp.getWidget{"probewizardwidget"}.displayZMinus{#<z_minus_probed>}])
+
+  o<140> if [#<input_probe_mode> EQ 0]
+    (Record Z zero in selected WCO)
+    G10 L2 P#5220 Z[#<z_minus_probed> + #<workspace_z>]
+    o<probe_z_minus_wco> return
+  o<140> endif
+
+o<probe_z_minus_wco> endsub
+
+M2 (end program)

@@ -29,21 +29,30 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>3</number>
    </property>
    <widget class="QWidget" name="page_loadProbeTool">
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>535</x>
-       <y>40</y>
-       <width>326</width>
+       <x>110</x>
+       <y>120</y>
+       <width>281</width>
        <height>61</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
      </property>
      <property name="text">
       <string>Load the probe tool into the spindle
 and plug the cable</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="label_3">
@@ -70,14 +79,20 @@ and plug the cable</string>
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>395</x>
-       <y>255</y>
-       <width>321</width>
-       <height>56</height>
+       <x>160</x>
+       <y>295</y>
+       <width>191</width>
+       <height>31</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+     </property>
      <property name="text">
-      <string>Touch the tip of the probe to ensure its working</string>
+      <string>Touch the tip of the probe</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_8">
@@ -101,1061 +116,470 @@ and plug the cable</string>
     </widget>
    </widget>
    <widget class="QWidget" name="page_selectProbeOperation">
-    <widget class="QWidget" name="probe_group_select" native="true">
+    <widget class="QGroupBox" name="groupBoxOutside">
      <property name="geometry">
       <rect>
-       <x>5</x>
-       <y>40</y>
-       <width>831</width>
-       <height>46</height>
+       <x>10</x>
+       <y>15</y>
+       <width>301</width>
+       <height>306</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">QWidget {
-    font: 13pt &quot;bebas kai&quot;;
+      <string notr="true">QGroupBox{
+    color: rgb(238, 238, 236);
+	font: 14pt &quot;Bebas Kai&quot;;
+	border-style: solid;
+    border-color: rgb(186, 189, 182);
+    border-width: 1px;
+    border-radius: 6px;
 }</string>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_30">
-      <property name="spacing">
-       <number>0</number>
+     <property name="title">
+      <string>Outside Corners</string>
+     </property>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>25</y>
+        <width>291</width>
+        <height>276</height>
+       </rect>
       </property>
-      <property name="leftMargin">
-       <number>10</number>
-      </property>
-      <property name="topMargin">
-       <number>3</number>
-      </property>
-      <property name="rightMargin">
-       <number>10</number>
-      </property>
-      <property name="bottomMargin">
-       <number>6</number>
-      </property>
-      <item>
-       <widget class="QPushButton" name="outside_corners">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    color: white;
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #4e4e4e, stop: 1.0 #3a3a3a);
-    border-style: solid;
-    border-color: black;
-    border-top-width: 2px;
-    border-bottom-width: 2px;
-    border-right-width: 1px;
-    border-left-width: 2px;
-    min-width: 10ex;
-    min-height: 25;
-    padding: 2px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 0px;
-}
-
-QPushButton:pressed, QPushButton:hover {
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
-}
-
-QPushButton:checked {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(112, 112, 238, 255), stop:0.121053 rgba(123, 123, 232, 255), stop:0.3 rgba(85, 85, 238, 255), stop:0.694737 rgba(85, 85, 238, 255), stop:0.915789 rgba(123, 123, 232, 255), stop:1 rgba(112, 112, 238, 255))
-}</string>
-        </property>
-        <property name="text">
-         <string>OUTSIDE CORNERS</string>
-        </property>
-        <property name="checkable">
-         <bool>true</bool>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-        <property name="autoExclusive">
-         <bool>true</bool>
-        </property>
-        <property name="page" stdset="0">
-         <number>0</number>
-        </property>
-        <attribute name="buttonGroup">
-         <string notr="true">probeTabsGroup</string>
-        </attribute>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="inside_corners">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    color: white;
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #4e4e4e, stop: 1.0 #3a3a3a);
-    border-style: solid;
-    border-color: black;
-    border-top-width: 2px;
-    border-bottom-width: 2px;
-    border-right-width: 1px;
-    border-left-width: 1px;
-    min-width: 10ex;
-    min-height: 25;
-    padding: 2px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-QPushButton:pressed, QPushButton:hover {
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
-}
-
-QPushButton:checked {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(112, 112, 238, 255), stop:0.121053 rgba(123, 123, 232, 255), stop:0.3 rgba(85, 85, 238, 255), stop:0.694737 rgba(85, 85, 238, 255), stop:0.915789 rgba(123, 123, 232, 255), stop:1 rgba(112, 112, 238, 255))
-}</string>
-        </property>
-        <property name="text">
-         <string>INSIDE CORNERS</string>
-        </property>
-        <property name="checkable">
-         <bool>true</bool>
-        </property>
-        <property name="autoExclusive">
-         <bool>true</bool>
-        </property>
-        <property name="page" stdset="0">
-         <number>1</number>
-        </property>
-        <attribute name="buttonGroup">
-         <string notr="true">probeTabsGroup</string>
-        </attribute>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="boss_and_pocket">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    color: white;
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #4e4e4e, stop: 1.0 #3a3a3a);
-    border-style: solid;
-    border-color: black;
-    border-top-width: 2px;
-    border-bottom-width: 2px;
-    border-right-width: 1px;
-    border-left-width: 1px;
-    min-width: 10ex;
-    min-height: 25;
-    padding: 2px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-QPushButton:pressed, QPushButton:hover {
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
-}
-
-QPushButton:checked {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(112, 112, 238, 255), stop:0.121053 rgba(123, 123, 232, 255), stop:0.3 rgba(85, 85, 238, 255), stop:0.694737 rgba(85, 85, 238, 255), stop:0.915789 rgba(123, 123, 232, 255), stop:1 rgba(112, 112, 238, 255))
-}</string>
-        </property>
-        <property name="text">
-         <string>BOSS/POCKET</string>
-        </property>
-        <property name="checkable">
-         <bool>true</bool>
-        </property>
-        <property name="autoExclusive">
-         <bool>true</bool>
-        </property>
-        <property name="page" stdset="0">
-         <number>2</number>
-        </property>
-        <attribute name="buttonGroup">
-         <string notr="true">probeTabsGroup</string>
-        </attribute>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="ridge_and_valley">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    color: white;
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #4e4e4e, stop: 1.0 #3a3a3a);
-    border-style: solid;
-    border-color: black;
-    border-top-width: 2px;
-    border-bottom-width: 2px;
-    border-right-width: 1px;
-    border-left-width: 1px;
-    min-width: 10ex;
-    min-height: 25;
-    padding: 2px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-QPushButton:pressed, QPushButton:hover {
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
-}
-
-QPushButton:checked {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(112, 112, 238, 255), stop:0.121053 rgba(123, 123, 232, 255), stop:0.3 rgba(85, 85, 238, 255), stop:0.694737 rgba(85, 85, 238, 255), stop:0.915789 rgba(123, 123, 232, 255), stop:1 rgba(112, 112, 238, 255))
-}</string>
-        </property>
-        <property name="text">
-         <string>RIDGE/VALLEY</string>
-        </property>
-        <property name="checkable">
-         <bool>true</bool>
-        </property>
-        <property name="autoExclusive">
-         <bool>true</bool>
-        </property>
-        <property name="page" stdset="0">
-         <number>3</number>
-        </property>
-        <attribute name="buttonGroup">
-         <string notr="true">probeTabsGroup</string>
-        </attribute>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="rotation_angle">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    color: white;
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #4e4e4e, stop: 1.0 #3a3a3a);
-    border-style: solid;
-    border-color: black;
-    border-top-width: 2px;
-    border-bottom-width: 2px;
-    border-right-width: 1px;
-    border-left-width: 1px;
-    min-width: 10ex;
-    min-height: 25;
-    padding: 2px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-QPushButton:pressed, QPushButton:hover {
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
-}
-
-QPushButton:checked {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(112, 112, 238, 255), stop:0.121053 rgba(123, 123, 232, 255), stop:0.3 rgba(85, 85, 238, 255), stop:0.694737 rgba(85, 85, 238, 255), stop:0.915789 rgba(123, 123, 232, 255), stop:1 rgba(112, 112, 238, 255))
-}</string>
-        </property>
-        <property name="text">
-         <string>EDGE ANGLE</string>
-        </property>
-        <property name="checkable">
-         <bool>true</bool>
-        </property>
-        <property name="autoExclusive">
-         <bool>true</bool>
-        </property>
-        <property name="page" stdset="0">
-         <number>4</number>
-        </property>
-        <attribute name="buttonGroup">
-         <string notr="true">probeTabsGroup</string>
-        </attribute>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="rotary_axis">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    color: white;
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #4e4e4e, stop: 1.0 #3a3a3a);
-    border-style: solid;
-    border-color: black;
-    border-top-width: 2px;
-    border-bottom-width: 2px;
-    border-right-width: 2px;
-    border-left-width: 1px;
-    min-width: 10ex;
-    min-height: 25;
-    padding: 2px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 4px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 4px;
-}
-
-QPushButton:pressed, QPushButton:hover {
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
-}
-
-QPushButton:checked {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(112, 112, 238, 255), stop:0.121053 rgba(123, 123, 232, 255), stop:0.3 rgba(85, 85, 238, 255), stop:0.694737 rgba(85, 85, 238, 255), stop:0.915789 rgba(123, 123, 232, 255), stop:1 rgba(112, 112, 238, 255))
-}</string>
-        </property>
-        <property name="text">
-         <string>ROTARY AXIS</string>
-        </property>
-        <property name="checkable">
-         <bool>true</bool>
-        </property>
-        <property name="autoExclusive">
-         <bool>true</bool>
-        </property>
-        <property name="page" stdset="0">
-         <number>5</number>
-        </property>
-        <attribute name="buttonGroup">
-         <string notr="true">probeTabsGroup</string>
-        </attribute>
-       </widget>
-      </item>
-     </layout>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="ProbePushButton" name="probepushbutton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/X+Y-.png</normaloff>:/probe_icons/X+Y-.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+         <property name="filename" stdset="0">
+          <string>probe_back_left_corner.ngc</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="ProbePushButton" name="probepushbutton_4">
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/X+.png</normaloff>:/probe_icons/X+.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+         <property name="filename" stdset="0">
+          <string>probe_x_plus.ngc</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="ProbePushButton" name="probepushbutton_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/inY-.png</normaloff>:/probe_icons/inY-.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+         <property name="filename" stdset="0">
+          <string>probe_y_minus.ngc</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="ProbePushButton" name="probepushbutton_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/X-Y-.png</normaloff>:/probe_icons/X-Y-.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="ProbePushButton" name="probepushbutton_5">
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/X+Y+.png</normaloff>:/probe_icons/X+Y+.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+         <property name="filename" stdset="0">
+          <string>probe_x_write_values.ngc</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="ProbePushButton" name="probepushbutton_6">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/Y+.png</normaloff>:/probe_icons/Y+.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="ProbePushButton" name="probepushbutton_7">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/X-Y+.png</normaloff>:/probe_icons/X-Y+.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="ProbePushButton" name="probepushbutton_8">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/X-.png</normaloff>:/probe_icons/X-.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
-    <widget class="QStackedWidget" name="probingCyclesStackedWidget">
+    <widget class="QGroupBox" name="groupBoxOutside_2">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>95</y>
-       <width>396</width>
-       <height>351</height>
+       <x>460</x>
+       <y>15</y>
+       <width>301</width>
+       <height>306</height>
       </rect>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::Box</enum>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox{
+    color: rgb(238, 238, 236);
+	font: 14pt &quot;Bebas Kai&quot;;
+	border-style: solid;
+    border-color: rgb(186, 189, 182);
+    border-width: 1px;
+    border-radius: 6px;
+}</string>
      </property>
-     <property name="currentIndex">
-      <number>0</number>
+     <property name="title">
+      <string>Inside Corners</string>
      </property>
-     <widget class="QWidget" name="outsideCornersPage">
-      <widget class="QWidget" name="gridLayoutWidget">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>291</width>
-         <height>276</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_3">
-        <item row="0" column="0">
-         <widget class="ProbePushButton" name="probepushbutton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/X+Y-.png</normaloff>:/probe_icons/X+Y-.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-          <property name="filename" stdset="0">
-           <string>probe_back_left_corner.ngc</string>
-          </property>
-          <attribute name="buttonGroup">
-           <string notr="true">probeButtonGroup</string>
-          </attribute>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="ProbePushButton" name="probepushbutton_4">
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/X+.png</normaloff>:/probe_icons/X+.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-          <property name="filename" stdset="0">
-           <string>probe_x_plus.ngc</string>
-          </property>
-          <attribute name="buttonGroup">
-           <string notr="true">probeButtonGroup</string>
-          </attribute>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="ProbePushButton" name="probepushbutton_2">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/inY-.png</normaloff>:/probe_icons/inY-.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-          <property name="filename" stdset="0">
-           <string>probe_y_minus.ngc</string>
-          </property>
-          <attribute name="buttonGroup">
-           <string notr="true">probeButtonGroup</string>
-          </attribute>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="ProbePushButton" name="probepushbutton_3">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/X-Y-.png</normaloff>:/probe_icons/X-Y-.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-          <attribute name="buttonGroup">
-           <string notr="true">probeButtonGroup</string>
-          </attribute>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="ProbePushButton" name="probepushbutton_5">
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/X+Y+.png</normaloff>:/probe_icons/X+Y+.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-          <property name="filename" stdset="0">
-           <string>probe_x_write_values.ngc</string>
-          </property>
-          <attribute name="buttonGroup">
-           <string notr="true">probeButtonGroup</string>
-          </attribute>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="ProbePushButton" name="probepushbutton_6">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/Y+.png</normaloff>:/probe_icons/Y+.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-          <attribute name="buttonGroup">
-           <string notr="true">probeButtonGroup</string>
-          </attribute>
-         </widget>
-        </item>
-        <item row="2" column="2">
-         <widget class="ProbePushButton" name="probepushbutton_7">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/X-Y+.png</normaloff>:/probe_icons/X-Y+.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-          <attribute name="buttonGroup">
-           <string notr="true">probeButtonGroup</string>
-          </attribute>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="ProbePushButton" name="probepushbutton_8">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/X-.png</normaloff>:/probe_icons/X-.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-          <attribute name="buttonGroup">
-           <string notr="true">probeButtonGroup</string>
-          </attribute>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="ProbePushButton" name="probepushbutton_17">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/down.png</normaloff>:/probe_icons/down.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-          <property name="filename" stdset="0">
-           <string>probe_z_minus.ngc</string>
-          </property>
-          <attribute name="buttonGroup">
-           <string notr="true">probeButtonGroup</string>
-          </attribute>
-         </widget>
-        </item>
-       </layout>
-      </widget>
+     <widget class="QWidget" name="gridLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>25</y>
+        <width>291</width>
+        <height>276</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <widget class="ProbePushButton" name="probepushbutton_9">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/inX-Y+.png</normaloff>:/probe_icons/inX-Y+.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="ProbePushButton" name="probepushbutton_10">
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/inX-.png</normaloff>:/probe_icons/inX-.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="ProbePushButton" name="probepushbutton_11">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/inY+.png</normaloff>:/probe_icons/inY+.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="ProbePushButton" name="probepushbutton_12">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/inX+Y+.png</normaloff>:/probe_icons/inX+Y+.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="ProbePushButton" name="probepushbutton_13">
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/inX-Y-.png</normaloff>:/probe_icons/inX-Y-.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="ProbePushButton" name="probepushbutton_14">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/inY-.png</normaloff>:/probe_icons/inY-.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="ProbePushButton" name="probepushbutton_15">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/inX+Y-.png</normaloff>:/probe_icons/inX+Y-.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="ProbePushButton" name="probepushbutton_16">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/probe_icons/inX+.png</normaloff>:/probe_icons/inX+.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
-     <widget class="QWidget" name="insideCornersPage">
-      <widget class="QWidget" name="gridLayoutWidget_2">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>291</width>
-         <height>276</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_5">
-        <item row="0" column="0">
-         <widget class="ProbePushButton" name="probepushbutton_9">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/inX-Y+.png</normaloff>:/probe_icons/inX-Y+.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="ProbePushButton" name="probepushbutton_10">
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/inX-.png</normaloff>:/probe_icons/inX-.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="ProbePushButton" name="probepushbutton_11">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/inY+.png</normaloff>:/probe_icons/inY+.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="ProbePushButton" name="probepushbutton_12">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/inX+Y+.png</normaloff>:/probe_icons/inX+Y+.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="ProbePushButton" name="probepushbutton_13">
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/inX-Y-.png</normaloff>:/probe_icons/inX-Y-.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="ProbePushButton" name="probepushbutton_14">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/inY-.png</normaloff>:/probe_icons/inY-.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="2">
-         <widget class="ProbePushButton" name="probepushbutton_15">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/inX+Y-.png</normaloff>:/probe_icons/inX+Y-.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="ProbePushButton" name="probepushbutton_16">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/inX+.png</normaloff>:/probe_icons/inX+.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="ProbePushButton" name="probepushbutton_18">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/down.png</normaloff>:/probe_icons/down.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBoxOutside_3">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>15</y>
+       <width>121</width>
+       <height>306</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox{
+    color: rgb(238, 238, 236);
+	font: 14pt &quot;Bebas Kai&quot;;
+	border-style: solid;
+    border-color: rgb(186, 189, 182);
+    border-width: 1px;
+    border-radius: 6px;
+}</string>
+     </property>
+     <property name="title">
+      <string>Z Minus</string>
+     </property>
+     <widget class="ProbePushButton" name="probepushbutton_18">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>125</y>
+        <width>83</width>
+        <height>79</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="icon">
+       <iconset resource="../resources.qrc">
+        <normaloff>:/probe_icons/down.png</normaloff>:/probe_icons/down.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>75</width>
+        <height>75</height>
+       </size>
+      </property>
+      <property name="filename" stdset="0">
+       <string>probe_z_minus_wco.ngc</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">probeButtonGroup</string>
+      </attribute>
      </widget>
-     <widget class="QWidget" name="bossPocketPage">
-      <widget class="ProbePushButton" name="probepushbutton_19">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>15</y>
-         <width>83</width>
-         <height>79</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="icon">
-        <iconset resource="../resources.qrc">
-         <normaloff>:/probe_icons/inHole.png</normaloff>:/probe_icons/inHole.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>75</width>
-         <height>75</height>
-        </size>
-       </property>
-       <property name="filename" stdset="0">
-        <string>probe_back_left_corner.ngc</string>
-       </property>
-      </widget>
-      <widget class="ProbePushButton" name="probepushbutton_20">
-       <property name="geometry">
-        <rect>
-         <x>155</x>
-         <y>15</y>
-         <width>83</width>
-         <height>79</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="icon">
-        <iconset resource="../resources.qrc">
-         <normaloff>:/probe_icons/xy_center.png</normaloff>:/probe_icons/xy_center.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>75</width>
-         <height>75</height>
-        </size>
-       </property>
-       <property name="filename" stdset="0">
-        <string>probe_back_left_corner.ngc</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="ridgeValleyPage">
-      <widget class="ProbePushButton" name="probepushbutton_21">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>30</y>
-         <width>111</width>
-         <height>101</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="icon">
-        <iconset resource="../resources.qrc">
-         <normaloff>:/probe_icons/Lx_in.png</normaloff>:/probe_icons/Lx_in.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>200</width>
-         <height>200</height>
-        </size>
-       </property>
-       <property name="filename" stdset="0">
-        <string>probe_back_left_corner.ngc</string>
-       </property>
-      </widget>
-      <widget class="ProbePushButton" name="probepushbutton_22">
-       <property name="geometry">
-        <rect>
-         <x>155</x>
-         <y>30</y>
-         <width>111</width>
-         <height>101</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="icon">
-        <iconset resource="../resources.qrc">
-         <normaloff>:/probe_icons/Lx_out.png</normaloff>:/probe_icons/Lx_out.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>75</width>
-         <height>75</height>
-        </size>
-       </property>
-       <property name="filename" stdset="0">
-        <string>probe_back_left_corner.ngc</string>
-       </property>
-      </widget>
-      <widget class="ProbePushButton" name="probepushbutton_23">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>150</y>
-         <width>111</width>
-         <height>101</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="icon">
-        <iconset resource="../resources.qrc">
-         <normaloff>:/probe_icons/Ly_in.png</normaloff>:/probe_icons/Ly_in.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>200</width>
-         <height>200</height>
-        </size>
-       </property>
-       <property name="filename" stdset="0">
-        <string>probe_back_left_corner.ngc</string>
-       </property>
-      </widget>
-      <widget class="ProbePushButton" name="probepushbutton_24">
-       <property name="geometry">
-        <rect>
-         <x>155</x>
-         <y>150</y>
-         <width>111</width>
-         <height>101</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="icon">
-        <iconset resource="../resources.qrc">
-         <normaloff>:/probe_icons/Ly_out.png</normaloff>:/probe_icons/Ly_out.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>75</width>
-         <height>75</height>
-        </size>
-       </property>
-       <property name="filename" stdset="0">
-        <string>probe_back_left_corner.ngc</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="edgeAnglePage">
-      <widget class="QWidget" name="gridLayoutWidget_3">
-       <property name="geometry">
-        <rect>
-         <x>105</x>
-         <y>70</y>
-         <width>174</width>
-         <height>166</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_7">
-        <item row="0" column="0">
-         <widget class="ProbePushButton" name="probepushbutton_28">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/angleX+.png</normaloff>:/probe_icons/angleX+.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="ProbePushButton" name="probepushbutton_29">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/angleY+.png</normaloff>:/probe_icons/angleY+.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="ProbePushButton" name="probepushbutton_30">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/angleY-.png</normaloff>:/probe_icons/angleY-.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="ProbePushButton" name="probepushbutton_31">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources.qrc">
-            <normaloff>:/probe_icons/angleX-.png</normaloff>:/probe_icons/angleX-.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>75</width>
-            <height>75</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="rotaryAxisPage"/>
     </widget>
    </widget>
    <widget class="QWidget" name="page_enterParameters">
     <widget class="QPushButton" name="buttonChangeRoutine">
      <property name="geometry">
       <rect>
-       <x>335</x>
-       <y>5</y>
+       <x>10</x>
+       <y>10</y>
        <width>131</width>
        <height>36</height>
       </rect>
@@ -1167,11 +591,17 @@ QPushButton:checked {
     <widget class="QLabel" name="labelSelectedRoutine">
      <property name="geometry">
       <rect>
-       <x>15</x>
-       <y>10</y>
+       <x>165</x>
+       <y>15</y>
        <width>316</width>
        <height>26</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
      </property>
      <property name="text">
       <string>Selected Routine Name</string>
@@ -1180,23 +610,23 @@ QPushButton:checked {
     <widget class="QPushButton" name="buttonGenerateCode">
      <property name="geometry">
       <rect>
-       <x>660</x>
-       <y>475</y>
-       <width>196</width>
+       <x>510</x>
+       <y>540</y>
+       <width>311</width>
        <height>46</height>
       </rect>
      </property>
      <property name="text">
-      <string>Generate Probing Code</string>
+      <string>Generate Code AND Load Program</string>
      </property>
     </widget>
     <widget class="QFrame" name="verticalFrame">
      <property name="geometry">
       <rect>
-       <x>560</x>
-       <y>55</y>
+       <x>460</x>
+       <y>245</y>
        <width>450</width>
-       <height>381</height>
+       <height>281</height>
       </rect>
      </property>
      <property name="layoutDirection">
@@ -1207,106 +637,242 @@ QPushButton:checked {
      </property>
      <layout class="QVBoxLayout" name="verticalLayout"/>
     </widget>
-   </widget>
-   <widget class="QWidget" name="page_displayResults">
-    <widget class="QLabel" name="label_108">
+    <widget class="VCPSettingsLineEdit" name="settings_lineedit">
      <property name="geometry">
       <rect>
-       <x>125</x>
-       <y>95</y>
-       <width>83</width>
-       <height>31</height>
+       <x>515</x>
+       <y>35</y>
+       <width>131</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">VCPSettingsLineEdit {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="settingName" stdset="0">
+      <string>probewizard.setting_probe_fast_fr</string>
+     </property>
+     <property name="textFormat" stdset="0">
+      <string>{:4f}</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="probe_position">
+     <property name="geometry">
+      <rect>
+       <x>258</x>
+       <y>260</y>
+       <width>118</width>
+       <height>38</height>
       </rect>
      </property>
      <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-       <horstretch>0</horstretch>
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>156</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
      <property name="minimumSize">
       <size>
-       <width>0</width>
-       <height>31</height>
+       <width>118</width>
+       <height>38</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>16777215</width>
-       <height>30</height>
+       <height>38</height>
       </size>
      </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="styleSheet">
-      <string notr="true">QLabel{
-font: 75 14pt &quot;Bebas Kai&quot;;
-color: white;
+      <string notr="true">QPushButton{
+    font: 15pt &quot;Bebas Kai&quot;;
 }</string>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
      <property name="text">
-      <string>X- PROBED:</string>
+      <string>PROBE POS'N</string>
      </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     <property name="checkable">
+      <bool>true</bool>
      </property>
-     <property name="indent">
-      <number>0</number>
+     <property name="checkedAction" stdset="0">
+      <string>1</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_98">
+    <widget class="QPushButton" name="probe_wco">
      <property name="geometry">
       <rect>
        <x>130</x>
-       <y>175</y>
-       <width>80</width>
-       <height>31</height>
+       <y>260</y>
+       <width>118</width>
+       <height>38</height>
       </rect>
      </property>
      <property name="sizePolicy">
       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
+       <horstretch>156</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
      <property name="minimumSize">
       <size>
-       <width>80</width>
-       <height>31</height>
+       <width>118</width>
+       <height>38</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>80</width>
-       <height>30</height>
+       <width>16777215</width>
+       <height>38</height>
       </size>
      </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="styleSheet">
-      <string notr="true">QLabel{
-font: 75 14pt &quot;Bebas Kai&quot;;
-color: white;
+      <string notr="true">QPushButton{
+    font: 15pt &quot;Bebas Kai&quot;;
 }</string>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
      <property name="text">
-      <string>X+ PROBED:</string>
+      <string>PROBE WCO</string>
      </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     <property name="checkable">
+      <bool>true</bool>
      </property>
-     <property name="indent">
-      <number>0</number>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <property name="checkedAction" stdset="0">
+      <string>0</string>
      </property>
     </widget>
+    <widget class="VCPSettingsLineEdit" name="settings_lineedit_2">
+     <property name="geometry">
+      <rect>
+       <x>515</x>
+       <y>70</y>
+       <width>131</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">VCPSettingsLineEdit {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="settingName" stdset="0">
+      <string>probewizard.setting_probe_slow_fr</string>
+     </property>
+    </widget>
+    <widget class="VCPSettingsLineEdit" name="settings_lineedit_3">
+     <property name="geometry">
+      <rect>
+       <x>515</x>
+       <y>105</y>
+       <width>131</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">VCPSettingsLineEdit {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="settingName" stdset="0">
+      <string>probewizard.setting_calibration_offset</string>
+     </property>
+    </widget>
+    <widget class="VCPSettingsLineEdit" name="settings_lineedit_4">
+     <property name="geometry">
+      <rect>
+       <x>515</x>
+       <y>140</y>
+       <width>131</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">VCPSettingsLineEdit {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="settingName" stdset="0">
+      <string>probewizard.setting_probe_tool_number</string>
+     </property>
+    </widget>
+    <widget class="VCPSettingsLineEdit" name="settings_lineedit_5">
+     <property name="geometry">
+      <rect>
+       <x>515</x>
+       <y>175</y>
+       <width>131</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">VCPSettingsLineEdit {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	font: 50 17pt &quot;Bebas Kai&quot;;
+}</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="settingName" stdset="0">
+      <string>probewizard.setting_latch_distance</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_displayResults">
     <widget class="QPushButton" name="buttonChangeParams">
      <property name="geometry">
       <rect>
@@ -1320,229 +886,76 @@ color: white;
       <string>Change Parameters</string>
      </property>
     </widget>
-    <widget class="StatusLabel" name="x_plus_probed_position">
+    <widget class="QLabel" name="labelSelectedRoutine_2">
      <property name="geometry">
       <rect>
-       <x>215</x>
-       <y>175</y>
-       <width>130</width>
-       <height>31</height>
+       <x>205</x>
+       <y>20</y>
+       <width>316</width>
+       <height>26</height>
       </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>130</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-    border-style: solid;
-    border-color: rgb(96, 96, 97);
-    border-width: 2px;
-    border-radius: 3px;
-    color: white;
-    background: rgb(86, 86, 87);
-	 font: 17pt &quot;Bebas Kai&quot;;
-}</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="rules" stdset="0">
-      <string>[]</string>
-     </property>
-     <property name="format" stdset="0">
-      <string>{:5.3f}</string>
-     </property>
-    </widget>
-    <widget class="StatusLabel" name="x_minus_probed_position">
-     <property name="geometry">
-      <rect>
-       <x>215</x>
-       <y>95</y>
-       <width>130</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>130</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-    border-style: solid;
-    border-color: rgb(96, 96, 97);
-    border-width: 2px;
-    border-radius: 3px;
-    color: white;
-    background: rgb(86, 86, 87);
-	 font: 17pt &quot;Bebas Kai&quot;;
-}</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="rules" stdset="0">
-      <string>[]</string>
-     </property>
-     <property name="format" stdset="0">
-      <string>{:5.3f}</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_97">
-     <property name="geometry">
-      <rect>
-       <x>125</x>
-       <y>215</y>
-       <width>80</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>80</width>
-       <height>30</height>
-      </size>
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel{
-font: 75 14pt &quot;Bebas Kai&quot;;
-color: white;
+    color: rgb(238, 238, 236);
+	font: 14pt &quot;Bebas Kai&quot;;
 }</string>
      </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
      <property name="text">
-      <string>X WIDTH:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="indent">
-      <number>0</number>
+      <string>Probing Results</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_113">
+    <widget class="QGroupBox" name="groupBoxOutside_4">
      <property name="geometry">
       <rect>
-       <x>125</x>
-       <y>135</y>
-       <width>80</width>
-       <height>31</height>
+       <x>160</x>
+       <y>90</y>
+       <width>751</width>
+       <height>211</height>
       </rect>
      </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>80</width>
-       <height>30</height>
-      </size>
-     </property>
      <property name="styleSheet">
-      <string notr="true">QLabel{
-font: 75 14pt &quot;Bebas Kai&quot;;
-color: white;
+      <string notr="true">QGroupBox{
+    color: rgb(238, 238, 236);
+	font: 14pt &quot;Bebas Kai&quot;;
+	border-style: solid;
+    border-color: rgb(186, 189, 182);
+    border-width: 1px;
+    border-radius: 6px;
 }</string>
      </property>
-     <property name="lineWidth">
-      <number>0</number>
+     <property name="title">
+      <string>Probing Results</string>
      </property>
-     <property name="text">
-      <string>X CENTER:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="indent">
-      <number>0</number>
-     </property>
-    </widget>
-    <widget class="StatusLabel" name="x_center_probed_position">
-     <property name="geometry">
-      <rect>
-       <x>215</x>
-       <y>135</y>
-       <width>130</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>130</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
+     <widget class="StatusLabel" name="z_minus_probed_position">
+      <property name="geometry">
+       <rect>
+        <x>595</x>
+        <y>40</y>
+        <width>130</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>130</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
     border-style: solid;
     border-color: rgb(96, 96, 97);
     border-width: 2px;
@@ -1551,49 +964,49 @@ color: white;
     background: rgb(86, 86, 87);
 	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="rules" stdset="0">
-      <string>[]</string>
-     </property>
-     <property name="format" stdset="0">
-      <string>{:5.3f}</string>
-     </property>
-    </widget>
-    <widget class="StatusLabel" name="x_probed_width">
-     <property name="geometry">
-      <rect>
-       <x>215</x>
-       <y>215</y>
-       <width>130</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>130</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="rules" stdset="0">
+       <string>[]</string>
+      </property>
+      <property name="format" stdset="0">
+       <string>{:5.3f}</string>
+      </property>
+     </widget>
+     <widget class="StatusLabel" name="edge_delta">
+      <property name="geometry">
+       <rect>
+        <x>595</x>
+        <y>120</y>
+        <width>130</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>130</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
     border-style: solid;
     border-color: rgb(96, 96, 97);
     border-width: 2px;
@@ -1602,195 +1015,95 @@ color: white;
     background: rgb(86, 86, 87);
 	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="rules" stdset="0">
-      <string>[]</string>
-     </property>
-     <property name="format" stdset="0">
-      <string>{:5.3f}</string>
-     </property>
-    </widget>
-    <widget class="StatusLabel" name="y_center_probed_position">
-     <property name="geometry">
-      <rect>
-       <x>465</x>
-       <y>135</y>
-       <width>130</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>130</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-    border-style: solid;
-    border-color: rgb(96, 96, 97);
-    border-width: 2px;
-    border-radius: 3px;
-    color: white;
-    background: rgb(86, 86, 87);
-	 font: 17pt &quot;Bebas Kai&quot;;
-}</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="rules" stdset="0">
-      <string>[]</string>
-     </property>
-     <property name="format" stdset="0">
-      <string>{:5.3f}</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_109">
-     <property name="geometry">
-      <rect>
-       <x>375</x>
-       <y>95</y>
-       <width>83</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>30</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel{
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="rules" stdset="0">
+       <string>[]</string>
+      </property>
+      <property name="format" stdset="0">
+       <string>{:5.3f}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_100">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>160</y>
+        <width>80</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
 }</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
-     <property name="text">
-      <string>Y- PROBED:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="indent">
-      <number>0</number>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_114">
-     <property name="geometry">
-      <rect>
-       <x>375</x>
-       <y>135</y>
-       <width>80</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>80</width>
-       <height>30</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel{
-font: 75 14pt &quot;Bebas Kai&quot;;
-color: white;
-}</string>
-     </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
-     <property name="text">
-      <string>Y CENTER:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="indent">
-      <number>0</number>
-     </property>
-    </widget>
-    <widget class="StatusLabel" name="y_probed_width">
-     <property name="geometry">
-      <rect>
-       <x>465</x>
-       <y>215</y>
-       <width>130</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>130</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>Y WIDTH:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="StatusLabel" name="x_minus_probed_position">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>40</y>
+        <width>130</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>130</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
     border-style: solid;
     border-color: rgb(96, 96, 97);
     border-width: 2px;
@@ -1799,49 +1112,98 @@ color: white;
     background: rgb(86, 86, 87);
 	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="rules" stdset="0">
-      <string>[]</string>
-     </property>
-     <property name="format" stdset="0">
-      <string>{:5.3f}</string>
-     </property>
-    </widget>
-    <widget class="StatusLabel" name="y_plus_probed_position">
-     <property name="geometry">
-      <rect>
-       <x>465</x>
-       <y>175</y>
-       <width>130</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>130</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="rules" stdset="0">
+       <string>[]</string>
+      </property>
+      <property name="format" stdset="0">
+       <string>{:5.3f}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_115">
+      <property name="geometry">
+       <rect>
+        <x>505</x>
+        <y>160</y>
+        <width>83</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+font: 75 14pt &quot;Bebas Kai&quot;;
+color: white;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>Edge Angle:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="StatusLabel" name="y_probed_width">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>160</y>
+        <width>130</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>130</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
     border-style: solid;
     border-color: rgb(96, 96, 97);
     border-width: 2px;
@@ -1850,144 +1212,98 @@ color: white;
     background: rgb(86, 86, 87);
 	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="rules" stdset="0">
-      <string>[]</string>
-     </property>
-     <property name="format" stdset="0">
-      <string>{:5.3f}</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_99">
-     <property name="geometry">
-      <rect>
-       <x>380</x>
-       <y>175</y>
-       <width>80</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>80</width>
-       <height>30</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel{
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="rules" stdset="0">
+       <string>[]</string>
+      </property>
+      <property name="format" stdset="0">
+       <string>{:5.3f}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_99">
+      <property name="geometry">
+       <rect>
+        <x>265</x>
+        <y>120</y>
+        <width>80</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
 }</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
-     <property name="text">
-      <string>Y+ PROBED:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="indent">
-      <number>0</number>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_100">
-     <property name="geometry">
-      <rect>
-       <x>375</x>
-       <y>215</y>
-       <width>80</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>80</width>
-       <height>30</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel{
-font: 75 14pt &quot;Bebas Kai&quot;;
-color: white;
-}</string>
-     </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
-     <property name="text">
-      <string>Y WIDTH:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="indent">
-      <number>0</number>
-     </property>
-    </widget>
-    <widget class="StatusLabel" name="y_minus_probed_position">
-     <property name="geometry">
-      <rect>
-       <x>465</x>
-       <y>95</y>
-       <width>130</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>130</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>Y+ PROBED:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="StatusLabel" name="edge_angle">
+      <property name="geometry">
+       <rect>
+        <x>595</x>
+        <y>160</y>
+        <width>130</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>130</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
     border-style: solid;
     border-color: rgb(96, 96, 97);
     border-width: 2px;
@@ -1996,98 +1312,147 @@ color: white;
     background: rgb(86, 86, 87);
 	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="rules" stdset="0">
-      <string>[]</string>
-     </property>
-     <property name="format" stdset="0">
-      <string>{:5.3f}</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_110">
-     <property name="geometry">
-      <rect>
-       <x>620</x>
-       <y>95</y>
-       <width>83</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>30</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel{
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="rules" stdset="0">
+       <string>[]</string>
+      </property>
+      <property name="format" stdset="0">
+       <string>{:5.3f}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_111">
+      <property name="geometry">
+       <rect>
+        <x>505</x>
+        <y>80</y>
+        <width>83</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
 }</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
-     <property name="text">
-      <string>Z- PROBED:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="indent">
-      <number>0</number>
-     </property>
-    </widget>
-    <widget class="StatusLabel" name="z_minus_probed_position">
-     <property name="geometry">
-      <rect>
-       <x>710</x>
-       <y>95</y>
-       <width>130</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>130</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>Diameter:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_98">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>120</y>
+        <width>80</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+font: 75 14pt &quot;Bebas Kai&quot;;
+color: white;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>X+ PROBED:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="StatusLabel" name="y_plus_probed_position">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>120</y>
+        <width>130</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>130</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
     border-style: solid;
     border-color: rgb(96, 96, 97);
     border-width: 2px;
@@ -2096,98 +1461,49 @@ color: white;
     background: rgb(86, 86, 87);
 	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="rules" stdset="0">
-      <string>[]</string>
-     </property>
-     <property name="format" stdset="0">
-      <string>{:5.3f}</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_111">
-     <property name="geometry">
-      <rect>
-       <x>620</x>
-       <y>135</y>
-       <width>83</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>30</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel{
-font: 75 14pt &quot;Bebas Kai&quot;;
-color: white;
-}</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
-     <property name="text">
-      <string>Diameter:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="indent">
-      <number>0</number>
-     </property>
-    </widget>
-    <widget class="StatusLabel" name="probed_diameter">
-     <property name="geometry">
-      <rect>
-       <x>710</x>
-       <y>135</y>
-       <width>130</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>130</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="rules" stdset="0">
+       <string>[]</string>
+      </property>
+      <property name="format" stdset="0">
+       <string>{:5.3f}</string>
+      </property>
+     </widget>
+     <widget class="StatusLabel" name="y_minus_probed_position">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>40</y>
+        <width>130</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>130</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
     border-style: solid;
     border-color: rgb(96, 96, 97);
     border-width: 2px;
@@ -2196,98 +1512,144 @@ color: white;
     background: rgb(86, 86, 87);
 	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="rules" stdset="0">
-      <string>[]</string>
-     </property>
-     <property name="format" stdset="0">
-      <string>{:5.3f}</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_112">
-     <property name="geometry">
-      <rect>
-       <x>620</x>
-       <y>175</y>
-       <width>83</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>30</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel{
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="rules" stdset="0">
+       <string>[]</string>
+      </property>
+      <property name="format" stdset="0">
+       <string>{:5.3f}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_113">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>80</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
 }</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
-     <property name="text">
-      <string>Edge Delta:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="indent">
-      <number>0</number>
-     </property>
-    </widget>
-    <widget class="StatusLabel" name="edge_delta">
-     <property name="geometry">
-      <rect>
-       <x>710</x>
-       <y>175</y>
-       <width>130</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>130</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>X CENTER:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_109">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>40</y>
+        <width>83</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+font: 75 14pt &quot;Bebas Kai&quot;;
+color: white;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>Y- PROBED:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="StatusLabel" name="probed_diameter">
+      <property name="geometry">
+       <rect>
+        <x>595</x>
+        <y>80</y>
+        <width>130</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>130</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
     border-style: solid;
     border-color: rgb(96, 96, 97);
     border-width: 2px;
@@ -2296,98 +1658,49 @@ color: white;
     background: rgb(86, 86, 87);
 	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="rules" stdset="0">
-      <string>[]</string>
-     </property>
-     <property name="format" stdset="0">
-      <string>{:5.3f}</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_115">
-     <property name="geometry">
-      <rect>
-       <x>620</x>
-       <y>215</y>
-       <width>83</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>30</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel{
-font: 75 14pt &quot;Bebas Kai&quot;;
-color: white;
-}</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
-     <property name="text">
-      <string>Edge Angle:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="indent">
-      <number>0</number>
-     </property>
-    </widget>
-    <widget class="StatusLabel" name="edge_angle">
-     <property name="geometry">
-      <rect>
-       <x>710</x>
-       <y>215</y>
-       <width>130</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>80</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>130</width>
-       <height>31</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="rules" stdset="0">
+       <string>[]</string>
+      </property>
+      <property name="format" stdset="0">
+       <string>{:5.3f}</string>
+      </property>
+     </widget>
+     <widget class="StatusLabel" name="x_plus_probed_position">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>120</y>
+        <width>130</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>130</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
     border-style: solid;
     border-color: rgb(96, 96, 97);
     border-width: 2px;
@@ -2396,19 +1709,412 @@ color: white;
     background: rgb(86, 86, 87);
 	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="rules" stdset="0">
-      <string>[]</string>
-     </property>
-     <property name="format" stdset="0">
-      <string>{:5.3f}</string>
-     </property>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="rules" stdset="0">
+       <string>[]</string>
+      </property>
+      <property name="format" stdset="0">
+       <string>{:5.3f}</string>
+      </property>
+     </widget>
+     <widget class="StatusLabel" name="y_center_probed_position">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>80</y>
+        <width>130</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>130</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	 font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="rules" stdset="0">
+       <string>[]</string>
+      </property>
+      <property name="format" stdset="0">
+       <string>{:5.3f}</string>
+      </property>
+     </widget>
+     <widget class="StatusLabel" name="x_center_probed_position">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>80</y>
+        <width>130</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>130</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	 font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="rules" stdset="0">
+       <string>[]</string>
+      </property>
+      <property name="format" stdset="0">
+       <string>{:5.3f}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_108">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>83</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+font: 75 14pt &quot;Bebas Kai&quot;;
+color: white;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>X- PROBED:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_112">
+      <property name="geometry">
+       <rect>
+        <x>505</x>
+        <y>120</y>
+        <width>83</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+font: 75 14pt &quot;Bebas Kai&quot;;
+color: white;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>Edge Delta:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_114">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>80</y>
+        <width>80</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+font: 75 14pt &quot;Bebas Kai&quot;;
+color: white;
+}</string>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>Y CENTER:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="StatusLabel" name="x_probed_width">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>160</y>
+        <width>130</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>130</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    border-style: solid;
+    border-color: rgb(96, 96, 97);
+    border-width: 2px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(86, 86, 87);
+	 font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="rules" stdset="0">
+       <string>[]</string>
+      </property>
+      <property name="format" stdset="0">
+       <string>{:5.3f}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_97">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>80</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+font: 75 14pt &quot;Bebas Kai&quot;;
+color: white;
+}</string>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>X WIDTH:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_110">
+      <property name="geometry">
+       <rect>
+        <x>505</x>
+        <y>40</y>
+        <width>83</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+font: 75 14pt &quot;Bebas Kai&quot;;
+color: white;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>Z- PROBED:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -2429,6 +2135,11 @@ color: white;
    <extends>QStackedWidget</extends>
    <header>qtpyvcp.widgets.containers.stack</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>VCPSettingsLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>qtpyvcp.widgets.input_widgets.setting_slider</header>
   </customwidget>
  </customwidgets>
  <resources>

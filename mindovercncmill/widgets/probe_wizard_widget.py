@@ -3,13 +3,14 @@ import re
 
 from qtpy import uic
 from qtpy.QtCore import Slot, Signal
-from PyQt5 import QtCore, QtGui, QtWidgets
-from qtpy.QtWidgets import QWidget, QWidgetItem, QAbstractButton
+from qtpy.QtWidgets import QWidget, QWidgetItem
 from qtpyvcp.actions.program_actions import load as loadProgram
 from qtpyvcp.utilities import logger
 from qtpyvcp.utilities.info import Info
-from widgets.probe_param_input import ProbeParamInputWidget
+from probe_param_input import ProbeParamInputWidget
 from enum import IntEnum
+from qtpy.QtWidgets import qApp
+
 # from statemachine import StateMachine, State
 
 LOG = logger.getLogger(__name__)
@@ -22,7 +23,10 @@ MAX_NUMBER_OF_PARAMS = 30
 # input: #<input_param_name> = #1 (=0.125 comment)
 # result: [("input_param_name", "1", "0.125", "comment")]
 # if a group is not present it will be an empty string
-PARSE_POSITIONAL_ARGS = re.compile(r' *# *<(input_[a-z0-9_-]+)> *= *#([0-9]+) *(?:\(= *([0-9.+-]+[0-9.]*?|) *(.*)\))?', re.I)
+PARSE_SETTING_ARGS = re.compile(r' *# *<(setting_[a-z0-9_-]+)> *= *#([0-9]+) *(?:\(= *([0-9.+-]+[0-9.]*?|) *(.*)\))?',
+                                re.I)
+PARSE_INPUT_ARGS = re.compile(r' *# *<(input_[a-z0-9_-]+)> *= *#([0-9]+) *(?:\(= *([0-9.+-]+[0-9.]*?|) *(.*)\))?', re.I)
+
 
 class WizardPage(IntEnum):
     LOAD_PROBE_TOOL = 0
@@ -54,6 +58,10 @@ class WizardPage(IntEnum):
 #     def on_enter_selectProbeOperation(self):
 #         LOG.debug('-----Entered selectProbeOperation')
 
+def getCommentFormat():
+    return " ({} : {})"
+
+
 class ProbeWizardWidget(QWidget):
     probingFinished = Signal(object)
     probingCodeReady = Signal(object)
@@ -62,14 +70,17 @@ class ProbeWizardWidget(QWidget):
         super(ProbeWizardWidget, self).__init__(parent)
         uic.loadUi(UI_FILE, self)
 
+        self._setting_args = [] * MAX_NUMBER_OF_PARAMS
+        self._input_args = [] * MAX_NUMBER_OF_PARAMS
         self._probe_plugged = False
+        self._routineName = ""
 
         self.probeButtonGroup.buttonClicked.connect(self.handleProbeRoutineSelected)
         self.buttonChangeRoutine.clicked.connect(self.changeRoutine)
         self.buttonGenerateCode.clicked.connect(self.generateCode)
         self.buttonChangeParams.clicked.connect(self.changeParams)
 
-        self.stackedWidget.setCurrentIndex(WizardPage.LOAD_PROBE_TOOL)
+        self.stackedWidget.setCurrentIndex(WizardPage.SELECT_PROBE_OPERATION)
 
         # self.wizard_machine = ProbeWizardStateMachine(self)
         # self.wizard_machine.start_wizard()
@@ -91,14 +102,11 @@ class ProbeWizardWidget(QWidget):
             # self.wizard_machine.probe_tripped()
             self.stackedWidget.setCurrentIndex(WizardPage.SELECT_PROBE_OPERATION)
 
-    @Slot(QAbstractButton)
-    def on_probeTabsGroup_buttonClicked(self, button):
-        self.probingCyclesStackedWidget.setCurrentIndex(button.property('page'))
-
     def handleProbeRoutineSelected(self, button):
         self._routineName = str(button.filename)
+        LOG.error('---------Select routine is: <{}>'.format(self._routineName))
         if self._routineName != "":
-            self.stackedWidget.setCurrentIndex(WizardPage.ENTER_PARAMETERS) # routineSelected, enter the parameters
+            self.stackedWidget.setCurrentIndex(WizardPage.ENTER_PARAMETERS)  # routineSelected, enter the parameters
             self.labelSelectedRoutine.setText(self._routineName)
 
             subfile = None
@@ -115,30 +123,31 @@ class ProbeWizardWidget(QWidget):
                 lines = fh.readlines()
 
             # input_index = 0
-            self._args = [] * MAX_NUMBER_OF_PARAMS
             for line in lines:
                 line = line.strip()
                 if not line.startswith('#'):
                     continue
 
-                # input_elements contains a string like the following in the splitted form:
+                # input_elements contains a string like the following in the split form:
                 # <input_param_name> = #1 (=0.125 comment)
-                input_elements = PARSE_POSITIONAL_ARGS.findall(line)
-                if len(input_elements) == 0:
-                    continue
 
-                param_name, param_number, default_val, comment = input_elements[0]
-                # store them for later
-                # self._args[input_index] = input_elements[0]
-                self._args.append(input_elements[0])
-                self.renderInput(param_name)
-                # input_index += 1
+                setting_elements = PARSE_SETTING_ARGS.findall(line)
+                if len(setting_elements) != 0:
+                    # store them for later
+                    self._setting_args.append(setting_elements[0])
+
+                input_elements = PARSE_INPUT_ARGS.findall(line)
+                if len(input_elements) != 0:
+                    param_name, param_number, default_val, comment = input_elements[0]
+                    # store them for later
+                    self._input_args.append(input_elements[0])
+                    self.renderInput(param_name)
                 # finished adding all inputs
             self.verticalLayout.addStretch()
             # load detailed image of routine
 
     def changeRoutine(self):
-        self.stackedWidget.setCurrentIndex(WizardPage.SELECT_PROBE_OPERATION) # available routines page
+        self.stackedWidget.setCurrentIndex(WizardPage.SELECT_PROBE_OPERATION)  # available routines page
         self._routineName = ""
         self.removeDynamicInputs()
 
@@ -151,16 +160,47 @@ class ProbeWizardWidget(QWidget):
 
     def generateCode(self):
         LOG.debug('generateCode')
-        items = (self.verticalLayout.itemAt(i) for i in range(self.verticalLayout.count()))
         sub_args = [] * MAX_NUMBER_OF_PARAMS
+        param_details = [] * MAX_NUMBER_OF_PARAMS
+
+        window = qApp.activeWindow()
+        for aSetting in self._setting_args:
+            param_name, param_number, default_val, comment = aSetting
+            try:
+                # get the value from the GUI input widget
+                val = getattr(window, param_name).text() or default_val
+            except:
+                val = default_val
+                LOG.warning('No input for red<{}> parameter, using default value blue<{}>'.format(param_name, val))
+
+            if val == '':
+                LOG.error('No value given for parameter red<{}>, and no default specified'.format(param_name))
+                return False
+
+            try:
+                val = float(val)
+            except ValueError:
+                LOG.error('Input value "{}" given for parameter "{}" is not a valid number'.format(val, param_name))
+                return False
+
+            index = int(param_number) - 1
+            while len(sub_args) <= index:
+                sub_args.append("[0.0000]")
+                param_details.append("---")
+
+            sub_args[index] = "[{}]".format(val)
+            param_details[index] = getCommentFormat().format(param_name, val)
+
+        input_items = (self.verticalLayout.itemAt(i) for i in range(self.verticalLayout.count()))
+
         input_index = 0
-        for anInput in items:
+        for anInput in input_items:
             if isinstance(anInput, QWidgetItem):
                 entered_value = anInput.widget().get_inputValue()
                 LOG.debug('Entered value: <{}>'.format(entered_value))
 
-                param_name, param_number, default_val, comment = self._args[input_index]
-                input_index +=1
+                param_name, param_number, default_val, comment = self._input_args[input_index]
+                input_index += 1
 
                 try:
                     val = entered_value or default_val
@@ -181,13 +221,17 @@ class ProbeWizardWidget(QWidget):
                 index = int(param_number) - 1
                 while len(sub_args) <= index:
                     sub_args.append("[0.0000]")
+                    param_details.append("---")
 
                 sub_args[index] = "[{}]".format(val)
+                param_details[index] = getCommentFormat().format(param_name, val)
 
+        params_list = '\n'.join(param_details)
         arg_str = ' '.join(sub_args)
         sub_name = os.path.splitext(self._routineName)[0]
         program_text = "(Call the probing subroutine with user's entered values)\n" \
-                      "o<{}> call {}\nM2".format(sub_name, arg_str)
+                       + params_list + "\n" \
+                       "o<{}> call {}\nM2".format(sub_name, arg_str)
 
         new_file_path = os.path.join(PROGRAM_PREFIX, "with_vals_" + self._routineName)
         LOG.debug('Writting output file: <%s>', new_file_path)
@@ -212,7 +256,7 @@ class ProbeWizardWidget(QWidget):
 
     def renderInput(self, param_name):
         probeparaminputwidget = ProbeParamInputWidget(self, param_name)
-        probeparaminputwidget.setObjectName("child_"+param_name)
+        probeparaminputwidget.setObjectName("child_" + param_name)
         self.verticalLayout.addWidget(probeparaminputwidget)
 
     def displayXMinus(self, value):
