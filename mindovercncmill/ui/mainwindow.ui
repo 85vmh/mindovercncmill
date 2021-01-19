@@ -128,7 +128,7 @@
 }</string>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>2</number>
                </property>
                <property name="rules" stdset="0">
                 <string>[]</string>
@@ -5432,7 +5432,7 @@ ToolTable {
                        <bool>true</bool>
                       </property>
                       <property name="displayColumns" stdset="0">
-                       <string>TPZDR</string>
+                       <string>TZDR</string>
                       </property>
                       <property name="currentToolColor" stdset="0">
                        <color>
@@ -6031,7 +6031,7 @@ QPushButton:checked {
                   <string>tool_touch_off.ngc</string>
                  </property>
                 </widget>
-                <widget class="HalLedIndicator" name="halledindicator">
+                <widget class="HalLedIndicator" name="tool_setter_touched">
                  <property name="geometry">
                   <rect>
                    <x>1115</x>
@@ -6061,6 +6061,12 @@ QPushButton:checked {
                    <green>154</green>
                    <blue>6</blue>
                   </color>
+                 </property>
+                 <property name="state">
+                  <bool>false</bool>
+                 </property>
+                 <property name="pinBaseName" stdset="0">
+                  <string>tool-setter-touched</string>
                  </property>
                 </widget>
                 <widget class="QLabel" name="label_52">
@@ -6106,6 +6112,60 @@ color: rgb(255, 255, 255);
                   <bool>true</bool>
                  </property>
                 </widget>
+                <widget class="MDIButton" name="remove_current_tool">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>1095</x>
+                   <y>240</y>
+                   <width>146</width>
+                   <height>45</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>130</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+   	font: 16pt &quot;Bebas Kai&quot;;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>UNLOAD SPINDLE</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[]</string>
+                 </property>
+                 <property name="MDICommand" stdset="0">
+                  <string>M61 Q0 G49 #5210 = 0</string>
+                 </property>
+                </widget>
                 <zorder>frame_13</zorder>
                 <zorder>label_43</zorder>
                 <zorder>frame_12</zorder>
@@ -6113,8 +6173,9 @@ color: rgb(255, 255, 255);
                 <zorder>tool_length_7</zorder>
                 <zorder>frame_11</zorder>
                 <zorder>tool_touch_off_button</zorder>
-                <zorder>halledindicator</zorder>
+                <zorder>tool_setter_touched</zorder>
                 <zorder>label_52</zorder>
+                <zorder>remove_current_tool</zorder>
                </widget>
                <widget class="QWidget" name="page_offsets">
                 <widget class="QFrame" name="frame_4">

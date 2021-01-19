@@ -78,8 +78,8 @@ class MyMainWindow(VCPMainWindow):
         self.comp.addListener('probe-tripped', self.onProbeTripped)
         self.comp.ready()
 
-        self.comp.getPin('probeheight').value = 80.0
-        self.comp.getPin('blockheight').value = -330.0
+        self.comp.getPin('probeheight').value = -290.373
+        self.comp.getPin('blockheight').value = -208.065
         self.comp.getPin('search_vel').value = 200.0
         self.comp.getPin('probe_vel').value = 20.0
 
