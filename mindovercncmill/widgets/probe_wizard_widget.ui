@@ -29,7 +29,7 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="page_loadProbeTool">
     <widget class="QLabel" name="label">
@@ -683,7 +683,7 @@ QPushButton:checked {
            </size>
           </property>
           <property name="filename" stdset="0">
-           <string>probe_z_minus_ui.ngc</string>
+           <string>probe_z_minus.ngc</string>
           </property>
           <attribute name="buttonGroup">
            <string notr="true">probeButtonGroup</string>
