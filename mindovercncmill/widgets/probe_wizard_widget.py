@@ -87,8 +87,6 @@ class ProbeWizardWidget(QWidget):
         if tripped:
             # self.wizard_machine.probe_tripped()
             self.stackedWidget.setCurrentIndex(WizardPage.SELECT_PROBE_OPERATION)
-        else:
-            self.stackedWidget.setCurrentIndex(WizardPage.LOAD_PROBE_TOOL)
 
     @Slot(QAbstractButton)
     def on_probeTabsGroup_buttonClicked(self, button):
