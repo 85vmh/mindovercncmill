@@ -1,0 +1,26 @@
+(author: Vasi Mihalca)
+(version: 0.1)
+(date: 22/12/2020)
+
+(Probe Z Minus direction and set Z value into widget: z_minus_probed_position)
+(Start probe position is over stock within max z distance)
+(ensure all settings have been set properly according to help diagrams)
+
+o<probe_x_write_values> sub
+
+  (uses NGCGUI style arg spec)
+  (number after "=" in comment is default value)
+
+  #<input_probe_fast_fr> = #1        (=100.0)
+  #<input_probe_slow_fr> = #2        (=10.0)
+  #<input_max_z_distance> = #3       (=0.5000)
+  #<input_z_clearance> = #4          (=0.1000)
+
+
+  (DEBUG, EVAL[vcp.getWidget{"probewizardwidget"}.displayXPlus{#1}])
+  (DEBUG, EVAL[vcp.getWidget{"probewizardwidget"}.displayXMinus{#<input_probe_slow_fr>}])
+  
+
+o<probe_x_write_values> endsub
+
+M2 (end program)

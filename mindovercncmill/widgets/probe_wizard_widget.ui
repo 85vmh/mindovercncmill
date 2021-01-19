@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>5</y>
+     <y>0</y>
      <width>1066</width>
      <height>606</height>
     </rect>
@@ -29,7 +29,7 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>3</number>
    </property>
    <widget class="QWidget" name="page_loadProbeTool">
     <widget class="QLabel" name="label">
@@ -104,9 +104,9 @@ and plug the cable</string>
     <widget class="QWidget" name="probe_group_select" native="true">
      <property name="geometry">
       <rect>
-       <x>15</x>
-       <y>95</y>
-       <width>701</width>
+       <x>5</x>
+       <y>40</y>
+       <width>831</width>
        <height>46</height>
       </rect>
      </property>
@@ -457,8 +457,8 @@ QPushButton:checked {
     <widget class="QStackedWidget" name="probingCyclesStackedWidget">
      <property name="geometry">
       <rect>
-       <x>15</x>
-       <y>175</y>
+       <x>50</x>
+       <y>95</y>
        <width>396</width>
        <height>351</height>
       </rect>
@@ -683,7 +683,7 @@ QPushButton:checked {
            </size>
           </property>
           <property name="filename" stdset="0">
-           <string>probe_z_minus.ngc</string>
+           <string>probe_z_minus_ui.ngc</string>
           </property>
           <attribute name="buttonGroup">
            <string notr="true">probeButtonGroup</string>
@@ -1154,7 +1154,7 @@ QPushButton:checked {
     <widget class="QPushButton" name="buttonChangeRoutine">
      <property name="geometry">
       <rect>
-       <x>390</x>
+       <x>335</x>
        <y>5</y>
        <width>131</width>
        <height>36</height>
@@ -1206,26 +1206,6 @@ QPushButton:checked {
       <enum>QFrame::Box</enum>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout"/>
-    </widget>
-    <widget class="QmlProbe" name="qmlprobe">
-     <property name="geometry">
-      <rect>
-       <x>15</x>
-       <y>195</y>
-       <width>521</width>
-       <height>401</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QSpinBox" name="spinBox">
-     <property name="geometry">
-      <rect>
-       <x>565</x>
-       <y>470</y>
-       <width>49</width>
-       <height>26</height>
-      </rect>
-     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="page_displayResults">
@@ -1345,7 +1325,7 @@ color: white;
       <rect>
        <x>215</x>
        <y>175</y>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </rect>
      </property>
@@ -1363,7 +1343,7 @@ color: white;
      </property>
      <property name="maximumSize">
       <size>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </size>
      </property>
@@ -1375,7 +1355,7 @@ color: white;
     border-radius: 3px;
     color: white;
     background: rgb(86, 86, 87);
-	font: 50 17pt &quot;Bebas Kai&quot;;
+	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
      </property>
      <property name="text">
@@ -1388,7 +1368,7 @@ color: white;
       <string>[]</string>
      </property>
      <property name="format" stdset="0">
-      <string>{:6.4f}</string>
+      <string>{:5.3f}</string>
      </property>
     </widget>
     <widget class="StatusLabel" name="x_minus_probed_position">
@@ -1396,7 +1376,7 @@ color: white;
       <rect>
        <x>215</x>
        <y>95</y>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </rect>
      </property>
@@ -1414,7 +1394,7 @@ color: white;
      </property>
      <property name="maximumSize">
       <size>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </size>
      </property>
@@ -1426,7 +1406,7 @@ color: white;
     border-radius: 3px;
     color: white;
     background: rgb(86, 86, 87);
-	font: 50 17pt &quot;Bebas Kai&quot;;
+	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
      </property>
      <property name="text">
@@ -1439,7 +1419,7 @@ color: white;
       <string>[]</string>
      </property>
      <property name="format" stdset="0">
-      <string>{:6.4f}</string>
+      <string>{:5.3f}</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_97">
@@ -1539,7 +1519,7 @@ color: white;
       <rect>
        <x>215</x>
        <y>135</y>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </rect>
      </property>
@@ -1557,7 +1537,7 @@ color: white;
      </property>
      <property name="maximumSize">
       <size>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </size>
      </property>
@@ -1569,7 +1549,7 @@ color: white;
     border-radius: 3px;
     color: white;
     background: rgb(86, 86, 87);
-	font: 50 17pt &quot;Bebas Kai&quot;;
+	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
      </property>
      <property name="text">
@@ -1582,7 +1562,7 @@ color: white;
       <string>[]</string>
      </property>
      <property name="format" stdset="0">
-      <string>{:6.4f}</string>
+      <string>{:5.3f}</string>
      </property>
     </widget>
     <widget class="StatusLabel" name="x_probed_width">
@@ -1590,7 +1570,7 @@ color: white;
       <rect>
        <x>215</x>
        <y>215</y>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </rect>
      </property>
@@ -1608,7 +1588,7 @@ color: white;
      </property>
      <property name="maximumSize">
       <size>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </size>
      </property>
@@ -1620,7 +1600,7 @@ color: white;
     border-radius: 3px;
     color: white;
     background: rgb(86, 86, 87);
-	font: 50 17pt &quot;Bebas Kai&quot;;
+	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
      </property>
      <property name="text">
@@ -1633,15 +1613,15 @@ color: white;
       <string>[]</string>
      </property>
      <property name="format" stdset="0">
-      <string>{:6.4f}</string>
+      <string>{:5.3f}</string>
      </property>
     </widget>
     <widget class="StatusLabel" name="y_center_probed_position">
      <property name="geometry">
       <rect>
-       <x>435</x>
+       <x>465</x>
        <y>135</y>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </rect>
      </property>
@@ -1659,7 +1639,7 @@ color: white;
      </property>
      <property name="maximumSize">
       <size>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </size>
      </property>
@@ -1671,7 +1651,7 @@ color: white;
     border-radius: 3px;
     color: white;
     background: rgb(86, 86, 87);
-	font: 50 17pt &quot;Bebas Kai&quot;;
+	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
      </property>
      <property name="text">
@@ -1684,13 +1664,13 @@ color: white;
       <string>[]</string>
      </property>
      <property name="format" stdset="0">
-      <string>{:6.4f}</string>
+      <string>{:5.3f}</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_109">
      <property name="geometry">
       <rect>
-       <x>345</x>
+       <x>375</x>
        <y>95</y>
        <width>83</width>
        <height>31</height>
@@ -1739,7 +1719,7 @@ color: white;
     <widget class="QLabel" name="label_114">
      <property name="geometry">
       <rect>
-       <x>345</x>
+       <x>375</x>
        <y>135</y>
        <width>80</width>
        <height>31</height>
@@ -1785,9 +1765,9 @@ color: white;
     <widget class="StatusLabel" name="y_probed_width">
      <property name="geometry">
       <rect>
-       <x>435</x>
+       <x>465</x>
        <y>215</y>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </rect>
      </property>
@@ -1805,7 +1785,7 @@ color: white;
      </property>
      <property name="maximumSize">
       <size>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </size>
      </property>
@@ -1817,7 +1797,7 @@ color: white;
     border-radius: 3px;
     color: white;
     background: rgb(86, 86, 87);
-	font: 50 17pt &quot;Bebas Kai&quot;;
+	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
      </property>
      <property name="text">
@@ -1830,15 +1810,15 @@ color: white;
       <string>[]</string>
      </property>
      <property name="format" stdset="0">
-      <string>{:6.4f}</string>
+      <string>{:5.3f}</string>
      </property>
     </widget>
     <widget class="StatusLabel" name="y_plus_probed_position">
      <property name="geometry">
       <rect>
-       <x>435</x>
+       <x>465</x>
        <y>175</y>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </rect>
      </property>
@@ -1856,7 +1836,7 @@ color: white;
      </property>
      <property name="maximumSize">
       <size>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </size>
      </property>
@@ -1868,7 +1848,7 @@ color: white;
     border-radius: 3px;
     color: white;
     background: rgb(86, 86, 87);
-	font: 50 17pt &quot;Bebas Kai&quot;;
+	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
      </property>
      <property name="text">
@@ -1881,13 +1861,13 @@ color: white;
       <string>[]</string>
      </property>
      <property name="format" stdset="0">
-      <string>{:6.4f}</string>
+      <string>{:5.3f}</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_99">
      <property name="geometry">
       <rect>
-       <x>350</x>
+       <x>380</x>
        <y>175</y>
        <width>80</width>
        <height>31</height>
@@ -1936,7 +1916,7 @@ color: white;
     <widget class="QLabel" name="label_100">
      <property name="geometry">
       <rect>
-       <x>345</x>
+       <x>375</x>
        <y>215</y>
        <width>80</width>
        <height>31</height>
@@ -1982,9 +1962,9 @@ color: white;
     <widget class="StatusLabel" name="y_minus_probed_position">
      <property name="geometry">
       <rect>
-       <x>435</x>
+       <x>465</x>
        <y>95</y>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </rect>
      </property>
@@ -2002,7 +1982,7 @@ color: white;
      </property>
      <property name="maximumSize">
       <size>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </size>
      </property>
@@ -2014,7 +1994,7 @@ color: white;
     border-radius: 3px;
     color: white;
     background: rgb(86, 86, 87);
-	font: 50 17pt &quot;Bebas Kai&quot;;
+	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
      </property>
      <property name="text">
@@ -2027,13 +2007,13 @@ color: white;
       <string>[]</string>
      </property>
      <property name="format" stdset="0">
-      <string>{:6.4f}</string>
+      <string>{:5.3f}</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_110">
      <property name="geometry">
       <rect>
-       <x>565</x>
+       <x>620</x>
        <y>95</y>
        <width>83</width>
        <height>31</height>
@@ -2082,9 +2062,9 @@ color: white;
     <widget class="StatusLabel" name="z_minus_probed_position">
      <property name="geometry">
       <rect>
-       <x>655</x>
+       <x>710</x>
        <y>95</y>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </rect>
      </property>
@@ -2102,7 +2082,7 @@ color: white;
      </property>
      <property name="maximumSize">
       <size>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </size>
      </property>
@@ -2114,7 +2094,7 @@ color: white;
     border-radius: 3px;
     color: white;
     background: rgb(86, 86, 87);
-	font: 50 17pt &quot;Bebas Kai&quot;;
+	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
      </property>
      <property name="text">
@@ -2127,13 +2107,13 @@ color: white;
       <string>[]</string>
      </property>
      <property name="format" stdset="0">
-      <string>{:6.4f}</string>
+      <string>{:5.3f}</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_111">
      <property name="geometry">
       <rect>
-       <x>565</x>
+       <x>620</x>
        <y>135</y>
        <width>83</width>
        <height>31</height>
@@ -2182,9 +2162,9 @@ color: white;
     <widget class="StatusLabel" name="probed_diameter">
      <property name="geometry">
       <rect>
-       <x>655</x>
+       <x>710</x>
        <y>135</y>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </rect>
      </property>
@@ -2202,7 +2182,7 @@ color: white;
      </property>
      <property name="maximumSize">
       <size>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </size>
      </property>
@@ -2214,7 +2194,7 @@ color: white;
     border-radius: 3px;
     color: white;
     background: rgb(86, 86, 87);
-	font: 50 17pt &quot;Bebas Kai&quot;;
+	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
      </property>
      <property name="text">
@@ -2227,13 +2207,13 @@ color: white;
       <string>[]</string>
      </property>
      <property name="format" stdset="0">
-      <string>{:6.4f}</string>
+      <string>{:5.3f}</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_112">
      <property name="geometry">
       <rect>
-       <x>565</x>
+       <x>620</x>
        <y>175</y>
        <width>83</width>
        <height>31</height>
@@ -2282,9 +2262,9 @@ color: white;
     <widget class="StatusLabel" name="edge_delta">
      <property name="geometry">
       <rect>
-       <x>655</x>
+       <x>710</x>
        <y>175</y>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </rect>
      </property>
@@ -2302,7 +2282,7 @@ color: white;
      </property>
      <property name="maximumSize">
       <size>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </size>
      </property>
@@ -2314,7 +2294,7 @@ color: white;
     border-radius: 3px;
     color: white;
     background: rgb(86, 86, 87);
-	font: 50 17pt &quot;Bebas Kai&quot;;
+	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
      </property>
      <property name="text">
@@ -2327,13 +2307,13 @@ color: white;
       <string>[]</string>
      </property>
      <property name="format" stdset="0">
-      <string>{:6.4f}</string>
+      <string>{:5.3f}</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_115">
      <property name="geometry">
       <rect>
-       <x>565</x>
+       <x>620</x>
        <y>215</y>
        <width>83</width>
        <height>31</height>
@@ -2382,9 +2362,9 @@ color: white;
     <widget class="StatusLabel" name="edge_angle">
      <property name="geometry">
       <rect>
-       <x>655</x>
+       <x>710</x>
        <y>215</y>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </rect>
      </property>
@@ -2402,7 +2382,7 @@ color: white;
      </property>
      <property name="maximumSize">
       <size>
-       <width>80</width>
+       <width>130</width>
        <height>31</height>
       </size>
      </property>
@@ -2414,7 +2394,7 @@ color: white;
     border-radius: 3px;
     color: white;
     background: rgb(86, 86, 87);
-	font: 50 17pt &quot;Bebas Kai&quot;;
+	 font: 17pt &quot;Bebas Kai&quot;;
 }</string>
      </property>
      <property name="text">
@@ -2427,7 +2407,7 @@ color: white;
       <string>[]</string>
      </property>
      <property name="format" stdset="0">
-      <string>{:6.4f}</string>
+      <string>{:5.3f}</string>
      </property>
     </widget>
    </widget>
@@ -2450,38 +2430,11 @@ color: white;
    <header>qtpyvcp.widgets.containers.stack</header>
    <container>1</container>
   </customwidget>
-  <customwidget>
-   <class>QmlProbe</class>
-   <extends>QQuickWidget</extends>
-   <header>widgets.qml_probe.qml_probe</header>
-  </customwidget>
-  <customwidget>
-   <class>QQuickWidget</class>
-   <extends>QWidget</extends>
-   <header>QtQuickWidgets/QQuickWidget</header>
-  </customwidget>
  </customwidgets>
  <resources>
   <include location="../resources.qrc"/>
  </resources>
- <connections>
-  <connection>
-   <sender>spinBox</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>qmlprobe</receiver>
-   <slot>set_z_retract(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>590</x>
-     <y>488</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>276</x>
-     <y>331</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
  <buttongroups>
   <buttongroup name="probeButtonGroup"/>
   <buttongroup name="probeTabsGroup"/>

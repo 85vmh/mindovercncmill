@@ -1,0 +1,79 @@
+(author: Chris P)
+(version: 0.1)
+(date: 04/25/19)
+
+(Probe X plus direction and set X 0 in current WCO)
+(Start probe position to the left side edge of stock)
+(inside the max xy distance with the probe tip below the stock top edge)
+(ensure all settings have been set properly according to help diagrams)
+
+o<probe_x_plus> sub
+
+  (uses NGCGUI style arg spec)
+  (number after "=" in comment is default value)
+
+  #<input_probe_fast_fr> = #1           (=10.0)
+  #<input_probe_slow_fr> = #2           (=11.0)
+  #<input_max_xy_distance> = #3         (=12.0)    
+  #<input_xy_clearance> = #4            (=13.0)
+  #<input_calibration_offset> = #5      (=14.0)
+
+  (Cancel G92 offsets)
+  G92.1
+
+  (Probe Diameter)
+  #<probe_diameter> = #5410
+
+  (Probe Radius)
+  #<probe_radius> = [#<probe_diameter> / 2]
+
+  (Probe Centerline Offset)
+  #<probe_center_offset> = [#<probe_radius> - #<calibration_offset>]
+
+  (Current X Position including offsets in current program units)
+  #<x> = #5420
+
+  (Initiate Fast X+ Probe)
+  G91
+  F[#<probe_fast_fr>]
+  G38.2 X[#<max_xy_distance>]
+  #<x_plus_probed> = #5061
+
+  (Probe Error check, #5070 will be 0 if failed)
+  o<120> if [#5070 EQ 0]
+    (back to start point and feed)
+    G90
+    G0 X#<x>
+    F[#<probe_fast_fr>]
+    (return from sub)
+    o<probe_x_plus> return
+  o<120> endif
+
+  (Move to xy_clearance distance for slow probe)
+  G90
+  G0 X[#<x_plus_probed> - #<xy_clearance>]
+
+  (Slow Probe Rule, if Slow Probe FR is set to 0, Slow Probe is Bypassed)
+  o<130> if [#<probe_slow_fr> GT 0]
+    (Initiate Slow X+ Probe)
+    G91
+    F[#<probe_slow_fr>]
+    G38.2 X[#<xy_clearance> * 2]
+    #<x_plus_probed> = #5061
+    (debug, Probed Pos: #5061 X Pos: #<_x>)
+    G90
+    G0 X[#<x_plus_probed> - #<xy_clearance>]
+  o<130> endif
+
+  #<x_plus_zero_edge> = [#<x_plus_probed> + #<probe_center_offset>]
+
+  (defines the edge as x_probed_position for DRO reporting)
+  #<x_plus_probed_position> = #<x_plus_zero_edge>
+
+  (output to gui DRO "X PROBED POSITION")
+  #1006 = #<x_plus_probed_position>
+  (DEBUG, EVAL[vcp.getWidget{"x_plus_probed_position"}.setValue{#1006}])
+
+o<probe_x_plus> endsub [#<x_plus_zero_edge>]
+
+M2 (end program)

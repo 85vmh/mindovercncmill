@@ -67,7 +67,7 @@ class ProbeWizardWidget(QWidget):
         self.buttonGenerateCode.clicked.connect(self.generateCode)
         self.buttonChangeParams.clicked.connect(self.changeParams)
 
-        self.stackedWidget.setCurrentIndex(WizardPage.ENTER_PARAMETERS)
+        self.stackedWidget.setCurrentIndex(WizardPage.SELECT_PROBE_OPERATION)
 
         # self.wizard_machine = ProbeWizardStateMachine(self)
         # self.wizard_machine.start_wizard()
@@ -227,7 +227,6 @@ class ProbeWizardWidget(QWidget):
     def displayXWidth(self, value):
         self.showProbingResults()
         self.x_probed_width.setText(str(value))
-
 
     def displayYMinus(self, value):
         self.showProbingResults()

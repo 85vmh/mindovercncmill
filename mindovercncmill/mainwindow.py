@@ -129,8 +129,11 @@ class MyMainWindow(VCPMainWindow):
         self.mdiEntry.setText(text)
 
     def handleProbingFinished(self):
-        self.setManualScreen()
-        self.stackedWidgetMain.setCurrentIndex(MainScreenPage.OFFSETS)
+        self.btnManual.click()
+        if not self.btnProbing.isChecked():
+            self.btnProbing.click()
+        else:
+            self.stackedWidgetMain.setCurrentIndex(MainScreenPage.PROBING)
 
     # add any custom methods here
     def setManualScreen(self):
