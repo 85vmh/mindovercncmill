@@ -66,9 +66,10 @@ class SpindleWidget(QWidget, HALWidget):
     def set_probe_plugged(self, plugged):
         self._probe_plugged = plugged
         if plugged:
-            self.spindleStates.setCurrentIndex(SpindleState.PROBE_IN_SPINDLE)
+            issue_mdi("M6 T{} G43".format(99))
         else:
-            self.determineSpindleState()
+            issue_mdi("M6 T{} G43".format(0))
+            #self.determineSpindleState()
 
     @Slot(bool)
     def set_probe_tripped(self, tripped):
@@ -86,6 +87,9 @@ class SpindleWidget(QWidget, HALWidget):
         if self._loadedTool == 0:
             LOG.debug('-----SPINDLE_EMPTY called')
             self.spindleStates.setCurrentIndex(SpindleState.SPINDLE_EMPTY)
+        elif self._loadedTool == 99 and self._probe_plugged:
+            LOG.debug('-----PROBE_IN_SPINDLE called')
+            self.spindleStates.setCurrentIndex(SpindleState.PROBE_IN_SPINDLE)
         elif spindleSpeed == 0.0:
             LOG.debug('-----SPINDLE_LOADED called')
             self.spindleStates.setCurrentIndex(SpindleState.SPINDLE_LOADED)

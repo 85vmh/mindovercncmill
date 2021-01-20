@@ -229,7 +229,6 @@ class MyMainWindow(VCPMainWindow):
         else:
             if self.btnProbing.isChecked():
                 self.btnProbing.click()
-            issue_mdi("G53 G0 Z-10")
 
     def onProbeTripped(self, tripped):
         self.spindlewidget.set_probe_tripped(tripped)
