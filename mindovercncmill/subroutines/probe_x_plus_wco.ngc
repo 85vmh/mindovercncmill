@@ -19,9 +19,9 @@ o<probe_x_plus_wco> sub
   #<setting_probe_mode> = #5           (=0)
   #<setting_calibration_offset> = #6   (=0)
 
-  #<input_max_z_distance> = #6        (=10.000)
-  #<input_z_final_retract> = #7       (=0.1000)
-  #<input_max_xy_distance> = #3      (=0.5000)
+  #<input_max_z_distance> = #7        (=10.000)
+  #<input_z_final_retract> = #8       (=0.1000)
+  #<input_max_xy_distance> = #9      (=0.5000)
 
   (Cancel G92 offsets)
   G92.1

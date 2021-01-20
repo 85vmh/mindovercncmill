@@ -106,6 +106,10 @@ class ProbeWizardWidget(QWidget):
 
     def handleProbeRoutineSelected(self, button):
         self._routineName = str(button.filename)
+        # re init values each time
+        self._setting_args = [] * MAX_NUMBER_OF_PARAMS
+        self._input_args = [] * MAX_NUMBER_OF_PARAMS
+
         LOG.error('---------Select routine is: <{}>'.format(self._routineName))
         if self._routineName != "":
             self.stackedWidget.setCurrentIndex(WizardPage.ENTER_PARAMETERS)  # routineSelected, enter the parameters
@@ -169,6 +173,8 @@ class ProbeWizardWidget(QWidget):
         for aSetting in self._setting_args:
             param_name, param_number, default_val, comment = aSetting
 
+            LOG.debug('-----settings param: {}'.format(param_name))
+
             if param_name == PROBE_MODE_PARAM_NAME:
                 val = 0 if self.probe_wcs.isChecked() else 1
             else:
@@ -206,6 +212,7 @@ class ProbeWizardWidget(QWidget):
                 LOG.debug('Entered value: <{}>'.format(entered_value))
 
                 param_name, param_number, default_val, comment = self._input_args[input_index]
+                LOG.debug('-----input param: {}'.format(param_name))
                 input_index += 1
 
                 try:
