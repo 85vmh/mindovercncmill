@@ -54,3 +54,8 @@ from notifications_widget import NotificationsWidget
 class NotificationsWidget_Plugin(_DesignerPlugin):
     def pluginClass(self):
         return NotificationsWidget
+
+from settings_label import SettingsLabel
+class SettingsLabelWidget_Plugin(_DesignerPlugin):
+    def pluginClass(self):
+        return SettingsLabel

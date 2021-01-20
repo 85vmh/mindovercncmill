@@ -67,7 +67,7 @@ o<probe_z_minus_wco> sub
   (Output to probewizardwidget")
   (DEBUG, EVAL[vcp.getWidget{"probewizardwidget"}.displayZMinus{#<z_minus_probed>}])
 
-  o<140> if [#<input_probe_mode> EQ 0]
+  o<140> if [#<setting_probe_mode> EQ 0]
     (Record Z zero in selected WCO)
     G10 L2 P#5220 Z[#<z_minus_probed> + #<workspace_z>]
     o<probe_z_minus_wco> return

@@ -128,7 +128,7 @@
 }</string>
                </property>
                <property name="currentIndex">
-                <number>5</number>
+                <number>0</number>
                </property>
                <property name="rules" stdset="0">
                 <string>[]</string>
@@ -5432,7 +5432,7 @@ ToolTable {
                        <bool>true</bool>
                       </property>
                       <property name="displayColumns" stdset="0">
-                       <string>TZDR</string>
+                       <string>TPZDR</string>
                       </property>
                       <property name="currentToolColor" stdset="0">
                        <color>
@@ -8472,11 +8472,51 @@ WcsOffsetsTable {
                 <widget class="ProbeWizardWidget" name="probewizardwidget">
                  <property name="geometry">
                   <rect>
-                   <x>35</x>
-                   <y>20</y>
-                   <width>1081</width>
-                   <height>611</height>
+                   <x>5</x>
+                   <y>60</y>
+                   <width>1261</width>
+                   <height>706</height>
                   </rect>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="machine_column_header_4">
+                 <property name="geometry">
+                  <rect>
+                   <x>70</x>
+                   <y>0</y>
+                   <width>256</width>
+                   <height>55</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>55</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>55</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel{
+	color: white;
+	font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Probing Wizard</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                  </property>
                 </widget>
                </widget>
@@ -9810,7 +9850,7 @@ All</string>
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="machineModeGroup"/>
   <buttongroup name="buttonGroupMdi"/>
+  <buttongroup name="machineModeGroup"/>
  </buttongroups>
 </ui>

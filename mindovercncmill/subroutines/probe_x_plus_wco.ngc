@@ -1,0 +1,94 @@
+(author: Chris P)
+(version: 0.1)
+(date: 04/25/19)
+
+(Probe X plus direction and set X 0 in current WCO)
+(Start probe position to the left side edge of stock)
+(inside the max xy distance with the probe tip below the stock top edge)
+(ensure all settings have been set properly according to help diagrams)
+
+o<probe_x_plus_wco> sub
+
+  (uses NGCGUI style arg spec)
+  (number after "=" in comment is default value)
+
+  #<setting_probe_tool_number> = #1    (=99)
+  #<setting_probe_fast_fr> = #2        (=200.0)
+  #<setting_probe_slow_fr> = #3        (=20.0)
+  #<setting_latch_distance> = #4       (=0.5)
+  #<setting_probe_mode> = #5           (=0)
+  #<setting_calibration_offset> = #6   (=0)
+
+  #<input_max_z_distance> = #6        (=10.000)
+  #<input_z_final_retract> = #7       (=0.1000)
+  #<input_max_xy_distance> = #3      (=0.5000)
+
+  (Cancel G92 offsets)
+  G92.1
+
+  #<workspace_x> = #[5201 + [20 * #5220]]
+
+  (Probe Tool Safety Check)
+  o<110> if [#5400 NE #<setting_probe_tool_number>]
+  (ERROR, Probe tool in the spindle, aborting)
+   o<probe_z_minus_wco> return
+  o<110> endif
+
+  (Probe Diameter)
+  #<probe_diameter> = #5410
+
+  (Probe Radius)
+  #<probe_radius> = [#<probe_diameter> / 2]
+
+  (Probe Centerline Offset)
+  #<probe_center_offset> = [#<probe_radius> - #<setting_calibration_offset>]
+
+  (Current X Position including offsets in current program units)
+  #<x> = #5420
+
+  (Initiate Fast X+ Probe)
+  G91
+  F[#<setting_probe_fast_fr>]
+  G38.2 X[#<input_max_xy_distance>]
+  #<x_plus_probed> = #5061
+
+  (Probe Error check, #5070 will be 0 if failed)
+  o<120> if [#5070 EQ 0]
+    (back to start point and feed)
+    G90
+    G0 X#<x>
+    F[#<setting_probe_fast_fr>]
+    (return from sub)
+    o<probe_x_plus_wco> return
+  o<120> endif
+
+  (Move to setting_latch_distance distance for slow probe)
+  G90
+  G0 X[#<x_plus_probed> - #<setting_latch_distance>]
+
+
+  (Subsequent Slow X+ Probe)
+  G91
+  F[#<setting_probe_slow_fr>]
+  G38.2 X[#<setting_latch_distance> * 2]
+  #<x_plus_probed> = #5061
+  (debug, Probed Pos: #5061 , X Pos: #<_x>)
+  G90
+  G0 X[#<x_plus_probed> - #<input_max_xy_distance>]
+
+
+  #<x_plus_zero_edge> = [#<x_plus_probed> + #<probe_center_offset>]
+
+  (Output to probewizardwidget")
+  (DEBUG, EVAL[vcp.getWidget{"probewizardwidget"}.displayXPlus{#<x_plus_probed>}])
+
+  (probe mode rule for WCO or probe position measuring only)
+  o<140> if [#<setting_probe_mode> EQ 0]
+    (Record X Zero in selected WCO)
+    G10 L2 P#5220 X[#<x_plus_zero_edge> + #<workspace_x>]
+    o<probe_x_plus_wco> return
+  o<140> endif
+
+o<probe_x_plus_wco> endsub
+
+M2 (end program)

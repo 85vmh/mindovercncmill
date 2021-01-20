@@ -5,7 +5,7 @@ from qtpy import uic
 from qtpy.QtCore import Slot, Signal
 from qtpy.QtWidgets import QWidget, QWidgetItem
 from qtpyvcp.actions.program_actions import load as loadProgram
-from qtpyvcp.utilities import logger
+
 from qtpyvcp.utilities.info import Info
 from probe_param_input import ProbeParamInputWidget
 from enum import IntEnum
@@ -13,12 +13,14 @@ from qtpy.QtWidgets import qApp
 
 # from statemachine import StateMachine, State
 
+from qtpyvcp.utilities import logger
 LOG = logger.getLogger(__name__)
 INFO = Info()
 SUBROUTINE_SEARCH_DIRS = INFO.getSubroutineSearchDirs()
 PROGRAM_PREFIX = INFO.getProgramPrefix()
 UI_FILE = os.path.join(os.path.dirname(__file__), "probe_wizard_widget.ui")
 MAX_NUMBER_OF_PARAMS = 30
+PROBE_MODE_PARAM_NAME = "setting_probe_mode"
 
 # input: #<input_param_name> = #1 (=0.125 comment)
 # result: [("input_param_name", "1", "0.125", "comment")]
@@ -166,12 +168,16 @@ class ProbeWizardWidget(QWidget):
         window = qApp.activeWindow()
         for aSetting in self._setting_args:
             param_name, param_number, default_val, comment = aSetting
-            try:
-                # get the value from the GUI input widget
-                val = getattr(window, param_name).text() or default_val
-            except:
-                val = default_val
-                LOG.warning('No input for red<{}> parameter, using default value blue<{}>'.format(param_name, val))
+
+            if param_name == PROBE_MODE_PARAM_NAME:
+                val = 0 if self.probe_wcs.isChecked() else 1
+            else:
+                try:
+                    # get the value from the GUI input widget
+                    val = getattr(window, param_name).text() or default_val
+                except:
+                    val = default_val
+                    LOG.warning('No input for red<{}> parameter, using default value blue<{}>'.format(param_name, val))
 
             if val == '':
                 LOG.error('No value given for parameter red<{}>, and no default specified'.format(param_name))

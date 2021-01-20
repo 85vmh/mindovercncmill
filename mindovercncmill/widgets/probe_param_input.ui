@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>450</width>
-    <height>44</height>
+    <width>436</width>
+    <height>40</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -20,14 +20,14 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: rgb(136, 138, 133)</string>
+   <string notr="true"/>
   </property>
   <widget class="QLabel" name="param_label">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>14</x>
      <y>5</y>
-     <width>280</width>
+     <width>276</width>
      <height>30</height>
     </rect>
    </property>
@@ -72,9 +72,9 @@ color: white;
    <property name="geometry">
     <rect>
      <x>390</x>
-     <y>10</y>
-     <width>50</width>
-     <height>21</height>
+     <y>5</y>
+     <width>41</width>
+     <height>30</height>
     </rect>
    </property>
    <property name="sizePolicy">
