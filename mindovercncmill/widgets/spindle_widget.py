@@ -22,10 +22,11 @@ UI_FILE = os.path.join(os.path.dirname(__file__), "spindle_widget.ui")
 class SpindleState(IntEnum):
     SPINDLE_EMPTY = 0
     PREPARING_TOOL_CHANGE = 1
-    CONFIRM_TOOL_CHANGE = 2
-    PROBE_IN_SPINDLE = 3
-    SPINDLE_LOADED = 4
-    SPINDLE_RUNNING = 5
+    CONFIRM_TOOL_INSERTED = 2
+    CONFIRM_TOOL_REMOVED = 3
+    PROBE_IN_SPINDLE = 4
+    SPINDLE_LOADED = 5
+    SPINDLE_RUNNING = 6
 
 
 class SpindleWidget(QWidget, HALWidget):
@@ -46,13 +47,15 @@ class SpindleWidget(QWidget, HALWidget):
         self._probe_plugged = False
         self._probe_tripped = False
         self._loadedTool = 0
+        self._toolToLoad = -1
 
         self._tool_change_confirmed = None
         self._tool_change_confirm = None
         self._tool_change_prep_number = None
 
         self.loadToolBtn.clicked.connect(self.loadTool)
-        self.confirmToolChangeBtn.clicked.connect(self.confirmToolChange)
+        self.confirmToolInsertedBtn.clicked.connect(self.confirmToolChange)
+        self.confirmToolRemovedBtn.clicked.connect(self.confirmToolChange)
         self.measureToolBtn.clicked.connect(self.confirmToolChangeAndMeasure)
         self.changeToolBtn.clicked.connect(self.changeTool)
         self.spindleRevBtn.clicked.connect(self.spindleReverse)
@@ -106,8 +109,6 @@ class SpindleWidget(QWidget, HALWidget):
         if int(self.toolNumberInput.text()) != self._loadedTool:
             # proceed with tool change
             issue_mdi("M6 T{} G43".format(self.toolNumberInput.text()))
-        elif self._loadedTool == 0:
-            pass
         else:
             self.spindleStates.setCurrentIndex(SpindleState.SPINDLE_LOADED)
             self.spindleSpeed.setFocus()
@@ -135,8 +136,12 @@ class SpindleWidget(QWidget, HALWidget):
 
     def readyToConfirm(self, value):
         if value:
-            self.spindleStates.setCurrentIndex(SpindleState.CONFIRM_TOOL_CHANGE)
-            self.confirmMessageLabel.setText(
-                "Insert T" + str(self._tool_change_prep_number.value) + " in the spindle,\nthen Confirm")
+            the_tool = self._tool_change_prep_number.value
+            if the_tool == 0:
+                self.spindleStates.setCurrentIndex(SpindleState.CONFIRM_TOOL_REMOVED)
+                self.confirmRemovedLabel.setText("Remove tool from the spindle,\nthen Confirm")
+            else:
+                self.spindleStates.setCurrentIndex(SpindleState.CONFIRM_TOOL_INSERTED)
+                self.confirmInsertedLabel.setText("Insert T" + str(the_tool) + " in the spindle,\nthen Confirm")
         else:
             self._tool_change_confirmed.value = False

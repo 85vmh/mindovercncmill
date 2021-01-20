@@ -52,7 +52,7 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="page_noToolLoaded">
     <widget class="QLabel" name="label">
@@ -522,7 +522,7 @@ Moving to change position...</string>
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="page_confirmToolChange">
+   <widget class="QWidget" name="page_confirmInserted">
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
@@ -552,14 +552,14 @@ Moving to change position...</string>
       </rect>
      </property>
      <property name="text">
-      <string>Confirm Tool Change
+      <string>Confirm Tool Inserted
 and Measure</string>
      </property>
      <property name="checkable">
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="confirmToolChangeBtn">
+    <widget class="QPushButton" name="confirmToolInsertedBtn">
      <property name="geometry">
       <rect>
        <x>37</x>
@@ -569,10 +569,10 @@ and Measure</string>
       </rect>
      </property>
      <property name="text">
-      <string>Confirm Tool Change</string>
+      <string>Confirm Tool Inserted</string>
      </property>
     </widget>
-    <widget class="StatusLabel" name="confirmMessageLabel">
+    <widget class="StatusLabel" name="confirmInsertedLabel">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -595,6 +595,65 @@ and Measure</string>
      </property>
      <property name="rules" stdset="0">
       <string>[]</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_confirmRemoved">
+    <widget class="StatusLabel" name="confirmRemovedLabel">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>85</y>
+       <width>226</width>
+       <height>76</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Message for tool change&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="rules" stdset="0">
+      <string>[]</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>-1</y>
+       <width>190</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="../resources.qrc">:/images/no_tool.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="confirmToolRemovedBtn">
+     <property name="geometry">
+      <rect>
+       <x>37</x>
+       <y>175</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Confirm Tool Removed</string>
      </property>
     </widget>
    </widget>
@@ -1118,7 +1177,7 @@ and Measure</string>
       <string notr="true">font: 17pt;</string>
      </property>
      <property name="text">
-      <string/>
+      <string>0</string>
      </property>
      <property name="maxLength">
       <number>5</number>
