@@ -31,7 +31,7 @@ o<probe_x_plus_wco> sub
   (Probe Tool Safety Check)
   o<110> if [#5400 NE #<setting_probe_tool_number>]
   (ERROR, Probe tool in the spindle, aborting)
-   o<probe_z_minus_wco> return
+   o<probe_x_plus_wco> return
   o<110> endif
 
   (Probe Diameter)
@@ -49,6 +49,10 @@ o<probe_x_plus_wco> sub
   (Initiate Fast X+ Probe)
   G91
   F[#<setting_probe_fast_fr>]
+
+  G1 X-[#<input_max_xy_distance>]
+  G1 Z-[#<input_max_z_distance>]
+
   G38.2 X[#<input_max_xy_distance>]
   #<x_plus_probed> = #5061
 
@@ -76,8 +80,13 @@ o<probe_x_plus_wco> sub
   G90
   G0 X[#<x_plus_probed> - #<input_max_xy_distance>]
 
+  G91
+  G0 Z[#<input_max_z_distance>]
 
   #<x_plus_zero_edge> = [#<x_plus_probed> + #<probe_center_offset>]
+
+  G90
+  G0 X[#<x_plus_zero_edge>]
 
   (Output to probewizardwidget")
   (DEBUG, EVAL[vcp.getWidget{"probewizardwidget"}.displayXPlus{#<x_plus_probed>}])

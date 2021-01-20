@@ -2,12 +2,12 @@
 (version: 0.1)
 (date: 04/25/19)
 
-(Probe Y Minus direction to locate edge, end at clearance distance)
-(Start probe position to the back side edge of stock)
+(Probe X plus direction and set X 0 in current WCO)
+(Start probe position to the left side edge of stock)
 (inside the max xy distance with the probe tip below the stock top edge)
 (ensure all settings have been set properly according to help diagrams)
 
-o<probe_y_minus> sub
+o<probe_x_plus_wco> sub
 
   (uses NGCGUI style arg spec)
   (number after "=" in comment is default value)
@@ -25,17 +25,18 @@ o<probe_y_minus> sub
 
   (Cancel G92 offsets)
   G92.1
-
-  #<workspace_y> = #[5202 + [20 * #5220]]
+  (ERROR, Before workspace)
+  #<workspace_x> = #[5201 + [20 * #5220]]
 
   (Probe Tool Safety Check)
   o<110> if [#5400 NE #<setting_probe_tool_number>]
   (ERROR, Probe tool in the spindle, aborting)
-   o<probe_y_minus> return
+   o<probe_z_minus_wco> return
   o<110> endif
 
   (Probe Diameter)
   #<probe_diameter> = #5410
+  (debug, Probe Diameter: #5410)
 
   (Probe Radius)
   #<probe_radius> = [#<probe_diameter> / 2]
@@ -43,61 +44,54 @@ o<probe_y_minus> sub
   (Probe Centerline Offset)
   #<probe_center_offset> = [#<probe_radius> - #<setting_calibration_offset>]
 
-  (Current Y Position including offsets in current program units)
-  #<y> = #5421
+  (Current X Position including offsets in current program units)
+  #<x> = #5420
+  (debug, Initial xpos: #5420)
+  (debug, Initial xpos: #<_x>)
 
-  (Initiate Fast Y- Probe)
+  (Initiate Fast X+ Probe)
   G91
   F[#<setting_probe_fast_fr>]
-
-  G1 Y[#<input_max_xy_distance>]
-  G1 Z-[#<input_max_z_distance>]
-
-  G38.2 Y-[#<input_max_xy_distance>]
-  #<y_minus_probed> = #5062
+  G38.2 X[#<input_max_xy_distance>]
+  #<x_plus_probed> = #5061
 
   (Probe Error check, #5070 will be 0 if failed)
   o<120> if [#5070 EQ 0]
     (back to start point and feed)
     G90
-    G0 Y#<y>
+    G0 X#<x>
     F[#<setting_probe_fast_fr>]
     (return from sub)
-    o<probe_y_minus> return
+    o<probe_x_plus_wco> return
   o<120> endif
 
   (Move to setting_latch_distance distance for slow probe)
   G90
-  G0 Y[#<y_minus_probed> + #<setting_latch_distance>]
+  G0 X[#<x_plus_probed> - #<setting_latch_distance>]
 
 
-  (Initiate Slow Y- Probe)
+  (Subsequent Slow X+ Probe)
   G91
   F[#<setting_probe_slow_fr>]
-  G38.2 Y-[#<setting_latch_distance> * 2]
-  #<y_minus_probed> = #5062
-  (debug, Probed Pos: #5062 , Y Pos: #<_y>)
+  G38.2 X[#<setting_latch_distance> * 2]
+  #<x_plus_probed> = #5061
+  (debug, Probed Pos: #5061 , X Pos: #<_x>)
   G90
-  G0 Y[#<y_minus_probed> + #<input_max_xy_distance>]
+  G0 X[#<x_plus_probed> - #<input_max_xy_distance>]
 
-  G91
-  G0 Z[#<input_max_z_distance>]
 
-  #<y_minus_zero_edge> = [#<y_minus_probed> - #<probe_center_offset>]
-
-  G90
-  G0 Y[#<y_minus_zero_edge>]
+  #<x_plus_zero_edge> = [#<x_plus_probed> + #<probe_center_offset>]
 
   (Output to probewizardwidget")
-  (DEBUG, EVAL[vcp.getWidget{"probewizardwidget"}.displayYMinus{#<y_minus_probed>}])
+  (DEBUG, EVAL[vcp.getWidget{"probewizardwidget"}.displayXPlus{#<x_plus_probed>}])
 
   (probe mode rule for WCO or probe position measuring only)
   o<140> if [#<setting_probe_mode> EQ 0]
     (Record X Zero in selected WCO)
-    G10 L2 P#5220 Y[#<y_minus_zero_edge> + #<workspace_y>]
-    o<probe_y_minus> return
+    G10 L2 P#5220 X[#<x_plus_zero_edge> + #<workspace_x>]
+    o<probe_x_plus_wco> return
   o<140> endif
-  
-o<probe_y_minus> endsub
+
+o<probe_x_plus_wco> endsub
 
 M2 (end program)
