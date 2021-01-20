@@ -50,8 +50,8 @@ o<probe_x_plus_wco> sub
   G91
   F[#<setting_probe_fast_fr>]
 
-  G1 X-[#<input_max_xy_distance>]
-  G1 Z-[#<input_max_z_distance>]
+  G38.3 X-[#<input_max_xy_distance>]
+  G38.3 Z-[#<input_max_z_distance>]
 
   G38.2 X[#<input_max_xy_distance>]
   #<x_plus_probed> = #5061

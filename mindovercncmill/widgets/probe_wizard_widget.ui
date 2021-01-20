@@ -224,7 +224,7 @@ and plug the cable</string>
           </size>
          </property>
          <property name="filename" stdset="0">
-          <string>probe_y_minus.ngc</string>
+          <string>probe_y_minus_wco.ngc</string>
          </property>
          <attribute name="buttonGroup">
           <string notr="true">probeButtonGroup</string>
