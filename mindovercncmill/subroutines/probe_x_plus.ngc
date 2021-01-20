@@ -66,9 +66,6 @@ o<probe_x_plus> sub
 
   #<x_plus_zero_edge> = [#<x_plus_probed> + #<probe_center_offset>]
 
-  (Output to probewizardwidget")
-  (DEBUG, EVAL[vcp.getWidget{"probewizardwidget"}.displayXPlus{#<x_plus_zero_edge>}])
-
 o<probe_x_plus> endsub [#<x_plus_zero_edge>]
 
 M2 (end program)

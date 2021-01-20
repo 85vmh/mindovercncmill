@@ -55,20 +55,15 @@ o<probe_y_minus> sub
   G90
   G0 Y[#<y_minus_probed> + #<setting_latch_distance>]
 
-
   (Initiate Slow Y- Probe)
   G91
   F[#<setting_probe_slow_fr>]
   G38.2 Y-[#<setting_latch_distance> * 2]
   #<y_minus_probed> = #5062
-  (debug, Probed Pos: #5062 , Y Pos: #<_y>)
   G90
   G0 Y[#<y_minus_probed> + #<input_step_off_width>]
 
   #<y_minus_zero_edge> = [#<y_minus_probed> - #<probe_center_offset>]
-
-  (Output to probewizardwidget")
-  (DEBUG, EVAL[vcp.getWidget{"probewizardwidget"}.displayYMinus{#<y_minus_zero_edge>}])
   
 o<probe_y_minus> endsub [#<y_minus_zero_edge>]
 

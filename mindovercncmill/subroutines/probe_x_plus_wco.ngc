@@ -53,6 +53,9 @@ o<probe_x_plus_wco> sub
   G90
   G0 X[#<x_plus_zero_edge>]
 
+  (Output to probewizardwidget")
+  (DEBUG, EVAL[vcp.getWidget{"probewizardwidget"}.displayXPlus{#<x_plus_zero_edge>}])
+
   (probe mode rule for WCO or probe position measuring only)
   o<140> if [#<setting_probe_mode> EQ 0]
     (Record X Zero in selected WCO)
