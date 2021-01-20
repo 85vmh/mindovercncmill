@@ -223,9 +223,10 @@ class MyMainWindow(VCPMainWindow):
     def onProbePlugged(self, plugged):
         self.spindlewidget.set_probe_plugged(plugged)
         self.probewizardwidget.set_probe_plugged(plugged)
-        if plugged:
-            if not self.btnProbing.isChecked():
-                self.btnProbing.click()
+        if not plugged:
+            pass
+            # if not self.btnProbing.isChecked():
+            #     self.btnProbing.click()
         else:
             if self.btnProbing.isChecked():
                 self.btnProbing.click()
