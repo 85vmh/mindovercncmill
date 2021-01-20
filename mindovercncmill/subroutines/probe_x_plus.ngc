@@ -18,6 +18,7 @@ o<probe_x_plus> sub
   #<setting_calibration_offset> = #4   (=0)
 
   #<input_max_xy_distance> = #5      (=0.5000)
+  #<input_step_off_width> = #6 
 
   (Cancel G92 offsets)
   G92.1
@@ -61,7 +62,7 @@ o<probe_x_plus> sub
   #<x_plus_probed> = #5061
   (debug, Probed Pos: #5061 , X Pos: #<_x>)
   G90
-  G0 X[#<x_plus_probed> - #<input_max_xy_distance>]
+  G0 X[#<x_plus_probed> - #<input_step_off_width>]
 
   #<x_plus_zero_edge> = [#<x_plus_probed> + #<probe_center_offset>]
 

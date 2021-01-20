@@ -48,7 +48,7 @@ o<probe_back_left_corner> sub
   G38.3 Z-[#<input_max_z_distance>]
 
   (Call sub "probe_x_plus" to Probe x+ side of Workpiece)
-  o<probe_x_plus> call [#2] [#3] [#4] [#6] [#8]
+  o<probe_x_plus> call [#2] [#3] [#4] [#6] [#8] [#9]
 
   #<x_plus_zero_edge> = #<_value>
 
@@ -65,14 +65,14 @@ o<probe_back_left_corner> sub
 
   (Probe Y Positioning Move, Traverse Workpiece at Z Clearance plane)
   F[#<setting_probe_fast_fr>]
-  G38.3 X[#<input_step_off_width>] Y[#<input_step_off_width>]
+  G38.3 X[#<input_step_off_width> + #<input_edge_width>] Y[#<input_step_off_width> + #<input_edge_width>]
 
   (Move to Probing Depth)
   F[#<setting_probe_fast_fr>]
   G38.3 Z-[#<input_max_z_distance>]
 
   (Call sub "probe_y_minus" to Probe y- side of Workpiece)
-  o<probe_y_minus> call [#2] [#3] [#4] [#6] [#8]
+  o<probe_y_minus> call [#2] [#3] [#4] [#6] [#8] [#9]
 
   #<y_minus_zero_edge> = #<_value>
 
