@@ -23,7 +23,7 @@ G0 Z [#<_hal[mindovercnc.tool-probe.retract-distance]>]
 G91
 F [#<_hal[mindovercnc.tool-probe.slow-probe-rate]>]
 (Probe down max 2x retract-distance)
-G38.2 Z [#<_hal[mindovercnc.tool-probe.retract-distance]> * 2] 
+G38.2 Z -[#<_hal[mindovercnc.tool-probe.retract-distance]> * 2] 
 
 G90
 (Raise the Z up)
