@@ -66,8 +66,10 @@ o<probe_front_left_corner> sub
   #<probe_radius> = [#<probe_diameter> / 2]
 
   (Probe Y Positioning Move, Traverse Workpiece at Z Clearance plane)
+  #<travel_distance> = #<input_step_off_width> + #<input_edge_width>
+
   F[#<setting_probe_fast_fr>]
-  G38.3 X[#<input_step_off_width> + #<input_edge_width> + #<probe_radius>] Y-[#<input_step_off_width> + #<input_edge_width>]
+  G38.3 X[#<travel_distance> + #<probe_radius>] Y-[#<travel_distance>]
 
   (Move to Probing Depth)
   F[#<setting_probe_fast_fr>]

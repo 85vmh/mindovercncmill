@@ -249,6 +249,9 @@ and plug the cable</string>
            <height>75</height>
           </size>
          </property>
+         <property name="filename" stdset="0">
+          <string>probe_back_right_corner.ngc</string>
+         </property>
          <attribute name="buttonGroup">
           <string notr="true">probeButtonGroup</string>
          </attribute>
@@ -317,6 +320,9 @@ and plug the cable</string>
            <width>75</width>
            <height>75</height>
           </size>
+         </property>
+         <property name="filename" stdset="0">
+          <string>probe_front_right_corner.ngc</string>
          </property>
          <attribute name="buttonGroup">
           <string notr="true">probeButtonGroup</string>
