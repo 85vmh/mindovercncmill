@@ -408,6 +408,9 @@ and plug the cable</string>
            <height>75</height>
           </size>
          </property>
+         <property name="filename" stdset="0">
+          <string>probe_back_left_inside_corner.ngc</string>
+         </property>
         </widget>
        </item>
        <item row="1" column="0">
@@ -468,6 +471,9 @@ and plug the cable</string>
            <height>75</height>
           </size>
          </property>
+         <property name="filename" stdset="0">
+          <string>probe_back_right_inside_corner.ngc</string>
+         </property>
         </widget>
        </item>
        <item row="2" column="0">
@@ -481,6 +487,9 @@ and plug the cable</string>
            <width>75</width>
            <height>75</height>
           </size>
+         </property>
+         <property name="filename" stdset="0">
+          <string>probe_front_left_inside_corner.ngc</string>
          </property>
         </widget>
        </item>
@@ -524,6 +533,9 @@ and plug the cable</string>
            <width>75</width>
            <height>75</height>
           </size>
+         </property>
+         <property name="filename" stdset="0">
+          <string>probe_front_right_inside_corner.ngc</string>
          </property>
         </widget>
        </item>
