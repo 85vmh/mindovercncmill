@@ -30,7 +30,7 @@ o<probe_x_minus> sub
   #<probe_radius> = [#<probe_diameter> / 2]
 
   (Probe Centerline Offset)
-  #<probe_center_offset> = [#<probe_radius> - #<calibration_offset>]
+  #<probe_center_offset> = [#<probe_radius> - #<setting_calibration_offset>]
 
   (Current X Position including offsets in current program units)
   #<x> = #5420

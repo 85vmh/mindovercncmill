@@ -57,7 +57,7 @@ o<probe_y_plus> sub
 
   (Initiate Slow Y+ Probe)
   G91
-  F[#<probe_slow_fr>]
+  F[#<setting_probe_slow_fr>]
   G38.2 Y[#<setting_latch_distance> * 2]
   #<y_plus_probed> = #5062
   G90
