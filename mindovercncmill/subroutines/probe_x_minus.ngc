@@ -2,12 +2,12 @@
 (version: 0.1)
 (date: 20/01/2021)
 
-(Probe X Plus direction and return the value)
-(Start probe position to the left side edge of stock)
+(Probe X Minus direction and return the value)
+(Start probe position to the right side edge of stock)
 (inside the max xy distance with the probe tip below the stock top edge)
 (ensure all settings have been set properly according to help diagrams)
 
-o<probe_x_plus> sub
+o<probe_x_minus> sub
 
   (uses NGCGUI style arg spec)
   (number after "=" in comment is default value)
@@ -30,16 +30,16 @@ o<probe_x_plus> sub
   #<probe_radius> = [#<probe_diameter> / 2]
 
   (Probe Centerline Offset)
-  #<probe_center_offset> = [#<probe_radius> - #<setting_calibration_offset>]
+  #<probe_center_offset> = [#<probe_radius> - #<calibration_offset>]
 
   (Current X Position including offsets in current program units)
   #<x> = #5420
 
-  (Initiate Fast X+ Probe)
+  (Initiate Fast X- Probe)
   G91
   F[#<setting_probe_fast_fr>]
-  G38.2 X[#<input_max_xy_distance>]
-  #<x_plus_probed> = #5061
+  G38.2 X-[#<input_max_xy_distance>]
+  #<x_minus_probed> = #5061
 
   (Probe Error check, #5070 will be 0 if failed)
   o<120> if [#5070 EQ 0]
@@ -48,24 +48,24 @@ o<probe_x_plus> sub
     G0 X#<x>
     F[#<setting_probe_fast_fr>]
     (return from sub)
-    o<probe_x_plus> return
+    o<probe_x_minus> return
   o<120> endif
 
   (Move to setting_latch_distance distance for slow probe)
   G90
-  G0 X[#<x_plus_probed> - #<setting_latch_distance>]
+  G0 X[#<x_minus_probed> + #<setting_latch_distance>]
 
-  (Initiate Slow X+ Probe)
+  (Initiate Slow X- Probe)
   G91
   F[#<setting_probe_slow_fr>]
-  G38.2 X[#<setting_latch_distance> * 2]
-  #<x_plus_probed> = #5061
+  G38.2 X-[#<setting_latch_distance> * 2]
+  #<x_minus_probed> = #5061
 
   G90
-  G0 X[#<x_plus_probed> - #<input_step_off_width>]
+  G0 X[#<x_minus_probed> + #<input_step_off_width>]
 
-  #<x_plus_zero_edge> = [#<x_plus_probed> + #<probe_center_offset>]
+  #<x_minus_zero_edge> = [#<x_minus_probed> - #<probe_center_offset>]
 
-o<probe_x_plus> endsub [#<x_plus_zero_edge>]
+o<probe_x_minus> endsub [#<x_minus_zero_edge>]
 
 M2 (end program)

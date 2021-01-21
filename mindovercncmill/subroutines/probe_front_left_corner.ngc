@@ -2,12 +2,12 @@
 (version: 0.1)
 (date: 20/01/2021)
 
-(Probe back left corner for x,y 0,0 position)
-(Start probe position is over back left corner of stock)
+(Probe front left corner for x,y 0,0 position)
+(Start probe position is over front left corner of stock)
 (inside the step off width square and within max z distance)
 (ensure all settings have been set properly according to help diagrams)
 
-o<probe_back_left_corner> sub
+o<probe_front_left_corner> sub
 
   (uses NGCGUI style arg spec)
   (number after "=" in comment is default value)
@@ -32,13 +32,13 @@ o<probe_back_left_corner> sub
   (Probe Tool Safety Check)
   o<110> if [#5400 NE #<setting_probe_tool_number>]
   (ERROR, Probe tool in the spindle, aborting)
-   o<probe_back_left_corner> return
+   o<probe_front_left_corner> return
   o<110> endif
 
   (Probe X Positioning Move, Step Off Width)
   G91
   F[#<setting_probe_fast_fr>]
-  G38.3 X-[#<input_step_off_width>] Y-[#<input_edge_width>]
+  G38.3 X-[#<input_step_off_width>] Y+[#<input_edge_width>]
 
   (Move to Probing Depth)
   F[#<setting_probe_fast_fr>]
@@ -52,7 +52,7 @@ o<probe_back_left_corner> sub
   (value returned safety check, aborts if no value returned)
   o<120> if [#<setting_probe_mode> EQ 1 AND #<_value_returned> NE 1]
     (MSG, Missing X Sub returned edge parameter, aborting)
-    o<probe_back_left_corner> return
+    o<probe_front_left_corner> return
   o<120> endif
 
   G91
@@ -67,21 +67,21 @@ o<probe_back_left_corner> sub
 
   (Probe Y Positioning Move, Traverse Workpiece at Z Clearance plane)
   F[#<setting_probe_fast_fr>]
-  G38.3 X[#<input_step_off_width> + #<input_edge_width> + #<probe_radius>] Y[#<input_step_off_width> + #<input_edge_width>]
+  G38.3 X[#<input_step_off_width> + #<input_edge_width> + #<probe_radius>] Y-[#<input_step_off_width> + #<input_edge_width>]
 
   (Move to Probing Depth)
   F[#<setting_probe_fast_fr>]
   G38.3 Z-[#<input_max_z_distance>]
 
-  (Call sub "probe_y_minus" to Probe y- side of Workpiece)
-  o<probe_y_minus> call [#2] [#3] [#4] [#6] [#8] [#9]
+  (Call sub "probe_y_plus" to Probe y+ side of Workpiece)
+  o<probe_y_plus> call [#2] [#3] [#4] [#6] [#8] [#9]
 
-  #<y_minus_zero_edge> = #<_value>
+  #<y_plus_zero_edge> = #<_value>
 
   (value returned safety check, aborts if no value returned)
   o<130> if [#<setting_probe_mode> EQ 1 AND #<_value_returned> NE 1]
     (MSG, Missing Y Sub returned edge parameter, aborting)
-    o<probe_back_left_corner> return
+    o<probe_front_left_corner> return
   o<130> endif
 
   (Probe Completion Move to Z Clearance Plane, and XY Zero)
@@ -89,20 +89,20 @@ o<probe_back_left_corner> sub
   G0 Z[#<input_max_z_distance>]
   
   G90
-  G0 X[#<x_plus_zero_edge>] Y[#<y_minus_zero_edge>]
+  G0 X[#<x_plus_zero_edge>] Y[#<y_plus_zero_edge>]
 
   (Output to probewizardwidget")
-  (DEBUG, EVAL[vcp.getWidget{"probewizardwidget"}.displayYMinus{#<y_minus_zero_edge>}])
+  (DEBUG, EVAL[vcp.getWidget{"probewizardwidget"}.displayYPlus{#<y_plus_zero_edge>}])
   (DEBUG, EVAL[vcp.getWidget{"probewizardwidget"}.displayXPlus{#<x_plus_zero_edge>}])
 
   (probe mode rules for WCO or probe position measuring only)
   o<140> if [#<setting_probe_mode> EQ 0]
     (Record Zero in selected axes and WCO)
     G10 L2 P#5220 X[#<x_plus_zero_edge> + #<workspace_x>]
-    G10 L2 P#5220 Y[#<y_minus_zero_edge> + #<workspace_y>]
-    o<probe_back_left_corner> return
+    G10 L2 P#5220 Y[#<y_plus_zero_edge> + #<workspace_y>]
+    obe_front_left_corner> return
   o<140> endif
 
-o<probe_back_left_corner> endsub
+o<probe_front_left_corner> endsub
 
 M2 (end program)

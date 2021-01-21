@@ -267,7 +267,7 @@ and plug the cable</string>
           </size>
          </property>
          <property name="filename" stdset="0">
-          <string>probe_x_write_values.ngc</string>
+          <string>probe_front_left_corner.ngc</string>
          </property>
          <attribute name="buttonGroup">
           <string notr="true">probeButtonGroup</string>
@@ -291,6 +291,9 @@ and plug the cable</string>
            <width>75</width>
            <height>75</height>
           </size>
+         </property>
+         <property name="filename" stdset="0">
+          <string>probe_y_plus_wco.ngc</string>
          </property>
          <attribute name="buttonGroup">
           <string notr="true">probeButtonGroup</string>
@@ -337,6 +340,9 @@ and plug the cable</string>
            <width>75</width>
            <height>75</height>
           </size>
+         </property>
+         <property name="filename" stdset="0">
+          <string>probe_x_minus_wco.ngc</string>
          </property>
          <attribute name="buttonGroup">
           <string notr="true">probeButtonGroup</string>
@@ -410,6 +416,9 @@ and plug the cable</string>
            <height>75</height>
           </size>
          </property>
+         <property name="filename" stdset="0">
+          <string>probe_x_minus_wco.ngc</string>
+         </property>
         </widget>
        </item>
        <item row="0" column="1">
@@ -429,6 +438,9 @@ and plug the cable</string>
            <width>75</width>
            <height>75</height>
           </size>
+         </property>
+         <property name="filename" stdset="0">
+          <string>probe_y_plus_wco.ngc</string>
          </property>
         </widget>
        </item>
@@ -484,6 +496,9 @@ and plug the cable</string>
            <height>75</height>
           </size>
          </property>
+         <property name="filename" stdset="0">
+          <string>probe_y_minus_wco.ngc</string>
+         </property>
         </widget>
        </item>
        <item row="2" column="2">
@@ -523,6 +538,9 @@ and plug the cable</string>
            <width>75</width>
            <height>75</height>
           </size>
+         </property>
+         <property name="filename" stdset="0">
+          <string>probe_x_plus_wco.ngc</string>
          </property>
         </widget>
        </item>

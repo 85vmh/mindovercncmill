@@ -2,12 +2,12 @@
 (version: 0.1)
 (date: 20/01/2021)
 
-(Probe X Plus direction and return the value)
-(Start probe position to the left side edge of stock)
+(Probe Y plus direction to locate edge, end at clearance distance)
+(Start probe position to the front side edge of stock)
 (inside the max xy distance with the probe tip below the stock top edge)
 (ensure all settings have been set properly according to help diagrams)
 
-o<probe_x_plus> sub
+o<probe_y_plus> sub
 
   (uses NGCGUI style arg spec)
   (number after "=" in comment is default value)
@@ -32,40 +32,39 @@ o<probe_x_plus> sub
   (Probe Centerline Offset)
   #<probe_center_offset> = [#<probe_radius> - #<setting_calibration_offset>]
 
-  (Current X Position including offsets in current program units)
-  #<x> = #5420
+  (Current Y Position including offsets in current program units)
+  #<y> = #5421
 
-  (Initiate Fast X+ Probe)
+  (Initiate Fast y+ Probe)
   G91
   F[#<setting_probe_fast_fr>]
-  G38.2 X[#<input_max_xy_distance>]
-  #<x_plus_probed> = #5061
+  G38.2 Y[#<input_max_xy_distance>]
+  #<y_plus_probed> = #5062
 
   (Probe Error check, #5070 will be 0 if failed)
   o<120> if [#5070 EQ 0]
     (back to start point and feed)
     G90
-    G0 X#<x>
+    G0 Y#<y>
     F[#<setting_probe_fast_fr>]
     (return from sub)
-    o<probe_x_plus> return
+    o<probe_y_plus> return
   o<120> endif
 
   (Move to setting_latch_distance distance for slow probe)
   G90
-  G0 X[#<x_plus_probed> - #<setting_latch_distance>]
+  G0 Y[#<y_plus_probed> - #<setting_latch_distance>]
 
-  (Initiate Slow X+ Probe)
+  (Initiate Slow Y+ Probe)
   G91
-  F[#<setting_probe_slow_fr>]
-  G38.2 X[#<setting_latch_distance> * 2]
-  #<x_plus_probed> = #5061
-
+  F[#<probe_slow_fr>]
+  G38.2 Y[#<setting_latch_distance> * 2]
+  #<y_plus_probed> = #5062
   G90
-  G0 X[#<x_plus_probed> - #<input_step_off_width>]
+  G0 Y[#<y_plus_probed> - #<input_step_off_width>]
 
-  #<x_plus_zero_edge> = [#<x_plus_probed> + #<probe_center_offset>]
+  #<y_plus_zero_edge> = [#<y_plus_probed>  + #<probe_center_offset>]
 
-o<probe_x_plus> endsub [#<x_plus_zero_edge>]
+o<probe_y_plus> endsub [#<y_plus_zero_edge>]
 
 M2 (end program)

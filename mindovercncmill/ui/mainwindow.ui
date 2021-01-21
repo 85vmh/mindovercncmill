@@ -128,7 +128,7 @@
 }</string>
                </property>
                <property name="currentIndex">
-                <number>2</number>
+                <number>0</number>
                </property>
                <property name="rules" stdset="0">
                 <string>[]</string>
