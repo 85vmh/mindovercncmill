@@ -30,10 +30,13 @@ o<probe_back_left_inside_corner> sub
   #<workspace_y> = #[5202 + [20 * #5220]]
 
   (Probe Tool Safety Check)
-  o<110> if [#5400 NE #<probe_tool_number>]
+  o<110> if [#5400 NE #<setting_probe_tool_number>]
   (ERROR, Probe tool in the spindle, aborting)
    o<probe_back_left_inside_corner> return
   o<110> endif
+
+  #<x_start> = #<_x>
+  #<y_start> = #<_y>
 
   (Probe X Positioning Move, Step Off Width)
   G91
@@ -54,6 +57,11 @@ o<probe_back_left_inside_corner> sub
     (MSG, Missing X Sub returned edge parameter, aborting)
     o<probe_back_left_inside_corner> return
   o<120> endif
+
+  (move to the y probing point)
+  G90
+  F[#<setting_probe_fast_fr>]
+  G38.3 X[#<x_start> + #<input_step_off_width>] Y-[#<y_start> + #<input_edge_width>]
 
   (Call sub "probe_y_plus" to Probe y+ side of Workpiece)
   o<probe_y_plus> call [#2] [#3] [#4] [#6] [#8] [#9]

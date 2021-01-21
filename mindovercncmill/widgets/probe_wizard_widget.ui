@@ -411,6 +411,9 @@ and plug the cable</string>
          <property name="filename" stdset="0">
           <string>probe_back_left_inside_corner.ngc</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
         </widget>
        </item>
        <item row="1" column="0">
@@ -428,6 +431,9 @@ and plug the cable</string>
          <property name="filename" stdset="0">
           <string>probe_x_minus_wco.ngc</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
         </widget>
        </item>
        <item row="0" column="1">
@@ -451,6 +457,9 @@ and plug the cable</string>
          <property name="filename" stdset="0">
           <string>probe_y_plus_wco.ngc</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
         </widget>
        </item>
        <item row="0" column="2">
@@ -474,6 +483,9 @@ and plug the cable</string>
          <property name="filename" stdset="0">
           <string>probe_back_right_inside_corner.ngc</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
         </widget>
        </item>
        <item row="2" column="0">
@@ -491,6 +503,9 @@ and plug the cable</string>
          <property name="filename" stdset="0">
           <string>probe_front_left_inside_corner.ngc</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
         </widget>
        </item>
        <item row="2" column="1">
@@ -514,6 +529,9 @@ and plug the cable</string>
          <property name="filename" stdset="0">
           <string>probe_y_minus_wco.ngc</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
         </widget>
        </item>
        <item row="2" column="2">
@@ -537,6 +555,9 @@ and plug the cable</string>
          <property name="filename" stdset="0">
           <string>probe_front_right_inside_corner.ngc</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
         </widget>
        </item>
        <item row="1" column="2">
@@ -560,6 +581,9 @@ and plug the cable</string>
          <property name="filename" stdset="0">
           <string>probe_x_plus_wco.ngc</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">probeButtonGroup</string>
+         </attribute>
         </widget>
        </item>
       </layout>
