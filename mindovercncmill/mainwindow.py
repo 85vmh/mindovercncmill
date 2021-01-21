@@ -10,6 +10,7 @@ from qtpyvcp.plugins import getPlugin
 from qtpyvcp.utilities import logger
 from qtpyvcp.widgets.form_widgets.main_window import VCPMainWindow
 from qtpyvcp.actions.machine_actions import issue_mdi
+from qtpyvcp import SETTINGS
 
 LOG = logger.getLogger('qtpyvcp.' + __name__)
 
@@ -29,6 +30,20 @@ class MainButtonsPage(IntEnum):
     START_PROGRAM = 2
     PROGRAM_RUNNING = 3
 
+
+class MindOverCncHalPins:
+    def __init__(self):
+        pass
+
+    MEASURE_TOOL = 'tool-probe.measure-tool'
+    TOOL_PROBE_X = 'tool-probe.x-coordinate'
+    TOOL_PROBE_Y = 'tool-probe.y-coordinate'
+    TOOL_PROBE_Z = 'tool-probe.z-coordinate'
+    MAX_Z_TRAVEL = 'tool-probe.max-z-travel'
+    SPINDLE_NOSE_HEIGHT = 'tool-probe.from-spindle-nose'
+    FAST_PROBE_RATE = 'tool-probe.fast-probe-rate'
+    RETRACT_DISTANCE = 'tool-probe.retract-distance'
+    SLOW_PROBE_RATE = 'tool-probe.slow-probe-rate'
 
 class MyMainWindow(VCPMainWindow):
     """Main window class for the VCP."""
@@ -56,6 +71,7 @@ class MyMainWindow(VCPMainWindow):
         self.probewizardwidget.probingFinished.connect(self.handleProbingFinished)
         self.spindlewidget.measureTool.connect(self.toggleMeasureFlag)
         self.notificationswidget.notificationsCleared.connect(self.hideNotifications)
+        self.btnToolTouchOff.clicked.connect(self.toolTouchOff)
 
         self.STATUS = getPlugin('status')
         self.STATUS.gcodes.notify(self.setActiveCodesButtonText)
@@ -67,11 +83,15 @@ class MyMainWindow(VCPMainWindow):
         self.setMainButtonsState()
 
         self.comp = hal.component('mindovercnc')
-        self.comp.addPin('measure_tool', 'bit', 'in')
-        self.comp.addPin("search_vel", 'float', 'out')
-        self.comp.addPin("probe_vel", 'float', 'out')
-        self.comp.addPin("probeheight", 'float', 'out')
-        self.comp.addPin("blockheight", 'float', 'out')
+        self.comp.addPin(MindOverCncHalPins.MEASURE_TOOL, 'bit', 'in')
+        self.comp.addPin(MindOverCncHalPins.TOOL_PROBE_X, 'float', 'out')
+        self.comp.addPin(MindOverCncHalPins.TOOL_PROBE_Y, 'float', 'out')
+        self.comp.addPin(MindOverCncHalPins.TOOL_PROBE_Z, 'float', 'out')
+        self.comp.addPin(MindOverCncHalPins.MAX_Z_TRAVEL, 'float', 'out')
+        self.comp.addPin(MindOverCncHalPins.SPINDLE_NOSE_HEIGHT, 'float', 'out')
+        self.comp.addPin(MindOverCncHalPins.FAST_PROBE_RATE, 'float', 'out')
+        self.comp.addPin(MindOverCncHalPins.RETRACT_DISTANCE, 'float', 'out')
+        self.comp.addPin(MindOverCncHalPins.SLOW_PROBE_RATE, 'float', 'out')
 
         self.comp.addPin('probe-plugged', 'bit', 'in')
         self.comp.addPin('probe-tripped', 'bit', 'in')
@@ -79,13 +99,21 @@ class MyMainWindow(VCPMainWindow):
         self.comp.addListener('probe-tripped', self.onProbeTripped)
         self.comp.ready()
 
-        self.comp.getPin('probeheight').value = -290.373
-        self.comp.getPin('blockheight').value = -208.065
-        self.comp.getPin('search_vel').value = 200.0
-        self.comp.getPin('probe_vel').value = 20.0
+        self.updateHalPinsWithCurrentSettings()
 
     def toggleMeasureFlag(self, value):
-        self.comp.getPin('measure_tool').value = value
+        self.comp.getPin(MindOverCncHalPins.MEASURE_TOOL).value = value
+        self.updateHalPinsWithCurrentSettings()
+
+    def updateHalPinsWithCurrentSettings(self):
+        self.comp.getPin(MindOverCncHalPins.TOOL_PROBE_X).value = SETTINGS.get("tool-setter-probe.x-coordinate").getValue()
+        self.comp.getPin(MindOverCncHalPins.TOOL_PROBE_Y).value = SETTINGS.get("tool-setter-probe.y-coordinate").getValue()
+        self.comp.getPin(MindOverCncHalPins.TOOL_PROBE_Z).value = SETTINGS.get("tool-setter-probe.z-coordinate").getValue()
+        self.comp.getPin(MindOverCncHalPins.MAX_Z_TRAVEL).value = SETTINGS.get("tool-setter-probe.z-max-travel").getValue()
+        self.comp.getPin(MindOverCncHalPins.SPINDLE_NOSE_HEIGHT).value = SETTINGS.get("tool-setter-probe.spindle-nose-height").getValue()
+        self.comp.getPin(MindOverCncHalPins.FAST_PROBE_RATE).value = SETTINGS.get("tool-setter-probe.fast-probe-fr").getValue()
+        self.comp.getPin(MindOverCncHalPins.RETRACT_DISTANCE).value = SETTINGS.get("tool-setter-probe.retract-distance").getValue()
+        self.comp.getPin(MindOverCncHalPins.SLOW_PROBE_RATE).value = SETTINGS.get("tool-setter-probe.slow-probe-fr").getValue()
 
     def setActiveCodesButtonText(self):
         active_g_codes = self.STATUS.gcodes
@@ -234,3 +262,9 @@ class MyMainWindow(VCPMainWindow):
     def onProbeTripped(self, tripped):
         self.spindlewidget.set_probe_tripped(tripped)
         self.probewizardwidget.set_probe_tripped(tripped)
+
+    def toolTouchOff(self):
+        if self.btnTools.isChecked():
+            self.btnTools.click()
+        self.updateHalPinsWithCurrentSettings()
+        issue_mdi("o<tool_touch_off> call [{}]".format(0))

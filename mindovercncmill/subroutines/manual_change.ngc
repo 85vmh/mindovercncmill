@@ -31,29 +31,26 @@ G49
 ; using the code being remapped here means 'use builtin behaviour'
 M6
 
-O200 if [#<_hal[mindovercnc.measure_tool]> EQ 0]
+O200 if [#<_hal[mindovercnc.tool-probe.measure-tool]> EQ 0]
         ;(debug, Tool: #<tool> does not need measurement)
 O200    return [1] ; indicate no tool measurement 
 O200 endif
 
-G53 G0 X[#<_ini[TOOLSENSOR]X>] Y[#<_ini[TOOLSENSOR]Y>]
-G53 G0 Z[#<_ini[TOOLSENSOR]Z>]
+G53 G0 X[#<_hal[mindovercnc.tool-probe.x-coordinate]>] Y[#<_hal[mindovercnc.tool-probe.y-coordinate]>]
+G53 G0 Z[#<_hal[mindovercnc.tool-probe.z-coordinate]>]
 
-; O300 if [#<_hal[mindovercnc.search_vel]> LE 0]
-; O300 return [-1] ; indicate searchvel <= 0 
-; O300 endif
-
-; O400 if [#<_hal[mindovercnc.probe_vel]> LE 0]
-; O400 return [-2] ; indicate probevel <= 0 
-; O400 endif
-
-F #<_hal[mindovercnc.search_vel]>
+(Initiate Fast Z- Probe)
 G91
-G38.2 Z #<_ini[TOOLSENSOR]MAXPROBE>
-G0 Z0.26
-; This is commented out only for sim.
-F #<_hal[mindovercnc.probe_vel]>
-G38.2 Z-0.5
+F [#<_hal[mindovercnc.tool-probe.fast-probe-rate]>]
+G38.2 Z [#<_hal[mindovercnc.tool-probe.max-z-travel]>]
+(Retract before starting the slow probing)
+G0 Z [#<_hal[mindovercnc.tool-probe.retract-distance]>]
+
+(Initiate Slow Z- Probe)
+G91
+F #<_hal[mindovercnc.tool-probe.slow-probe-rate]>
+(Probe down max 2x retract-distance)
+G38.2 Z [#<_hal[mindovercnc.tool-probe.retract-distance]> * 2]
 
 O500 if [#5070 EQ 0]
 G90
@@ -61,21 +58,24 @@ O500 return [-3] ; indicate probe contact failure to epilog
 O500 endif
 
 G90
+(Raise the Z up and move to change position coordinates)
 G53 G0 Z[#<_ini[CHANGE_POSITION]Z>]
 G53 G0 X[#<_ini[CHANGE_POSITION]X>] Y[#<_ini[CHANGE_POSITION]Y>]
 
 #<touch_result> = #5063
-#<probeheight> = #<_hal[mindovercnc.probeheight]> 
-#<blockheight> = #<_hal[mindovercnc.blockheight]>
 
-(DEBUG, #<touch_result>  #<probeheight>  #<blockheight>)
 
-G10 L1 P#<tool> Z[#<touch_result> - #<_hal[mindovercnc.probeheight]> + #<_hal[mindovercnc.blockheight]>]
-;G10 L1 P#<tool> Z#<touch_result>
+#<spindle_nose> = #<_hal[mindovercnc.tool-probe.from-spindle-nose]>
+
+(define new tool length offset parameters)
+#<new_tool_length_offset> = [ABS[#<spindle_nose> + #<touch_result>]]
+
+(debug, Touch Result: #<touch_result>)
+(debug, Spindle Nose: #<spindle_nose>)
+(debug, Length Offset: #<new_tool_length_offset>)
+
+G10 L1 P#<tool> Z[#<new_tool_length_offset>]
 G43
-
-;G10 L1 P#<tool> Z#<touch_result>
-;G10 L2 P0 Z[#<workpieceheight> + #<probeheight> + #<touch_result>]
 
 ; signal success be returning a value > 0:
 o<manual_change> endsub [1]

@@ -1,0 +1,54 @@
+o<tool_touch_off> sub
+
+#<y_offset_amount> = #1    (adds an offset on the Y axis)
+
+G92.1 (Cancel G92 offsets)
+
+G49 (Cancel Tool Length Compensation)
+
+G90   (set absolute coordinates)
+G53 G0 Z[#<_ini[CHANGE_POSITION]Z>]
+
+G53 G0 X[#<_hal[mindovercnc.tool-probe.x-coordinate]>] Y[#<_hal[mindovercnc.tool-probe.y-coordinate]> + #<y_offset_amount>]
+G53 G0 Z[#<_hal[mindovercnc.tool-probe.z-coordinate]>]
+
+(Initiate Fast Z- Probe)
+G91
+F [#<_hal[mindovercnc.tool-probe.fast-probe-rate]>]
+G38.2 Z [#<_hal[mindovercnc.tool-probe.max-z-travel]>]
+(Retract before starting the slow probing)
+G0 Z [#<_hal[mindovercnc.tool-probe.retract-distance]>]
+
+(Initiate Slow Z- Probe)
+G91
+F [#<_hal[mindovercnc.tool-probe.slow-probe-rate]>]
+(Probe down max 2x retract-distance)
+G38.2 Z [#<_hal[mindovercnc.tool-probe.retract-distance]> * 2] 
+
+G90
+(Raise the Z up)
+G53 G0 Z[#<_ini[CHANGE_POSITION]Z>]
+
+o<130> if [#5070 EQ 1]    (verify probe event was succesful)
+  #<touch_result> = #5063    (save slow probe result to parameters)
+o<130> else
+  (MSG,Tool Length Offset Probe Failed)
+o<130> endif
+
+
+#<spindle_nose> = #<_hal[mindovercnc.tool-probe.from-spindle-nose]>
+
+(define new tool length offset parameters)
+#<new_tool_length_offset> = [ABS[#<spindle_nose> + #<touch_result>]]
+
+(debug, Touch Result: #<touch_result>)
+(debug, Spindle Nose: #<spindle_nose>)
+(debug, Length Offset: #<new_tool_length_offset>)
+
+(#5400 = tool number)
+G10 L1 P #5400 Z [#<new_tool_length_offset>]  
+G43   
+
+o<tool_touch_off> endsub
+
+M2 (end program)

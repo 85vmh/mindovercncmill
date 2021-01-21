@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="/">
+    <file>images/tool_sensor.png</file>
     <file>images/tool_loaded.png</file>
     <file>images/no_tool.png</file>
     <file>images/probe_loaded.png</file>
