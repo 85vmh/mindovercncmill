@@ -30,7 +30,7 @@ o<probe_front_right_corner> sub
   #<workspace_y> = #[5202 + [20 * #5220]]
 
   (Probe Tool Safety Check)
-  o<110> if [#5400 NE #<probe_tool_number>]
+  o<110> if [#5400 NE #<setting_probe_tool_number>]
   (ERROR, Probe tool in the spindle, aborting)
    o<probe_front_right_corner> return
   o<110> endif
@@ -38,7 +38,7 @@ o<probe_front_right_corner> sub
   (Probe X Positioning Move, Step Off Width)
   G91
   F[#<setting_probe_fast_fr>]
-  G38.3 X+[#<input_step_off_width>] Y+[#<input_edge_width>]
+  G38.3 X[#<input_step_off_width>] Y[#<input_edge_width>]
 
   (Move to Probing Depth)
   F[#<setting_probe_fast_fr>]
@@ -66,10 +66,10 @@ o<probe_front_right_corner> sub
   #<probe_radius> = [#<probe_diameter> / 2]
 
   (Probe Y Positioning Move, Traverse Workpiece at Z Clearance plane)
-  #<travel_distance> = #<input_step_off_width> + #<input_edge_width>
+  #<distance> = [#<input_step_off_width> + #<input_edge_width>]
 
   F[#<setting_probe_fast_fr>]
-  G38.3 X[#<travel_distance> + #<probe_radius>] Y-[#<travel_distance>]
+  G38.3 X-[#<distance> + #<probe_radius>] Y-[#<distance>]
 
   (Move to Probing Depth)
   F[#<setting_probe_fast_fr>]
