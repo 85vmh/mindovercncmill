@@ -102,7 +102,7 @@ o<probe_front_left_corner> sub
     (Record Zero in selected axes and WCO)
     G10 L2 P#5220 X[#<x_plus_zero_edge> + #<workspace_x>]
     G10 L2 P#5220 Y[#<y_plus_zero_edge> + #<workspace_y>]
-    obe_front_left_corner> return
+    o<probe_front_left_corner> return
   o<140> endif
 
 o<probe_front_left_corner> endsub
