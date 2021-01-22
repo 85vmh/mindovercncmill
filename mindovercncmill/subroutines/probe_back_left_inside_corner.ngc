@@ -35,9 +35,6 @@ o<probe_back_left_inside_corner> sub
    o<probe_back_left_inside_corner> return
   o<110> endif
 
-  #<x_start> = #<_x>
-  #<y_start> = #<_y>
-
   (Probe X Positioning Move, Step Off Width)
   G91
   F[#<setting_probe_fast_fr>]
@@ -59,9 +56,10 @@ o<probe_back_left_inside_corner> sub
   o<120> endif
 
   (move to the y probing point)
-  G90
+  G91
   F[#<setting_probe_fast_fr>]
-  G38.3 X[#<x_start> + #<input_step_off_width>] Y-[#<y_start> + #<input_edge_width>]
+  #<distance> = [#<input_edge_width> - #<input_step_off_width>]
+  G38.3 X[#<distance>] Y[#<distance>]
 
   (Call sub "probe_y_plus" to Probe y+ side of Workpiece)
   o<probe_y_plus> call [#2] [#3] [#4] [#6] [#8] [#9]
