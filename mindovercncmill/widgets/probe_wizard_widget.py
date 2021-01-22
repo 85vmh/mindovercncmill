@@ -110,15 +110,17 @@ class ProbeWizardWidget(QWidget):
         self._setting_args = [] * MAX_NUMBER_OF_PARAMS
         self._input_args = [] * MAX_NUMBER_OF_PARAMS
 
-        LOG.error('---------Select routine is: <{}>'.format(self._routineName))
+        LOG.debug('---------Select routine is: <{}>'.format(self._routineName))
         if self._routineName != "":
             self.stackedWidget.setCurrentIndex(WizardPage.ENTER_PARAMETERS)  # routineSelected, enter the parameters
             self.labelSelectedRoutine.setText(self._routineName)
 
             subfile = None
+            LOG.debug('---------routine folder is: {}'.format(SUBROUTINE_SEARCH_DIRS))
             for dir in SUBROUTINE_SEARCH_DIRS:
                 subfile = os.path.join(dir, self._routineName)
                 if os.path.isfile(subfile):
+                    LOG.debug('---------routine path is: {}'.format(subfile))
                     break
 
             if subfile is None:
@@ -127,6 +129,8 @@ class ProbeWizardWidget(QWidget):
 
             with open(subfile, 'r') as fh:
                 lines = fh.readlines()
+
+            LOG.debug('---------routine has {} lines'.format(len(lines)))
 
             # input_index = 0
             for line in lines:
@@ -138,11 +142,13 @@ class ProbeWizardWidget(QWidget):
                 # <input_param_name> = #1 (=0.125 comment)
 
                 setting_elements = PARSE_SETTING_ARGS.findall(line)
+                LOG.debug('---------routine has {} setting_elements'.format(len(setting_elements)))
                 if len(setting_elements) != 0:
                     # store them for later
                     self._setting_args.append(setting_elements[0])
 
                 input_elements = PARSE_INPUT_ARGS.findall(line)
+                LOG.debug('---------routine has {} input_elements'.format(len(input_elements)))
                 if len(input_elements) != 0:
                     param_name, param_number, default_val, comment = input_elements[0]
                     # store them for later
@@ -151,6 +157,8 @@ class ProbeWizardWidget(QWidget):
                 # finished adding all inputs
             self.verticalLayout.addStretch()
             # load detailed image of routine
+        else:
+            LOG.debug('---------routine name is empty')
 
     def changeRoutine(self):
         self.stackedWidget.setCurrentIndex(WizardPage.SELECT_PROBE_OPERATION)  # available routines page
@@ -308,7 +316,7 @@ class ProbeWizardWidget(QWidget):
         self.showProbingResults()
         self.z_minus_probed_position.setText(str(value))
 
-    def displayProbedDiameter(self, value):
+    def displayDiameter(self, value):
         self.showProbingResults()
         self.probed_diameter.setText(str(value))
 

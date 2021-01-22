@@ -24,7 +24,7 @@ vcp:
 data_plugins:
   status:
     kwargs:
-      cycle_time: 75
+      cycle_time: 15
   notifications:
     provider: qtpyvcp.plugins.notifications:Notifications
     kwargs:
@@ -146,6 +146,12 @@ settings:
     min_value: 0
     max_value: 1000
 
+  probewizard.input_diameter_hint:
+    description: Aproximate diameter
+    default_value: 0
+    persistent: true
+    min_value: 0
+    max_value: 1000
 
 
 
