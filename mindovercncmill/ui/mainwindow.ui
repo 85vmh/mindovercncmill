@@ -155,7 +155,7 @@
                   <enum>QFrame::Box</enum>
                  </property>
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>2</number>
                  </property>
                  <property name="rules" stdset="0">
                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;currentIndex&quot;, &quot;expression&quot;: &quot;0 if(ch[0] == 1) else (1 if(ch[0] == 3) else 2)&quot;, &quot;name&quot;: &quot;Selected Page&quot;}]</string>
@@ -3851,7 +3851,7 @@ border-radius: 4px;
                    <number>8</number>
                   </property>
                   <item>
-                   <widget class="VTKBackPlot" name="vtkbackplot"/>
+                   <widget class="GcodeBackplot" name="gcodebackplot"/>
                   </item>
                  </layout>
                 </widget>
@@ -9535,6 +9535,12 @@ All</string>
    <header>widgets.gm_codes_table</header>
   </customwidget>
   <customwidget>
+   <class>GcodeBackplot</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.display_widgets.gcode_backplot.gcode_backplot</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
    <class>SpindleWidget</class>
    <extends>QWidget</extends>
    <header>widgets.spindle_widget</header>
@@ -9544,11 +9550,6 @@ All</string>
    <extends>QFrame</extends>
    <header>qtpyvcp.widgets.input_widgets.gcode_editor</header>
    <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>VTKBackPlot</class>
-   <extends>QWidget</extends>
-   <header>qtpyvcp.widgets.display_widgets.vtk_backplot.vtk_backplot</header>
   </customwidget>
   <customwidget>
    <class>WcsOffsetsTable</class>
@@ -9784,150 +9785,6 @@ All</string>
    </hints>
   </connection>
   <connection>
-   <sender>iso_view_button</sender>
-   <signal>clicked()</signal>
-   <receiver>vtkbackplot</receiver>
-   <slot>setViewP()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>532</x>
-     <y>27</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>915</x>
-     <y>217</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>x_view_button</sender>
-   <signal>clicked()</signal>
-   <receiver>vtkbackplot</receiver>
-   <slot>setViewX()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>532</x>
-     <y>72</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>915</x>
-     <y>217</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>y_view_button</sender>
-   <signal>clicked()</signal>
-   <receiver>vtkbackplot</receiver>
-   <slot>setViewY()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>532</x>
-     <y>117</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>915</x>
-     <y>217</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>z_view_button</sender>
-   <signal>clicked()</signal>
-   <receiver>vtkbackplot</receiver>
-   <slot>setViewZ()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>532</x>
-     <y>162</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>915</x>
-     <y>217</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>zoom_in_button</sender>
-   <signal>clicked()</signal>
-   <receiver>vtkbackplot</receiver>
-   <slot>zoomIn()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>532</x>
-     <y>272</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>915</x>
-     <y>217</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>zoom_out_button</sender>
-   <signal>clicked()</signal>
-   <receiver>vtkbackplot</receiver>
-   <slot>zoomOut()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>532</x>
-     <y>317</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>915</x>
-     <y>217</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pan_button</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>vtkbackplot</receiver>
-   <slot>enable_panning(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>532</x>
-     <y>217</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>915</x>
-     <y>217</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>path_button</sender>
-   <signal>clicked()</signal>
-   <receiver>vtkbackplot</receiver>
-   <slot>setViewPath()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>532</x>
-     <y>367</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>915</x>
-     <y>217</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>clear_button</sender>
-   <signal>clicked()</signal>
-   <receiver>vtkbackplot</receiver>
-   <slot>clearLivePlot()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>532</x>
-     <y>412</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>915</x>
-     <y>217</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>tool_table_add_tool_button</sender>
    <signal>clicked()</signal>
    <receiver>toolTable</receiver>
@@ -10151,9 +10008,121 @@ All</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>iso_view_button</sender>
+   <signal>clicked()</signal>
+   <receiver>gcodebackplot</receiver>
+   <slot>setViewP()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>534</x>
+     <y>22</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>918</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>x_view_button</sender>
+   <signal>clicked()</signal>
+   <receiver>gcodebackplot</receiver>
+   <slot>setViewX()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>534</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>918</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>y_view_button</sender>
+   <signal>clicked()</signal>
+   <receiver>gcodebackplot</receiver>
+   <slot>setViewY()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>534</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>918</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>z_view_button</sender>
+   <signal>clicked()</signal>
+   <receiver>gcodebackplot</receiver>
+   <slot>setViewZ()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>534</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>918</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoom_in_button</sender>
+   <signal>clicked()</signal>
+   <receiver>gcodebackplot</receiver>
+   <slot>zoomIn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>534</x>
+     <y>272</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>918</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoom_out_button</sender>
+   <signal>clicked()</signal>
+   <receiver>gcodebackplot</receiver>
+   <slot>zoomOut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>534</x>
+     <y>317</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>918</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clear_button</sender>
+   <signal>clicked()</signal>
+   <receiver>gcodebackplot</receiver>
+   <slot>clearLivePlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>534</x>
+     <y>412</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>918</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="buttonGroupMdi"/>
   <buttongroup name="machineModeGroup"/>
+  <buttongroup name="buttonGroupMdi"/>
  </buttongroups>
 </ui>
