@@ -52,7 +52,7 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>6</number>
    </property>
    <widget class="QWidget" name="page_noToolLoaded">
     <widget class="QLabel" name="label">
@@ -1776,7 +1776,7 @@ and Measure</string>
 Spindle</string>
      </property>
      <property name="rules" stdset="0">
-      <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Visible&quot;, &quot;expression&quot;: &quot;ch[0] != 2&quot;, &quot;name&quot;: &quot;Visibility&quot;}]</string>
+      <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:interp_state&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Visible&quot;, &quot;expression&quot;: &quot;ch[0] == 1&quot;, &quot;name&quot;: &quot;Visibility&quot;}]</string>
      </property>
      <property name="actionName" stdset="0">
       <string>spindle.off</string>

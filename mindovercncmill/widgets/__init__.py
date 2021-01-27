@@ -59,3 +59,8 @@ from settings_label import SettingsLabel
 class SettingsLabelWidget_Plugin(_DesignerPlugin):
     def pluginClass(self):
         return SettingsLabel
+
+from blink_button import BlinkButton
+class BlinkButton_Plugin(_DesignerPlugin):
+    def pluginClass(self):
+        return BlinkButton

@@ -40,7 +40,7 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>3</number>
    </property>
    <widget class="QWidget" name="page_loadProbeTool">
     <widget class="QLabel" name="label">
@@ -945,7 +945,7 @@ and plug the cable</string>
 }</string>
       </property>
       <property name="text">
-       <string>Latch</string>
+       <string>Retract</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1017,7 +1017,7 @@ and plug the cable</string>
 }</string>
       </property>
       <property name="text">
-       <string>Latch Distance:</string>
+       <string>Retract Distance:</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3051,6 +3051,45 @@ color: white;
        <number>0</number>
       </property>
      </widget>
+    </widget>
+    <widget class="QPushButton" name="buttonChangeParams_2">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>570</y>
+       <width>336</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Finshed Probing</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonResetResults">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>325</y>
+       <width>221</width>
+       <height>46</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Reset All Results</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonNextAction">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>325</y>
+       <width>221</width>
+       <height>46</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Next Action</string>
+     </property>
     </widget>
    </widget>
   </widget>

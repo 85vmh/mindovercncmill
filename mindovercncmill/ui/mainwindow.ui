@@ -155,7 +155,7 @@
                   <enum>QFrame::Box</enum>
                  </property>
                  <property name="currentIndex">
-                  <number>2</number>
+                  <number>0</number>
                  </property>
                  <property name="rules" stdset="0">
                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;currentIndex&quot;, &quot;expression&quot;: &quot;0 if(ch[0] == 1) else (1 if(ch[0] == 3) else 2)&quot;, &quot;name&quot;: &quot;Selected Page&quot;}]</string>
@@ -8850,7 +8850,7 @@ WcsOffsetsTable {
                    <string>tool-setter-probe.x-coordinate</string>
                   </property>
                   <property name="textFormat" stdset="0">
-                   <string>{:3.0f}</string>
+                   <string>{:3.3f}</string>
                   </property>
                  </widget>
                  <widget class="QLabel" name="label_7">
@@ -8879,7 +8879,7 @@ WcsOffsetsTable {
                    <string>tool-setter-probe.y-coordinate</string>
                   </property>
                   <property name="textFormat" stdset="0">
-                   <string>{:3.0f}</string>
+                   <string>{:3.3f}</string>
                   </property>
                  </widget>
                  <widget class="QLabel" name="label_8">
@@ -9439,11 +9439,6 @@ All</string>
    <header>qtpyvcp.widgets.input_widgets.jog_increment</header>
   </customwidget>
   <customwidget>
-   <class>SmartDro</class>
-   <extends>QWidget</extends>
-   <header>widgets.smart_dro_widget</header>
-  </customwidget>
-  <customwidget>
    <class>NotificationsWidget</class>
    <extends>QWidget</extends>
    <header>widgets.notifications_widget</header>
@@ -9533,6 +9528,11 @@ All</string>
    <class>GMCodesTable</class>
    <extends>QTableView</extends>
    <header>widgets.gm_codes_table</header>
+  </customwidget>
+  <customwidget>
+   <class>SmartDro</class>
+   <extends>QWidget</extends>
+   <header>widgets.smart_dro_widget</header>
   </customwidget>
   <customwidget>
    <class>GcodeBackplot</class>
@@ -10122,7 +10122,7 @@ All</string>
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="machineModeGroup"/>
   <buttongroup name="buttonGroupMdi"/>
+  <buttongroup name="machineModeGroup"/>
  </buttongroups>
 </ui>

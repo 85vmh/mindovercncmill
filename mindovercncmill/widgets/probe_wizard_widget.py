@@ -8,12 +8,14 @@ from qtpyvcp.actions.program_actions import load as loadProgram
 
 from qtpyvcp.utilities.info import Info
 from probe_param_input import ProbeParamInputWidget
+from probe_push_button import ProbePushButton
 from enum import IntEnum
 from qtpy.QtWidgets import qApp
 
 # from statemachine import StateMachine, State
 
 from qtpyvcp.utilities import logger
+
 LOG = logger.getLogger(__name__)
 INFO = Info()
 SUBROUTINE_SEARCH_DIRS = INFO.getSubroutineSearchDirs()
@@ -81,6 +83,7 @@ class ProbeWizardWidget(QWidget):
         self.buttonChangeRoutine.clicked.connect(self.changeRoutine)
         self.buttonGenerateCode.clicked.connect(self.generateCode)
         self.buttonChangeParams.clicked.connect(self.changeParams)
+        self.buttonResetResults.clicked.connect(self.resetResults)
 
         self.stackedWidget.setCurrentIndex(WizardPage.SELECT_PROBE_OPERATION)
 
@@ -169,6 +172,18 @@ class ProbeWizardWidget(QWidget):
         self.probingFinished.emit(self)
         self.stackedWidget.setCurrentIndex(WizardPage.SHOW_PROBE_RESULTS)
 
+        has_z = self.z_minus_probed_position.text() != ""
+        has_x = self.x_minus_probed_position.text() != "" or self.x_plus_probed_position.text() != ""
+        has_y = self.y_minus_probed_position.text() != "" or self.y_plus_probed_position.text() != ""
+
+        if has_z and not has_x or has_y:
+            self.buttonNextAction.setText('Probe edge or corner')
+            self.buttonNextAction.buttonClicked.connect(self.changeRoutine)
+        else:
+            self.buttonNextAction.setText('Probe top')
+            fake_button = ProbePushButton(filename='probe_z_minus_wco.ngc')
+            self.buttonNextAction.buttonClicked.connect(self.handleProbeRoutineSelected(fake_button))
+
     def changeParams(self):
         self.stackedWidget.setCurrentIndex(WizardPage.ENTER_PARAMETERS)
 
@@ -252,14 +267,14 @@ class ProbeWizardWidget(QWidget):
         sub_name = os.path.splitext(self._routineName)[0]
         program_text = "(Call the probing subroutine with user's entered values)\n" \
                        + params_list + "\n" \
-                       "o<{}> call {}\nM2".format(sub_name, arg_str)
+                                       "o<{}> call {}\nM2".format(sub_name, arg_str)
 
         new_file_path = os.path.join(PROGRAM_PREFIX, "with_vals_" + self._routineName)
         LOG.debug('Writting output file: <%s>', new_file_path)
         outputFile = open(new_file_path, "w")
         outputFile.write(program_text)
         outputFile.close()
-        loadProgram(new_file_path)
+        loadProgram(new_file_path, add_to_recents=False)
         self.probingCodeReady.emit(self)
 
     def removeDynamicInputs(self, L=False):
@@ -281,49 +296,63 @@ class ProbeWizardWidget(QWidget):
         self.verticalLayout.addWidget(probeparaminputwidget)
 
     def displayXMinus(self, value):
-        self.showProbingResults()
         self.x_minus_probed_position.setText(str(value))
+        self.showProbingResults()
 
     def displayXPlus(self, value):
-        self.showProbingResults()
         self.x_plus_probed_position.setText(str(value))
+        self.showProbingResults()
 
     def displayXCenter(self, value):
-        self.showProbingResults()
         self.x_center_probed_position.setText(str(value))
+        self.showProbingResults()
 
     def displayXWidth(self, value):
-        self.showProbingResults()
         self.x_probed_width.setText(str(value))
+        self.showProbingResults()
 
     def displayYMinus(self, value):
-        self.showProbingResults()
         self.y_minus_probed_position.setText(str(value))
+        self.showProbingResults()
 
     def displayYPlus(self, value):
-        self.showProbingResults()
         self.y_plus_probed_position.setText(str(value))
+        self.showProbingResults()
 
     def displayYCenter(self, value):
-        self.showProbingResults()
         self.y_center_probed_position.setText(str(value))
+        self.showProbingResults()
 
     def displayYWidth(self, value):
-        self.showProbingResults()
         self.y_probed_width.setText(str(value))
+        self.showProbingResults()
 
     def displayZMinus(self, value):
-        self.showProbingResults()
         self.z_minus_probed_position.setText(str(value))
+        self.showProbingResults()
 
     def displayDiameter(self, value):
-        self.showProbingResults()
         self.probed_diameter.setText(str(value))
+        self.showProbingResults()
 
     def displayEdgeDelta(self, value):
-        self.showProbingResults()
         self.edge_delta.setText(str(value))
+        self.showProbingResults()
 
     def displayEdgeAngle(self, value):
-        self.showProbingResults()
         self.edge_angle.setText(str(value))
+        self.showProbingResults()
+
+    def resetResults(self):
+        self.x_minus_probed_position.setText("")
+        self.x_plus_probed_position.setText("")
+        self.x_center_probed_position.setText("")
+        self.x_probed_width.setText("")
+        self.y_minus_probed_position.setText("")
+        self.y_plus_probed_position.setText("")
+        self.y_center_probed_position.setText("")
+        self.y_probed_width.setText("")
+        self.z_minus_probed_position.setText("")
+        self.probed_diameter.setText("")
+        self.edge_delta.setText("")
+        self.edge_angle.setText("")
