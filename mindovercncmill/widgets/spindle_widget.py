@@ -127,7 +127,7 @@ class SpindleWidget(QWidget, HALWidget):
         self._tool_change_confirmed.value = True
 
     def preparingToLoadTool(self, tool_number):
-        if tool_number != 0:
+        if tool_number != 0 and tool_number != self._loadedTool:
             self.spindleStates.setCurrentIndex(SpindleState.PREPARING_TOOL_CHANGE)
             self.prepareMessageLabel.setText(
                 "Preparing to load T" + str(tool_number) + "...\nMoving to change position...")
