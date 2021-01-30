@@ -53,7 +53,9 @@ class MyMainWindow(VCPMainWindow):
 
     def __init__(self, *args, **kwargs):
         super(MyMainWindow, self).__init__(*args, **kwargs)
-        self.vtkbackplot.setViewMachine()
+
+        self.vtkbackplot.setViewPath()
+
         self._initialMainPage = MainScreenPage.MAIN
         self._initialLeftTopPage = 0
         self._pageBeforeCodesOpen = 0
