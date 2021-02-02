@@ -12,6 +12,8 @@ from qtpyvcp.widgets.form_widgets.main_window import VCPMainWindow
 from qtpyvcp.actions.machine_actions import issue_mdi
 from qtpyvcp import SETTINGS
 
+from widgets.input_overlay import MkInputOverlay
+
 LOG = logger.getLogger('qtpyvcp.' + __name__)
 
 
@@ -212,6 +214,10 @@ class MyMainWindow(VCPMainWindow):
             self.stackedWidgetMain.setCurrentIndex(self._initialMainPage)
 
     def showSettingsPage(self):
+        # ui_file = os.path.join(os.path.dirname(__file__), "estop.ui")
+        # inputOverlay = MkInputOverlay(ui_file)
+        # inputOverlay.show()
+
         if self.btnSettings.isChecked():
             self._initialMainPage = self.stackedWidgetMain.currentIndex()
             self.stackedWidgetMain.setCurrentIndex(MainScreenPage.SETTINGS)
