@@ -10,7 +10,7 @@ from qtpyvcp.actions.program_actions import load as loadProgram
 from qtpyvcp.plugins import getPlugin
 from qtpyvcp.utilities import logger
 
-from qtpyvcp_conversational_gcode.ops.gcode_file import GCodeFile
+from ops.gcode_file import GCodeFile
 
 LOG = logger.getLogger(__name__)
 
