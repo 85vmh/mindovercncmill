@@ -3,6 +3,8 @@ import resources_rc
 import linuxcnc
 import os
 from enum import IntEnum
+from widgets.estop_overlay import EstopOverlay
+from PyQt5.QtCore import QTimer
 
 from qtpy.QtWidgets import QApplication
 from qtpy.QtWidgets import QMessageBox
@@ -109,14 +111,26 @@ class MyMainWindow(VCPMainWindow):
         self.comp.ready()
 
         self.updateHalPinsWithCurrentSettings()
-        #self.showEstopDialog()
+
+        self.estop_dialog = None
+        self.STATUS.estop.notify(self.handleEstop)
+        QTimer.singleShot(500, self.handleEstop)
+
+    def handleEstop(self):
+        LOG.debug("------handleEstop called: {}".format(self.STATUS.estop.getValue()))
+        if self.STATUS.estop.getValue() == linuxcnc.STATE_ESTOP and self.estop_dialog == None:
+            self.showEstopDialog()
+        elif self.estop_dialog != None:
+            self.estop_dialog.hide()
+            self.estop_dialog = None
 
     def showEstopDialog(self):
-        dialog = 'mindovercncmill.widgets.estop_overlay.EstopOverlay'
+        self.estop_dialog = EstopOverlay()
         win = QApplication.instance().activeWindow()
         win_pos = win.mapToGlobal(win.rect().center())
-        dialog.move(win_pos.x() - dialog.width() / 2, win_pos.y() - dialog.height() / 2)
-        dialog.show()
+        LOG.debug("------dialog type is: {}, {}".format(type(self.estop_dialog), self.estop_dialog) )
+        self.estop_dialog.move(win_pos.x() - self.estop_dialog.width() / 2, win_pos.y() - self.estop_dialog.height() / 2)
+        self.estop_dialog.show()
 
     def toggleMeasureFlag(self, value):
         self.comp.getPin(MindOverCncHalPins.MEASURE_TOOL).value = value
@@ -221,11 +235,12 @@ class MyMainWindow(VCPMainWindow):
             self.stackedWidgetMain.setCurrentIndex(self._initialMainPage)
 
     def showConversationalPage(self):
-        if self.btnConversational.isChecked():
-            self._initialMainPage = self.stackedWidgetMain.currentIndex()
-            self.stackedWidgetMain.setCurrentIndex(MainScreenPage.CONVERSATIONAL)
-        else:
-            self.stackedWidgetMain.setCurrentIndex(self._initialMainPage)
+        self.handleEstop()
+        # if self.btnConversational.isChecked():
+        #     self._initialMainPage = self.stackedWidgetMain.currentIndex()
+        #     self.stackedWidgetMain.setCurrentIndex(MainScreenPage.CONVERSATIONAL)
+        # else:
+        #     self.stackedWidgetMain.setCurrentIndex(self._initialMainPage)
 
     def showSettingsPage(self):
         if self.btnSettings.isChecked():

@@ -32,19 +32,25 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background : rgb(255, 255, 255)</string>
+   <string notr="true">background: #2e3436;</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>95</x>
-     <y>30</y>
-     <width>166</width>
-     <height>31</height>
+     <x>75</x>
+     <y>25</y>
+     <width>216</width>
+     <height>46</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+    color: rgb(239, 41, 41);
+	font: 24pt &quot;Bebas Kai&quot;;
+}</string>
+   </property>
    <property name="text">
-    <string>Estop Is pressed</string>
+    <string>E-stop  Is  pressed</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -53,11 +59,17 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>95</x>
      <y>80</y>
-     <width>166</width>
+     <width>171</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
    </property>
    <property name="text">
     <string>Depress it to continue</string>
@@ -69,14 +81,14 @@
   <widget class="ActionButton" name="actionbutton">
    <property name="geometry">
     <rect>
-     <x>145</x>
-     <y>110</y>
-     <width>81</width>
-     <height>26</height>
+     <x>310</x>
+     <y>5</y>
+     <width>31</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>Depress E-Stop</string>
+    <string>OK</string>
    </property>
    <property name="checkable">
     <bool>true</bool>
