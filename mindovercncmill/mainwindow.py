@@ -4,6 +4,7 @@ import linuxcnc
 import os
 from enum import IntEnum
 
+from qtpy.QtWidgets import QApplication
 from qtpy.QtWidgets import QMessageBox
 from qtpyvcp import hal
 from qtpyvcp.plugins import getPlugin
@@ -108,6 +109,14 @@ class MyMainWindow(VCPMainWindow):
         self.comp.ready()
 
         self.updateHalPinsWithCurrentSettings()
+        #self.showEstopDialog()
+
+    def showEstopDialog(self):
+        dialog = 'mindovercncmill.widgets.estop_overlay.EstopOverlay'
+        win = QApplication.instance().activeWindow()
+        win_pos = win.mapToGlobal(win.rect().center())
+        dialog.move(win_pos.x() - dialog.width() / 2, win_pos.y() - dialog.height() / 2)
+        dialog.show()
 
     def toggleMeasureFlag(self, value):
         self.comp.getPin(MindOverCncHalPins.MEASURE_TOOL).value = value

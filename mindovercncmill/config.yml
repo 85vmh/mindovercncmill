@@ -48,16 +48,9 @@ windows:
       # Set the window title from from the date in the vcp section above.
       title: ( vcp.name ) ( vcp.version)
 
-#dialogs:
-#  estop_pressed:
-#    provider: mindovercncmill.widgets.input_overlay:InputOverlay
-#    kwargs:
-#      ui_file: { { file.dir } }/../estop.ui
 dialogs:
   estop_pressed:
-    provider: mindovercncmill.widgets.input_overlay:InputOverlay
-    kwargs:
-      ui_file: {{ file.dir}}/widgets/estop.ui
+    provider: mindovercncmill.widgets.estop_overlay:EstopOverlay
 
   program_header:
     provider: mindovercncmill.widgets.program_header_overlay:ProgramHeaderOverlay

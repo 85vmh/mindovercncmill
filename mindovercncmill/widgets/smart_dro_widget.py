@@ -12,50 +12,59 @@ import linuxcnc
 CMD = linuxcnc.command()
 UI_FILE = os.path.join(os.path.dirname(__file__), "smart_dro.ui")
 
+class DynamicAxis(IntEnum):
+    STATUS = 0
+    MANUAL = 1
+    RUNNING = 2
 
-class DynamicHeader(IntEnum):
-    INTERPRETER_OFF = 0
-    INTERPRETER_ON = 1
-
-
-class DynamicX(IntEnum):
-    INTERPRETER_OFF = 0
-    INTERPRETER_ON = 1
-
-
-class DynamicY(IntEnum):
-    INTERPRETER_OFF = 1
-    INTERPRETER_ON = 0
-
-
-class DynamicZ(IntEnum):
-    INTERPRETER_OFF = 1
-    INTERPRETER_ON = 0
-
-
-class DynamicA(IntEnum):
-    INTERPRETER_OFF = 1
-    INTERPRETER_ON = 0
-
+class HomedState(IntEnum):
+    UNHOMED = 0
+    HOMED_OR_HOMING = 1
 
 class SmartDro(QWidget):
     def __init__(self, parent=None):
         super(SmartDro, self).__init__(parent)
         uic.loadUi(UI_FILE, self)
-        self.STATUS = getPlugin('status')
+        self.status = getPlugin('status')
 
-        self.STATUS.interp_state.notify(self.__update_ui)
+        self.status.interp_state.notify(self.__update_ui)
+        self.status.all_axes_homed.notify(self.__set_state)
+        self.status.homed.notify(self.__set_state)
+        self.__set_state()
+
+    def __set_state(self):
+        homed = self.status.all_axes_homed.getValue()
+        homed_per_axis = self.status.homed.getValue()
+
+        if not homed:
+            LOG.debug("----not homed per axis: {}".format(homed_per_axis))
+            if homed_per_axis[0] == 0 and homed_per_axis[1] == 0 and homed_per_axis[2] == 0:
+                self.stackedWidget.setCurrentIndex(HomedState.UNHOMED)
+            else:
+                LOG.debug("----homing: {}".format(homed_per_axis))
+                self.stackedWidget.setCurrentIndex(HomedState.HOMED_OR_HOMING)
+                if homed_per_axis[0] == 0 or homed_per_axis[1] == 0 or homed_per_axis[2] == 0:
+                    LOG.debug("----set status: {}".format(homed_per_axis))
+                    self.dynamicHeader.setCurrentIndex(DynamicAxis.STATUS)
+                    self.dynamicX.setCurrentIndex(DynamicAxis.STATUS)
+                    self.dynamicY.setCurrentIndex(DynamicAxis.STATUS)
+                    self.dynamicZ.setCurrentIndex(DynamicAxis.STATUS)
+                    self.dynamicA.setCurrentIndex(DynamicAxis.STATUS)
+                    self.x_axis_status.setText('Homing...' if homed_per_axis[0] == 0 else 'Homed')
+                    self.y_axis_status.setText('Homing...' if homed_per_axis[1] == 0 else 'Homed')
+                    self.z_axis_status.setText('Homing...' if homed_per_axis[2] == 0 else 'Homed')
+                    self.a_axis_status.setText('Homing...' if homed_per_axis[3] == 0 else 'Homed')
+        else:
+            LOG.debug("----homed or homing")
+            self.stackedWidget.setCurrentIndex(HomedState.HOMED_OR_HOMING)
+            self.__update_ui(self.status.interp_state.getValue())
 
     def __update_ui(self, interpreter_state):
-        if interpreter_state == linuxcnc.INTERP_IDLE:
-            self.dynamicHeader.setCurrentIndex(DynamicHeader.INTERPRETER_OFF)
-            self.dynamicX.setCurrentIndex(DynamicX.INTERPRETER_OFF)
-            self.dynamicY.setCurrentIndex(DynamicY.INTERPRETER_OFF)
-            self.dynamicZ.setCurrentIndex(DynamicZ.INTERPRETER_OFF)
-            self.dynamicA.setCurrentIndex(DynamicA.INTERPRETER_OFF)
-        else:
-            self.dynamicHeader.setCurrentIndex(DynamicHeader.INTERPRETER_ON)
-            self.dynamicX.setCurrentIndex(DynamicX.INTERPRETER_ON)
-            self.dynamicY.setCurrentIndex(DynamicY.INTERPRETER_ON)
-            self.dynamicZ.setCurrentIndex(DynamicZ.INTERPRETER_ON)
-            self.dynamicA.setCurrentIndex(DynamicA.INTERPRETER_ON)
+        LOG.debug("----update ui - all axes homed: {}".format(self.status.all_axes_homed.getValue()))
+        if self.status.all_axes_homed.getValue() == True:
+            selectedIndex = DynamicAxis.MANUAL if interpreter_state == linuxcnc.INTERP_IDLE else DynamicAxis.RUNNING
+            self.dynamicHeader.setCurrentIndex(selectedIndex)
+            self.dynamicX.setCurrentIndex(selectedIndex)
+            self.dynamicY.setCurrentIndex(selectedIndex)
+            self.dynamicZ.setCurrentIndex(selectedIndex)
+            self.dynamicA.setCurrentIndex(selectedIndex)
