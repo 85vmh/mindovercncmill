@@ -21,7 +21,8 @@ class MainScreenPage(IntEnum):
     TOOLS = 2
     OFFSETS = 3
     PROBING = 4
-    SETTINGS = 5
+    CONVERSATIONAL = 5
+    SETTINGS = 6
 
 
 class MainButtonsPage(IntEnum):
@@ -67,6 +68,7 @@ class MyMainWindow(VCPMainWindow):
         self.btnTools.clicked.connect(self.showToolsPage)
         self.btnOffsets.clicked.connect(self.showOffsetsPage)
         self.btnProbing.clicked.connect(self.showProbingPage)
+        self.btnConversational.clicked.connect(self.showConversationalPage)
         self.btnSettings.clicked.connect(self.showSettingsPage)
         self.btnStatus.clicked.connect(self.showStatusPage)
         self.btnActiveCodes.clicked.connect(self.showCodesPage)
@@ -206,6 +208,13 @@ class MyMainWindow(VCPMainWindow):
         if self.btnProbing.isChecked():
             self._initialMainPage = self.stackedWidgetMain.currentIndex()
             self.stackedWidgetMain.setCurrentIndex(MainScreenPage.PROBING)
+        else:
+            self.stackedWidgetMain.setCurrentIndex(self._initialMainPage)
+
+    def showConversationalPage(self):
+        if self.btnConversational.isChecked():
+            self._initialMainPage = self.stackedWidgetMain.currentIndex()
+            self.stackedWidgetMain.setCurrentIndex(MainScreenPage.CONVERSATIONAL)
         else:
             self.stackedWidgetMain.setCurrentIndex(self._initialMainPage)
 

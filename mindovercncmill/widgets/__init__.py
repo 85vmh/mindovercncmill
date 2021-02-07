@@ -64,3 +64,23 @@ from blink_button import BlinkButton
 class BlinkButton_Plugin(_DesignerPlugin):
     def pluginClass(self):
         return BlinkButton
+
+from conversational.conversational import ConversationalWizardWidget
+class ConversationalWidget_Plugin(_DesignerPlugin):
+    def pluginClass(self):
+        return ConversationalWizardWidget
+
+from conversational.general_params import GeneralParamsWidget
+class GeneralParamsWidget_Plugin(_DesignerPlugin):
+    def pluginClass(self):
+        return GeneralParamsWidget
+
+from conversational.program_header import ProgramHeaderWidget
+class ProgramHeaderWidget_Plugin(_DesignerPlugin):
+    def pluginClass(self):
+        return ProgramHeaderWidget
+
+from conversational.facing import FacingOpWidget
+class FacingOpWidget_Plugin(_DesignerPlugin):
+    def pluginClass(self):
+        return FacingOpWidget
