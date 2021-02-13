@@ -27,7 +27,6 @@ class InputOverlay(QWidget):
         if obj == self.parent() and event.type() == QEvent.Resize:
             size = QResizeEvent.size(event)
             self.resize(size)
-            self.btn.move(size.width() - 100, 20)
 
         return super(InputOverlay, self).eventFilter(obj, event)
 

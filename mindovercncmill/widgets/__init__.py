@@ -45,10 +45,10 @@ class GMCodesTable_Plugin(_DesignerPlugin):
     def pluginClass(self):
         return GMCodesTable
 
-from wcs_offsets_table import WcsOffsetsTable
-class WcsOffsetsTable_Plugin(_DesignerPlugin):
-    def pluginClass(self):
-        return WcsOffsetsTable
+# from wcs_offsets_table import WcsOffsetsTable
+# class WcsOffsetsTable_Plugin(_DesignerPlugin):
+#     def pluginClass(self):
+#         return WcsOffsetsTable
 
 from notifications_widget import NotificationsWidget
 class NotificationsWidget_Plugin(_DesignerPlugin):
@@ -75,12 +75,22 @@ class GeneralParamsWidget_Plugin(_DesignerPlugin):
     def pluginClass(self):
         return GeneralParamsWidget
 
-from conversational.program_header import ProgramHeaderWidget
-class ProgramHeaderWidget_Plugin(_DesignerPlugin):
+from conversational.operation_summary import OperationSummaryItem
+class OperationSummaryItem_Plugin(_DesignerPlugin):
     def pluginClass(self):
-        return ProgramHeaderWidget
+        return OperationSummaryItem
 
-from conversational.facing import FacingOpWidget
-class FacingOpWidget_Plugin(_DesignerPlugin):
+# from conversational.facing import FacingOpWidget
+# class FacingOpWidget_Plugin(_DesignerPlugin):
+#     def pluginClass(self):
+#         return FacingOpWidget
+
+from conversational.float_line_edit import FloatLineEdit
+class FloatLineEditPlugin(_DesignerPlugin):
     def pluginClass(self):
-        return FacingOpWidget
+        return FloatLineEdit
+
+from conversational.int_line_edit import IntLineEdit
+class IntLineEditPlugin(_DesignerPlugin):
+    def pluginClass(self):
+        return IntLineEdit

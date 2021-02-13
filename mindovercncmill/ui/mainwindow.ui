@@ -128,7 +128,7 @@
 }</string>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>5</number>
                </property>
                <property name="rules" stdset="0">
                 <string>[]</string>
@@ -155,7 +155,7 @@
                   <enum>QFrame::Box</enum>
                  </property>
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>2</number>
                  </property>
                  <property name="rules" stdset="0">
                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;currentIndex&quot;, &quot;expression&quot;: &quot;0 if(ch[0] == 1) else (1 if(ch[0] == 3) else 2)&quot;, &quot;name&quot;: &quot;Selected Page&quot;}]</string>
@@ -4130,7 +4130,7 @@ QHeaderView {
 }</string>
                       </property>
                       <property name="locale">
-                       <locale language="English" country="Germany"/>
+                       <locale language="Romanian" country="Romania"/>
                       </property>
                       <property name="selectionMode">
                        <enum>QAbstractItemView::SingleSelection</enum>
@@ -4151,13 +4151,16 @@ QHeaderView {
                        <string>1,2</string>
                       </property>
                       <attribute name="horizontalHeaderDefaultSectionSize">
-                       <number>180</number>
+                       <number>190</number>
                       </attribute>
                       <attribute name="horizontalHeaderMinimumSectionSize">
-                       <number>28</number>
+                       <number>25</number>
                       </attribute>
                       <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
                        <bool>true</bool>
+                      </attribute>
+                      <attribute name="verticalHeaderMinimumSectionSize">
+                       <number>30</number>
                       </attribute>
                      </widget>
                     </item>
@@ -4495,6 +4498,9 @@ QHeaderView {
 	font: 13pt &quot;Bebas Kai&quot;;
 }</string>
                       </property>
+                      <property name="locale">
+                       <locale language="Romanian" country="Romania"/>
+                      </property>
                       <property name="selectionMode">
                        <enum>QAbstractItemView::SingleSelection</enum>
                       </property>
@@ -4508,7 +4514,13 @@ QHeaderView {
                        <string>1,2</string>
                       </property>
                       <attribute name="horizontalHeaderDefaultSectionSize">
-                       <number>180</number>
+                       <number>190</number>
+                      </attribute>
+                      <attribute name="horizontalHeaderMinimumSectionSize">
+                       <number>25</number>
+                      </attribute>
+                      <attribute name="verticalHeaderMinimumSectionSize">
+                       <number>30</number>
                       </attribute>
                      </widget>
                     </item>
@@ -5119,10 +5131,10 @@ LEFT</string>
                  </property>
                  <property name="geometry">
                   <rect>
-                   <x>0</x>
-                   <y>0</y>
+                   <x>5</x>
+                   <y>60</y>
                    <width>821</width>
-                   <height>764</height>
+                   <height>701</height>
                   </rect>
                  </property>
                  <property name="sizePolicy">
@@ -6177,6 +6189,46 @@ color: rgb(255, 255, 255);
                   </rect>
                  </property>
                 </widget>
+                <widget class="QLabel" name="machine_column_header_7">
+                 <property name="geometry">
+                  <rect>
+                   <x>50</x>
+                   <y>10</y>
+                   <width>256</width>
+                   <height>40</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>55</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel{
+	color: white;
+	font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Tool Library</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
                 <zorder>frame_13</zorder>
                 <zorder>label_43</zorder>
                 <zorder>frame_12</zorder>
@@ -6191,13 +6243,14 @@ color: rgb(255, 255, 255);
                 <zorder>applyYOffsetCheckBox</zorder>
                 <zorder>yOffsetSpinner</zorder>
                 <zorder>tool_length_7</zorder>
+                <zorder>machine_column_header_7</zorder>
                </widget>
                <widget class="QWidget" name="page_offsets">
                 <widget class="QFrame" name="frame_4">
                  <property name="geometry">
                   <rect>
                    <x>520</x>
-                   <y>5</y>
+                   <y>60</y>
                    <width>746</width>
                    <height>441</height>
                   </rect>
@@ -8166,7 +8219,7 @@ OFFSET</string>
                  <property name="geometry">
                   <rect>
                    <x>810</x>
-                   <y>570</y>
+                   <y>705</y>
                    <width>181</width>
                    <height>41</height>
                   </rect>
@@ -8182,7 +8235,7 @@ OFFSET</string>
                  <property name="geometry">
                   <rect>
                    <x>810</x>
-                   <y>470</y>
+                   <y>605</y>
                    <width>181</width>
                    <height>41</height>
                   </rect>
@@ -8198,7 +8251,7 @@ OFFSET</string>
                  <property name="geometry">
                   <rect>
                    <x>810</x>
-                   <y>520</y>
+                   <y>655</y>
                    <width>181</width>
                    <height>41</height>
                   </rect>
@@ -8214,7 +8267,7 @@ OFFSET</string>
                  <property name="geometry">
                   <rect>
                    <x>5</x>
-                   <y>5</y>
+                   <y>60</y>
                    <width>511</width>
                    <height>441</height>
                   </rect>
@@ -8481,6 +8534,59 @@ WcsOffsetsTable {
                    <set>Qt::AlignCenter</set>
                   </property>
                  </widget>
+                 <widget class="OffsetTable" name="offset_table">
+                  <property name="geometry">
+                   <rect>
+                    <x>5</x>
+                    <y>50</y>
+                    <width>496</width>
+                    <height>331</height>
+                   </rect>
+                  </property>
+                  <property name="displayColumns" stdset="0">
+                   <string>XYZAR</string>
+                  </property>
+                 </widget>
+                </widget>
+                <widget class="QLabel" name="machine_column_header_6">
+                 <property name="geometry">
+                  <rect>
+                   <x>50</x>
+                   <y>10</y>
+                   <width>256</width>
+                   <height>40</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>55</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel{
+	color: white;
+	font: 17pt &quot;Bebas Kai&quot;;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Offsets Page</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
                 </widget>
                </widget>
                <widget class="QWidget" name="page_probing">
@@ -8497,10 +8603,10 @@ WcsOffsetsTable {
                 <widget class="QLabel" name="machine_column_header_4">
                  <property name="geometry">
                   <rect>
-                   <x>70</x>
-                   <y>0</y>
+                   <x>50</x>
+                   <y>10</y>
                    <width>256</width>
-                   <height>55</height>
+                   <height>40</height>
                   </rect>
                  </property>
                  <property name="sizePolicy">
@@ -8512,7 +8618,7 @@ WcsOffsetsTable {
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
-                   <height>55</height>
+                   <height>40</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -8539,8 +8645,8 @@ WcsOffsetsTable {
                 <widget class="QLabel" name="machine_column_header_5">
                  <property name="geometry">
                   <rect>
-                   <x>40</x>
-                   <y>5</y>
+                   <x>50</x>
+                   <y>10</y>
                    <width>256</width>
                    <height>40</height>
                   </rect>
@@ -8580,7 +8686,7 @@ WcsOffsetsTable {
                  <property name="geometry">
                   <rect>
                    <x>5</x>
-                   <y>65</y>
+                   <y>60</y>
                    <width>1261</width>
                    <height>696</height>
                   </rect>
@@ -9417,19 +9523,6 @@ WcsOffsetsTable {
                  <string>machine.power.toggle</string>
                 </property>
                </widget>
-               <widget class="DialogButton" name="dialogbutton">
-                <property name="geometry">
-                 <rect>
-                  <x>45</x>
-                  <y>345</y>
-                  <width>44</width>
-                  <height>25</height>
-                 </rect>
-                </property>
-                <property name="dialogName" stdset="0">
-                 <string>estop_pressed</string>
-                </property>
-               </widget>
               </widget>
              </item>
             </layout>
@@ -9488,11 +9581,6 @@ WcsOffsetsTable {
    <header>widgets.notifications_widget</header>
   </customwidget>
   <customwidget>
-   <class>DialogButton</class>
-   <extends>QPushButton</extends>
-   <header>qtpyvcp.widgets.button_widgets.dialog_button</header>
-  </customwidget>
-  <customwidget>
    <class>FileSystemTable</class>
    <extends>QTableView</extends>
    <header>qtpyvcp.widgets.input_widgets.file_system</header>
@@ -9511,6 +9599,11 @@ WcsOffsetsTable {
    <class>ActionSlider</class>
    <extends>QSlider</extends>
    <header>qtpyvcp.widgets.input_widgets.action_slider</header>
+  </customwidget>
+  <customwidget>
+   <class>OffsetTable</class>
+   <extends>QTableView</extends>
+   <header>qtpyvcp.widgets.input_widgets.offset_table</header>
   </customwidget>
   <customwidget>
    <class>RemovableDeviceComboBox</class>
@@ -9606,11 +9699,6 @@ WcsOffsetsTable {
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>WcsOffsetsTable</class>
-   <extends>QTableView</extends>
-   <header>widgets.wcs_offsets_table</header>
-  </customwidget>
-  <customwidget>
    <class>PauseResumeButton</class>
    <extends>QPushButton</extends>
    <header>widgets.pause_resume_button</header>
@@ -9624,6 +9712,11 @@ WcsOffsetsTable {
    <class>ActionButton</class>
    <extends>QPushButton</extends>
    <header>qtpyvcp.widgets.button_widgets.action_button</header>
+  </customwidget>
+  <customwidget>
+   <class>WcsOffsetsTable</class>
+   <extends>QTableView</extends>
+   <header>widgets.wcs_offsets_table</header>
   </customwidget>
  </customwidgets>
  <resources>
@@ -10176,7 +10269,7 @@ WcsOffsetsTable {
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="machineModeGroup"/>
   <buttongroup name="buttonGroupMdi"/>
+  <buttongroup name="machineModeGroup"/>
  </buttongroups>
 </ui>

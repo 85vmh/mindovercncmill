@@ -52,9 +52,6 @@ dialogs:
   estop_pressed:
     provider: mindovercncmill.widgets.estop_overlay:EstopOverlay
 
-#  program_header:
-#    provider: mindovercncmill.widgets.program_header_overlay:ProgramHeaderOverlay
-#
 #  facing_operation:
 #    provider: mindovercncmill.widgets.facing_op_overlay:FacingOpOverlay
 

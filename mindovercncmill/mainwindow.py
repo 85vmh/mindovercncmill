@@ -175,12 +175,13 @@ class MyMainWindow(VCPMainWindow):
 
     def on_btnExit_clicked(self):
         # self.closeEvent(QEvent.Close)
-        quit_msg = "Are you sure you want to exit MindOverCNC Mill?"
-        reply = QMessageBox.question(self, 'Exit MindOverCNC controller?', quit_msg, QMessageBox.Yes, QMessageBox.No)
-        if reply == QMessageBox.Yes:
-            self.app.quit()
-        else:
-            pass
+        #quit_msg = "Are you sure you want to exit MindOverCNC Mill?"
+        #reply = QMessageBox.question(self, 'Exit MindOverCNC controller?', quit_msg, QMessageBox.Yes, QMessageBox.No)
+        #if reply == QMessageBox.Yes:
+        #    self.app.quit()
+        #else:
+        #    pass
+        self.app.quit()
 
     def mdiHandleKeys(self, button):
         char = str(button.text())
@@ -235,12 +236,11 @@ class MyMainWindow(VCPMainWindow):
             self.stackedWidgetMain.setCurrentIndex(self._initialMainPage)
 
     def showConversationalPage(self):
-        self.handleEstop()
-        # if self.btnConversational.isChecked():
-        #     self._initialMainPage = self.stackedWidgetMain.currentIndex()
-        #     self.stackedWidgetMain.setCurrentIndex(MainScreenPage.CONVERSATIONAL)
-        # else:
-        #     self.stackedWidgetMain.setCurrentIndex(self._initialMainPage)
+        if self.btnConversational.isChecked():
+            self._initialMainPage = self.stackedWidgetMain.currentIndex()
+            self.stackedWidgetMain.setCurrentIndex(MainScreenPage.CONVERSATIONAL)
+        else:
+            self.stackedWidgetMain.setCurrentIndex(self._initialMainPage)
 
     def showSettingsPage(self):
         if self.btnSettings.isChecked():

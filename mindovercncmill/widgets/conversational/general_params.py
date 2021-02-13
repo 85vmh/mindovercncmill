@@ -3,9 +3,12 @@ from qtpyvcp.utilities import logger
 
 LOG = logger.getLogger(__name__)
 
+
 class GeneralParamsWidget(ConversationalBaseWidget):
     def __init__(self, parent=None):
-        super(GeneralParamsWidget, self).__init__(parent, "general_params.ui")
+        super(GeneralParamsWidget, self).__init__(parent, "ui/general_params.ui")
+
+        self._programOperation = None
 
         self._tool_is_valid = False
         self._tool_table = self.tooltable.getToolTable()
@@ -31,6 +34,16 @@ class GeneralParamsWidget(ConversationalBaseWidget):
         self.spindle_rpm_input.editingFinished.connect(self._validate_spindle_rpm)
         self.xy_feed_rate_input.editingFinished.connect(self._validate_xy_feed_rate)
         self.z_feed_rate_input.editingFinished.connect(self._validate_z_feed_rate)
+
+    def populateWithValues(self, program_operation):
+        program_operation.coolant = self.coolant()
+        program_operation.tool_number = self.tool_number()
+        program_operation.tool_diameter = self.tool_diameter()
+        program_operation.spindle_rpm = self.spindle_rpm()
+        program_operation.spindle_dir = self.spindle_direction()
+        program_operation.z_feed = self.z_feed_rate()
+        program_operation.xy_feed = self.xy_feed_rate()
+        program_operation.z_clear = self.clearance_height()
 
     def set_tool_description_from_tool_num(self):
         tool_table = self._tool_table
@@ -80,7 +93,6 @@ class GeneralParamsWidget(ConversationalBaseWidget):
 
     def z_end(self):
         return self.z_end_input.value()
-
 
     def _validate_spindle_rpm(self):
         if self.spindle_rpm() > 0:
