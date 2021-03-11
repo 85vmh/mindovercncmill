@@ -23,7 +23,15 @@ QMenuBar {
 
 QMenuBar::item {
     background: transparent;
-   
+
+}
+
+QScrollBar:vertical {
+    width:30px;
+}
+
+QScrollBar:horizontal {
+    width:30px;
 }
 
 QMenuBar::item:selected {

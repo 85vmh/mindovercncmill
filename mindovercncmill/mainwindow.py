@@ -174,13 +174,6 @@ class MyMainWindow(VCPMainWindow):
                 self.stackedWidgetMainButtons.setCurrentIndex(MainButtonsPage.START_PROGRAM)
 
     def on_btnExit_clicked(self):
-        # self.closeEvent(QEvent.Close)
-        #quit_msg = "Are you sure you want to exit MindOverCNC Mill?"
-        #reply = QMessageBox.question(self, 'Exit MindOverCNC controller?', quit_msg, QMessageBox.Yes, QMessageBox.No)
-        #if reply == QMessageBox.Yes:
-        #    self.app.quit()
-        #else:
-        #    pass
         self.app.quit()
 
     def mdiHandleKeys(self, button):
