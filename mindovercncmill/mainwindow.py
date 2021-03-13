@@ -309,7 +309,7 @@ class MyMainWindow(VCPMainWindow):
         self.updateHalPinsWithCurrentSettings()
 
         offset_by = 0
-        if self.applyYOffsetCheckbox.isChecked():
-            offset_by = self.yOffsetSpinner.getValue()
+        # if self.applyYOffsetCheckbox.isChecked():
+        #     offset_by = self.yOffsetSpinner.getValue()
 
         issue_mdi("o<tool_touch_off> call [{}]".format(offset_by))

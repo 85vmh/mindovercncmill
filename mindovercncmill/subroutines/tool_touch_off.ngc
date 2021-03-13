@@ -47,7 +47,7 @@ o<130> endif
 
 (#5400 = tool number)
 G10 L1 P #5400 Z [#<new_tool_length_offset>]  
-G43   
+T #5400 G43  H #5400    (enable tool length offset) 
 
 o<tool_touch_off> endsub
 

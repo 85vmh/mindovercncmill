@@ -75,7 +75,7 @@ G53 G0 X[#<_ini[CHANGE_POSITION]X>] Y[#<_ini[CHANGE_POSITION]Y>]
 (debug, Length Offset: #<new_tool_length_offset>)
 
 G10 L1 P#<tool> Z[#<new_tool_length_offset>]
-G43
+T #<tool> G43  H #<tool> 
 
 ; signal success be returning a value > 0:
 o<manual_change> endsub [1]
