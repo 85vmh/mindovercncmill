@@ -19,12 +19,14 @@ O100 if [#<_task> EQ 0]
 O100     return [999]
 O100 endif
 
+#<workspace_z> = #5220
 
 G90
 ; move to change position
 G53 G0 Z[#<_ini[CHANGE_POSITION]Z>]
 G53 G0 X[#<_ini[CHANGE_POSITION]X>] Y[#<_ini[CHANGE_POSITION]Y>]
 
+G59.3
 
 ; cancel tool offset
 G49
@@ -75,6 +77,25 @@ G53 G0 X[#<_ini[CHANGE_POSITION]X>] Y[#<_ini[CHANGE_POSITION]Y>]
 (debug, Length Offset: #<new_tool_length_offset>)
 
 G10 L1 P#<tool> Z[#<new_tool_length_offset>]
+
+o<160> if [#<workspace_z> EQ 1]
+  G54
+o<160> else if [#<workspace_z> EQ 2]
+  G55
+o<160> else if [#<workspace_z> EQ 3]
+  G56
+o<160> else if [#<workspace_z> EQ 4]
+  G57
+o<160> else if [#<workspace_z> EQ 5]
+  G58
+o<160> else if [#<workspace_z> EQ 6]
+  G59
+o<160> else if [#<workspace_z> EQ 7]
+  G59.1
+o<160> else if [#<workspace_z> EQ 8]
+  G59.2
+o<160> endif
+
 T #<tool> G43  H #<tool> 
 
 ; signal success be returning a value > 0:
