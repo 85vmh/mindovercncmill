@@ -61,6 +61,7 @@ class MyMainWindow(VCPMainWindow):
         self._initialMainPage = MainScreenPage.MAIN
         self._initialLeftTopPage = 0
         self._pageBeforeCodesOpen = 0
+        self.gcodebackplot.setViewP()
 
         self.btnManual.clicked.connect(self.setManualScreen)
         self.btnMdi.clicked.connect(self.setMdiScreen)
@@ -202,7 +203,8 @@ class MyMainWindow(VCPMainWindow):
 
     def setMdiScreen(self):
         self.stackedWidgetMain.setCurrentIndex(MainScreenPage.MAIN)
-        self.mdiArea.setFocus()
+        #self.mdiArea.setFocus()
+        self.mdiEntry.setFocus()
         # self.stackedWidgetLeftTop.setCurrentIndex(1)
         # self.stackedWidgetLeftBottom.setCurrentIndex(1)
         # self.stackedWidgetSliders.setCurrentIndex(1)
