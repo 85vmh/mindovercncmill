@@ -128,7 +128,7 @@
 }</string>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>6</number>
                </property>
                <property name="rules" stdset="0">
                 <string>[]</string>
@@ -8826,7 +8826,7 @@ WcsOffsetsTable {
                   <string notr="true">QTabBar::tab { height: 40px;}</string>
                  </property>
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>1</number>
                  </property>
                  <widget class="QWidget" name="tab">
                   <attribute name="title">
@@ -9362,7 +9362,7 @@ WcsOffsetsTable {
                      <string>tool-setter-probe.spindle-nose-height</string>
                     </property>
                     <property name="textFormat" stdset="0">
-                     <string>{:3.0f}</string>
+                     <string>{:3.3f}</string>
                     </property>
                    </widget>
                    <widget class="QLabel" name="label_12">
