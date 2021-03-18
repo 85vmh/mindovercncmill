@@ -27,13 +27,12 @@ QMenuBar::item {
 }
 
 QListView::item {
-    margin: 2px;
+    margin: 50px;
     height: 40px;
-    background: red;
 }
 
 QListView::item:selected {
-    background: orange;
+
 }
 
 QScrollBar:vertical {

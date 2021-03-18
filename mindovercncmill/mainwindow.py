@@ -61,7 +61,7 @@ class MyMainWindow(VCPMainWindow):
         self._initialMainPage = MainScreenPage.MAIN
         self._initialLeftTopPage = 0
         self._pageBeforeCodesOpen = 0
-        self.gcodebackplot.setViewP()
+        self.vtkbackplot.setViewMachine()
 
         self.btnManual.clicked.connect(self.setManualScreen)
         self.btnMdi.clicked.connect(self.setMdiScreen)

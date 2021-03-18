@@ -128,7 +128,7 @@
 }</string>
                </property>
                <property name="currentIndex">
-                <number>6</number>
+                <number>0</number>
                </property>
                <property name="rules" stdset="0">
                 <string>[]</string>
@@ -155,7 +155,7 @@
                   <enum>QFrame::Box</enum>
                  </property>
                  <property name="currentIndex">
-                  <number>1</number>
+                  <number>2</number>
                  </property>
                  <property name="rules" stdset="0">
                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;currentIndex&quot;, &quot;expression&quot;: &quot;0 if(ch[0] == 1) else (1 if(ch[0] == 3) else 2)&quot;, &quot;name&quot;: &quot;Selected Page&quot;}]</string>
@@ -1721,7 +1721,7 @@ QComboBox QAbstractItemView{
                     <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:interp_state&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0] == 1&quot;, &quot;name&quot;: &quot;Change Active&quot;}]</string>
                    </property>
                   </widget>
-                  <widget class="ActionButton" name="buttonReloadProgram">
+                  <widget class="ActionButton" name="btnReloadProgram">
                    <property name="geometry">
                     <rect>
                      <x>410</x>
@@ -2554,7 +2554,7 @@ QPushButton:checked {
                  <property name="geometry">
                   <rect>
                    <x>505</x>
-                   <y>5</y>
+                   <y>50</y>
                    <width>60</width>
                    <height>35</height>
                   </rect>
@@ -2594,7 +2594,7 @@ QPushButton:checked {
                  <property name="geometry">
                   <rect>
                    <x>505</x>
-                   <y>55</y>
+                   <y>95</y>
                    <width>60</width>
                    <height>35</height>
                   </rect>
@@ -2634,7 +2634,7 @@ QPushButton:checked {
                  <property name="geometry">
                   <rect>
                    <x>505</x>
-                   <y>100</y>
+                   <y>140</y>
                    <width>60</width>
                    <height>35</height>
                   </rect>
@@ -2674,7 +2674,7 @@ QPushButton:checked {
                  <property name="geometry">
                   <rect>
                    <x>505</x>
-                   <y>145</y>
+                   <y>185</y>
                    <width>60</width>
                    <height>35</height>
                   </rect>
@@ -2714,7 +2714,7 @@ QPushButton:checked {
                  <property name="geometry">
                   <rect>
                    <x>505</x>
-                   <y>200</y>
+                   <y>240</y>
                    <width>60</width>
                    <height>35</height>
                   </rect>
@@ -2787,7 +2787,7 @@ QPushButton:checked {
                  <property name="geometry">
                   <rect>
                    <x>505</x>
-                   <y>300</y>
+                   <y>345</y>
                    <width>60</width>
                    <height>35</height>
                   </rect>
@@ -2827,7 +2827,7 @@ QPushButton:checked {
                  <property name="geometry">
                   <rect>
                    <x>505</x>
-                   <y>255</y>
+                   <y>300</y>
                    <width>60</width>
                    <height>35</height>
                   </rect>
@@ -2858,46 +2858,6 @@ QPushButton:checked {
                  </property>
                  <property name="text">
                   <string>ZOOM +</string>
-                 </property>
-                 <property name="checkable">
-                  <bool>false</bool>
-                 </property>
-                </widget>
-                <widget class="QPushButton" name="path_button">
-                 <property name="geometry">
-                  <rect>
-                   <x>505</x>
-                   <y>350</y>
-                   <width>60</width>
-                   <height>35</height>
-                  </rect>
-                 </property>
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>55</width>
-                   <height>35</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>60</width>
-                   <height>35</height>
-                  </size>
-                 </property>
-                 <property name="focusPolicy">
-                  <enum>Qt::NoFocus</enum>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">font-size: 12pt</string>
-                 </property>
-                 <property name="text">
-                  <string>Path</string>
                  </property>
                  <property name="checkable">
                   <bool>false</bool>
@@ -3921,7 +3881,7 @@ border-radius: 4px;
                    <number>8</number>
                   </property>
                   <item>
-                   <widget class="GcodeBackplot" name="gcodebackplot"/>
+                   <widget class="VTKBackPlot" name="vtkbackplot"/>
                   </item>
                  </layout>
                 </widget>
@@ -3978,6 +3938,46 @@ border-radius: 4px;
                    <width>251</width>
                    <height>321</height>
                   </rect>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="machine_view_button">
+                 <property name="geometry">
+                  <rect>
+                   <x>505</x>
+                   <y>5</y>
+                   <width>60</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>55</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>60</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font-size: 12pt</string>
+                 </property>
+                 <property name="text">
+                  <string>M View</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
                  </property>
                 </widget>
                </widget>
@@ -10099,12 +10099,6 @@ WcsOffsetsTable {
    <header>widgets.smart_dro_widget</header>
   </customwidget>
   <customwidget>
-   <class>GcodeBackplot</class>
-   <extends>QWidget</extends>
-   <header>qtpyvcp.widgets.display_widgets.gcode_backplot.gcode_backplot</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>SpindleWidget</class>
    <extends>QWidget</extends>
    <header>widgets.spindle_widget</header>
@@ -10113,6 +10107,12 @@ WcsOffsetsTable {
    <class>GcodeEditor</class>
    <extends>QFrame</extends>
    <header>qtpyvcp.widgets.input_widgets.gcode_editor</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>VTKBackPlot</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.display_widgets.vtk_backplot.vtk_backplot</header>
    <container>1</container>
   </customwidget>
   <customwidget>
@@ -10573,10 +10573,26 @@ WcsOffsetsTable {
    </hints>
   </connection>
   <connection>
-   <sender>iso_view_button</sender>
+   <sender>btnReloadProgram</sender>
    <signal>clicked()</signal>
-   <receiver>gcodebackplot</receiver>
-   <slot>setViewP()</slot>
+   <receiver>filesystemtable_right</receiver>
+   <slot>loadSelectedFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>451</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>584</x>
+     <y>382</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>machine_view_button</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewMachine()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>534</x>
@@ -10589,14 +10605,30 @@ WcsOffsetsTable {
    </hints>
   </connection>
   <connection>
+   <sender>iso_view_button</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewP()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>534</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>918</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
    <sender>x_view_button</sender>
    <signal>clicked()</signal>
-   <receiver>gcodebackplot</receiver>
+   <receiver>vtkbackplot</receiver>
    <slot>setViewX()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>534</x>
-     <y>72</y>
+     <y>112</y>
     </hint>
     <hint type="destinationlabel">
      <x>918</x>
@@ -10607,12 +10639,12 @@ WcsOffsetsTable {
   <connection>
    <sender>y_view_button</sender>
    <signal>clicked()</signal>
-   <receiver>gcodebackplot</receiver>
+   <receiver>vtkbackplot</receiver>
    <slot>setViewY()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>534</x>
-     <y>117</y>
+     <y>157</y>
     </hint>
     <hint type="destinationlabel">
      <x>918</x>
@@ -10623,12 +10655,28 @@ WcsOffsetsTable {
   <connection>
    <sender>z_view_button</sender>
    <signal>clicked()</signal>
-   <receiver>gcodebackplot</receiver>
+   <receiver>vtkbackplot</receiver>
    <slot>setViewZ()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>534</x>
-     <y>162</y>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>918</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pan_button</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>enable_panning(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>534</x>
+     <y>257</y>
     </hint>
     <hint type="destinationlabel">
      <x>918</x>
@@ -10639,24 +10687,8 @@ WcsOffsetsTable {
   <connection>
    <sender>zoom_in_button</sender>
    <signal>clicked()</signal>
-   <receiver>gcodebackplot</receiver>
+   <receiver>vtkbackplot</receiver>
    <slot>zoomIn()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>534</x>
-     <y>272</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>918</x>
-     <y>217</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>zoom_out_button</sender>
-   <signal>clicked()</signal>
-   <receiver>gcodebackplot</receiver>
-   <slot>zoomOut()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>534</x>
@@ -10669,9 +10701,25 @@ WcsOffsetsTable {
    </hints>
   </connection>
   <connection>
+   <sender>zoom_out_button</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>zoomOut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>534</x>
+     <y>362</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>918</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
    <sender>clear_button</sender>
    <signal>clicked()</signal>
-   <receiver>gcodebackplot</receiver>
+   <receiver>vtkbackplot</receiver>
    <slot>clearLivePlot()</slot>
    <hints>
     <hint type="sourcelabel">
