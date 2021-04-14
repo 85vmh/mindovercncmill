@@ -1,10 +1,10 @@
-from mindovercncmill.widgets.conversational.dataclass.program_operation import ProgramOperation
+from .single_operation import SingleOperation
 import math
 
 
-class FacingOperation(ProgramOperation):
+class FacingOperation(SingleOperation):
     def __init__(self):
-        ProgramOperation.__init__(self)
+        super(FacingOperation, self).__init__()
         self.x_start = 0.
         self.x_end = 0.
         self.y_start = 0.
@@ -18,7 +18,7 @@ class FacingOperation(ProgramOperation):
     def get_operation_name(self):
         return "Facing"
 
-    def generate_code(self):
+    def generate_gcode(self):
         width = abs(self.y_end - self.y_start)
         depth = abs(self.z_end - self.z_start)
 

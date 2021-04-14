@@ -62,6 +62,7 @@ class MyMainWindow(VCPMainWindow):
         self._initialLeftTopPage = 0
         self._pageBeforeCodesOpen = 0
         self.vtkbackplot.setViewMachine()
+        self.vtkbackplot.setProgramViewWhenLoadingProgram(True)
 
         self.btnManual.clicked.connect(self.setManualScreen)
         self.btnMdi.clicked.connect(self.setMdiScreen)
@@ -79,6 +80,7 @@ class MyMainWindow(VCPMainWindow):
         self.probewizardwidget.probingCodeReady.connect(self.loadGCode)
         self.probewizardwidget.probingFinished.connect(self.handleProbingFinished)
         self.spindlewidget.measureTool.connect(self.toggleMeasureFlag)
+        self.gcodeeditor_initial.somethingHasChanged.connect(self.gCodeWasEdited)
         self.notificationswidget.notificationsCleared.connect(self.hideNotifications)
         self.btnToolTouchOff.clicked.connect(self.toolTouchOff)
         self.applyYOffsetCheckBox.clicked.connect(self.applyYOffset)
@@ -93,6 +95,7 @@ class MyMainWindow(VCPMainWindow):
         self.setMainButtonsState()
 
         self.STATUS.tool_in_spindle.notify(self.resetMeasureFlag)
+        self.STATUS.all_axes_homed.notify(self.clearBackPlot)
 
         self.comp = hal.component('mindovercnc')
         self.comp.addPin(MindOverCncHalPins.MEASURE_TOOL, 'bit', 'in')
@@ -132,6 +135,13 @@ class MyMainWindow(VCPMainWindow):
         LOG.debug("------dialog type is: {}, {}".format(type(self.estop_dialog), self.estop_dialog) )
         self.estop_dialog.move(win_pos.x() - self.estop_dialog.width() / 2, win_pos.y() - self.estop_dialog.height() / 2)
         self.estop_dialog.show()
+
+    def clearBackPlot(self):
+        self.vtkbackplot.clearLivePlot()
+
+    def gCodeWasEdited(self, value):
+        self.save_button.setEnabled(value)
+        self.save_as_button.setEnabled(value)
 
     def toggleMeasureFlag(self, value):
         self.comp.getPin(MindOverCncHalPins.MEASURE_TOOL).value = value

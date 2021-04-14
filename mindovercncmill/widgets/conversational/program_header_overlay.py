@@ -3,6 +3,8 @@ from mindovercncmill.widgets.input_overlay import InputOverlay
 from qtpyvcp.plugins import getPlugin
 from qtpyvcp.utilities import logger
 LOG = logger.getLogger(__name__)
+from qtpy.QtCore import Signal
+from dataclass.program_header import ProgramHeader
 
 UI_FILE = os.path.join(os.path.dirname(__file__), "ui/program_header.ui")
 STATUS = getPlugin('status')
@@ -11,7 +13,9 @@ UNITS = ['IN', 'MM']
 
 
 class ProgramHeaderOverlay(InputOverlay):
-    def __init__(self, programHeader, parent=None):
+    programHeaderChanged = Signal(object)
+
+    def __init__(self, programHeader=ProgramHeader(), parent=None):
         super(ProgramHeaderOverlay, self).__init__(UI_FILE, parent)
         self._programHeader = programHeader
 
@@ -42,5 +46,6 @@ class ProgramHeaderOverlay(InputOverlay):
         self._programHeader.name = self.dialog.name_input.text()
         self._programHeader.wcs = self.dialog.wcs_input.currentText()
         self._programHeader.units = self.dialog.unit_input.currentText()
+        self.programHeaderChanged.emit(self._programHeader)
         self.hide()
 

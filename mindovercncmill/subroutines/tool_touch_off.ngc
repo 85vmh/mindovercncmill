@@ -46,8 +46,28 @@ o<130> endif
 (debug, Length Offset: #<new_tool_length_offset>)
 
 (#5400 = tool number)
-G10 L1 P #5400 Z [#<new_tool_length_offset>]  
-T #5400 G43  H #5400    (enable tool length offset) 
+#<tool> = #5400
+G10 L1 P#<tool> Z[#<new_tool_length_offset>]
+
+o<160> if [#<workspace_z> EQ 1]
+  G54
+o<160> else if [#<workspace_z> EQ 2]
+  G55
+o<160> else if [#<workspace_z> EQ 3]
+  G56
+o<160> else if [#<workspace_z> EQ 4]
+  G57
+o<160> else if [#<workspace_z> EQ 5]
+  G58
+o<160> else if [#<workspace_z> EQ 6]
+  G59
+o<160> else if [#<workspace_z> EQ 7]
+  G59.1
+o<160> else if [#<workspace_z> EQ 8]
+  G59.2
+o<160> endif
+
+T #<tool> G43  H #<tool> (enable tool length offset) 
 
 o<tool_touch_off> endsub
 

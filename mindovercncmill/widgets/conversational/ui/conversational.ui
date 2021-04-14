@@ -1925,14 +1925,27 @@
      <widget class="QPushButton" name="btnAddOperation">
       <property name="geometry">
        <rect>
-        <x>545</x>
-        <y>325</y>
+        <x>375</x>
+        <y>245</y>
         <width>126</width>
         <height>46</height>
        </rect>
       </property>
       <property name="text">
-       <string>Add Operation</string>
+       <string>Facing OP</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnAddPointLocations">
+      <property name="geometry">
+       <rect>
+        <x>615</x>
+        <y>245</y>
+        <width>126</width>
+        <height>46</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add Points</string>
       </property>
      </widget>
     </widget>

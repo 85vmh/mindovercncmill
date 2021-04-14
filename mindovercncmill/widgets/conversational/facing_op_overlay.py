@@ -1,15 +1,15 @@
 import os
-
-from qtpyvcp.plugins import getPlugin
-
 from mindovercncmill.widgets.input_overlay import InputOverlay
+from dataclass.facing_operation import FacingOperation
+from qtpy.QtCore import Signal
 
 UI_FILE = os.path.join(os.path.dirname(__file__), "ui/facing_op.ui")
-STATUS = getPlugin('status')
 
 
 class FacingOpOverlay(InputOverlay):
-    def __init__(self, facingOperation, parent=None):
+    operationChanged = Signal(object)
+
+    def __init__(self, facingOperation=FacingOperation(), parent=None):
         super(FacingOpOverlay, self).__init__(UI_FILE, parent)
         self._facingOperation = facingOperation
         self.dialog.generalparamswidget.programOperation = facingOperation
@@ -29,8 +29,21 @@ class FacingOpOverlay(InputOverlay):
                             self._validate_x_positions,
                             self._validate_y_positions]
 
-        # self.dialog.btnCancel.clicked.connect(self.hide)
+        self.populateInitialValues(self._facingOperation)
+
+        self.dialog.btnCancel.clicked.connect(self.hide)
         self.dialog.btnDoneEditing.clicked.connect(self.handleDoneClicked)
+
+    def populateInitialValues(self, facingOperation):
+        self.dialog.step_down_input.default_value = facingOperation.step_down
+        self.dialog.step_over_input.default_value = facingOperation.step_over
+        self.dialog.x_start_input.default_value = facingOperation.x_start
+        self.dialog.x_end_input.default_value = facingOperation.x_end
+        self.dialog.y_start_input.default_value = facingOperation.y_start
+        self.dialog.y_end_input.default_value = facingOperation.y_end
+        self.dialog.z_start_input.default_value = facingOperation.z_start
+        self.dialog.z_end_input.default_value = facingOperation.z_end
+        self.dialog.retract_height_input.default_value = facingOperation.retract
 
     def handleDoneClicked(self):
         self.dialog.generalparamswidget.populateWithValues(self._facingOperation)
@@ -43,6 +56,7 @@ class FacingOpOverlay(InputOverlay):
         self._facingOperation.z_end = self.z_end()
         self._facingOperation.step_down = self.step_down()
         self._facingOperation.retract = self.retract_height()
+        self.operationChanged.emit(self._facingOperation)
         self.hide()
 
     def step_over(self):
@@ -139,4 +153,3 @@ class FacingOpOverlay(InputOverlay):
             error = 'Retract height must be 0 or greater.'
             self.dialog.retract_height_input.setToolTip(error)
             return False, error
-
