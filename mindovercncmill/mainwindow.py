@@ -62,7 +62,7 @@ class MyMainWindow(VCPMainWindow):
         self._initialLeftTopPage = 0
         self._pageBeforeCodesOpen = 0
         self.vtkbackplot.setViewMachine()
-        self.vtkbackplot.setProgramViewWhenLoadingProgram(True)
+        #self.vtkbackplot.setProgramViewWhenLoadingProgram(True)
 
         self.btnManual.clicked.connect(self.setManualScreen)
         self.btnMdi.clicked.connect(self.setMdiScreen)
@@ -80,7 +80,7 @@ class MyMainWindow(VCPMainWindow):
         self.probewizardwidget.probingCodeReady.connect(self.loadGCode)
         self.probewizardwidget.probingFinished.connect(self.handleProbingFinished)
         self.spindlewidget.measureTool.connect(self.toggleMeasureFlag)
-        self.gcodeeditor_initial.somethingHasChanged.connect(self.gCodeWasEdited)
+        #self.gcodeeditor_initial.somethingHasChanged.connect(self.gCodeWasEdited)
         self.notificationswidget.notificationsCleared.connect(self.hideNotifications)
         self.btnToolTouchOff.clicked.connect(self.toolTouchOff)
         self.applyYOffsetCheckBox.clicked.connect(self.applyYOffset)
@@ -94,11 +94,10 @@ class MyMainWindow(VCPMainWindow):
         self.STATUS.interp_state.notify(self.setMainButtonsState)
         self.setMainButtonsState()
 
-        self.STATUS.tool_in_spindle.notify(self.resetMeasureFlag)
         self.STATUS.all_axes_homed.notify(self.clearBackPlot)
 
         self.comp = hal.component('mindovercnc')
-        self.comp.addPin(MindOverCncHalPins.MEASURE_TOOL, 'bit', 'in')
+        self.comp.addPin(MindOverCncHalPins.MEASURE_TOOL, 'bit', 'io')
         self.comp.addPin(MindOverCncHalPins.TOOL_PROBE_X, 'float', 'out')
         self.comp.addPin(MindOverCncHalPins.TOOL_PROBE_Y, 'float', 'out')
         self.comp.addPin(MindOverCncHalPins.TOOL_PROBE_Z, 'float', 'out')
@@ -144,11 +143,9 @@ class MyMainWindow(VCPMainWindow):
         self.save_as_button.setEnabled(value)
 
     def toggleMeasureFlag(self, value):
+        LOG.debug("------toggleMeasureFlag: {}".format(value))
         self.comp.getPin(MindOverCncHalPins.MEASURE_TOOL).value = value
         self.updateHalPinsWithCurrentSettings()
-
-    def resetMeasureFlag(self):
-        self.comp.getPin(MindOverCncHalPins.MEASURE_TOOL).value = False
 
     def updateHalPinsWithCurrentSettings(self):
         self.comp.getPin(MindOverCncHalPins.TOOL_PROBE_X).value = SETTINGS.get("tool-setter-probe.x-coordinate").getValue()

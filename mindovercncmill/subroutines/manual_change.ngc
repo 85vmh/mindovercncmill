@@ -99,6 +99,8 @@ o<160> endif
 
 T #<tool> G43  H #<tool> 
 
+M100 (Reset the "mindovercnc.tool-probe.measure-tool" hal pin)
+
 ; signal success be returning a value > 0:
 o<manual_change> endsub [1]
 m2

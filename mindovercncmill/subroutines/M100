@@ -1,0 +1,4 @@
+#!/bin/bash
+# file to reset the measure tool flag after its been measured
+halcmd setp mindovercnc.tool-probe.measure-tool False
+exit 0
