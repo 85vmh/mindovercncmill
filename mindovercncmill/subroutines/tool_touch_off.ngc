@@ -4,6 +4,9 @@ o<tool_touch_off> sub
 
 G92.1 (Cancel G92 offsets)
 
+#<workspace_z> = #5220
+G59.3 (change coordinate system)
+
 G49 (Cancel Tool Length Compensation)
 
 G90   (set absolute coordinates)

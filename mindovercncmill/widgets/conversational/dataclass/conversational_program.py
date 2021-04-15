@@ -22,7 +22,7 @@ class ConversationalProgram:
             obj.__dict__.pop("holes")
             return obj.__dict__
         elif isinstance(obj, SingleOperation):
-            return {obj.get_operation_name(): obj.__dict__}
+            return {obj.get_serializable_name(): obj.__dict__}
 
         return obj.__dict__
 

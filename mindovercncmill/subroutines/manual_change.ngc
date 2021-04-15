@@ -30,13 +30,14 @@ M6
 
 O200 if [#<_hal[mindovercnc.tool-probe.measure-tool]> EQ 0]
         ;(debug, Tool: #<tool> does not need measurement)
-O200    return [1] ; indicate no tool measurement 
+O200    return [1] ; indicate no tool measurement, the code will finish here!
 O200 endif
 
-G59.3
 
-; cancel tool offset
-G49
+(If we ended up here, then a tool measurement is needed.)
+G59.3 (change coordinate system)
+
+G49 (Cancel Tool Length Compensation)
 
 G53 G0 X[#<_hal[mindovercnc.tool-probe.x-coordinate]>] Y[#<_hal[mindovercnc.tool-probe.y-coordinate]>]
 G53 G0 Z[#<_hal[mindovercnc.tool-probe.z-coordinate]>]

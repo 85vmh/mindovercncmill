@@ -72,6 +72,9 @@ class DeepDrillOperation(HolesOperation):
     def get_operation_name(self):
         return "Deep Drilling"
 
+    def get_serializable_name(self):
+        return "deep_drilling"
+
     def get_operation_comment(self):
         return '(Use G81 drilling cycle)'
 
@@ -89,6 +92,9 @@ class DwellOperation(HolesOperation):
 
     def get_operation_name(self):
         return "Dwell"
+
+    def get_serializable_name(self):
+        return "dwell_drilling"
 
     def get_operation_comment(self):
         return '(Use G82 drilling cycle that dwells at the bottom of the hole)'
@@ -109,6 +115,9 @@ class PeckOperation(HolesOperation):
     def get_operation_name(self):
         return "Pecking"
 
+    def get_serializable_name(self):
+        return "peck_drilling"
+
     def get_operation_comment(self):
         return '(Use G83 peck drilling with chip breaking)'
 
@@ -128,6 +137,9 @@ class ChipBreakingOperation(HolesOperation):
     def get_operation_name(self):
         return "Chip Breaking"
 
+    def get_serializable_name(self):
+        return "deep_drilling"
+
     def get_operation_comment(self):
         return '(Use G73 Drilling Cycle with Chip Breaking)'
 
@@ -146,6 +158,9 @@ class RigidTappingOperation(HolesOperation):
 
     def get_operation_name(self):
         return "Rigid Tapping"
+
+    def get_serializable_name(self):
+        return "rigid_tapping"
 
     def get_operation_comment(self):
         return '(Use G33.1 Rigid tapping cycle)'

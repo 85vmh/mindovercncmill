@@ -18,6 +18,9 @@ class FacingOperation(SingleOperation):
     def get_operation_name(self):
         return "Facing"
 
+    def get_serializable_name(self):
+        return "facing"
+
     def generate_gcode(self):
         width = abs(self.y_end - self.y_start)
         depth = abs(self.z_end - self.z_start)

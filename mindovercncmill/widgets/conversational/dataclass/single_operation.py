@@ -19,6 +19,9 @@ class SingleOperation(BaseOperation):
     def get_operation_name(self): pass
 
     @abstractmethod
+    def get_serializable_name(self): pass
+
+    @abstractmethod
     def has_valid_inputs(self): pass
 
     def isSpindleFwd(self):

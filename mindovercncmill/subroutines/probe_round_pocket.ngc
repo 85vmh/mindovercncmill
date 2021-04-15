@@ -2,12 +2,12 @@
 (version: 0.1)
 (date: 20/01/2021)
 
-(Probe Boss in X and Y Axes, find center, Diam)
-(Start probe position is over center of stock in X and Y axis)
-(within max z distance, ensure all settings have been)
-(set properly according to help diagrams)
+(Probe round pocket center measure x and y Diam, find xy center position)
+(Start probe position is the aproximated center of the pocket)
+(inside the step off width distance and within max z distance)
+(ensure all settings have been set properly according to help diagrams)
 
-o<probe_round_boss> sub
+o<probe_round_pocket> sub
 
   (uses NGCGUI style arg spec)
   (number after "=" in comment is default value)
@@ -28,110 +28,71 @@ o<probe_round_boss> sub
 
   #<workspace_x> = #[5201 + [20 * #5220]]
   #<workspace_y> = #[5202 + [20 * #5220]]
-  #<workspace_z> = #[5203 + [20 * #5220]]
 
   (Probe Tool Safety Check)
   o<110> if [#5400 NE #<setting_probe_tool_number>]
   (ERROR, Probe tool in the spindle, aborting)
-   o<probe_round_boss> return
+   o<probe_round_pocket> return
   o<110> endif
 
   (Probe Diameter)
   #<probe_diameter> = #5410
 
-  (Probe Radius)
-  #<probe_radius> = [#<probe_diameter> / 2]
-
-  (Probe Centerline Offset)
-  #<probe_center_offset> = [#<probe_radius> - #<setting_calibration_offset>]
-
   (remove probe tip diam and cal offset from probed width calculations)
   #<probe_diameter_offset> = [#<probe_diameter> - [#<setting_calibration_offset> * 2]]
 
-
-  (Probe X Positioning Move, aprox diameter/2 + Step Off Width)
+  (Move to probing depth)
   G91
-  F[#<setting_probe_fast_fr>]
-  G38.3 X-[[#<input_diameter_hint> / 2] + [#<input_step_off_width>]]
-
-  (Probe X Positioning Move, to Probing Depth)
   F[#<setting_probe_fast_fr>]
   G38.3 Z-[#<input_max_z_distance>]
 
-  (Call sub "probe_x_plus" to Probe x+ side of Pocket)
-  o<probe_x_plus> call [#2] [#3] [#4] [#6] [#8] [#9]
-
-  #<x_plus_probed> = #5061
-
-  (first side Probe Completion Move to Z Clearance Plane)
   G91
+   (Move to the left side of the hole)
   F[#<setting_probe_fast_fr>]
-  G38.3 Z[#<input_max_z_distance>]
+  G38.3 X-[[#<input_diameter_hint> / 2] - [#<input_step_off_width>]]
 
-  (Positioning move in X, X Hint + Step Off Width at Rapid Speed)
-  G91
-  F[#<setting_probe_fast_fr>]
-  G38.3 X[#<input_step_off_width> + #<input_diameter_hint> + #<input_step_off_width>]
-
-  (Probe X Positioning Move, to Probing Depth)
-  F[#<setting_probe_fast_fr>]
-  G38.3 Z-[#<input_max_z_distance>]
-
-  (Call sub "probe_x_minus" to Probe x- side of Workpiece)
+  (Call sub "probe_x_minux" to Probe x- side of Hole)
   o<probe_x_minus> call [#2] [#3] [#4] [#6] [#8] [#9]
 
   #<x_minus_probed> = #5061
 
   G91
+  (Move to the right side of the hole)
   F[#<setting_probe_fast_fr>]
-  G38.3 Z[#<input_max_z_distance>]
+  G38.3 X[#<input_diameter_hint> - [2* #<input_step_off_width>]]
 
-  (probed center calulation)
-  #<x_center_probed> = [[#<x_minus_probed> + #<x_plus_probed>] / 2]
+  (Call sub "probe_x_plus" to Probe x+)
+  o<probe_x_plus> call [#2] [#3] [#4] [#6] [#8] [#9]
+
+  #<x_plus_probed> = #5061
+
+  (probed center calculation)
+  #<x_center_probed> = [[#<x_plus_probed> + #<x_minus_probed>] / 2]
 
   (move to center of X)
   G90
   F[#<setting_probe_fast_fr>]
   G38.3 X[#<x_center_probed>]
 
-
-  (Probe Y Positioning Move, Y hint/2 + Step Off Width)
   G91
+  (Move to the back side of the hole)
   F[#<setting_probe_fast_fr>]
-  G38.3 Y-[[#<input_diameter_hint> / 2] + [#<input_step_off_width>]]
-
-  (Probe Y Positioning Move, to Probing Depth)
-  F[#<setting_probe_fast_fr>]
-  G38.3 Z-[#<input_max_z_distance>]
+  G38.3 Y[#<input_diameter_hint> - [2* #<input_step_off_width>]]
 
   (Call sub "probe_y_plus" to Probe y+ side of Workpiece)
   o<probe_y_plus> call [#2] [#3] [#4] [#6] [#8] [#9]
 
   #<y_plus_probed> = #5062
 
-  (first side Probe Completion Move to Z Clearance Plane)
   G91
+  (Move to the front side of the hole)
   F[#<setting_probe_fast_fr>]
-  G38.3 Z[#<input_max_z_distance>]
-
-  (Positioning move in Y, Y Hint + Step Off Width at Rapid Speed)
-  G91
-  F[#<setting_probe_fast_fr>]
-  G38.3 Y[#<input_diameter_hint> + [#<input_step_off_width> * 2]]
-
-  (Probe Y Positioning Move, to Probing Depth)
-  F[#<setting_probe_fast_fr>]
-  G38.3 Z-[#<input_max_z_distance>]
+  G38.3 Y-[#<input_diameter_hint> - [2* #<input_step_off_width>]]
 
   (Call sub "probe_y_minus" to Probe y- side of Workpiece)
-  o<probe_y_minus> call  [#2] [#3] [#4] [#6] [#8] [#9]
+  o<probe_y_minus> call [#2] [#3] [#4] [#6] [#8] [#9]
 
   #<y_minus_probed> = #5062
-
-  (Move to z clearance plane)
-  G91
-  F[#<setting_probe_fast_fr>]
-  G38.3 Z[#<input_max_z_distance>]
 
   (probed center calulation)
   #<y_center_probed> = [[#<y_minus_probed> + #<y_plus_probed>] / 2]
@@ -140,6 +101,12 @@ o<probe_round_boss> sub
   G90
   F[#<setting_probe_fast_fr>]
   G38.3 Y[#<y_center_probed>]
+
+  (Retract Z axis to the starting point)
+  G91
+  F[#<setting_probe_fast_fr>]
+  G0 Z[#<input_max_z_distance>]
+
 
   (calculate X Width Probed)
   o<120> if [#<x_minus_probed> GT #<x_plus_probed>]
@@ -183,9 +150,9 @@ o<probe_round_boss> sub
   o<140> if [#<setting_probe_mode> EQ 0]
     (Record XY Zero in selected WCO)
     G10 L2 P#5220 X[#<x_zero>] Y[#<y_zero>]
-    o<probe_round_boss> return
+    o<probe_round_pocket> return
   o<140> endif
 
-o<probe_round_boss> endsub
+o<probe_round_pocket> endsub
 
 M2 (end program)
