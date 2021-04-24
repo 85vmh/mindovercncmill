@@ -40,7 +40,7 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>3</number>
    </property>
    <widget class="QWidget" name="page_loadProbeTool">
     <widget class="QLabel" name="label">
@@ -135,16 +135,6 @@ and plug the cable</string>
        <width>301</width>
        <height>306</height>
       </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QGroupBox{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-	border-style: solid;
-    border-color: rgb(186, 189, 182);
-    border-width: 1px;
-    border-radius: 6px;
-}</string>
      </property>
      <property name="title">
       <string>Outside Corners</string>
@@ -367,16 +357,6 @@ and plug the cable</string>
        <height>306</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QGroupBox{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-	border-style: solid;
-    border-color: rgb(186, 189, 182);
-    border-width: 1px;
-    border-radius: 6px;
-}</string>
-     </property>
      <property name="title">
       <string>Inside Corners</string>
      </property>
@@ -598,16 +578,6 @@ and plug the cable</string>
        <height>306</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QGroupBox{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-	border-style: solid;
-    border-color: rgb(186, 189, 182);
-    border-width: 1px;
-    border-radius: 6px;
-}</string>
-     </property>
      <property name="title">
       <string>Z Minus</string>
      </property>
@@ -764,16 +734,6 @@ and plug the cable</string>
        <height>271</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QGroupBox{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-	border-style: solid;
-    border-color: rgb(186, 189, 182);
-    border-width: 1px;
-    border-radius: 6px;
-}</string>
-     </property>
      <property name="title">
       <string>Static Parameters</string>
      </property>
@@ -788,12 +748,6 @@ and plug the cable</string>
         <width>156</width>
         <height>30</height>
        </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
       </property>
       <property name="text">
        <string>Probe Fast Feed Rate:</string>
@@ -810,12 +764,6 @@ and plug the cable</string>
         <width>156</width>
         <height>30</height>
        </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
       </property>
       <property name="text">
        <string>Probe Slow Feed Rate:</string>
@@ -998,12 +946,6 @@ and plug the cable</string>
         <height>30</height>
        </rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-      </property>
       <property name="text">
        <string>Probe Length Offset:</string>
       </property>
@@ -1020,12 +962,6 @@ and plug the cable</string>
         <height>30</height>
        </rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-      </property>
       <property name="text">
        <string>Probe Tool Number:</string>
       </property>
@@ -1041,12 +977,6 @@ and plug the cable</string>
         <width>141</width>
         <height>30</height>
        </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
       </property>
       <property name="text">
        <string>Retract Distance:</string>
@@ -1076,12 +1006,6 @@ and plug the cable</string>
         <height>16777215</height>
        </size>
       </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-      </property>
       <property name="alignment">
        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
       </property>
@@ -1109,12 +1033,6 @@ and plug the cable</string>
         <width>50</width>
         <height>16777215</height>
        </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1144,12 +1062,6 @@ and plug the cable</string>
         <height>16777215</height>
        </size>
       </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-      </property>
       <property name="alignment">
        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
       </property>
@@ -1178,12 +1090,6 @@ and plug the cable</string>
         <height>16777215</height>
        </size>
       </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-      </property>
       <property name="alignment">
        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
       </property>
@@ -1200,16 +1106,6 @@ and plug the cable</string>
        <width>441</width>
        <height>336</height>
       </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QGroupBox{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-	border-style: solid;
-    border-color: rgb(186, 189, 182);
-    border-width: 1px;
-    border-radius: 6px;
-}</string>
      </property>
      <property name="title">
       <string>Dynamic Parameters</string>
@@ -1240,16 +1136,6 @@ and plug the cable</string>
        <width>801</width>
        <height>80</height>
       </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QGroupBox{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-	border-style: solid;
-    border-color: rgb(186, 189, 182);
-    border-width: 1px;
-    border-radius: 6px;
-}</string>
      </property>
      <property name="title">
       <string>Current Work Coodinate System</string>
@@ -1653,16 +1539,6 @@ and plug the cable</string>
        <width>571</width>
        <height>81</height>
       </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QGroupBox{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-	border-style: solid;
-    border-color: rgb(186, 189, 182);
-    border-width: 1px;
-    border-radius: 6px;
-}</string>
      </property>
      <property name="title">
       <string>Probe Results Usage</string>

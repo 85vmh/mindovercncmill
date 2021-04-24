@@ -77,8 +77,19 @@ QComboBox QAbstractItemView {
 }
 
 QPushButton {
-    font-family: "Bebas Kai";
-    font-size: 14pt;
+    font-family: "Liberation Sans Narrow";
+    font-weight:bold;
+    font-size: 13pt;
+}
+
+QLabel {
+    font-family: "Liberation Sans Narrow";
+    font-size: 13pt;
+}
+
+QCheckBox {
+    font-family: "Liberation Sans Narrow";
+    font-size: 13pt;
 }
 
 QPushButton:disabled {
@@ -129,6 +140,9 @@ ActionButton[action_id="0"]:checked {
 }
 
 QGroupBox {
+    font-family: "Liberation Sans Narrow";
+    font-weight:bold;
+    font-size: 13pt;
     border: 1px solid #8A8484;
     border-radius: 1px;
     margin-top: 1ex;
@@ -137,9 +151,11 @@ QGroupBox {
 
 QGroupBox::title {
     subcontrol-origin: margin;
-    subcontrol-position: top left;
+    subcontrol-position: top center;
     padding: 0 3px;
     color: white;
+    font-weight:bold;
+    font-size: 14pt;
 }
 
 RoundQPushButton {

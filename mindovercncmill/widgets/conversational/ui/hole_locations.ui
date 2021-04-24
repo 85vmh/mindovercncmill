@@ -37,6 +37,11 @@
      <height>671</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Liberation Sans Narrow</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">.QFrame {
 	background: rgb(186, 189, 182);
@@ -61,11 +66,11 @@
       <height>41</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel{
-    color: rgb(0, 0, 0);
-	font: 16pt &quot;Bebas Kai&quot;;
-}</string>
+    <property name="font">
+     <font>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Points on a circle</string>
@@ -593,14 +598,19 @@ color: rgb(255, 255, 255);
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QLabel{
-    color: rgb(0, 0, 0);
-	font: 18pt &quot;Bebas Kai&quot;;
-}</string>
+     <string notr="true"/>
     </property>
     <property name="text">
-     <string>Define points where to make operations</string>
+     <string>Points Locations</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -627,11 +637,14 @@ color: rgb(255, 255, 255);
       <height>42</height>
      </size>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
+    <property name="font">
+     <font>
+      <family>Bebas Kai</family>
+      <pointsize>14</pointsize>
+     </font>
     </property>
     <property name="text">
-     <string>DELETE SELECTED</string>
+     <string>Delete Selection</string>
     </property>
    </widget>
    <widget class="QTableView" name="xy_coord_input">
@@ -681,11 +694,11 @@ QTableView {
       <height>41</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel{
-    color: rgb(0, 0, 0);
-	font: 16pt &quot;Bebas Kai&quot;;
-}</string>
+    <property name="font">
+     <font>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Specified XY Points</string>
@@ -715,11 +728,14 @@ QTableView {
       <height>42</height>
      </size>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
+    <property name="font">
+     <font>
+      <family>Bebas Kai</family>
+      <pointsize>14</pointsize>
+     </font>
     </property>
     <property name="text">
-     <string>DELETE ALL</string>
+     <string>Delete All</string>
     </property>
    </widget>
    <widget class="QFrame" name="frame_55">
@@ -868,6 +884,12 @@ color: rgb(255, 255, 255);
       <height>45</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Bebas Kai</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string>Done Defining Points</string>
     </property>
@@ -880,6 +902,12 @@ color: rgb(255, 255, 255);
       <width>83</width>
       <height>45</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bebas Kai</family>
+      <pointsize>14</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Cancel</string>

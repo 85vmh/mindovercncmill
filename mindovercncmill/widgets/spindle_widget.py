@@ -64,6 +64,7 @@ class SpindleWidget(QWidget, HALWidget):
         self.STATUS.spindle[0].speed.notify(self.determineSpindleState)
         self.STATUS.tool_in_spindle.notify(self.determineSpindleState)
         self.determineSpindleState()
+        self.toolInfo1.setText('T1 (' + u'\u2300' + ' 8,5): Tool comment here that might not fit because its too long')
 
     @Slot(bool)
     def set_probe_plugged(self, plugged):

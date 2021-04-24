@@ -127,7 +127,8 @@
     color: black;
     background: rgb(235, 235, 235);
     padding-right: 2px;
-    font: 17pt &quot;Bebas Kai&quot;;
+	font-family: &quot;Liberation Sans Narrow&quot;;
+    font-size: 13pt;
 }</string>
      </property>
      <property name="text">
@@ -172,21 +173,18 @@
      </property>
      <property name="font">
       <font>
-       <family>Bebas Kai</family>
-       <pointsize>14</pointsize>
+       <family>Liberation Sans Narrow</family>
+       <pointsize>13</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
       </font>
      </property>
-     <property name="styleSheet">
-      <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
-     </property>
      <property name="lineWidth">
       <number>0</number>
      </property>
      <property name="text">
-      <string>TOOL NUMBER:</string>
+      <string>Tool Number</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -224,21 +222,18 @@
      </property>
      <property name="font">
       <font>
-       <family>Bebas Kai</family>
+       <family>Liberation Sans Narrow</family>
        <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
       </font>
      </property>
-     <property name="styleSheet">
-      <string notr="true">font: 12pt &quot;Bebas Kai&quot;;</string>
-     </property>
      <property name="lineWidth">
       <number>0</number>
      </property>
      <property name="text">
-      <string>NO TOOL SELECTED</string>
+      <string>No Tool Selected</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -277,21 +272,18 @@
     </property>
     <property name="font">
      <font>
-      <family>Bebas Kai</family>
-      <pointsize>14</pointsize>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
-    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
     <property name="text">
-     <string>RPM</string>
+     <string>rpm</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -329,21 +321,18 @@
     </property>
     <property name="font">
      <font>
-      <family>Bebas Kai</family>
-      <pointsize>14</pointsize>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
-    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
     <property name="text">
-     <string>SPINDLE SPEED:</string>
+     <string>Spindle Speed:</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -388,7 +377,8 @@
     color: black;
     background: rgb(235, 235, 235);
     padding-right: 2px;
-    font: 17pt &quot;Bebas Kai&quot;;
+	font-family: &quot;Liberation Sans Narrow&quot;;
+    font-size: 13pt;
 }</string>
     </property>
     <property name="text">
@@ -436,21 +426,18 @@
     </property>
     <property name="font">
      <font>
-      <family>Bebas Kai</family>
-      <pointsize>14</pointsize>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
-    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
     <property name="text">
-     <string>MM</string>
+     <string>mm</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -488,21 +475,18 @@
     </property>
     <property name="font">
      <font>
-      <family>Bebas Kai</family>
-      <pointsize>14</pointsize>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
-    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
     <property name="text">
-     <string>Z FEEDRATE:</string>
+     <string>Z Feed Rate:</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -547,7 +531,8 @@
     color: black;
     background: rgb(235, 235, 235);
     padding-right: 2px;
-    font: 17pt &quot;Bebas Kai&quot;;
+	font-family: &quot;Liberation Sans Narrow&quot;;
+    font-size: 13pt;
 }</string>
     </property>
     <property name="text">
@@ -592,21 +577,18 @@
     </property>
     <property name="font">
      <font>
-      <family>Bebas Kai</family>
-      <pointsize>14</pointsize>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
-    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
     <property name="text">
-     <string>COOLANT:</string>
+     <string>Coolant:</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -644,21 +626,18 @@
     </property>
     <property name="font">
      <font>
-      <family>Bebas Kai</family>
-      <pointsize>14</pointsize>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
-    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
     <property name="text">
-     <string>XY FEEDRATE:</string>
+     <string>XY Feed Rate:</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -696,21 +675,18 @@
     </property>
     <property name="font">
      <font>
-      <family>Bebas Kai</family>
-      <pointsize>14</pointsize>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
-    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
     <property name="text">
-     <string>MM/MIN</string>
+     <string>mm/min</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -748,21 +724,18 @@
     </property>
     <property name="font">
      <font>
-      <family>Bebas Kai</family>
-      <pointsize>14</pointsize>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
-    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
     <property name="text">
-     <string>MM/MIN</string>
+     <string>mm/min</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -798,8 +771,14 @@
       <height>35</height>
      </size>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
+    <property name="font">
+     <font>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
     </property>
    </widget>
    <widget class="QLabel" name="label_178">
@@ -831,15 +810,12 @@
     </property>
     <property name="font">
      <font>
-      <family>Bebas Kai</family>
-      <pointsize>14</pointsize>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
     </property>
     <property name="lineWidth">
      <number>0</number>
@@ -890,7 +866,8 @@
     color: black;
     background: rgb(235, 235, 235);
     padding-right: 2px;
-    font: 17pt &quot;Bebas Kai&quot;;
+	font-family: &quot;Liberation Sans Narrow&quot;;
+    font-size: 13pt;
 }</string>
     </property>
     <property name="text">
@@ -935,21 +912,18 @@
     </property>
     <property name="font">
      <font>
-      <family>Bebas Kai</family>
-      <pointsize>14</pointsize>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
-    </property>
     <property name="lineWidth">
      <number>0</number>
     </property>
     <property name="text">
-     <string>CLEARANCE HEIGHT:</string>
+     <string>Clearance Height:</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -984,9 +958,6 @@
       <width>100</width>
       <height>35</height>
      </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
     </property>
    </widget>
    <widget class="FloatLineEdit" name="z_feed_rate_input">
@@ -1025,7 +996,8 @@
     color: black;
     background: rgb(235, 235, 235);
     padding-right: 2px;
-    font: 17pt &quot;Bebas Kai&quot;;
+	font-family: &quot;Liberation Sans Narrow&quot;;
+    font-size: 13pt;
 }</string>
     </property>
     <property name="text">

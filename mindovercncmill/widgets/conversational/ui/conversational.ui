@@ -58,6 +58,12 @@
      <height>696</height>
     </size>
    </property>
+   <property name="font">
+    <font>
+     <family>Liberation Sans Narrow</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">.QStackedWidget {
     border-style: solid;
@@ -122,15 +128,10 @@
        <height>141</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QGroupBox{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-	border-style: solid;
-    border-color: rgb(186, 189, 182);
-    border-width: 1px;
-    border-radius: 6px;
-}</string>
+     <property name="font">
+      <font>
+       <family>Liberation Sans Narrow</family>
+      </font>
      </property>
      <property name="title">
       <string>Program Header</string>
@@ -138,7 +139,7 @@
      <widget class="QLabel" name="label_168">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>5</x>
         <y>30</y>
         <width>111</width>
         <height>25</height>
@@ -164,15 +165,12 @@
       </property>
       <property name="font">
        <font>
-        <family>Bebas Kai</family>
-        <pointsize>14</pointsize>
+        <family>Liberation Sans Narrow</family>
+        <pointsize>13</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
        </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
       </property>
       <property name="lineWidth">
        <number>0</number>
@@ -181,7 +179,7 @@
        <string>Program Name:</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
       <property name="indent">
        <number>0</number>
@@ -190,7 +188,7 @@
      <widget class="QLabel" name="label_132">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>30</x>
         <y>65</y>
         <width>85</width>
         <height>25</height>
@@ -216,15 +214,12 @@
       </property>
       <property name="font">
        <font>
-        <family>Bebas Kai</family>
-        <pointsize>14</pointsize>
+        <family>Liberation Sans Narrow</family>
+        <pointsize>13</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
        </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
       </property>
       <property name="lineWidth">
        <number>0</number>
@@ -233,7 +228,7 @@
        <string>WCS Offset:</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
       <property name="indent">
        <number>0</number>
@@ -244,7 +239,7 @@
        <rect>
         <x>75</x>
         <y>100</y>
-        <width>50</width>
+        <width>41</width>
         <height>25</height>
        </rect>
       </property>
@@ -268,24 +263,21 @@
       </property>
       <property name="font">
        <font>
-        <family>Bebas Kai</family>
-        <pointsize>14</pointsize>
+        <family>Liberation Sans Narrow</family>
+        <pointsize>13</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
        </font>
       </property>
-      <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
-      </property>
       <property name="lineWidth">
        <number>0</number>
       </property>
       <property name="text">
-       <string>UNITS:</string>
+       <string>Units:</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
       <property name="indent">
        <number>0</number>
@@ -322,11 +314,11 @@
        <string notr="true">QLabel {
     border-style: solid;
     border-color: rgb(96, 96, 97);
-    border-width: 2px;
-    border-radius: 5px;
+    border-width: 1px;
+    border-radius: 3px;
     color: white;
-    background: rgb(86, 86, 87);
-	font: 50 14pt &quot;Bebas Kai&quot;;
+    font-family: &quot;Liberation Sans Narrow&quot;;
+    font-size: 13pt;
 }</string>
       </property>
       <property name="text">
@@ -384,15 +376,12 @@
       </property>
       <property name="font">
        <font>
-        <family>Bebas Kai</family>
-        <pointsize>14</pointsize>
+        <family>Liberation Sans Narrow</family>
+        <pointsize>13</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
        </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
       </property>
       <property name="lineWidth">
        <number>0</number>
@@ -436,15 +425,12 @@
       </property>
       <property name="font">
        <font>
-        <family>Bebas Kai</family>
-        <pointsize>14</pointsize>
+        <family>Liberation Sans Narrow</family>
+        <pointsize>13</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
        </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
       </property>
       <property name="lineWidth">
        <number>0</number>
@@ -547,18 +533,8 @@ Programs</string>
        <height>141</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QGroupBox{
-    color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
-	border-style: solid;
-    border-color: rgb(186, 189, 182);
-    border-width: 1px;
-    border-radius: 6px;
-}</string>
-     </property>
      <property name="title">
-      <string>Program details</string>
+      <string>Program Details</string>
      </property>
      <widget class="QLabel" name="label_170">
       <property name="geometry">
@@ -589,15 +565,12 @@ Programs</string>
       </property>
       <property name="font">
        <font>
-        <family>Bebas Kai</family>
-        <pointsize>14</pointsize>
+        <family>Liberation Sans Narrow</family>
+        <pointsize>13</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
        </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
       </property>
       <property name="lineWidth">
        <number>0</number>
@@ -641,21 +614,18 @@ Programs</string>
       </property>
       <property name="font">
        <font>
-        <family>Bebas Kai</family>
-        <pointsize>14</pointsize>
+        <family>Liberation Sans Narrow</family>
+        <pointsize>13</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
        </font>
       </property>
-      <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
-      </property>
       <property name="lineWidth">
        <number>0</number>
       </property>
       <property name="text">
-       <string>mATERIAL:</string>
+       <string>Material:</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -693,15 +663,12 @@ Programs</string>
       </property>
       <property name="font">
        <font>
-        <family>Bebas Kai</family>
-        <pointsize>14</pointsize>
+        <family>Liberation Sans Narrow</family>
+        <pointsize>13</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
        </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
       </property>
       <property name="lineWidth">
        <number>0</number>
@@ -747,11 +714,11 @@ Programs</string>
        <string notr="true">QLabel {
     border-style: solid;
     border-color: rgb(96, 96, 97);
-    border-width: 2px;
-    border-radius: 5px;
+    border-width: 1px;
+    border-radius: 3px;
     color: white;
-    background: rgb(86, 86, 87);
-	font: 50 14pt &quot;Bebas Kai&quot;;
+    font-family: &quot;Liberation Sans Narrow&quot;;
+    font-size: 13pt;
 }</string>
       </property>
       <property name="text">
@@ -811,11 +778,11 @@ Programs</string>
        <string notr="true">QLabel {
     border-style: solid;
     border-color: rgb(96, 96, 97);
-    border-width: 2px;
-    border-radius: 5px;
+    border-width: 1px;
+    border-radius: 3px;
     color: white;
-    background: rgb(86, 86, 87);
-	font: 50 14pt &quot;Bebas Kai&quot;;
+    font-family: &quot;Liberation Sans Narrow&quot;;
+    font-size: 13pt;
 }</string>
       </property>
       <property name="text">
@@ -860,15 +827,12 @@ Programs</string>
       </property>
       <property name="font">
        <font>
-        <family>Bebas Kai</family>
-        <pointsize>14</pointsize>
+        <family>Liberation Sans Narrow</family>
+        <pointsize>13</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
        </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;Bebas Kai&quot;;</string>
       </property>
       <property name="lineWidth">
        <number>0</number>
@@ -892,16 +856,6 @@ Programs</string>
        <width>120</width>
        <height>456</height>
       </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QGroupBox{
-    color: rgba(238, 238, 236, 125);
-	font: 14pt &quot;Bebas Kai&quot;;
-	border-style: solid;
-    border-color: rgb1(186, 189, 182, 120);
-    border-width: 1px;
-    border-radius: 6px;
-}</string>
      </property>
      <property name="title">
       <string>New Op</string>

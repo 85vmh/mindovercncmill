@@ -133,6 +133,7 @@ class MyMainWindow(VCPMainWindow):
         self.estop_dialog = None
         self.STATUS.estop.notify(self.handleEstop)
         QTimer.singleShot(500, self.handleEstop)
+        self.statusDiameter.setText('T1: (' + u'\u2300' + ' 8,5)' + u'\u2192' + "Tool comment here")
 
     def resetSpindleOverride(self):
         self.btnResetSpindleOverride.click()

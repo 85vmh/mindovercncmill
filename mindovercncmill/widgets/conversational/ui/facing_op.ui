@@ -141,14 +141,8 @@
          <height>33</height>
         </size>
        </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-font: 75 13pt &quot;Bebas Kai&quot;;
-color: rgb(255, 255, 255);
-}</string>
-       </property>
        <property name="text">
-        <string>X START</string>
+        <string>X Start</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -278,14 +272,8 @@ color: rgb(255, 255, 255);
          <height>33</height>
         </size>
        </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-font: 75 13pt &quot;Bebas Kai&quot;;
-color: rgb(255, 255, 255);
-}</string>
-       </property>
        <property name="text">
-        <string>STEP OVER</string>
+        <string>Step Over</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -418,14 +406,8 @@ color: rgb(255, 255, 255);
          <height>33</height>
         </size>
        </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-font: 75 13pt &quot;Bebas Kai&quot;;
-color: rgb(255, 255, 255);
-}</string>
-       </property>
        <property name="text">
-        <string>Y END</string>
+        <string>Y End</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -555,14 +537,8 @@ color: rgb(255, 255, 255);
          <height>33</height>
         </size>
        </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-font: 75 13pt &quot;Bebas Kai&quot;;
-color: rgb(255, 255, 255);
-}</string>
-       </property>
        <property name="text">
-        <string>Y START</string>
+        <string>Y Start</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -692,14 +668,8 @@ color: rgb(255, 255, 255);
          <height>33</height>
         </size>
        </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-font: 75 13pt &quot;Bebas Kai&quot;;
-color: rgb(255, 255, 255);
-}</string>
-       </property>
        <property name="text">
-        <string>X END</string>
+        <string>X End</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -829,14 +799,8 @@ color: rgb(255, 255, 255);
          <height>33</height>
         </size>
        </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-font: 75 13pt &quot;Bebas Kai&quot;;
-color: rgb(255, 255, 255);
-}</string>
-       </property>
        <property name="text">
-        <string>Z END</string>
+        <string>Z End</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -966,14 +930,8 @@ color: rgb(255, 255, 255);
          <height>33</height>
         </size>
        </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-font: 75 13pt &quot;Bebas Kai&quot;;
-color: rgb(255, 255, 255);
-}</string>
-       </property>
        <property name="text">
-        <string>RETRACT</string>
+        <string>Retract</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1103,14 +1061,8 @@ color: rgb(255, 255, 255);
          <height>33</height>
         </size>
        </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-font: 75 13pt &quot;Bebas Kai&quot;;
-color: rgb(255, 255, 255);
-}</string>
-       </property>
        <property name="text">
-        <string>Z START</string>
+        <string>Z Start</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1240,14 +1192,8 @@ color: rgb(255, 255, 255);
          <height>33</height>
         </size>
        </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel{
-font: 75 13pt &quot;Bebas Kai&quot;;
-color: rgb(255, 255, 255);
-}</string>
-       </property>
        <property name="text">
-        <string>STEP DOWN</string>
+        <string>Step Down</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>

@@ -517,10 +517,7 @@
                     </size>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}
-
+                    <string notr="true">
 </string>
                    </property>
                    <property name="diameter" stdset="0">
@@ -540,6 +537,11 @@
                      <width>491</width>
                      <height>376</height>
                     </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Liberation Sans Narrow</family>
+                    </font>
                    </property>
                    <widget class="QPushButton" name="pushButton_23">
                     <property name="geometry">
@@ -869,7 +871,9 @@
     border-radius: 2px;
     color: black;
     background: rgb(235, 235, 235);
-    font: 16pt &quot;Bebas Kai&quot;;
+    font-family: &quot;Liberation Sans Narrow&quot;;
+    font-weight:bold;
+    font-size: 13pt;
 }</string>
                      </property>
                      <property name="placeholderText">
@@ -1753,9 +1757,10 @@ QComboBox QAbstractItemView{
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QLabel {
-    font-family: &quot;Bebas Kai&quot;;
     color: white;
-    font-size: 16pt;
+    font-family: &quot;Liberation Sans Narrow&quot;;
+    font-weight:bold;
+    font-size: 13pt;
 }
 </string>
                    </property>
@@ -2006,9 +2011,7 @@ QPushButton:checked {
                     <enum>Qt::NoFocus</enum>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">QPushButton {
-   	font: 15pt &quot;Bebas Kai&quot;;
-}</string>
+                    <string notr="true"/>
                    </property>
                    <property name="text">
                     <string>Flood</string>
@@ -2051,9 +2054,7 @@ QPushButton:checked {
                     <enum>Qt::NoFocus</enum>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">QPushButton {
-   	font: 15pt &quot;Bebas Kai&quot;;
-}</string>
+                    <string notr="true"/>
                    </property>
                    <property name="text">
                     <string>Mist</string>
@@ -2063,6 +2064,49 @@ QPushButton:checked {
                    </property>
                    <property name="actionName" stdset="0">
                     <string>coolant.mist.toggle</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="statusDiameter">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="geometry">
+                    <rect>
+                     <x>5</x>
+                     <y>150</y>
+                     <width>281</width>
+                     <height>40</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>300</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 12pt;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Machine not homed</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
                    </property>
                   </widget>
                  </widget>
@@ -2098,9 +2142,7 @@ QPushButton:checked {
                     <enum>Qt::NoFocus</enum>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">QPushButton {
-   	font: 15pt &quot;Bebas Kai&quot;;
-}</string>
+                    <string notr="true"/>
                    </property>
                    <property name="text">
                     <string>STOP</string>
@@ -2140,9 +2182,7 @@ QPushButton:checked {
                     <enum>Qt::NoFocus</enum>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">QPushButton {
-   	font: 15pt &quot;Bebas Kai&quot;;
-}</string>
+                    <string notr="true"/>
                    </property>
                    <property name="text">
                     <string>Mist</string>
@@ -2185,9 +2225,7 @@ QPushButton:checked {
                     <enum>Qt::NoFocus</enum>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">QPushButton {
-   	font: 15pt &quot;Bebas Kai&quot;;
-}</string>
+                    <string notr="true"/>
                    </property>
                    <property name="text">
                     <string>Flood</string>
@@ -2209,9 +2247,7 @@ QPushButton:checked {
                     </rect>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">QPushButton {
-   	font: 17pt &quot;Bebas Kai&quot;;
-}</string>
+                    <string notr="true"/>
                    </property>
                    <property name="text">
                     <string>Pause/Resume</string>
@@ -2584,7 +2620,7 @@ QPushButton:checked {
                   <string notr="true">font-size: 12pt</string>
                  </property>
                  <property name="text">
-                  <string>ISO VIEW</string>
+                  <string>iso View</string>
                  </property>
                  <property name="checkable">
                   <bool>false</bool>
@@ -2817,7 +2853,7 @@ QPushButton:checked {
                   <string notr="true">font-size: 12pt</string>
                  </property>
                  <property name="text">
-                  <string>ZOOM -</string>
+                  <string>zoom -</string>
                  </property>
                  <property name="checkable">
                   <bool>false</bool>
@@ -2857,7 +2893,7 @@ QPushButton:checked {
                   <string notr="true">font-size: 12pt</string>
                  </property>
                  <property name="text">
-                  <string>ZOOM +</string>
+                  <string>zoom +</string>
                  </property>
                  <property name="checkable">
                   <bool>false</bool>
@@ -2921,7 +2957,7 @@ QPushButton:checked {
 }</string>
                  </property>
                  <property name="currentIndex">
-                  <number>1</number>
+                  <number>0</number>
                  </property>
                  <property name="rules" stdset="0">
                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;currentIndex&quot;, &quot;expression&quot;: &quot;0 if ch[0] == 1 else 1&quot;, &quot;name&quot;: &quot;Selected Page&quot;}]</string>
@@ -2939,11 +2975,10 @@ QPushButton:checked {
                    <property name="styleSheet">
                     <string notr="true">QLabel{
     color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
 }</string>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:machine.jog.angular-speed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:program_units?text&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Angular Jog Speed: {:.0f} Deg/Min'.format(ch[0])&quot;, &quot;name&quot;: &quot;Angular Jog Speed&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:machine.jog.angular-speed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:program_units?text&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Angular Jog Speed: {:.0f} deg/min'.format(ch[0])&quot;, &quot;name&quot;: &quot;Angular Jog Speed&quot;}]</string>
                    </property>
                   </widget>
                   <widget class="VCPSettingsSlider" name="settings_slider_3">
@@ -3053,7 +3088,6 @@ border-radius: 4px;
                    <property name="styleSheet">
                     <string notr="true">QLabel{
     color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
 }</string>
                    </property>
                    <property name="rules" stdset="0">
@@ -3241,9 +3275,9 @@ border-radius: 4px;
                   <widget class="ActionButton" name="actionbutton_36">
                    <property name="geometry">
                     <rect>
-                     <x>220</x>
+                     <x>210</x>
                      <y>245</y>
-                     <width>40</width>
+                     <width>50</width>
                      <height>30</height>
                     </rect>
                    </property>
@@ -3255,7 +3289,7 @@ border-radius: 4px;
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>40</width>
+                     <width>60</width>
                      <height>30</height>
                     </size>
                    </property>
@@ -3264,7 +3298,8 @@ border-radius: 4px;
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QPushButton {
-   	font: 12pt &quot;Bebas Kai&quot;;
+    font-family: &quot;Liberation Sans Narrow&quot;;
+    font-size: 12pt;
 }</string>
                    </property>
                    <property name="text">
@@ -3286,7 +3321,6 @@ border-radius: 4px;
                    <property name="styleSheet">
                     <string notr="true">QLabel{
     color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
 }</string>
                    </property>
                    <property name="rules" stdset="0">
@@ -3298,9 +3332,9 @@ border-radius: 4px;
                   <widget class="ActionButton" name="btnResetMaxVelOverride">
                    <property name="geometry">
                     <rect>
-                     <x>220</x>
+                     <x>210</x>
                      <y>10</y>
-                     <width>40</width>
+                     <width>50</width>
                      <height>30</height>
                     </rect>
                    </property>
@@ -3318,7 +3352,7 @@ border-radius: 4px;
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>40</width>
+                     <width>60</width>
                      <height>30</height>
                     </size>
                    </property>
@@ -3327,11 +3361,12 @@ border-radius: 4px;
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QPushButton {
-   	font: 12pt &quot;Bebas Kai&quot;;
+    font-family: &quot;Liberation Sans Narrow&quot;;
+    font-size: 12pt;
 }</string>
                    </property>
                    <property name="text">
-                    <string>reset</string>
+                    <string>Reset</string>
                    </property>
                    <property name="actionName" stdset="0">
                     <string>machine.max-velocity.reset</string>
@@ -3423,9 +3458,9 @@ border-radius: 4px;
                   <widget class="ActionButton" name="btnResetRapidOverride">
                    <property name="geometry">
                     <rect>
-                     <x>220</x>
+                     <x>210</x>
                      <y>85</y>
-                     <width>40</width>
+                     <width>50</width>
                      <height>30</height>
                     </rect>
                    </property>
@@ -3437,17 +3472,14 @@ border-radius: 4px;
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>40</width>
+                     <width>60</width>
                      <height>30</height>
                     </size>
                    </property>
                    <property name="font">
                     <font>
-                     <family>Bebas Kai</family>
+                     <family>Liberation Sans Narrow</family>
                      <pointsize>12</pointsize>
-                     <weight>50</weight>
-                     <italic>false</italic>
-                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="focusPolicy">
@@ -3455,7 +3487,9 @@ border-radius: 4px;
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QPushButton {
-   	font: 12pt &quot;Bebas Kai&quot;;
+    font-family: &quot;Liberation Sans Narrow&quot;;
+    font-size: 12pt;
+	font-weight:regular;
 }</string>
                    </property>
                    <property name="text">
@@ -3470,14 +3504,13 @@ border-radius: 4px;
                     <rect>
                      <x>10</x>
                      <y>15</y>
-                     <width>181</width>
+                     <width>201</width>
                      <height>21</height>
                     </rect>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QLabel{
     color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
 }</string>
                    </property>
                    <property name="rules" stdset="0">
@@ -3496,7 +3529,6 @@ border-radius: 4px;
                    <property name="styleSheet">
                     <string notr="true">QLabel{
     color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
 }</string>
                    </property>
                    <property name="rules" stdset="0">
@@ -3601,7 +3633,6 @@ border-radius: 4px;
                    <property name="styleSheet">
                     <string notr="true">QLabel{
     color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
 }</string>
                    </property>
                    <property name="rules" stdset="0">
@@ -3611,9 +3642,9 @@ border-radius: 4px;
                   <widget class="ActionButton" name="btnResetFeedOverride">
                    <property name="geometry">
                     <rect>
-                     <x>220</x>
+                     <x>210</x>
                      <y>165</y>
-                     <width>40</width>
+                     <width>50</width>
                      <height>30</height>
                     </rect>
                    </property>
@@ -3625,7 +3656,7 @@ border-radius: 4px;
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>40</width>
+                     <width>60</width>
                      <height>30</height>
                     </size>
                    </property>
@@ -3634,11 +3665,12 @@ border-radius: 4px;
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QPushButton {
-   	font: 12pt &quot;Bebas Kai&quot;;
+    font-family: &quot;Liberation Sans Narrow&quot;;
+    font-size: 12pt;
 }</string>
                    </property>
                    <property name="text">
-                    <string>reset</string>
+                    <string>Reset</string>
                    </property>
                    <property name="actionName" stdset="0">
                     <string>machine.feed-override.reset</string>
@@ -3730,9 +3762,9 @@ border-radius: 4px;
                   <widget class="ActionButton" name="btnResetSpindleOverride">
                    <property name="geometry">
                     <rect>
-                     <x>220</x>
+                     <x>210</x>
                      <y>245</y>
-                     <width>40</width>
+                     <width>50</width>
                      <height>30</height>
                     </rect>
                    </property>
@@ -3744,7 +3776,7 @@ border-radius: 4px;
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>40</width>
+                     <width>60</width>
                      <height>30</height>
                     </size>
                    </property>
@@ -3753,7 +3785,8 @@ border-radius: 4px;
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QPushButton {
-   	font: 12pt &quot;Bebas Kai&quot;;
+    font-family: &quot;Liberation Sans Narrow&quot;;
+    font-size: 12pt;
 }</string>
                    </property>
                    <property name="text">
@@ -3769,13 +3802,12 @@ border-radius: 4px;
                      <x>10</x>
                      <y>250</y>
                      <width>171</width>
-                     <height>16</height>
+                     <height>21</height>
                     </rect>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QLabel{
     color: rgb(238, 238, 236);
-	font: 14pt &quot;Bebas Kai&quot;;
 }</string>
                    </property>
                    <property name="rules" stdset="0">
@@ -3921,7 +3953,9 @@ border-radius: 4px;
                   </rect>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">font-size: 13pt;</string>
+                  <string notr="true">QPushButton {
+	font: 12pt &quot;Liberation Sans Narrow&quot;;
+}</string>
                  </property>
                  <property name="text">
                   <string>Active Codes</string>
@@ -4068,13 +4102,8 @@ border-radius: 4px;
                       <property name="focusPolicy">
                        <enum>Qt::NoFocus</enum>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 12pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
                       <property name="text">
-                       <string> UP</string>
+                       <string>Up</string>
                       </property>
                       <property name="icon">
                        <iconset resource="../resources.qrc">
@@ -4152,7 +4181,7 @@ border-radius: 4px;
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>70</width>
+                        <width>75</width>
                         <height>35</height>
                        </size>
                       </property>
@@ -4165,13 +4194,8 @@ border-radius: 4px;
                       <property name="focusPolicy">
                        <enum>Qt::NoFocus</enum>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 12pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
                       <property name="text">
-                       <string>EJECT USB</string>
+                       <string>Eject USB</string>
                       </property>
                      </widget>
                     </item>
@@ -4191,7 +4215,7 @@ border-radius: 4px;
 	border-color: rgb(120, 120, 120);
 	border-style: solid;
 	background-color: rgb(238, 238, 236);
-    font: 12pt &quot;Bebas Kai&quot;;
+    font: 12pt &quot;Liberation Sans Narrow&quot;;
 }
 
 QHeaderView {
@@ -4277,17 +4301,8 @@ QHeaderView {
                       <property name="focusPolicy">
                        <enum>Qt::NoFocus</enum>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
                       <property name="text">
-                       <string> DELETE</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="../resources.qrc">
-                        <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
+                       <string> Delete</string>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -4298,7 +4313,7 @@ QHeaderView {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="device_new_file_button">
+                     <widget class="QPushButton" name="pushButton">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                         <horstretch>0</horstretch>
@@ -4307,35 +4322,23 @@ QHeaderView {
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>70</width>
+                        <width>80</width>
                         <height>35</height>
                        </size>
                       </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>70</width>
-                        <height>30</height>
-                       </size>
-                      </property>
-                      <property name="focusPolicy">
-                       <enum>Qt::NoFocus</enum>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
+                      <property name="font">
+                       <font>
+                        <family>Bebas Kai</family>
+                        <pointsize>14</pointsize>
+                       </font>
                       </property>
                       <property name="text">
-                       <string> +FILE</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="../resources.qrc">
-                        <normaloff>:/images/new_file.png</normaloff>:/images/new_file.png</iconset>
+                       <string>New File</string>
                       </property>
                       <property name="iconSize">
                        <size>
-                        <width>12</width>
-                        <height>16</height>
+                        <width>14</width>
+                        <height>14</height>
                        </size>
                       </property>
                      </widget>
@@ -4363,17 +4366,8 @@ QHeaderView {
                       <property name="focusPolicy">
                        <enum>Qt::NoFocus</enum>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
                       <property name="text">
-                       <string>+FOLDER</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="../resources.qrc">
-                        <normaloff>:/images/new_folder.png</normaloff>:/images/new_folder.png</iconset>
+                       <string>New Folder</string>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -4406,13 +4400,8 @@ QHeaderView {
                       <property name="focusPolicy">
                        <enum>Qt::NoFocus</enum>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
                       <property name="text">
-                       <string>RENAME</string>
+                       <string>Rename</string>
                       </property>
                      </widget>
                     </item>
@@ -4506,13 +4495,8 @@ QHeaderView {
                       <property name="focusPolicy">
                        <enum>Qt::NoFocus</enum>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 12pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
                       <property name="text">
-                       <string> UP</string>
+                       <string>Up</string>
                       </property>
                       <property name="icon">
                        <iconset resource="../resources.qrc">
@@ -4554,6 +4538,15 @@ QHeaderView {
                    <layout class="QHBoxLayout" name="horizontalLayout_122">
                     <item>
                      <widget class="FileSystemTable" name="filesystemtable_right">
+                      <property name="font">
+                       <font>
+                        <family>Liberation Sans Narrow</family>
+                        <pointsize>12</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                       </font>
+                      </property>
                       <property name="focusPolicy">
                        <enum>Qt::WheelFocus</enum>
                       </property>
@@ -4564,7 +4557,7 @@ QHeaderView {
 	border-color: rgb(120, 120, 120);
 	border-style: solid;
 	background-color: rgb(238, 238, 236);
-    font: 12pt &quot;Bebas Kai&quot;;
+    font: 12pt &quot;Liberation Sans Narrow&quot;;
 }
 
 QHeaderView {
@@ -4638,17 +4631,8 @@ QHeaderView {
                       <property name="focusPolicy">
                        <enum>Qt::NoFocus</enum>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
                       <property name="text">
-                       <string> DELETE</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="../resources.qrc">
-                        <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
+                       <string>Delete</string>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -4681,17 +4665,8 @@ QHeaderView {
                       <property name="focusPolicy">
                        <enum>Qt::NoFocus</enum>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
                       <property name="text">
-                       <string>+FILE</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="../resources.qrc">
-                        <normaloff>:/images/new_file.png</normaloff>:/images/new_file.png</iconset>
+                       <string>New File</string>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -4724,17 +4699,8 @@ QHeaderView {
                       <property name="focusPolicy">
                        <enum>Qt::NoFocus</enum>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
                       <property name="text">
-                       <string>+FOLDER</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="../resources.qrc">
-                        <normaloff>:/images/new_folder.png</normaloff>:/images/new_folder.png</iconset>
+                       <string>New Folder</string>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -4767,13 +4733,8 @@ QHeaderView {
                       <property name="focusPolicy">
                        <enum>Qt::NoFocus</enum>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
                       <property name="text">
-                       <string>RENAME</string>
+                       <string>Rename</string>
                       </property>
                      </widget>
                     </item>
@@ -4837,14 +4798,15 @@ QHeaderView {
                     </property>
                     <property name="styleSheet">
                      <string notr="true">QPushButton {
-   	font: 12pt &quot;Bebas Kai&quot;;
-    padding-right: 4px;
+   	font: 11pt;
+    padding-right: 8px;
+	font-weight:bold;
 }</string>
                     </property>
                     <property name="text">
-                     <string>COPY
-TO
-RIGHT</string>
+                     <string>Copy
+to
+Right</string>
                     </property>
                     <property name="icon">
                      <iconset resource="../resources.qrc">
@@ -4886,14 +4848,15 @@ RIGHT</string>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">QPushButton {
-   	font: 12pt &quot;Bebas Kai&quot;;
+   	font: 11pt;
     padding-right: 8px;
+	font-weight:bold;
 }</string>
                     </property>
                     <property name="text">
-                     <string>COPY
-TO
-LEFT</string>
+                     <string>Copy
+to
+Left</string>
                     </property>
                     <property name="icon">
                      <iconset resource="../resources.qrc">
@@ -4939,13 +4902,8 @@ LEFT</string>
                  <property name="focusPolicy">
                   <enum>Qt::NoFocus</enum>
                  </property>
-                 <property name="styleSheet">
-                  <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                 </property>
                  <property name="text">
-                  <string>LOAD G-CODE</string>
+                  <string>Load G Code</string>
                  </property>
                 </widget>
                 <widget class="QFrame" name="frame_7">
@@ -5018,7 +4976,6 @@ LEFT</string>
     border-color: transparent;
     color: black;
   	background-color: white;
-    font: 12pt &quot;Bebas Kai&quot;;
     padding-left: 6px;
 }</string>
                   </property>
@@ -5090,13 +5047,8 @@ LEFT</string>
                      <property name="focusPolicy">
                       <enum>Qt::NoFocus</enum>
                      </property>
-                     <property name="styleSheet">
-                      <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                     </property>
                      <property name="text">
-                      <string>EDIT G-CODE</string>
+                      <string>Edit G Code</string>
                      </property>
                      <property name="checkable">
                       <bool>true</bool>
@@ -5126,13 +5078,8 @@ LEFT</string>
                      <property name="focusPolicy">
                       <enum>Qt::NoFocus</enum>
                      </property>
-                     <property name="styleSheet">
-                      <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                     </property>
                      <property name="text">
-                      <string>FIND/REPLACE</string>
+                      <string>Find/Replace</string>
                      </property>
                     </widget>
                    </item>
@@ -5168,7 +5115,7 @@ LEFT</string>
 }</string>
                      </property>
                      <property name="text">
-                      <string>SAVE</string>
+                      <string>Save</string>
                      </property>
                     </widget>
                    </item>
@@ -5204,7 +5151,7 @@ LEFT</string>
 }</string>
                      </property>
                      <property name="text">
-                      <string>SAVE AS</string>
+                      <string>Save As</string>
                      </property>
                     </widget>
                    </item>
@@ -5513,8 +5460,8 @@ LEFT</string>
                       </property>
                       <property name="font">
                        <font>
-                        <family>Bebas Kai</family>
-                        <pointsize>15</pointsize>
+                        <family>Liberation Sans Narrow</family>
+                        <pointsize>13</pointsize>
                         <weight>50</weight>
                         <italic>false</italic>
                         <bold>false</bold>
@@ -5526,7 +5473,8 @@ LEFT</string>
                       <property name="styleSheet">
                        <string notr="true">TootTable,
 QHeaderView {
-    font: 14pt &quot;Bebas Kai&quot;;
+    font-family: &quot;Liberation Sans Narrow&quot;;
+    font-size: 13pt;
 	background-color: rgb(220, 220, 220);
 	color: black;
     border: none;
@@ -5634,20 +5582,15 @@ ToolTable {
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>120</width>
+                        <width>150</width>
                         <height>33</height>
                        </size>
                       </property>
                       <property name="focusPolicy">
                        <enum>Qt::NoFocus</enum>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
                       <property name="text">
-                       <string>ADD TOOL</string>
+                       <string>Add Tool</string>
                       </property>
                      </widget>
                     </item>
@@ -5667,20 +5610,15 @@ ToolTable {
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>120</width>
+                        <width>150</width>
                         <height>33</height>
                        </size>
                       </property>
                       <property name="focusPolicy">
                        <enum>Qt::NoFocus</enum>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
                       <property name="text">
-                       <string>DELETE</string>
+                       <string>Delete Selected</string>
                       </property>
                      </widget>
                     </item>
@@ -5700,20 +5638,15 @@ ToolTable {
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>120</width>
+                        <width>150</width>
                         <height>33</height>
                        </size>
                       </property>
                       <property name="focusPolicy">
                        <enum>Qt::NoFocus</enum>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
                       <property name="text">
-                       <string>SAVE TABLE</string>
+                       <string>Save Changes</string>
                       </property>
                      </widget>
                     </item>
@@ -5733,20 +5666,15 @@ ToolTable {
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>140</width>
+                        <width>150</width>
                         <height>33</height>
                        </size>
                       </property>
                       <property name="focusPolicy">
                        <enum>Qt::NoFocus</enum>
                       </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                      </property>
                       <property name="text">
-                       <string>RELOAD TABLE</string>
+                       <string>Reload Table</string>
                       </property>
                      </widget>
                     </item>
@@ -6233,13 +6161,8 @@ color: rgb(255, 255, 255);
                  <property name="focusPolicy">
                   <enum>Qt::NoFocus</enum>
                  </property>
-                 <property name="styleSheet">
-                  <string notr="true">QPushButton {
-   	font: 16pt &quot;Bebas Kai&quot;;
-}</string>
-                 </property>
                  <property name="text">
-                  <string>UNLOAD SPINDLE</string>
+                  <string>Unload Spindle</string>
                  </property>
                  <property name="checkable">
                   <bool>false</bool>
@@ -6281,11 +6204,16 @@ color: rgb(255, 255, 255);
                    <height>35</height>
                   </rect>
                  </property>
+                 <property name="font">
+                  <font>
+                   <family>Liberation Sans Narrow</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="styleSheet">
-                  <string notr="true">QLabel{
-	color: white;
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
+                  <string notr="true">color: white;</string>
                  </property>
                  <property name="text">
                   <string>Y Offset</string>
@@ -6313,10 +6241,17 @@ color: rgb(255, 255, 255);
                    <height>23</height>
                   </rect>
                  </property>
+                 <property name="font">
+                  <font>
+                   <family>Liberation Sans Narrow</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="styleSheet">
                   <string notr="true">QCheckBox{
 	color: white;
-	font: 14pt &quot;Bebas Kai&quot;;
 }</string>
                  </property>
                  <property name="text">
@@ -6331,6 +6266,15 @@ color: rgb(255, 255, 255);
                    <width>101</width>
                    <height>35</height>
                   </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Bebas Kai</family>
+                   <pointsize>14</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">ActionSpinBox{
@@ -8511,16 +8455,17 @@ WcsOffsetsTable {
                     <height>33</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <family>Bebas Kai</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
                   <property name="focusPolicy">
                    <enum>Qt::NoFocus</enum>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                  </property>
                   <property name="text">
-                   <string>CLEAR SELECTED</string>
+                   <string>Clear Selected</string>
                   </property>
                  </widget>
                  <widget class="QPushButton" name="wcs_save">
@@ -8553,13 +8498,8 @@ WcsOffsetsTable {
                   <property name="focusPolicy">
                    <enum>Qt::NoFocus</enum>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                  </property>
                   <property name="text">
-                   <string>SAVE</string>
+                   <string>Save</string>
                   </property>
                  </widget>
                  <widget class="QPushButton" name="wcs_reload">
@@ -8592,13 +8532,8 @@ WcsOffsetsTable {
                   <property name="focusPolicy">
                    <enum>Qt::NoFocus</enum>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                  </property>
                   <property name="text">
-                   <string>RELOAD</string>
+                   <string>Reload</string>
                   </property>
                  </widget>
                  <widget class="QPushButton" name="wcs_clear_all">
@@ -8631,13 +8566,8 @@ WcsOffsetsTable {
                   <property name="focusPolicy">
                    <enum>Qt::NoFocus</enum>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true">QPushButton {
-   	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                  </property>
                   <property name="text">
-                   <string>CLEAR ALL</string>
+                   <string>Clear All</string>
                   </property>
                  </widget>
                  <widget class="QLabel" name="work_column_header_14">
@@ -8695,14 +8625,15 @@ WcsOffsetsTable {
                   <property name="styleSheet">
                    <string notr="true">OffsetTable,
 QHeaderView {
-    font: 14pt &quot;Bebas Kai&quot;;
+    font-family: &quot;Liberation Sans Narrow&quot;;
+    font-size: 13pt;
 	background-color: rgb(220, 220, 220);
 	color: black;
     border: none;
 }
 
 OffsetTable {
-   	border-top: 8px rgb(120, 120, 120);
+	border-top: 8px rgb(120, 120, 120);
 	border-left: 4px  rgb(120, 120, 120);
 	border-bottom: 5px rgb(120, 120, 120);
 	border-right: 4px rgb(120, 120, 120);
@@ -8868,9 +8799,9 @@ OffsetTable {
                 <widget class="ActionButton" name="actionbutton">
                  <property name="geometry">
                   <rect>
-                   <x>875</x>
+                   <x>905</x>
                    <y>15</y>
-                   <width>146</width>
+                   <width>116</width>
                    <height>40</height>
                   </rect>
                  </property>
@@ -8906,11 +8837,19 @@ OffsetTable {
                    <height>636</height>
                   </rect>
                  </property>
+                 <property name="font">
+                  <font>
+                   <family>Liberation Sans Narrow</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="styleSheet">
-                  <string notr="true">QTabBar::tab { height: 40px;}</string>
+                  <string notr="true"/>
                  </property>
                  <property name="currentIndex">
-                  <number>1</number>
+                  <number>2</number>
                  </property>
                  <widget class="QWidget" name="tab">
                   <attribute name="title">
@@ -8924,12 +8863,6 @@ OffsetTable {
                      <width>161</width>
                      <height>186</height>
                     </rect>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QGroupBox{
-	color: white;
-	font: 16pt &quot;Bebas Kai&quot;;
-}</string>
                    </property>
                    <property name="title">
                     <string>Individual Homing</string>
@@ -9086,6 +9019,9 @@ OffsetTable {
                    <string>Probing</string>
                   </attribute>
                   <widget class="QGroupBox" name="groupBox">
+                   <property name="enabled">
+                    <bool>true</bool>
+                   </property>
                    <property name="geometry">
                     <rect>
                      <x>15</x>
@@ -9094,14 +9030,13 @@ OffsetTable {
                      <height>216</height>
                     </rect>
                    </property>
-                   <property name="styleSheet">
-                    <string notr="true">QGroupBox{
-	color: white;
-	font: 16pt &quot;Bebas Kai&quot;;
-}</string>
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                    </font>
                    </property>
                    <property name="title">
-                    <string>Touch probe settings</string>
+                    <string>Touch Probe Settings</string>
                    </property>
                    <widget class="VCPSettingsLineEdit" name="setting_probe_tool_number">
                     <property name="geometry">
@@ -9111,6 +9046,12 @@ OffsetTable {
                       <width>142</width>
                       <height>25</height>
                      </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Liberation Sans Narrow</family>
+                      <pointsize>12</pointsize>
+                     </font>
                     </property>
                     <property name="settingName" stdset="0">
                      <string>probewizard.setting_probe_tool_number</string>
@@ -9128,12 +9069,6 @@ OffsetTable {
                       <height>17</height>
                      </rect>
                     </property>
-                    <property name="styleSheet">
-                     <string notr="true">QLabel{
-	color: white;
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                    </property>
                     <property name="text">
                      <string>Tool Number</string>
                     </property>
@@ -9146,6 +9081,12 @@ OffsetTable {
                       <width>142</width>
                       <height>25</height>
                      </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Liberation Sans Narrow</family>
+                      <pointsize>12</pointsize>
+                     </font>
                     </property>
                     <property name="settingName" stdset="0">
                      <string>probewizard.setting_calibration_offset</string>
@@ -9164,10 +9105,7 @@ OffsetTable {
                      </rect>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">QLabel{
-	color: white;
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
+                     <string notr="true"/>
                     </property>
                     <property name="text">
                      <string>Calibration offset</string>
@@ -9181,6 +9119,12 @@ OffsetTable {
                       <width>141</width>
                       <height>25</height>
                      </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Liberation Sans Narrow</family>
+                      <pointsize>12</pointsize>
+                     </font>
                     </property>
                     <property name="settingName" stdset="0">
                      <string>probewizard.setting_latch_distance</string>
@@ -9198,12 +9142,6 @@ OffsetTable {
                       <height>17</height>
                      </rect>
                     </property>
-                    <property name="styleSheet">
-                     <string notr="true">QLabel{
-	color: white;
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                    </property>
                     <property name="text">
                      <string>Retract Distance</string>
                     </property>
@@ -9216,6 +9154,12 @@ OffsetTable {
                       <width>142</width>
                       <height>25</height>
                      </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Liberation Sans Narrow</family>
+                      <pointsize>12</pointsize>
+                     </font>
                     </property>
                     <property name="settingName" stdset="0">
                      <string>probewizard.setting_probe_slow_fr</string>
@@ -9233,12 +9177,6 @@ OffsetTable {
                       <height>17</height>
                      </rect>
                     </property>
-                    <property name="styleSheet">
-                     <string notr="true">QLabel{
-	color: white;
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                    </property>
                     <property name="text">
                      <string>Probe Slow Feed Rate</string>
                     </property>
@@ -9251,6 +9189,12 @@ OffsetTable {
                       <width>142</width>
                       <height>25</height>
                      </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Liberation Sans Narrow</family>
+                      <pointsize>12</pointsize>
+                     </font>
                     </property>
                     <property name="settingName" stdset="0">
                      <string>probewizard.setting_probe_fast_fr</string>
@@ -9267,12 +9211,6 @@ OffsetTable {
                       <width>146</width>
                       <height>17</height>
                      </rect>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">QLabel{
-	color: white;
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
                     </property>
                     <property name="text">
                      <string>Probe Fast Feed Rate</string>
@@ -9304,11 +9242,10 @@ OffsetTable {
                      <height>346</height>
                     </rect>
                    </property>
-                   <property name="styleSheet">
-                    <string notr="true">QGroupBox{
-	color: white;
-	font: 16pt &quot;Bebas Kai&quot;;
-}</string>
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                    </font>
                    </property>
                    <property name="title">
                     <string>Tool Probe Settings</string>
@@ -9321,6 +9258,12 @@ OffsetTable {
                       <width>142</width>
                       <height>25</height>
                      </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Liberation Sans Narrow</family>
+                      <pointsize>12</pointsize>
+                     </font>
                     </property>
                     <property name="settingName" stdset="0">
                      <string>tool-setter-probe.x-coordinate</string>
@@ -9338,12 +9281,6 @@ OffsetTable {
                       <height>17</height>
                      </rect>
                     </property>
-                    <property name="styleSheet">
-                     <string notr="true">QLabel{
-	color: white;
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                    </property>
                     <property name="text">
                      <string>X Coordinate</string>
                     </property>
@@ -9359,6 +9296,12 @@ OffsetTable {
                       <width>142</width>
                       <height>25</height>
                      </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Liberation Sans Narrow</family>
+                      <pointsize>12</pointsize>
+                     </font>
                     </property>
                     <property name="settingName" stdset="0">
                      <string>tool-setter-probe.y-coordinate</string>
@@ -9376,12 +9319,6 @@ OffsetTable {
                       <height>17</height>
                      </rect>
                     </property>
-                    <property name="styleSheet">
-                     <string notr="true">QLabel{
-	color: white;
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                    </property>
                     <property name="text">
                      <string>Y Coordinate</string>
                     </property>
@@ -9397,6 +9334,12 @@ OffsetTable {
                       <width>142</width>
                       <height>25</height>
                      </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Liberation Sans Narrow</family>
+                      <pointsize>12</pointsize>
+                     </font>
                     </property>
                     <property name="text">
                      <string/>
@@ -9417,12 +9360,6 @@ OffsetTable {
                       <height>17</height>
                      </rect>
                     </property>
-                    <property name="styleSheet">
-                     <string notr="true">QLabel{
-	color: white;
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                    </property>
                     <property name="text">
                      <string>Z Coordinate</string>
                     </property>
@@ -9438,6 +9375,12 @@ OffsetTable {
                       <width>142</width>
                       <height>25</height>
                      </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Liberation Sans Narrow</family>
+                      <pointsize>12</pointsize>
+                     </font>
                     </property>
                     <property name="text">
                      <string/>
@@ -9458,12 +9401,6 @@ OffsetTable {
                       <height>17</height>
                      </rect>
                     </property>
-                    <property name="styleSheet">
-                     <string notr="true">QLabel{
-	color: white;
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                    </property>
                     <property name="text">
                      <string>Z max travel</string>
                     </property>
@@ -9479,6 +9416,12 @@ OffsetTable {
                       <width>142</width>
                       <height>25</height>
                      </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Liberation Sans Narrow</family>
+                      <pointsize>12</pointsize>
+                     </font>
                     </property>
                     <property name="text">
                      <string/>
@@ -9499,6 +9442,12 @@ OffsetTable {
                       <height>25</height>
                      </rect>
                     </property>
+                    <property name="font">
+                     <font>
+                      <family>Liberation Sans Narrow</family>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
                     <property name="text">
                      <string/>
                     </property>
@@ -9518,12 +9467,6 @@ OffsetTable {
                       <height>17</height>
                      </rect>
                     </property>
-                    <property name="styleSheet">
-                     <string notr="true">QLabel{
-	color: white;
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                    </property>
                     <property name="text">
                      <string>Retract Distance</string>
                     </property>
@@ -9539,12 +9482,6 @@ OffsetTable {
                       <width>131</width>
                       <height>17</height>
                      </rect>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">QLabel{
-	color: white;
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
                     </property>
                     <property name="text">
                      <string>Spindle Nose Height</string>
@@ -9562,12 +9499,6 @@ OffsetTable {
                       <height>17</height>
                      </rect>
                     </property>
-                    <property name="styleSheet">
-                     <string notr="true">QLabel{
-	color: white;
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                    </property>
                     <property name="text">
                      <string>Fast Feed Rate</string>
                     </property>
@@ -9584,12 +9515,6 @@ OffsetTable {
                       <height>17</height>
                      </rect>
                     </property>
-                    <property name="styleSheet">
-                     <string notr="true">QLabel{
-	color: white;
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                    </property>
                     <property name="text">
                      <string>Slow Feed Rate</string>
                     </property>
@@ -9605,6 +9530,12 @@ OffsetTable {
                       <width>142</width>
                       <height>25</height>
                      </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Liberation Sans Narrow</family>
+                      <pointsize>12</pointsize>
+                     </font>
                     </property>
                     <property name="text">
                      <string/>
@@ -9624,6 +9555,12 @@ OffsetTable {
                       <width>142</width>
                       <height>25</height>
                      </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Liberation Sans Narrow</family>
+                      <pointsize>12</pointsize>
+                     </font>
                     </property>
                     <property name="text">
                      <string/>
@@ -9782,9 +9719,9 @@ OffsetTable {
                 <widget class="ActionButton" name="actionbutton_2">
                  <property name="geometry">
                   <rect>
-                   <x>1035</x>
+                   <x>1030</x>
                    <y>15</y>
-                   <width>80</width>
+                   <width>116</width>
                    <height>40</height>
                   </rect>
                  </property>
@@ -10904,22 +10841,6 @@ OffsetTable {
    <hints>
     <hint type="sourcelabel">
      <x>50</x>
-     <y>727</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>179</x>
-     <y>409</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>device_new_file_button</sender>
-   <signal>clicked()</signal>
-   <receiver>filesystemtable_left</receiver>
-   <slot>newFile()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>133</x>
      <y>727</y>
     </hint>
     <hint type="destinationlabel">
