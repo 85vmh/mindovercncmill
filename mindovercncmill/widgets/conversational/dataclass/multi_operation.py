@@ -13,6 +13,9 @@ class MultiOperation(BaseOperation):
         self.points_locations = points_locations
         self.hole_operations = hole_operations
 
+    def get_serializable_name(self):
+        return 'multi_operation'
+
     def generate_gcode(self):
         xy_points = self.points_locations.getAllPoints()
         LOG.debug("------xy_points changed: {}".format(xy_points))

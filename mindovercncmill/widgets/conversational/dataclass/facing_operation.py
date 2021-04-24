@@ -1,5 +1,6 @@
-from .single_operation import SingleOperation
 import math
+
+from .single_operation import SingleOperation
 
 
 class FacingOperation(SingleOperation):

@@ -42,6 +42,11 @@ class MindOverCncHalPins:
     TOUCH_PROBE_PLUGGED = 'touch-probe.probe-plugged'
     TOUCH_PROBE_TRIPPED = 'touch-probe.probe-tripped'
 
+    RESET_OVERRIDE_FEED = 'reset-override.feed'
+    RESET_OVERRIDE_SPINDLE = 'reset-override.spindle'
+    RESET_OVERRIDE_RAPID = 'reset-override.rapid'
+    RESET_OVERRIDE_MAX_VEL = 'reset-override.max-vel'
+
     MEASURE_TOOL = 'tool-probe.measure-tool'
     TOOL_PROBE_X = 'tool-probe.x-coordinate'
     TOOL_PROBE_Y = 'tool-probe.y-coordinate'
@@ -111,6 +116,16 @@ class MyMainWindow(VCPMainWindow):
         self.comp.addPin(MindOverCncHalPins.TOUCH_PROBE_TRIPPED, 'bit', 'in')
         self.comp.addListener(MindOverCncHalPins.TOUCH_PROBE_PLUGGED, self.onProbePlugged)
         self.comp.addListener(MindOverCncHalPins.TOUCH_PROBE_TRIPPED, self.onProbeTripped)
+
+        self.comp.addPin(MindOverCncHalPins.RESET_OVERRIDE_FEED, 'bit', 'in')
+        self.comp.addPin(MindOverCncHalPins.RESET_OVERRIDE_SPINDLE, 'bit', 'in')
+        self.comp.addPin(MindOverCncHalPins.RESET_OVERRIDE_RAPID, 'bit', 'in')
+        self.comp.addPin(MindOverCncHalPins.RESET_OVERRIDE_MAX_VEL, 'bit', 'in')
+        self.comp.addListener(MindOverCncHalPins.RESET_OVERRIDE_FEED, self.resetFeedOverride)
+        self.comp.addListener(MindOverCncHalPins.RESET_OVERRIDE_SPINDLE, self.resetSpindleOverride)
+        self.comp.addListener(MindOverCncHalPins.RESET_OVERRIDE_RAPID, self.resetRapidOverride)
+        self.comp.addListener(MindOverCncHalPins.RESET_OVERRIDE_MAX_VEL, self.resetMaxVelOverride)
+
         self.comp.ready()
 
         self.updateHalPinsWithCurrentSettings()
@@ -118,6 +133,18 @@ class MyMainWindow(VCPMainWindow):
         self.estop_dialog = None
         self.STATUS.estop.notify(self.handleEstop)
         QTimer.singleShot(500, self.handleEstop)
+
+    def resetSpindleOverride(self):
+        self.btnResetSpindleOverride.click()
+
+    def resetFeedOverride(self):
+        self.btnResetFeedOverride.click()
+
+    def resetRapidOverride(self):
+        self.btnResetRapidOverride.click()
+
+    def resetMaxVelOverride(self):
+        self.btnResetMaxVelOverride.click()
 
     def handleEstop(self):
         LOG.debug("------handleEstop called: {}".format(self.STATUS.estop.getValue()))
@@ -131,7 +158,6 @@ class MyMainWindow(VCPMainWindow):
         self.estop_dialog = EstopOverlay()
         win = QApplication.instance().activeWindow()
         win_pos = win.mapToGlobal(win.rect().center())
-        LOG.debug("------dialog type is: {}, {}".format(type(self.estop_dialog), self.estop_dialog) )
         self.estop_dialog.move(win_pos.x() - self.estop_dialog.width() / 2, win_pos.y() - self.estop_dialog.height() / 2)
         self.estop_dialog.show()
 

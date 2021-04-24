@@ -1,0 +1,4 @@
+o<test_vasi> sub
+     G91 G0 Z-10
+o<test_vasi> endsub
+M2

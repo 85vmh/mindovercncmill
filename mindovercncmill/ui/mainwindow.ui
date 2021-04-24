@@ -2921,7 +2921,7 @@ QPushButton:checked {
 }</string>
                  </property>
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>1</number>
                  </property>
                  <property name="rules" stdset="0">
                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;currentIndex&quot;, &quot;expression&quot;: &quot;0 if ch[0] == 1 else 1&quot;, &quot;name&quot;: &quot;Selected Page&quot;}]</string>
@@ -3295,7 +3295,7 @@ border-radius: 4px;
                   </widget>
                  </widget>
                  <widget class="QWidget" name="page_all_sliders">
-                  <widget class="ActionButton" name="actionbutton_max_velocity_reset_3">
+                  <widget class="ActionButton" name="btnResetMaxVelOverride">
                    <property name="geometry">
                     <rect>
                      <x>220</x>
@@ -3420,7 +3420,7 @@ border-radius: 4px;
                     <string>machine.max-velocity.set</string>
                    </property>
                   </widget>
-                  <widget class="ActionButton" name="actionbutton_rapid_override_reset_3">
+                  <widget class="ActionButton" name="btnResetRapidOverride">
                    <property name="geometry">
                     <rect>
                      <x>220</x>
@@ -3608,7 +3608,7 @@ border-radius: 4px;
                     <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:feedrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Feed Override: {:.0%}'.format(ch[0])&quot;, &quot;name&quot;: &quot;Feed Override Text&quot;}]</string>
                    </property>
                   </widget>
-                  <widget class="ActionButton" name="actionbutton_feed_override_reset_3">
+                  <widget class="ActionButton" name="btnResetFeedOverride">
                    <property name="geometry">
                     <rect>
                      <x>220</x>
@@ -3727,7 +3727,7 @@ border-radius: 4px;
                     <string>machine.rapid-override.set</string>
                    </property>
                   </widget>
-                  <widget class="ActionButton" name="actionbutton_32">
+                  <widget class="ActionButton" name="btnResetSpindleOverride">
                    <property name="geometry">
                     <rect>
                      <x>220</x>
