@@ -52,7 +52,7 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>6</number>
    </property>
    <widget class="QWidget" name="page_noToolLoaded">
     <widget class="QLabel" name="label">
@@ -1881,7 +1881,7 @@ Spindle</string>
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="toolInfo1_2">
+    <widget class="QLabel" name="toolInfo2">
      <property name="enabled">
       <bool>false</bool>
      </property>

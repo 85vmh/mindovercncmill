@@ -76,7 +76,7 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QPushButton" name="btnNewProgram">
@@ -131,6 +131,9 @@
      <property name="font">
       <font>
        <family>Liberation Sans Narrow</family>
+       <pointsize>13</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="title">
@@ -455,16 +458,6 @@
        <height>456</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QGroupBox{
-    color: rgba(238, 238, 236, 125);
-	font: 14pt &quot;Bebas Kai&quot;;
-	border-style: solid;
-    border-color: rgb1(186, 189, 182, 120);
-    border-width: 1px;
-    border-radius: 6px;
-}</string>
-     </property>
      <property name="title">
       <string>Program Operations</string>
      </property>
@@ -513,9 +506,9 @@
     <widget class="QPushButton" name="btnBackToPrograms">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>65</y>
-       <width>101</width>
+       <x>15</x>
+       <y>55</y>
+       <width>96</width>
        <height>51</height>
       </rect>
      </property>
@@ -539,7 +532,7 @@ Programs</string>
      <widget class="QLabel" name="label_170">
       <property name="geometry">
        <rect>
-        <x>14</x>
+        <x>20</x>
         <y>30</y>
         <width>61</width>
         <height>25</height>
@@ -588,7 +581,7 @@ Programs</string>
      <widget class="QLabel" name="label_133">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>16</x>
         <y>65</y>
         <width>66</width>
         <height>25</height>
@@ -637,9 +630,9 @@ Programs</string>
      <widget class="QLabel" name="label_171">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>6</x>
         <y>100</y>
-        <width>46</width>
+        <width>76</width>
         <height>25</height>
        </rect>
       </property>
@@ -674,7 +667,7 @@ Programs</string>
        <number>0</number>
       </property>
       <property name="text">
-       <string>Descr:</string>
+       <string>Description:</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -686,7 +679,7 @@ Programs</string>
      <widget class="StatusLabel" name="labelAuthorName">
       <property name="geometry">
        <rect>
-        <x>85</x>
+        <x>90</x>
         <y>30</y>
         <width>156</width>
         <height>25</height>
@@ -750,7 +743,7 @@ Programs</string>
      <widget class="StatusLabel" name="labelDescription">
       <property name="geometry">
        <rect>
-        <x>85</x>
+        <x>90</x>
         <y>100</y>
         <width>200</width>
         <height>25</height>
@@ -801,7 +794,7 @@ Programs</string>
      <widget class="QLabel" name="labelMaterial">
       <property name="geometry">
        <rect>
-        <x>85</x>
+        <x>90</x>
         <y>65</y>
         <width>156</width>
         <height>25</height>

@@ -63,6 +63,8 @@ QMenuBar::item:pressed {
 
 QPushButton, QComboBox[editable="false"],
 QComboBox[editable="true"]::drop-down {
+    font-family: "Liberation Sans Narrow";
+    font-size: 13pt;
     color: white;    
     border-color: black;
     border-style: solid;
@@ -144,9 +146,8 @@ QGroupBox {
     font-weight:bold;
     font-size: 13pt;
     border: 1px solid #8A8484;
-    border-radius: 1px;
-    margin-top: 1ex;
-    font-size: 10pt;
+    border-radius: 3px;
+    margin-top: 10px;
 }
 
 QGroupBox::title {

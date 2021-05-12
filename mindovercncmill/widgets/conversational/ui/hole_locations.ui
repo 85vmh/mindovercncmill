@@ -601,9 +601,7 @@ color: rgb(255, 255, 255);
     <property name="font">
      <font>
       <family>Liberation Sans Narrow</family>
-      <pointsize>16</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <pointsize>13</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -639,8 +637,10 @@ color: rgb(255, 255, 255);
     </property>
     <property name="font">
      <font>
-      <family>Bebas Kai</family>
-      <pointsize>14</pointsize>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -730,8 +730,10 @@ QTableView {
     </property>
     <property name="font">
      <font>
-      <family>Bebas Kai</family>
-      <pointsize>14</pointsize>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -865,6 +867,9 @@ color: rgb(255, 255, 255);
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
+       <property name="default_value" stdset="0">
+        <double>0.000000000000000</double>
+       </property>
        <property name="format_string" stdset="0">
         <string>{0:.3f}</string>
        </property>
@@ -886,8 +891,10 @@ color: rgb(255, 255, 255);
     </property>
     <property name="font">
      <font>
-      <family>Bebas Kai</family>
-      <pointsize>14</pointsize>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -905,8 +912,10 @@ color: rgb(255, 255, 255);
     </property>
     <property name="font">
      <font>
-      <family>Bebas Kai</family>
-      <pointsize>14</pointsize>
+      <family>Liberation Sans Narrow</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">

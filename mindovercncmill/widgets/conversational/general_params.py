@@ -13,10 +13,7 @@ class GeneralParamsWidget(ConversationalBaseWidget):
         self._tool_is_valid = False
         self._tool_table = self.tooltable.getToolTable()
 
-        self._validators = [self._validate_spindle_rpm,
-                            self._validate_xy_feed_rate,
-                            self._validate_z_feed_rate,
-                            self._validate_tool_number]
+        self._validators = [self._validate_spindle_rpm,self._validate_tool_number]
 
         self.coolant_input.addItem('OFF')
         self.coolant_input.addItem('MIST')
@@ -25,15 +22,15 @@ class GeneralParamsWidget(ConversationalBaseWidget):
         self.spindle_direction_input.addItem('CW')
         self.spindle_direction_input.addItem('CCW')
 
-        self.xy_feed_rate_input.setText('{0:.3f}'.format(self.default_linear_velocity))
+        #self.xy_feed_rate_input.setText('{0:.3f}'.format(self.default_linear_velocity))
         self.spindle_rpm_input.setText('{0:.3f}'.format(self.default_spindle_speed))
 
         self.tool_number_input.editingFinished.connect(self.set_tool_description_from_tool_num)
         self.tool_number_input.editingFinished.connect(self._validate_tool_number)
 
         self.spindle_rpm_input.editingFinished.connect(self._validate_spindle_rpm)
-        self.xy_feed_rate_input.editingFinished.connect(self._validate_xy_feed_rate)
-        self.z_feed_rate_input.editingFinished.connect(self._validate_z_feed_rate)
+        # self.xy_feed_rate_input.editingFinished.connect(self._validate_xy_feed_rate)
+        # self.z_feed_rate_input.editingFinished.connect(self._validate_z_feed_rate)
 
     def populateWithValues(self, program_operation):
         program_operation.coolant = self.coolant()
@@ -41,9 +38,6 @@ class GeneralParamsWidget(ConversationalBaseWidget):
         program_operation.tool_diameter = self.tool_diameter()
         program_operation.spindle_rpm = self.spindle_rpm()
         program_operation.spindle_dir = self.spindle_direction()
-        program_operation.z_feed = self.z_feed_rate()
-        program_operation.xy_feed = self.xy_feed_rate()
-        program_operation.z_clear = self.clearance_height()
 
     def set_tool_description_from_tool_num(self):
         tool_table = self._tool_table
@@ -76,14 +70,14 @@ class GeneralParamsWidget(ConversationalBaseWidget):
     def coolant(self):
         return self.coolant_input.currentText()
 
-    def xy_feed_rate(self):
-        return self.xy_feed_rate_input.value()
+    # def xy_feed_rate(self):
+    #     return self.xy_feed_rate_input.value()
+    #
+    # def z_feed_rate(self):
+    #     return self.z_feed_rate_input.value()
 
-    def z_feed_rate(self):
-        return self.z_feed_rate_input.value()
-
-    def clearance_height(self):
-        return self.clearance_height_input.value()
+    # def clearance_height(self):
+    #     return self.clearance_height_input.value()
 
     def retract_height(self):
         return self.retract_height_input.value()
@@ -104,15 +98,15 @@ class GeneralParamsWidget(ConversationalBaseWidget):
             self.spindle_rpm_input.setToolTip(error)
             return False, error
 
-    def _validate_xy_feed_rate(self):
-        if self.xy_feed_rate() > 0:
-            self.xy_feed_rate_input.setStyleSheet('')
-            return True, None
-        else:
-            self.xy_feed_rate_input.setStyleSheet('background-color: rgb(205, 141, 123)')
-            error = 'XY feed rate must be greater than 0.'
-            self.xy_feed_rate_input.setToolTip(error)
-            return False, error
+    # def _validate_xy_feed_rate(self):
+    #     if self.xy_feed_rate() > 0:
+    #         self.xy_feed_rate_input.setStyleSheet('')
+    #         return True, None
+    #     else:
+    #         self.xy_feed_rate_input.setStyleSheet('background-color: rgb(205, 141, 123)')
+    #         error = 'XY feed rate must be greater than 0.'
+    #         self.xy_feed_rate_input.setToolTip(error)
+    #         return False, error
 
     def _validate_z_feed_rate(self):
         if self.z_feed_rate() > 0:

@@ -138,7 +138,7 @@ class ChipBreakingOperation(HolesOperation):
         return "Chip Breaking"
 
     def get_serializable_name(self):
-        return "deep_drilling"
+        return "chip_breaking"
 
     def get_operation_comment(self):
         return '(Use G73 Drilling Cycle with Chip Breaking)'

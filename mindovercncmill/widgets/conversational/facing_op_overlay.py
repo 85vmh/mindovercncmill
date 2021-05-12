@@ -2,16 +2,29 @@ import os
 from mindovercncmill.widgets.input_overlay import InputOverlay
 from dataclass.facing_operation import FacingOperation
 from qtpy.QtCore import Signal
+from qtpyvcp.utilities import logger
+LOG = logger.getLogger(__name__)
 
 UI_FILE = os.path.join(os.path.dirname(__file__), "ui/facing_op.ui")
 
 
-class FacingOpOverlay(InputOverlay):
-    operationChanged = Signal(object)
 
-    def __init__(self, facingOperation=FacingOperation(), parent=None):
+class FacingOpOverlay(InputOverlay):
+    facingOperationChanged = Signal(object)
+
+    def __init__(self, facingOperation=None, parent=None):
         super(FacingOpOverlay, self).__init__(UI_FILE, parent)
-        self._facingOperation = facingOperation
+
+        LOG.debug("-------constructor: {}".format(facingOperation))
+        self._is_adding_new = False
+        if facingOperation is None:
+            self._facingOperation = FacingOperation()
+            self._is_adding_new = True
+            LOG.debug("-------if")
+        else:
+            LOG.debug("-------else")
+            self._facingOperation = facingOperation
+
         self.dialog.generalparamswidget.programOperation = facingOperation
 
         self.dialog.step_down_input.editingFinished.connect(self._validate_step_down)
@@ -56,7 +69,12 @@ class FacingOpOverlay(InputOverlay):
         self._facingOperation.z_end = self.z_end()
         self._facingOperation.step_down = self.step_down()
         self._facingOperation.retract = self.retract_height()
-        self.operationChanged.emit(self._facingOperation)
+
+        if self._is_adding_new:
+            self.facingOperationChanged.emit(self._facingOperation)
+        else:
+            self.facingOperationChanged.emit(None)
+
         self.hide()
 
     def step_over(self):

@@ -44,6 +44,8 @@ class SpindleWidget(QWidget, HALWidget):
         super(SpindleWidget, self).__init__(parent)
         uic.loadUi(UI_FILE, self)
         self.STATUS = getPlugin('status')
+        self._tool_table = getPlugin('tooltable').getToolTable()
+
         self._probe_plugged = False
         self._probe_tripped = False
         self._loadedTool = 0
@@ -64,7 +66,21 @@ class SpindleWidget(QWidget, HALWidget):
         self.STATUS.spindle[0].speed.notify(self.determineSpindleState)
         self.STATUS.tool_in_spindle.notify(self.determineSpindleState)
         self.determineSpindleState()
-        self.toolInfo1.setText('T1 (' + u'\u2300' + ' 8,5): Tool comment here that might not fit because its too long')
+
+    def setLoadedToolInfo(self):
+        diameter = self.repr_of(self._tool_table[self._loadedTool]['D'])
+        z_offset = str(self._tool_table[self._loadedTool]['Z'])
+        remark = self._tool_table[self._loadedTool]['R']
+        tool_text = 'T{} ('.format(self._loadedTool) + u'\u2300' + ' {}): {}'.format(diameter, remark)
+        self.toolInfo1.setText(tool_text)
+        self.toolInfo2.setText(tool_text)
+        self.statusZOffset1.setText(z_offset)
+        self.statusZOffset2.setText(z_offset)
+        self.statusFlutes1.setText('N/A')
+        self.statusFlutes2.setText('N/A')
+
+    def repr_of(self, value, precision=3):
+        return ('%.{}f'.format(precision) % value).rstrip('0').rstrip('.')
 
     @Slot(bool)
     def set_probe_plugged(self, plugged):
@@ -98,9 +114,11 @@ class SpindleWidget(QWidget, HALWidget):
             LOG.debug('-----SPINDLE_LOADED called')
             self.spindleStates.setCurrentIndex(SpindleState.SPINDLE_LOADED)
             self.spindleSpeed.setFocus()
+            self.setLoadedToolInfo()
         else:
             LOG.debug('-----SPINDLE_Running called')
             self.spindleStates.setCurrentIndex(SpindleState.SPINDLE_RUNNING)
+            self.setLoadedToolInfo()
 
     def changeTool(self):
         self.spindleStates.setCurrentIndex(SpindleState.SPINDLE_EMPTY)

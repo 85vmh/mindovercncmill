@@ -12,6 +12,7 @@ class MultiOperation(BaseOperation):
             hole_operations = []
         self.points_locations = points_locations
         self.hole_operations = hole_operations
+        LOG.debug("------MultiOperation constructor: {}".format(points_locations.__dict__))
 
     def get_serializable_name(self):
         return 'multi_operation'

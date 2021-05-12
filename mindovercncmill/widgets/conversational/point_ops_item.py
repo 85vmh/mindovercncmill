@@ -13,12 +13,14 @@ UI_FILE = os.path.join(os.path.dirname(__file__), "ui/hole_ops_item.ui")
 class PointOpsItemWidget(QWidget):
     editPointLocations = Signal(object)
 
-    def __init__(self, points_locations=None, parent=None):
+    def __init__(self, points_locations=None, op_number=0, parent=None):
         super(PointOpsItemWidget, self).__init__(parent)
         uic.loadUi(UI_FILE, self)
         self._points_locations = points_locations
+        self._op_number = op_number
 
         if self._points_locations is not None:
+            self.opNo.setText(str(self._op_number))
             self.xCoord.setText(str(self._points_locations.circle_xy_coord[0]))
             self.yCoord.setText(str(self._points_locations.circle_xy_coord[1]))
             self.diameter.setText(str(self._points_locations.circle_diameter))
@@ -29,4 +31,5 @@ class PointOpsItemWidget(QWidget):
 
     def handleEditClicked(self):
         self.editPointLocations.emit(self._points_locations)
+        LOG.debug("-------handleEditClicked: {}".format(self._points_locations.__dict__))
 

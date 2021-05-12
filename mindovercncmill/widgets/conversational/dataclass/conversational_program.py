@@ -47,7 +47,10 @@ class ConversationalProgram:
                 operations.append(facingOp)
                 LOG.debug("----facingOp: {} ".format(facingOp))
             if 'multi_operation' in op:
-                multiOp = MultiOperation()
+                pts_locations = PointsLocations()
+                pts_locations.__dict__.update(**op["multi_operation"]['points_locations'])
+                LOG.debug("----pointsLocations: {} ".format(pts_locations.__dict__))
+                multiOp = MultiOperation(points_locations=pts_locations)
                 for holeOp in op["multi_operation"]['hole_operations']:
                     if 'peck_drilling' in holeOp:
                         peck = PeckOperation()
@@ -59,12 +62,6 @@ class ConversationalProgram:
                         deepDrill.__dict__.update(**holeOp['deep_drilling'])
                         LOG.debug("----deepDrill: {} ".format(deepDrill))
                         multiOp.hole_operations.append(deepDrill)
-
-                pointLocs = op["multi_operation"]['points_locations']
-                pointsLocations = PointsLocations
-                pointsLocations.__dict__.update(**pointLocs)
-                LOG.debug("----pointsLocations: {} ".format(pointsLocations))
-                multiOp.points_locations = pointsLocations
 
                 #multiOp.__dict__.update(**op["multi_operation"])
                 operations.append(multiOp)
@@ -91,6 +88,7 @@ class ConversationalProgram:
             gcode.append('G94 (Feed rate mode: units/minute)\n')
 
         for an_operation in self.operations:
+            LOG.debug("------an_operation: {}".format(an_operation))
             an_operation.isMetric = self.header.isMetric()
             gcode.extend(an_operation.generate_gcode())
 

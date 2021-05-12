@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>339</width>
-    <height>406</height>
+    <height>250</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,7 +19,7 @@
   <property name="minimumSize">
    <size>
     <width>300</width>
-    <height>350</height>
+    <height>250</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -37,7 +37,7 @@
      <x>10</x>
      <y>10</y>
      <width>316</width>
-     <height>386</height>
+     <height>231</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -223,10 +223,7 @@
      <property name="font">
       <font>
        <family>Liberation Sans Narrow</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
+       <pointsize>13</pointsize>
       </font>
      </property>
      <property name="lineWidth">
@@ -397,157 +394,6 @@
      <double>0.000000000000000</double>
     </property>
    </widget>
-   <widget class="QLabel" name="label_179">
-    <property name="geometry">
-     <rect>
-      <x>245</x>
-      <y>325</y>
-      <width>60</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>60</width>
-      <height>30</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>120</width>
-      <height>35</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <family>Liberation Sans Narrow</family>
-      <pointsize>13</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="lineWidth">
-     <number>0</number>
-    </property>
-    <property name="text">
-     <string>mm</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-    <property name="indent">
-     <number>0</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_174">
-    <property name="geometry">
-     <rect>
-      <x>22</x>
-      <y>279</y>
-      <width>120</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>120</width>
-      <height>30</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>120</width>
-      <height>35</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <family>Liberation Sans Narrow</family>
-      <pointsize>13</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="lineWidth">
-     <number>0</number>
-    </property>
-    <property name="text">
-     <string>Z Feed Rate:</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-    <property name="indent">
-     <number>0</number>
-    </property>
-   </widget>
-   <widget class="FloatLineEdit" name="clearance_height_input">
-    <property name="geometry">
-     <rect>
-      <x>155</x>
-      <y>325</y>
-      <width>80</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>33</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>80</width>
-      <height>30</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>100</width>
-      <height>35</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLineEdit{
-    border-style: transparant;
-    border-color: rgb(235, 235, 235);
-    border-width: 1px;
-    border-radius: 3px;
-    color: black;
-    background: rgb(235, 235, 235);
-    padding-right: 2px;
-	font-family: &quot;Liberation Sans Narrow&quot;;
-    font-size: 13pt;
-}</string>
-    </property>
-    <property name="text">
-     <string>10</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-    <property name="format_string" stdset="0">
-     <string>%.3f</string>
-    </property>
-    <property name="bottom" stdset="0">
-     <double>0.000000000000000</double>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_172">
     <property name="geometry">
      <rect>
@@ -597,153 +443,6 @@
      <number>0</number>
     </property>
    </widget>
-   <widget class="QLabel" name="label_173">
-    <property name="geometry">
-     <rect>
-      <x>22</x>
-      <y>235</y>
-      <width>120</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>120</width>
-      <height>30</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>120</width>
-      <height>35</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <family>Liberation Sans Narrow</family>
-      <pointsize>13</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="lineWidth">
-     <number>0</number>
-    </property>
-    <property name="text">
-     <string>XY Feed Rate:</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-    <property name="indent">
-     <number>0</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_176">
-    <property name="geometry">
-     <rect>
-      <x>245</x>
-      <y>235</y>
-      <width>60</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>50</width>
-      <height>30</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>100</width>
-      <height>35</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <family>Liberation Sans Narrow</family>
-      <pointsize>13</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="lineWidth">
-     <number>0</number>
-    </property>
-    <property name="text">
-     <string>mm/min</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-    <property name="indent">
-     <number>0</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_177">
-    <property name="geometry">
-     <rect>
-      <x>245</x>
-      <y>280</y>
-      <width>60</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>60</width>
-      <height>30</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>120</width>
-      <height>35</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <family>Liberation Sans Narrow</family>
-      <pointsize>13</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="lineWidth">
-     <number>0</number>
-    </property>
-    <property name="text">
-     <string>mm/min</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-    <property name="indent">
-     <number>0</number>
-    </property>
-   </widget>
    <widget class="QComboBox" name="spindle_direction_input">
     <property name="geometry">
      <rect>
@@ -774,10 +473,7 @@
     <property name="font">
      <font>
       <family>Liberation Sans Narrow</family>
-      <pointsize>14</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
+      <pointsize>13</pointsize>
      </font>
     </property>
    </widget>
@@ -830,108 +526,6 @@
      <number>0</number>
     </property>
    </widget>
-   <widget class="FloatLineEdit" name="xy_feed_rate_input">
-    <property name="geometry">
-     <rect>
-      <x>155</x>
-      <y>235</y>
-      <width>80</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>33</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>80</width>
-      <height>30</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>100</width>
-      <height>35</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLineEdit{
-    border-style: transparant;
-    border-color: rgb(235, 235, 235);
-    border-width: 1px;
-    border-radius: 3px;
-    color: black;
-    background: rgb(235, 235, 235);
-    padding-right: 2px;
-	font-family: &quot;Liberation Sans Narrow&quot;;
-    font-size: 13pt;
-}</string>
-    </property>
-    <property name="text">
-     <string>200</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-    <property name="format_string" stdset="0">
-     <string>%.1f</string>
-    </property>
-    <property name="bottom" stdset="0">
-     <double>0.000000000000000</double>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_175">
-    <property name="geometry">
-     <rect>
-      <x>22</x>
-      <y>325</y>
-      <width>120</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>120</width>
-      <height>30</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>120</width>
-      <height>35</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <family>Liberation Sans Narrow</family>
-      <pointsize>13</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="lineWidth">
-     <number>0</number>
-    </property>
-    <property name="text">
-     <string>Clearance Height:</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-    <property name="indent">
-     <number>0</number>
-    </property>
-   </widget>
    <widget class="QComboBox" name="coolant_input">
     <property name="geometry">
      <rect>
@@ -958,59 +552,6 @@
       <width>100</width>
       <height>35</height>
      </size>
-    </property>
-   </widget>
-   <widget class="FloatLineEdit" name="z_feed_rate_input">
-    <property name="geometry">
-     <rect>
-      <x>155</x>
-      <y>279</y>
-      <width>80</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>33</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>80</width>
-      <height>30</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>100</width>
-      <height>35</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLineEdit{
-    border-style: transparant;
-    border-color: rgb(235, 235, 235);
-    border-width: 1px;
-    border-radius: 3px;
-    color: black;
-    background: rgb(235, 235, 235);
-    padding-right: 2px;
-	font-family: &quot;Liberation Sans Narrow&quot;;
-    font-size: 13pt;
-}</string>
-    </property>
-    <property name="text">
-     <string>100</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-    <property name="format_string" stdset="0">
-     <string>%.3f</string>
-    </property>
-    <property name="bottom" stdset="0">
-     <double>0.000000000000000</double>
     </property>
    </widget>
   </widget>
