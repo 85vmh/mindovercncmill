@@ -17,6 +17,7 @@ class HolesOperation(SingleOperation):
 
     def generate_gcode(self):
         gcode = self.start_operation()
+        gcode.append('G17 (Select the XY plane)')
         if len(self.holes) > 0:
             gcode.append('(Hole #1) G0 X{} Y{}'.format(self.repr_of(self.holes[0][0]), self.repr_of(self.holes[0][1])))
             gcode.append('G0 Z{} (Move to clearance height)'.format(self.repr_of(self.z_clear)))

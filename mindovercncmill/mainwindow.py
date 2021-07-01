@@ -132,7 +132,7 @@ class MyMainWindow(VCPMainWindow):
 
         self.estop_dialog = None
         self.STATUS.estop.notify(self.handleEstop)
-        QTimer.singleShot(500, self.handleEstop)
+        QTimer.singleShot(1000, self.handleEstop)
 
     def resetSpindleOverride(self):
         self.btnResetSpindleOverride.click()
@@ -150,7 +150,7 @@ class MyMainWindow(VCPMainWindow):
         LOG.debug("------handleEstop called: {}".format(self.STATUS.estop.getValue()))
         if self.STATUS.estop.getValue() == linuxcnc.STATE_ESTOP and self.estop_dialog == None:
             self.showEstopDialog()
-        elif self.estop_dialog != None:
+        elif self.estop_dialog is not None:
             self.estop_dialog.hide()
             self.estop_dialog = None
 

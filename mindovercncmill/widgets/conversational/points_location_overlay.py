@@ -14,8 +14,6 @@ class PointsLocationOverlay(InputOverlay):
     def __init__(self, pointsLocations, parent=None):
         super(PointsLocationOverlay, self).__init__(UI_FILE, parent)
 
-        LOG.debug("-------PointsLocationOverlay constructor: {}".format(pointsLocations.__dict__))
-
         self._is_adding_new = False
         if pointsLocations is None:
             self._pointsLocations = PointsLocations()

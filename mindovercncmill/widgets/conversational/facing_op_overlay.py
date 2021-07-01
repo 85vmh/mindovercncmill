@@ -8,21 +8,17 @@ LOG = logger.getLogger(__name__)
 UI_FILE = os.path.join(os.path.dirname(__file__), "ui/facing_op.ui")
 
 
-
 class FacingOpOverlay(InputOverlay):
     facingOperationChanged = Signal(object)
 
     def __init__(self, facingOperation=None, parent=None):
         super(FacingOpOverlay, self).__init__(UI_FILE, parent)
 
-        LOG.debug("-------constructor: {}".format(facingOperation))
         self._is_adding_new = False
         if facingOperation is None:
             self._facingOperation = FacingOperation()
             self._is_adding_new = True
-            LOG.debug("-------if")
         else:
-            LOG.debug("-------else")
             self._facingOperation = facingOperation
 
         self.dialog.generalparamswidget.programOperation = facingOperation
@@ -33,6 +29,7 @@ class FacingOpOverlay(InputOverlay):
         self.dialog.x_end_input.editingFinished.connect(self._validate_x_positions)
         self.dialog.y_start_input.editingFinished.connect(self._validate_y_positions)
         self.dialog.y_end_input.editingFinished.connect(self._validate_y_positions)
+        #self.dialog.feed_rate_input.editingFinished.connect(self._validate_feed_rate)
         self.dialog.z_start_input.editingFinished.connect(self._validate_z_heights)
         self.dialog.z_end_input.editingFinished.connect(self._validate_z_heights)
         self.dialog.retract_height_input.editingFinished.connect(self._validate_retract_height)
@@ -48,15 +45,16 @@ class FacingOpOverlay(InputOverlay):
         self.dialog.btnDoneEditing.clicked.connect(self.handleDoneClicked)
 
     def populateInitialValues(self, facingOperation):
-        self.dialog.step_down_input.default_value = facingOperation.step_down
-        self.dialog.step_over_input.default_value = facingOperation.step_over
-        self.dialog.x_start_input.default_value = facingOperation.x_start
-        self.dialog.x_end_input.default_value = facingOperation.x_end
-        self.dialog.y_start_input.default_value = facingOperation.y_start
-        self.dialog.y_end_input.default_value = facingOperation.y_end
-        self.dialog.z_start_input.default_value = facingOperation.z_start
-        self.dialog.z_end_input.default_value = facingOperation.z_end
-        self.dialog.retract_height_input.default_value = facingOperation.retract
+        self.dialog.step_down_input.setText(str(facingOperation.step_down))
+        self.dialog.step_over_input.setText(str(facingOperation.step_over))
+        self.dialog.x_start_input.setText(str(facingOperation.x_start))
+        self.dialog.x_end_input.setText(str(facingOperation.x_end))
+        self.dialog.y_start_input.setText(str(facingOperation.y_start))
+        self.dialog.y_end_input.setText(str(facingOperation.y_end))
+        self.dialog.feed_rate_input.setText(str(facingOperation.xy_feed))
+        self.dialog.z_start_input.setText(str(facingOperation.z_start))
+        self.dialog.z_end_input.setText(str(facingOperation.z_end))
+        self.dialog.retract_height_input.setText(str(facingOperation.retract))
 
     def handleDoneClicked(self):
         self.dialog.generalparamswidget.populateWithValues(self._facingOperation)
@@ -65,6 +63,7 @@ class FacingOpOverlay(InputOverlay):
         self._facingOperation.y_start = self.y_start()
         self._facingOperation.y_end = self.x_end()
         self._facingOperation.step_over = self.step_over()
+        self._facingOperation.xy_feed = self.feed_rate()
         self._facingOperation.z_start = self.z_start()
         self._facingOperation.z_end = self.z_end()
         self._facingOperation.step_down = self.step_down()
@@ -94,6 +93,9 @@ class FacingOpOverlay(InputOverlay):
 
     def y_end(self):
         return self.dialog.y_end_input.value()
+
+    def feed_rate(self):
+        return self.dialog.feed_rate_input.value()
 
     def z_start(self):
         return self.dialog.z_start_input.value()

@@ -7,6 +7,7 @@ from qtpyvcp.utilities import logger
 from program_header_overlay import ProgramHeaderOverlay
 from program_details_overlay import ProgramDetailsOverlay
 from points_location_overlay import PointsLocationOverlay
+from hole_op_overlay import HoleOpOverlay
 from base_widget import ConversationalBaseWidget
 from qtpy.QtWidgets import QApplication
 from dataclass.holes_operation import *
@@ -43,14 +44,20 @@ class ConversationalWizardWidget(ConversationalBaseWidget):
         self.btnBackToPrograms.clicked.connect(self.backToPrograms)
         self.btnHeader.clicked.connect(self.showHeaderDialog)
         self.btnDetails.clicked.connect(self.showDetailsDialog)
-        self.btnAddOperation.clicked.connect(self.addEditFacingOperation)
-        self.btnAddPointLocations.clicked.connect(self.addEditPointsLocation)
+        self.btnAddOperation.clicked.connect(self.addFacingOperation)
+        self.btnAddPointLocations.clicked.connect(self.addPointsLocation)
+        self.btnDwell.clicked.connect(self.dwellOperation)
+        self.btnPeck.clicked.connect(self.peckOperation)
+        self.btnRigidTap.clicked.connect(self.rigidTapOperation)
         self.btnGenerateAndLoad.clicked.connect(self.generateAndLoad)
         self.header_dialog = None
         self.details_dialog = None
         self.facing_dialog = None
         self.points_location_dialog = None
+        self.holes_op_dialog = None
         self.conv_program = None
+        self.multi_operation = None
+
         self.loadConvPrograms()
 
     def newProgram(self):
@@ -87,13 +94,11 @@ class ConversationalWizardWidget(ConversationalBaseWidget):
         self.conv_program.details = details
         self.loadProgramDetails()
 
-    def addEditFacingOperation(self, initial_value=None):
-        if initial_value is None:
-            LOG.debug("------no initial value: {}")
-            self.facing_dialog = FacingOpOverlay()
-        else:
-            LOG.debug("------with initial value: {}")
-            self.facing_dialog = FacingOpOverlay(facingOperation=initial_value)
+    def addFacingOperation(self):
+        self.editFacingOperation()
+
+    def editFacingOperation(self, initial_value=None):
+        self.facing_dialog = FacingOpOverlay(facingOperation=initial_value)
         self.facing_dialog.facingOperationChanged.connect(self.facingOperationChanged)
         self.showInputOverlayDialog(self.facing_dialog)
 
@@ -104,7 +109,10 @@ class ConversationalWizardWidget(ConversationalBaseWidget):
             self.conv_program.operations.append(operation)
         self.loadProgramDetails()
 
-    def addEditPointsLocation(self, initial_value=None):
+    def addPointsLocation(self):
+        self.editPointsLocation()
+
+    def editPointsLocation(self, initial_value=None):
         self.points_location_dialog = PointsLocationOverlay(pointsLocations=initial_value)
         self.points_location_dialog.pointsLocationsChanged.connect(self.pointsLocationsChanged)
         self.showInputOverlayDialog(self.points_location_dialog)
@@ -116,35 +124,28 @@ class ConversationalWizardWidget(ConversationalBaseWidget):
             self.conv_program.operations.append(multi_operation)
         self.loadProgramDetails()
 
-    def dummyAddOps(self):
-        peck_op = PeckOperation(peck_depth=0.5)
-        peck_op.tool_number = 1
-        peck_op.tool_diameter = 8
-        peck_op.spindle_rpm = 2000
-        peck_op.z_feed = 200
-        peck_op.z_clear = 5
-        peck_op.retract = 2
-        #multi_operation.hole_operations.append(peck_op)
+    def dwellOperation(self):
+        self.holes_op_dialog = HoleOpOverlay(holeOp=DwellOperation())
+        self.holes_op_dialog.holeOperationChanged.connect(self.holeOpChanged)
+        self.showInputOverlayDialog(self.holes_op_dialog)
 
-        drill_op = DeepDrillOperation()
-        drill_op.tool_number = 1
-        drill_op.tool_diameter = 8
-        drill_op.spindle_rpm = 2000
-        drill_op.z_feed = 200
-        drill_op.retract = 5
-        drill_op.z_clear = 5
-        drill_op.z_end = -20
-        #multi_operation.hole_operations.append(drill_op)
+    def peckOperation(self):
+        self.holes_op_dialog = HoleOpOverlay(holeOp=PeckOperation())
+        self.holes_op_dialog.holeOperationChanged.connect(self.holeOpChanged)
+        self.showInputOverlayDialog(self.holes_op_dialog)
 
-        # tap_op = RigidTappingOperation(pitch=2)
-        # tap_op.tool_number = 2
-        # tap_op.tool_diameter = 8
-        # tap_op.spindle_rpm = 500
-        # tap_op.z_feed = 200
-        # tap_op.z_clear = 5
-        # tap_op.retract = 5
-        # tap_op.z_end = -20
-        # multi_operation.hole_operations.append(tap_op)
+    def rigidTapOperation(self):
+        self.holes_op_dialog = HoleOpOverlay(holeOp=RigidTappingOperation())
+        self.holes_op_dialog.holeOperationChanged.connect(self.holeOpChanged)
+        self.showInputOverlayDialog(self.holes_op_dialog)
+
+    def holeOpChanged(self, holeOp):
+        LOG.debug("------holeOpChanged changed: {}".format(holeOp))
+        for rootOp in self.conv_program.operations:
+            if isinstance(rootOp, MultiOperation):
+                rootOp.hole_operations.append(holeOp)
+
+        self.loadProgramDetails()
 
     def showInputOverlayDialog(self, inputOverlay):
         win = QApplication.instance().activeWindow()
@@ -213,7 +214,7 @@ class ConversationalWizardWidget(ConversationalBaseWidget):
             operation_no = operation_no+1
             if isinstance(an_op, FacingOperation):
                 facingOpItem = FacingOpItemWidget(facing_op=an_op, op_number=operation_no)
-                facingOpItem.editFacingOp.connect(self.addEditFacingOperation)
+                facingOpItem.editFacingOp.connect(self.editFacingOperation)
                 listWidgetItem = QtWidgets.QListWidgetItem(self.opsListWidget)
                 # Set size hint, hardcoded, cannot find how to obtain it
                 listWidgetItem.setSizeHint(QtCore.QSize(1090, 125))
@@ -222,7 +223,7 @@ class ConversationalWizardWidget(ConversationalBaseWidget):
             if isinstance(an_op, MultiOperation):
                 LOG.debug("-------point locations: {}".format(an_op.points_locations.__dict__))
                 pointOpsItem = PointOpsItemWidget(points_locations=an_op.points_locations, op_number=operation_no)
-                pointOpsItem.editPointLocations.connect(self.addEditPointsLocation)
+                pointOpsItem.editPointLocations.connect(self.editPointsLocation)
                 listWidgetItem = QtWidgets.QListWidgetItem(self.opsListWidget)
                 # Set size hint, hardcoded, cannot find how to obtain it
                 listWidgetItem.setSizeHint(QtCore.QSize(1090, 160))

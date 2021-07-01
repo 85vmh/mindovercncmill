@@ -39,7 +39,7 @@ class SingleOperation(BaseOperation):
         elif self.coolant.lower() == 'flood':
             gcode.append('M8 (Start coolant: flood)')
         if self.xy_feed > 0:
-            gcode.append('F{}'.format(self.repr_of(self.xy_feed)))
+            gcode.append('F{} (Feed rate in units/minute)'.format(self.repr_of(self.xy_feed)))
         return gcode
 
     def end_operation(self):

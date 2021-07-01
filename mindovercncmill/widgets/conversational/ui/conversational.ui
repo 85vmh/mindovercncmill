@@ -76,7 +76,7 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QPushButton" name="btnNewProgram">
@@ -877,6 +877,45 @@ Programs</string>
       </property>
       <property name="text">
        <string>Facing OP</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnDwell">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>175</y>
+        <width>96</width>
+        <height>46</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dwell</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnPeck">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>235</y>
+        <width>96</width>
+        <height>46</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Peck</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnRigidTap">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>290</y>
+        <width>96</width>
+        <height>46</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Rigid Tap</string>
       </property>
      </widget>
     </widget>
