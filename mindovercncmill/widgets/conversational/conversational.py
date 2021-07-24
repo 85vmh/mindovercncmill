@@ -179,26 +179,27 @@ class ConversationalWizardWidget(ConversationalBaseWidget):
 
     def loadConvPrograms(self):
         # TODO: take json only
-        conversational_programs = []
-        for filename in os.listdir(CONVERSATIONAL_TEMPLATE_PREFIX):
-            with open(os.path.join(CONVERSATIONAL_TEMPLATE_PREFIX, filename), 'r') as f:  # open in readonly mode
-                content = f.read()
-                LOG.debug("-------file content {}".format(content))
-                decoded_conv = ConversationalProgram.decode(json.loads(content))
-                conversational_programs.append(decoded_conv)
-                # json_template = json.dumps(decoded_conv, default=ConversationalProgram.encode, indent=4)
-                # LOG.debug("-------Decoded Conversational:{} {}".format(filename, json_template))
-
-        self.programsListWidget.clear()
-        for conv_prg in conversational_programs:
-            convProgramItemWidget = ConvProgramItemWidget(conv_prg)
-            convProgramItemWidget.viewConvProgram.connect(self.handleViewProgram)
-            listWidgetItem = QtWidgets.QListWidgetItem(self.programsListWidget)
-            # Set size hint, hardcoded, cannot find how to obtain it
-            listWidgetItem.setSizeHint(QtCore.QSize(800, 100))
-            # Add QListWidgetItem into QListWidget
-            self.programsListWidget.addItem(listWidgetItem)
-            self.programsListWidget.setItemWidget(listWidgetItem, convProgramItemWidget)
+        # conversational_programs = []
+        # for filename in os.listdir(CONVERSATIONAL_TEMPLATE_PREFIX):
+        #     with open(os.path.join(CONVERSATIONAL_TEMPLATE_PREFIX, filename), 'r') as f:  # open in readonly mode
+        #         content = f.read()
+        #         LOG.debug("-------file content {}".format(content))
+        #         decoded_conv = ConversationalProgram.decode(json.loads(content))
+        #         conversational_programs.append(decoded_conv)
+        #         # json_template = json.dumps(decoded_conv, default=ConversationalProgram.encode, indent=4)
+        #         # LOG.debug("-------Decoded Conversational:{} {}".format(filename, json_template))
+        #
+        # self.programsListWidget.clear()
+        # for conv_prg in conversational_programs:
+        #     convProgramItemWidget = ConvProgramItemWidget(conv_prg)
+        #     convProgramItemWidget.viewConvProgram.connect(self.handleViewProgram)
+        #     listWidgetItem = QtWidgets.QListWidgetItem(self.programsListWidget)
+        #     # Set size hint, hardcoded, cannot find how to obtain it
+        #     listWidgetItem.setSizeHint(QtCore.QSize(800, 100))
+        #     # Add QListWidgetItem into QListWidget
+        #     self.programsListWidget.addItem(listWidgetItem)
+        #     self.programsListWidget.setItemWidget(listWidgetItem, convProgramItemWidget)
+        pass
 
     def loadProgramDetails(self):
         self.labelProgramName.setText(self.conv_program.header.name)
