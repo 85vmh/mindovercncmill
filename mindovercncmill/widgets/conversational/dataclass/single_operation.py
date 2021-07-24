@@ -42,6 +42,8 @@ class SingleOperation(BaseOperation):
             gcode.append('F{} (Feed rate in units/minute)'.format(self.repr_of(self.xy_feed)))
         return gcode
 
+
+
     def end_operation(self):
         gcode = []
         if self.coolant.strip() != '':
